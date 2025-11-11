@@ -1,0 +1,1200 @@
+{
+  "extraction_date": "2025-10-28",
+  "source_directory": "/Users/steve.westgladly.com/Desktop/enablement-site/new-microsite-html/",
+  "pages": {
+    "product_sidekick_sales": {
+      "file_path": "product/sidekick-sales/index.html",
+      "hero": {
+        "badge": "SIDEKICK SALES",
+        "title": "AI for Revenue Teams",
+        "subtitle": "Empower sales and marketing with AI that engages prospects, qualifies leads, and drives revenue",
+        "gradient_color": "linear-gradient(135deg, #009B00 0%, #007a00 100%)",
+        "cta_buttons": [
+          {"text": "Learn More", "link": "#overview", "type": "btn-white"},
+          {"text": "View Demos", "link": "#demos", "type": "btn-outline"}
+        ],
+        "video_embed": "wistia-player media-id='85i16s6k7a'"
+      },
+      "quick_nav": [
+        {"text": "Overview", "link": "#overview"},
+        {"text": "Capabilities", "link": "#capabilities"},
+        {"text": "Use Cases", "link": "#use-cases"},
+        {"text": "Content", "link": "#content"},
+        {"text": "Demos", "link": "#demos"},
+        {"text": "Competitive", "link": "#competitive"}
+      ],
+      "what_is_section": {
+        "title": "What is Sidekick Sales?",
+        "description": [
+          "Sidekick Sales is AI designed specifically for revenue generation. It engages website visitors, qualifies leads, books meetings, and nurtures prospects through the sales funnel.",
+          "Unlike traditional chatbots that deflect, Sidekick Sales actively converts visitors into qualified opportunities and drives measurable revenue impact."
+        ],
+        "background_color": "#0D0D0D"
+      },
+      "launch_status": {
+        "title": "🚀 Launch Status",
+        "stages": [
+          {"name": "Initial research", "active": false},
+          {"name": "Added to roadmap", "active": false},
+          {"name": "Discovery and design", "active": true, "marker": "➡️ Discovery and design ⬅️"},
+          {"name": "Build in progress", "active": false},
+          {"name": "Prototyping", "active": false},
+          {"name": "Limited rollout", "active": false},
+          {"name": "Broader rollout", "active": false},
+          {"name": "Open Access", "active": false}
+        ],
+        "status_note": "Product design phase. Gathering customer feedback on requirements and use cases."
+      },
+      "capabilities": {
+        "section_id": "capabilities",
+        "title": "Sales AI Capabilities",
+        "background": "gray",
+        "cards": [
+          {
+            "icon": "🎯",
+            "title": "Lead Qualification",
+            "description": "Automatically qualify prospects based on your ideal customer profile",
+            "link_text": "Learn More →"
+          },
+          {
+            "icon": "📅",
+            "title": "Meeting Scheduling",
+            "description": "Book demos directly into AE calendars without back-and-forth",
+            "link_text": "See How →"
+          },
+          {
+            "icon": "📈",
+            "title": "Lead Nurturing",
+            "description": "Engage prospects with personalized follow-ups and content",
+            "link_text": "View Examples →"
+          }
+        ]
+      },
+      "use_cases": {
+        "section_id": "use-cases",
+        "title": "Common Use Cases",
+        "items": [
+          {
+            "title": "Website Conversion",
+            "description": "Convert anonymous visitors into qualified leads 24/7"
+          },
+          {
+            "title": "Demo Requests",
+            "description": "Qualify and book product demos automatically"
+          },
+          {
+            "title": "Event Follow-up",
+            "description": "Engage trade show and webinar leads at scale"
+          },
+          {
+            "title": "Pricing Inquiries",
+            "description": "Provide custom pricing based on prospect needs"
+          },
+          {
+            "title": "Content Recommendations",
+            "description": "Share relevant case studies and resources"
+          },
+          {
+            "title": "Pipeline Acceleration",
+            "description": "Re-engage stalled deals and dormant accounts"
+          }
+        ]
+      },
+      "content_resources": {
+        "section_id": "content",
+        "title": "Content & Resources",
+        "background": "gray",
+        "cards": [
+          {
+            "icon": "📄",
+            "title": "Sales One-Pager",
+            "description": "Quick overview for revenue teams",
+            "link_text": "Download PDF →"
+          },
+          {
+            "icon": "💰",
+            "title": "Revenue Impact Calculator",
+            "description": "Calculate potential pipeline and revenue lift",
+            "link_text": "Use Calculator →"
+          },
+          {
+            "icon": "📚",
+            "title": "Best Practices Guide",
+            "description": "Optimize AI for maximum conversion",
+            "link_text": "View Guide →"
+          }
+        ]
+      },
+      "demo_materials": {
+        "section_id": "demos",
+        "title": "Demo Materials",
+        "cards": [
+          {
+            "icon": "💻",
+            "title": "Interactive Demo",
+            "description": "Experience Sidekick Sales on a live website",
+            "link_text": "Try Demo →"
+          },
+          {
+            "icon": "📊",
+            "title": "Performance Metrics",
+            "description": "Real customer results and conversion rates",
+            "link_text": "View Metrics →"
+          },
+          {
+            "icon": "🎬",
+            "title": "Customer Success Stories",
+            "description": "Video testimonials from revenue teams",
+            "link_text": "Watch Videos →"
+          },
+          {
+            "icon": "🔧",
+            "title": "Integration Guides",
+            "description": "Connect with CRM, marketing automation, and calendaring",
+            "link_text": "View Guides →"
+          }
+        ]
+      },
+      "competitive": {
+        "section_id": "competitive",
+        "title": "Competitive Intelligence",
+        "background": "gray",
+        "cards": [
+          {
+            "icon": "⚔️",
+            "title": "vs. Traditional Chatbots",
+            "description": "Why Sidekick Sales converts better",
+            "link_text": "View Comparison →"
+          },
+          {
+            "icon": "🏆",
+            "title": "Unique Differentiators",
+            "description": "What sets us apart in the market",
+            "link_text": "Learn More →"
+          },
+          {
+            "icon": "💬",
+            "title": "Objection Handling",
+            "description": "Address common sales concerns",
+            "link_text": "View Guide →"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Drive More Revenue?",
+        "subtitle": "See how Sidekick Sales can transform your pipeline",
+        "buttons": [
+          {"text": "Schedule Demo", "type": "btn-primary"},
+          {"text": "Calculate ROI", "type": "btn-secondary"}
+        ]
+      }
+    },
+    "product_customer_ai": {
+      "file_path": "product/customer-ai/index.html",
+      "hero": {
+        "badge": "CUSTOMER AI",
+        "title": "Gladly Customer AI",
+        "subtitle": "Gladly is Customer AI—the per-user intelligence layer that makes radically efficient, radically personal customer experiences possible, allowing AI to understand customers, predict needs, and teams through AI-powered customer intelligence.",
+        "gradient_color": "linear-gradient(135deg, #009B00 0%, #007a00 100%)",
+        "cta_buttons": [
+          {"text": "Learn More", "link": "#what-it-is", "type": "btn-white"},
+          {"text": "View Resources", "link": "#content", "type": "btn-outline"}
+        ]
+      },
+      "quick_nav": [
+        {"text": "What it is", "link": "#what-it-is"},
+        {"text": "Quick Links for Sales", "link": "#quick-links-sales"},
+        {"text": "Quick Links for CS/AM", "link": "#quick-links-csam"},
+        {"text": "Customer AI Videos", "link": "#videos"},
+        {"text": "Shareable Content", "link": "#shareable"},
+        {"text": "PR", "link": "#pr"},
+        {"text": "Enablement", "link": "#enablement"}
+      ],
+      "what_is_section": {
+        "title": "What is Gladly?",
+        "description": [
+          "Gladly is Customer AI—a per-user intelligence layer that makes radically efficient, radically personal experiences possible, allowing AI agents and human teams to understand customers, predict needs, and provide a seamless experience. It unifies customer conversations, commerce, AI, and support teams through AI-powered customer intelligence.",
+          "Why it matters: Most platforms treat customer data as isolated tickets rather than continuous relationships. Gladly's Customer AI creates a persistent intelligence layer that powers all interactions, enabling both AI agents and human teams to deliver personalized service at scale with full customer context.",
+          "Who it's for: B2C Businesses with high-touch customer relationships, ecommerce platforms, and brands prioritizing customer experience over transactional support."
+        ],
+        "background_color": "#0D0D0D"
+      },
+      "key_capabilities": [
+        {
+          "title": "Customer-Centered Platform",
+          "description": "All interactions organized by customer, not tickets"
+        },
+        {
+          "title": "AI-Powered Resolution and Support",
+          "description": "Automate resolutions while assisting human agents"
+        },
+        {
+          "title": "Real-Time Customer Context",
+          "description": "Complete conversation and purchase history instantly available"
+        },
+        {
+          "title": "Omnichannel Continuity",
+          "description": "Seamless experience across all communication channels"
+        },
+        {
+          "title": "Commerce Integration",
+          "description": "Direct integration with order management and catalogs"
+        },
+        {
+          "title": "Trusted Access & Configuration",
+          "description": "Secure, compliant access to customer intelligence"
+        }
+      ],
+      "launch_status": {
+        "title": "🚀 Launch Status",
+        "stages": [
+          {"name": "Initial research", "active": false},
+          {"name": "Added to roadmap", "active": false},
+          {"name": "Discovery and design", "active": false},
+          {"name": "Build in progress", "active": false},
+          {"name": "Prototyping", "active": false},
+          {"name": "Limited rollout", "active": false},
+          {"name": "Broader rollout", "active": false},
+          {"name": "Open Access", "active": true, "marker": "➡️ Open Access 🎉 ⬅️"}
+        ],
+        "status_note": "Customer AI is the foundational intelligence layer powering all Gladly products and is available to all customers."
+      },
+      "quick_links_sales": {
+        "section_id": "quick-links-sales",
+        "title": "Quick Links For Sales",
+        "background": "white",
+        "cards": [
+          {
+            "title": "Launch video",
+            "description": "Product launch overview and announcement",
+            "link_text": "Watch Video →"
+          },
+          {
+            "title": "Customer AI Video",
+            "description": "Detailed product walkthrough and capabilities",
+            "link_text": "Watch Video →"
+          },
+          {
+            "title": "Customer AI one-pager",
+            "description": "Quick reference sheet for sales conversations",
+            "link_text": "View One-Pager →"
+          },
+          {
+            "title": "New customer stories",
+            "description": "Latest customer success stories and testimonials",
+            "link_text": "View Stories →"
+          },
+          {
+            "title": "Cluadia photos",
+            "description": "Visual assets and brand imagery",
+            "link_text": "View Photos →"
+          }
+        ]
+      },
+      "quick_links_csam": {
+        "section_id": "quick-links-csam",
+        "title": "Quick Links For CS/AM",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Sidekick Sales usage",
+            "description": "Usage guidelines and best practices",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "Rollout to Customers for CSMs",
+            "description": "Customer rollout strategy and materials",
+            "link_text": "View Strategy →"
+          },
+          {
+            "title": "New customer assets",
+            "description": "Latest onboarding and training materials",
+            "link_text": "Access Assets →"
+          },
+          {
+            "title": "Claudia videos",
+            "description": "Video resources for customer presentations",
+            "link_text": "Watch Videos →"
+          }
+        ]
+      },
+      "videos": {
+        "section_id": "videos",
+        "title": "Customer AI Videos",
+        "background": "white",
+        "cards": [
+          {
+            "title": "Gladly Demo Walk",
+            "description": "Complete platform demonstration",
+            "link_text": "Watch Demo →"
+          },
+          {
+            "title": "Gladly Launch Video",
+            "description": "Official product launch announcement",
+            "link_text": "Watch Launch →"
+          },
+          {
+            "title": "Customer AI Video",
+            "description": "Deep dive into AI capabilities",
+            "link_text": "Watch Video →"
+          },
+          {
+            "title": "Gladly AI Video w/ text",
+            "description": "Captioned version for accessibility",
+            "link_text": "Watch Video →"
+          },
+          {
+            "title": "Customer AI Videos w/ tec",
+            "description": "Technical deep-dive versions",
+            "link_text": "Watch Videos →"
+          }
+        ]
+      },
+      "shareable_content": {
+        "section_id": "shareable",
+        "title": "Shareable Content",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Gladly One Pager",
+            "description": "One-page overview for quick reference",
+            "link_text": "View One-Pager →"
+          },
+          {
+            "title": "Customer AI One Pager",
+            "description": "AI-focused one-page summary",
+            "link_text": "View One-Pager →"
+          },
+          {
+            "title": "External Customer Branded",
+            "description": "Branded materials for customer-facing use",
+            "link_text": "View Materials →"
+          },
+          {
+            "title": "Buyer's Guide or XLSX site",
+            "description": "Comprehensive buyer's guide and resources",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "Email to Gladly on AI ...",
+            "description": "Email templates for AI discussions",
+            "link_text": "View Templates →"
+          }
+        ]
+      },
+      "pr": {
+        "section_id": "pr",
+        "title": "PR",
+        "background": "white",
+        "cards": [
+          {
+            "title": "WIRED article",
+            "description": "Featured coverage in WIRED magazine",
+            "link_text": "Read Article →"
+          },
+          {
+            "title": "Fortune Access",
+            "description": "Fortune magazine feature and analysis",
+            "link_text": "Read Article →"
+          },
+          {
+            "title": "Further News",
+            "description": "Additional press coverage and mentions",
+            "link_text": "View News →"
+          }
+        ]
+      },
+      "enablement": {
+        "section_id": "enablement",
+        "title": "Enablement",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Customer AI Nametrix Training",
+            "description": "Training session on AI capabilities",
+            "link_text": "Start Training →"
+          },
+          {
+            "title": "Connection of the Message to the",
+            "description": "Messaging framework and guidelines",
+            "link_text": "View Framework →"
+          },
+          {
+            "title": "Rebranding FAQ",
+            "description": "Frequently asked questions about rebrand",
+            "link_text": "View FAQ →"
+          },
+          {
+            "title": "Sidekick AI Demo Integrations",
+            "description": "Demo integration guides and examples",
+            "link_text": "View Demos →"
+          },
+          {
+            "title": "2025 GKO",
+            "description": "Go-to-market kickoff materials",
+            "link_text": "Access Materials →"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need Help With Customer AI?",
+        "subtitle": "Can't find what you're looking for? Reach out to the enablement team",
+        "buttons": [
+          {"text": "Ask in #enablement-resources", "type": "btn-primary"},
+          {"text": "Browse All Products", "type": "btn-secondary"}
+        ]
+      }
+    },
+    "product_guides_journeys": {
+      "file_path": "product/guides-journeys/index.html",
+      "hero": {
+        "badge": "GUIDES AND JOURNEYS",
+        "title": "Guides and Journeys",
+        "subtitle": "Sidekick Guides and Journeys simplify AI setup and optimization, giving CX teams full control without technical skills. Guides offers a no-code interface to create and manage AI workflows while Journeys provides insights and analytics to continuously improve AI performance and outcomes.",
+        "gradient_color": "linear-gradient(135deg, #009B00 0%, #007a00 100%)",
+        "cta_buttons": [
+          {"text": "Learn More", "link": "#what-it-is", "type": "btn-white"},
+          {"text": "View Resources", "link": "#content", "type": "btn-outline"}
+        ]
+      },
+      "quick_nav": [
+        {"text": "What it is", "link": "#what-it-is"},
+        {"text": "Content", "link": "#content"},
+        {"text": "Demo", "link": "#demo"},
+        {"text": "Enablement", "link": "#enablement"}
+      ],
+      "what_is_section": {
+        "title": "What it is",
+        "description": [
+          "Sidekick Guides and Journeys simplify AI setup and optimization, giving CX teams full control without technical skills. Guides offers a no-code interface to create and manage AI workflows while Journeys provides insights and analytics to continuously improve AI performance and outcomes.",
+          "Why it matters: AI is often hard to manage and optimize without technical help, leading to poor performance and frustrating customer experiences. Guides and Journeys remove complexity, letting CX teams quickly set up, monitor, and refine AI to deliver more effective and personalized support at scale.",
+          "Who it's for: B2C Businesses and CX teams managing high volumes of support who need simple tools to configure and improve AI without relying on technical skills or external help."
+        ],
+        "background_color": "#0D0D0D"
+      },
+      "key_capabilities": [
+        {
+          "title": "No Code AI Workflow Setup",
+          "description": "Create and manage AI conversations without any coding"
+        },
+        {
+          "title": "Continuous Performance Insights",
+          "description": "Real-time analytics on AI effectiveness and customer satisfaction"
+        },
+        {
+          "title": "Instant Updates and Optimization",
+          "description": "Make changes to AI behavior instantly without technical support"
+        },
+        {
+          "title": "Customer-Centric Workflow Design",
+          "description": "Build workflows focused on customer needs and journeys"
+        },
+        {
+          "title": "Seamless Feedback Loop",
+          "description": "Continuous improvement based on real customer interactions"
+        },
+        {
+          "title": "Multi-Channel Support",
+          "description": "Deploy guides across all customer communication channels"
+        },
+        {
+          "title": "Unified AI and Customer Context",
+          "description": "Leverage full customer intelligence in every workflow"
+        }
+      ],
+      "launch_status": {
+        "title": "🚀 Launch Status",
+        "stages": [
+          {"name": "Initial research", "active": false},
+          {"name": "Added to roadmap", "active": false},
+          {"name": "Discovery and design", "active": false},
+          {"name": "Build in progress", "active": false},
+          {"name": "Prototyping", "active": false},
+          {"name": "Limited rollout", "active": false},
+          {"name": "Broader rollout", "active": true, "marker": "➡️ Broader rollout ⬅️"},
+          {"name": "Open Access", "active": false}
+        ],
+        "status_note": "Guides and Journeys is in broader rollout and available to most customers."
+      },
+      "content": {
+        "section_id": "content",
+        "title": "Content",
+        "background": "white",
+        "cards": [
+          {
+            "title": "Product One Pager: Guides",
+            "description": "Quick reference guide for Guides product",
+            "link_text": "View One-Pager →"
+          },
+          {
+            "title": "One Pager",
+            "description": "General overview one-pager",
+            "link_text": "View One-Pager →"
+          },
+          {
+            "title": "Deck Template Coming Soon",
+            "description": "Presentation deck for customer conversations",
+            "link_text": "Coming Soon"
+          },
+          {
+            "title": "September Roadmap Deck",
+            "description": "Product roadmap and upcoming features",
+            "link_text": "View Roadmap →"
+          }
+        ]
+      },
+      "demo": {
+        "section_id": "demo",
+        "title": "Demo",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Guides Sales Prototype",
+            "description": "Interactive sales prototype demonstrating key features",
+            "link_text": "Try Prototype →"
+          },
+          {
+            "title": "Demo Script JSON, late ...",
+            "description": "Demo script and configuration files",
+            "link_text": "View Script →"
+          }
+        ]
+      },
+      "enablement": {
+        "section_id": "enablement",
+        "title": "Enablement",
+        "background": "white",
+        "cards": [
+          {
+            "title": "Foundational Training",
+            "description": "Core training materials for Guides and Journeys",
+            "link_text": "Start Training →"
+          },
+          {
+            "title": "Tactical Enablement",
+            "description": "Hands-on tactical training and exercises",
+            "link_text": "View Training →"
+          },
+          {
+            "title": "April 2025 GTM AI Hands",
+            "description": "Go-to-market training session recording",
+            "link_text": "Watch Recording →"
+          },
+          {
+            "title": "2025 GKO",
+            "description": "Global kickoff materials and resources",
+            "link_text": "Access Materials →"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need Help With Guides and Journeys?",
+        "subtitle": "Can't find what you're looking for? Reach out to the enablement team",
+        "buttons": [
+          {"text": "Ask in #enablement-resources", "type": "btn-primary"},
+          {"text": "Browse All Products", "type": "btn-secondary"}
+        ]
+      }
+    },
+    "product_app_platform": {
+      "file_path": "product/app-platform/index.html",
+      "hero": {
+        "badge": "APP PLATFORM",
+        "title": "App Platform",
+        "subtitle": "Gladly's App Platform is a low-code integration layer that connects external systems like order management, loyalty, and payment directly to Gladly's interface for agents and AI. Teams get faster setup, better service outcomes, and 'lower IT overhead.",
+        "gradient_color": "linear-gradient(135deg, #009B00 0%, #007a00 100%)",
+        "cta_buttons": [
+          {"text": "Learn More", "link": "#what-it-is", "type": "btn-white"},
+          {"text": "View Resources", "link": "#content", "type": "btn-outline"}
+        ]
+      },
+      "quick_nav": [
+        {"text": "What it is", "link": "#what-it-is"},
+        {"text": "Available Apps", "link": "#available-apps"},
+        {"text": "Talk Tracks + Next Steps", "link": "#talk-tracks"},
+        {"text": "Content", "link": "#content"},
+        {"text": "Demo", "link": "#demo"},
+        {"text": "Technical Enablement", "link": "#technical-enablement"},
+        {"text": "Revenue Enablement", "link": "#revenue-enablement"}
+      ],
+      "what_is_section": {
+        "title": "What it is",
+        "description": [
+          "Gladly's App Platform is a low-code integration layer that connects external systems like order management, loyalty, and payment directly to Gladly's interface for agents and AI.",
+          "Why it matters: It eliminates tool-switching, gives agents full contact, and lets AI act on real data—teams get faster setup, better service outcomes, and 'lower IT overhead.",
+          "Who it's for: For IT and CX teams at ecommerce high-tech customers who rely on multiple systems to support customers and need simple tools to unify data across agents and AI."
+        ],
+        "background_color": "#0D0D0D"
+      },
+      "key_capabilities": [
+        {
+          "title": "Bi-directional data sync (read and write)",
+          "description": "Two-way data flow between Gladly and external systems"
+        },
+        {
+          "title": "Real-time visibility in Hero and Sidekick",
+          "description": "Live data accessible to both human agents and AI"
+        },
+        {
+          "title": "40+ pre-built integrations",
+          "description": "Ready-to-use connections with popular business tools"
+        },
+        {
+          "title": "Open APIs and SDK",
+          "description": "Build custom integrations for unique requirements"
+        },
+        {
+          "title": "Secure and compliant",
+          "description": "Enterprise-grade security and data protection"
+        }
+      ],
+      "launch_status": {
+        "title": "🚀 Launch Status",
+        "stages": [
+          {"name": "Initial research", "active": false},
+          {"name": "Added to roadmap", "active": false},
+          {"name": "Discovery and design", "active": false},
+          {"name": "Build in progress", "active": false},
+          {"name": "Prototyping", "active": false},
+          {"name": "Limited rollout", "active": false},
+          {"name": "Broader rollout", "active": false},
+          {"name": "Open Access", "active": true, "marker": "➡️ Open Access 🎉 ⬅️"}
+        ],
+        "status_note": "App Platform is generally available and accessible to all customers."
+      },
+      "available_apps": {
+        "section_id": "available-apps",
+        "title": "Available Apps",
+        "background": "white",
+        "cards": [
+          {
+            "title": "List of available apps",
+            "description": "Browse all pre-built integrations and apps available on the platform",
+            "link_text": "View All Apps →"
+          }
+        ]
+      },
+      "talk_tracks": {
+        "section_id": "talk-tracks",
+        "title": "Talk Tracks + Next Steps",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Next steps - Internal",
+            "description": "Internal process and handoff documentation",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "Next steps - External",
+            "description": "Customer-facing implementation steps",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "SC + CRM Talk Tracks",
+            "description": "Solutions consulting and CRM conversation guides",
+            "link_text": "View Talk Tracks →"
+          },
+          {
+            "title": "AE Talk Tracks",
+            "description": "Account executive conversation frameworks",
+            "link_text": "View Talk Tracks →"
+          }
+        ]
+      },
+      "content": {
+        "section_id": "content",
+        "title": "Content",
+        "background": "white",
+        "cards": [
+          {
+            "title": "📄 START | Apps Platform 3...",
+            "description": "Getting started guide for App Platform",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "Templated Slides",
+            "description": "Pre-built presentation templates",
+            "link_text": "View Slides →"
+          },
+          {
+            "title": "September Roadmap Deck",
+            "description": "Product roadmap and upcoming features",
+            "link_text": "View Roadmap →"
+          }
+        ]
+      },
+      "demo": {
+        "section_id": "demo",
+        "title": "Demo",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "How to set up an App",
+            "description": "Step-by-step demo of app configuration and setup",
+            "link_text": "Watch Demo →"
+          }
+        ]
+      },
+      "technical_enablement": {
+        "section_id": "technical-enablement",
+        "title": "Technical Enablement",
+        "background": "white",
+        "cards": [
+          {
+            "title": "Product Enablement - ...",
+            "description": "Technical product training materials",
+            "link_text": "Start Training →"
+          },
+          {
+            "title": "Product Enablement - ...",
+            "description": "Advanced technical enablement",
+            "link_text": "Start Training →"
+          },
+          {
+            "title": "App Platform Technical En...",
+            "description": "Platform architecture and technical overview",
+            "link_text": "View Docs →"
+          },
+          {
+            "title": "App Platform Technical En...",
+            "description": "Developer documentation and API guides",
+            "link_text": "View Docs →"
+          },
+          {
+            "title": "App Platform for Hero Tech...",
+            "description": "Hero integration technical guide",
+            "link_text": "View Guide →"
+          },
+          {
+            "title": "App Platform for Hero Tech...",
+            "description": "Advanced Hero platform configurations",
+            "link_text": "View Guide →"
+          }
+        ]
+      },
+      "revenue_enablement": {
+        "section_id": "revenue-enablement",
+        "title": "Revenue Enablement",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Sidekick Email + ...",
+            "description": "Revenue enablement for Email integrations",
+            "link_text": "View Materials →"
+          },
+          {
+            "title": "12/19/24: App Platform &...",
+            "description": "Platform enablement session recording",
+            "link_text": "Watch Recording →"
+          },
+          {
+            "title": "Session Folder",
+            "description": "Complete enablement session materials",
+            "link_text": "Access Folder →"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Need Help With App Platform?",
+        "subtitle": "Can't find what you're looking for? Reach out to the enablement team",
+        "buttons": [
+          {"text": "Ask in #enablement-resources", "type": "btn-primary"},
+          {"text": "Browse All Products", "type": "btn-secondary"}
+        ]
+      }
+    },
+    "resources_templates": {
+      "file_path": "resources/templates/index.html",
+      "hero": {
+        "title": "Template Gallery",
+        "subtitle": "Deck templates and slide inserts for your presentations",
+        "gradient_color": "linear-gradient(135deg, #8C69F0 0%, #7557d9 100%)"
+      },
+      "quick_nav": [
+        {"text": "Brand Guidelines", "link": "#brand-guidelines"},
+        {"text": "Pitch Decks", "link": "#pitch-decks"},
+        {"text": "Product Decks", "link": "#product-decks"},
+        {"text": "Security + RFX", "link": "#security-rfx"},
+        {"text": "Implementation", "link": "#implementation"},
+        {"text": "Feature Slides", "link": "#feature-slides"}
+      ],
+      "brand_guidelines": {
+        "section_id": "brand-guidelines",
+        "title": "Brand Guidelines",
+        "subtitle": "Branded templates and style guides",
+        "icon": "🎨",
+        "background": "white",
+        "featured_deck": {
+          "title": "Gladly Brand Guidelines Deck",
+          "description": "Complete brand style guide including logos, colors, typography, imagery guidelines, and best practices for creating on-brand materials",
+          "meta": "45 slides • Updated Sep 2024",
+          "cta": "Open Deck"
+        },
+        "sidebar_cards": [
+          {
+            "title": "Logo Assets",
+            "description": "All logo variations and usage guidelines",
+            "link_text": "Download Assets →"
+          },
+          {
+            "title": "Color Palette",
+            "description": "Official color codes and application examples",
+            "link_text": "View Palette →"
+          }
+        ]
+      },
+      "pitch_decks": {
+        "section_id": "pitch-decks",
+        "title": "Pitch Decks",
+        "subtitle": "Full presentation templates for customer pitches",
+        "icon": "📊",
+        "background": "#F3F3F3",
+        "featured_deck": {
+          "title": "First Meeting Pitch Deck",
+          "description": "Comprehensive first meeting template covering company overview, product capabilities, customer success stories, and next steps",
+          "meta": "32 slides • Updated Oct 2024",
+          "cta": "Open Deck"
+        },
+        "sidebar_cards": [
+          {
+            "title": "Specialized Team Pitch",
+            "description": "Pitch template for specialized team conversations",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "Custom Template w/o Hero",
+            "description": "Customizable deck template without Hero content",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "Buyer Persona Pitch",
+            "description": "Persona-specific pitch deck template",
+            "link_text": "Open Template →"
+          }
+        ],
+        "additional_cards": [
+          {
+            "title": "First Day Experience",
+            "description": "Day 1 pitch template",
+            "link_text": "View →"
+          },
+          {
+            "title": "Pitch (no team section)",
+            "description": "Streamlined pitch deck",
+            "link_text": "View →"
+          }
+        ]
+      },
+      "product_decks": {
+        "section_id": "product-decks",
+        "title": "Product Decks",
+        "subtitle": "Deep dive product presentation templates",
+        "icon": "📱",
+        "background": "white",
+        "featured_deck": {
+          "title": "Sidekick for Enterprise",
+          "description": "Enterprise-focused Sidekick presentation covering advanced features, security, scalability, and integration capabilities",
+          "meta": "38 slides • Updated Oct 2024",
+          "cta": "Open Deck"
+        },
+        "sidebar_cards": [
+          {
+            "title": "Product Storytelling Deck",
+            "description": "Narrative-driven product presentation",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "Zendesk Alternative",
+            "description": "Competitive positioning against Zendesk",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "Deep Dive Roadmap Kit",
+            "description": "Roadmap presentation template",
+            "link_text": "Open Template →"
+          }
+        ]
+      },
+      "security_rfx": {
+        "section_id": "security-rfx",
+        "title": "Security + RFX Templates",
+        "subtitle": "Security presentations and RFP response templates",
+        "icon": "🔒",
+        "background": "#F3F3F3",
+        "featured_deck": {
+          "title": "Architecture, Security, and SOC 2",
+          "description": "Comprehensive security presentation covering system architecture, security controls, compliance certifications, and data protection",
+          "meta": "42 slides • Updated Oct 2024",
+          "cta": "Open Deck"
+        },
+        "sidebar_cards": [
+          {
+            "title": "RFP Response Template",
+            "description": "Standard template for responding to RFPs",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "RFI Response Template",
+            "description": "Standard template for responding to RFIs",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "VSA Response Template",
+            "description": "Vendor security assessment template",
+            "link_text": "Open Template →"
+          }
+        ]
+      },
+      "implementation": {
+        "section_id": "implementation",
+        "title": "Implementation Decks",
+        "subtitle": "Customer onboarding and implementation templates",
+        "icon": "⚙️",
+        "background": "white",
+        "featured_deck": {
+          "title": "Customer Onboarding Kickoff",
+          "description": "Complete kickoff presentation covering implementation timeline, milestones, team introductions, and success criteria",
+          "meta": "28 slides • Updated Sep 2024",
+          "cta": "Open Deck"
+        },
+        "sidebar_cards": [
+          {
+            "title": "90 Day Implementation",
+            "description": "Phased implementation roadmap template",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "QBR Deck Template",
+            "description": "Quarterly business review presentation",
+            "link_text": "Open Template →"
+          },
+          {
+            "title": "Success Renewal Deck",
+            "description": "Renewal conversation template",
+            "link_text": "Open Template →"
+          }
+        ]
+      },
+      "feature_slides": {
+        "section_id": "feature-slides",
+        "title": "Feature Slides",
+        "subtitle": "Individual feature slides to insert into presentations",
+        "icon": "✨",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Auto Translate Feature Slides",
+            "description": "Slides showcasing automatic translation capabilities",
+            "link_text": "View Slides →"
+          },
+          {
+            "title": "E-Escalate Widget",
+            "description": "Feature slides for escalation widget",
+            "link_text": "View Slides →"
+          },
+          {
+            "title": "Assisted Auth Slides",
+            "description": "Authentication feature presentation",
+            "link_text": "View Slides →"
+          },
+          {
+            "title": "Product Storytelling Slides",
+            "description": "Narrative feature presentations",
+            "link_text": "View Slides →"
+          }
+        ]
+      }
+    },
+    "resources_content": {
+      "file_path": "resources/content/index.html",
+      "hero": {
+        "title": "Content Library",
+        "subtitle": "All decks, one-pagers, collateral, and marketing materials in one place",
+        "gradient_color": "linear-gradient(135deg, #8C69F0 0%, #7557d9 100%)"
+      },
+      "quick_nav": [
+        {"text": "Product Decks", "link": "#product-decks"},
+        {"text": "One-Pagers", "link": "#one-pagers"},
+        {"text": "Industry Materials", "link": "#industry"},
+        {"text": "Case Studies", "link": "#case-studies"},
+        {"text": "Marketing", "link": "#marketing"}
+      ],
+      "product_decks": {
+        "section_id": "product-decks",
+        "title": "Product Presentations",
+        "subtitle": "Full product decks and demo presentations",
+        "icon": "📊",
+        "background": "white",
+        "cards": [
+          {
+            "icon": "🤖",
+            "title": "Sidekick Overview Deck",
+            "description": "Comprehensive presentation on all Sidekick capabilities",
+            "meta": ["32 slides", "Updated Oct 2024"],
+            "link_text": "Download Deck →"
+          },
+          {
+            "icon": "🦸",
+            "title": "Hero Platform Deck",
+            "description": "Agent workspace and platform capabilities",
+            "meta": ["28 slides", "Updated Sep 2024"],
+            "link_text": "Download Deck →"
+          },
+          {
+            "icon": "🧠",
+            "title": "Customer AI Deep Dive",
+            "description": "Intelligence layer powering all products",
+            "meta": ["24 slides", "Updated Oct 2024"],
+            "link_text": "Download Deck →"
+          }
+        ]
+      },
+      "one_pagers": {
+        "section_id": "one-pagers",
+        "title": "One-Pagers & Product Sheets",
+        "subtitle": "Quick reference materials and product overviews",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "title": "Sidekick Standalone",
+            "description": "1-page overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "Sidekick Sales",
+            "description": "1-page overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "Sidekick Voice",
+            "description": "1-page overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "Sidekick Email",
+            "description": "1-page overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "Hero Platform",
+            "description": "1-page overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "Platform Overview",
+            "description": "Complete solution",
+            "link_text": "View →"
+          },
+          {
+            "title": "Outcomes Velocity",
+            "description": "Philosophy overview",
+            "link_text": "View →"
+          },
+          {
+            "title": "AI Comparison",
+            "description": "Resolution vs containment",
+            "link_text": "View →"
+          }
+        ]
+      },
+      "industry": {
+        "section_id": "industry",
+        "title": "Industry-Specific Materials",
+        "subtitle": "Tailored content for key verticals",
+        "icon": "🏢",
+        "background": "white",
+        "cards": [
+          {
+            "icon": "🛍️",
+            "title": "Retail & E-commerce",
+            "description": "Industry deck with retail use cases and customer stories",
+            "meta": ["20 slides", "Updated Oct 2024"],
+            "link_text": "Download Deck →"
+          },
+          {
+            "icon": "💄",
+            "title": "Beauty & Personal Care",
+            "description": "Vertical-specific positioning and case studies",
+            "meta": ["18 slides", "Updated Sep 2024"],
+            "link_text": "Download Deck →"
+          },
+          {
+            "icon": "✈️",
+            "title": "Travel & Hospitality",
+            "description": "Industry challenges and Gladly solutions",
+            "meta": ["22 slides", "Updated Aug 2024"],
+            "link_text": "Download Deck →"
+          }
+        ]
+      },
+      "case_studies": {
+        "section_id": "case-studies",
+        "title": "Case Studies & Customer Stories",
+        "subtitle": "Success stories with metrics and outcomes",
+        "background": "#F3F3F3",
+        "cards": [
+          {
+            "icon": "⭐",
+            "title": "Leading Beauty Brand: 87% AI Resolution Rate",
+            "description": "How a top beauty retailer achieved industry-leading resolution rates with Sidekick",
+            "link_text": "Read Case Study →"
+          },
+          {
+            "icon": "🏔️",
+            "title": "Outdoor Retailer: 40% Reduction in Handle Time",
+            "description": "Efficiency gains through Sidekick Answers and Agent Assist",
+            "link_text": "Read Case Study →"
+          },
+          {
+            "icon": "👗",
+            "title": "Fashion E-commerce: $2M Cost Savings",
+            "description": "ROI analysis from implementing full Gladly platform",
+            "link_text": "Read Case Study →"
+          },
+          {
+            "icon": "🌍",
+            "title": "Travel Company: 95% CSAT with AI",
+            "description": "Maintaining high satisfaction while scaling with automation",
+            "link_text": "Read Case Study →"
+          }
+        ]
+      },
+      "marketing": {
+        "section_id": "marketing",
+        "title": "Marketing Collateral",
+        "subtitle": "Brand materials and campaign assets",
+        "icon": "📢",
+        "background": "white",
+        "cards": [
+          {
+            "icon": "🎨",
+            "title": "Brand Guidelines",
+            "description": "Logos, colors, typography, and usage guidelines",
+            "link_text": "View Guidelines →"
+          },
+          {
+            "icon": "📧",
+            "title": "Email Templates",
+            "description": "Branded email templates for campaigns",
+            "link_text": "View Templates →"
+          },
+          {
+            "icon": "💬",
+            "title": "Social Media Assets",
+            "description": "LinkedIn, Twitter, and social sharing content",
+            "link_text": "View Assets →"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Can't Find What You Need?",
+        "subtitle": "Request custom content or ask the enablement team for help",
+        "buttons": [
+          {"text": "Request Content", "type": "btn-primary"},
+          {"text": "Browse All Files", "type": "btn-secondary"}
+        ]
+      }
+    }
+  },
+  "notes": "This extraction includes all hero sections, navigation, content cards, launch statuses, capabilities, use cases, and CTAs from the primary product and resource pages. Additional pages (training, CoE, enablement, demos, toolkits, other Sidekick products) were also read but are extensive - this represents the core structure ready for Sanity CMS import."
+}

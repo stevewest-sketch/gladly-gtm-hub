@@ -1,0 +1,2869 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "rows": 3,
+        "name": "excerpt",
+        "type": "text"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "mainImage",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "body",
+        "type": "array"
+      },
+      {
+        "name": "publishedAt",
+        "type": "datetime"
+      }
+    ],
+    "name": "post",
+    "type": "document",
+    "title": "Blog Post"
+  },
+  {
+    "fields": [
+      {
+        "description": "Build your homepage by adding and reordering different section types",
+        "of": [
+          {
+            "type": "heroWithSearchSection",
+            "title": "Hero with Search Bar"
+          },
+          {
+            "type": "teamToolkitsSection"
+          },
+          {
+            "type": "quickTasksSection"
+          },
+          {
+            "type": "productsGridSection"
+          },
+          {
+            "type": "whatsNewSection",
+            "title": "What's New Section"
+          },
+          {
+            "type": "helpSection",
+            "title": "Help/CTA Section"
+          }
+        ],
+        "name": "pageBuilder",
+        "type": "array",
+        "title": "Page Builder (Drag & Drop Sections)"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Main heading (displays at 72px)",
+        "name": "heroTitle",
+        "type": "string"
+      },
+      {
+        "description": "Supporting text below title",
+        "name": "heroSubtitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "Search for battle cards, templates, demos, product info...",
+        "name": "searchPlaceholder",
+        "type": "string",
+        "title": "Search Bar Placeholder"
+      },
+      {
+        "initialValue": "Start with Your Role",
+        "name": "teamToolkitsTitle",
+        "type": "string",
+        "title": "Team Toolkits Section Title"
+      },
+      {
+        "initialValue": "Everything you need, organized for your job",
+        "name": "teamToolkitsSubtitle",
+        "type": "string",
+        "title": "Team Toolkits Section Subtitle"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "description": "Single emoji character",
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              },
+              {
+                "options": {
+                  "list": [
+                    {
+                      "title": "Blue (Sales)",
+                      "value": "blue"
+                    },
+                    {
+                      "title": "Purple (CSM)",
+                      "value": "purple"
+                    },
+                    {
+                      "title": "Green (SC)",
+                      "value": "green"
+                    },
+                    {
+                      "title": "Orange (Marketing)",
+                      "value": "orange"
+                    }
+                  ]
+                },
+                "name": "color",
+                "type": "string",
+                "title": "Color Theme"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "teamToolkits",
+        "type": "array"
+      },
+      {
+        "initialValue": "What do you need to do today?",
+        "name": "quickTasksTitle",
+        "type": "string",
+        "title": "Quick Tasks Section Title"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "quickTasks",
+        "type": "array"
+      },
+      {
+        "initialValue": "Product Knowledge",
+        "name": "productsTitle",
+        "type": "string",
+        "title": "Products Section Title"
+      },
+      {
+        "initialValue": "Learn about our products and features",
+        "name": "productsSubtitle",
+        "type": "string",
+        "title": "Products Section Subtitle"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "products",
+        "type": "array"
+      },
+      {
+        "initialValue": "Oct 2025",
+        "description": "Badge text shown next to \"What's New\" heading",
+        "name": "whatsNewBadge",
+        "type": "string",
+        "title": "What's New Badge Text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 3
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "fields": [
+              {
+                "description": "Format: MONTH DAY, YEAR (e.g., OCTOBER 1, 2025)",
+                "name": "date",
+                "type": "string"
+              },
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 3,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "max",
+                        "constraint": 2
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "of": [
+                  {
+                    "fields": [
+                      {
+                        "name": "text",
+                        "type": "string",
+                        "title": "Link Text"
+                      },
+                      {
+                        "name": "url",
+                        "type": "string",
+                        "title": "URL"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "name": "links",
+                "type": "array"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "whatsNew",
+        "type": "array",
+        "title": "What's New"
+      },
+      {
+        "initialValue": "Most Useful Resources",
+        "name": "popularResourcesTitle",
+        "type": "string",
+        "title": "Popular Resources Section Title"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "popularResources",
+        "type": "array"
+      },
+      {
+        "fields": [
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "rows": 2,
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "max",
+                    "constraint": 2
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "of": [
+              {
+                "fields": [
+                  {
+                    "name": "text",
+                    "type": "string",
+                    "title": "Button Text"
+                  },
+                  {
+                    "name": "link",
+                    "type": "string"
+                  },
+                  {
+                    "options": {
+                      "list": [
+                        {
+                          "title": "Primary",
+                          "value": "primary"
+                        },
+                        {
+                          "title": "Secondary",
+                          "value": "secondary"
+                        }
+                      ]
+                    },
+                    "name": "variant",
+                    "type": "string",
+                    "title": "Button Variant"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "name": "buttons",
+            "type": "array"
+          }
+        ],
+        "name": "helpSection",
+        "type": "object"
+      }
+    ],
+    "name": "homepage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "body",
+        "type": "array"
+      }
+    ],
+    "name": "about",
+    "type": "document",
+    "title": "About Page"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "address",
+        "type": "text"
+      }
+    ],
+    "name": "contact",
+    "type": "document",
+    "title": "Contact Page"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Page Title"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "e.g., \"coe/bva\" for /coe/bva page",
+        "name": "slug",
+        "type": "slug",
+        "title": "Slug (URL Path)"
+      },
+      {
+        "name": "subtitle",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Purple",
+              "value": "purple"
+            },
+            {
+              "title": "Blue",
+              "value": "blue"
+            },
+            {
+              "title": "Green",
+              "value": "green"
+            },
+            {
+              "title": "Orange",
+              "value": "orange"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "purple",
+        "name": "heroColor",
+        "type": "string",
+        "title": "Hero Section Color"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^mailto$/",
+                                    "/^tel$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "name": "href",
+                      "type": "url",
+                      "title": "URL"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Emphasis"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bullet"
+              },
+              {
+                "value": "number",
+                "title": "Numbered"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "H1"
+              },
+              {
+                "value": "h2",
+                "title": "H2"
+              },
+              {
+                "value": "h3",
+                "title": "H3"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "fields": [
+              {
+                "name": "alt",
+                "type": "string",
+                "title": "Alternative text"
+              }
+            ],
+            "type": "image"
+          }
+        ],
+        "name": "content",
+        "type": "array",
+        "title": "Page Content"
+      },
+      {
+        "description": "Add sticky navigation buttons that jump to sections on the page",
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "label",
+                "type": "string",
+                "title": "Button Label"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      },
+                      {
+                        "flag": "regex",
+                        "constraint": {
+                          "pattern": "/^[a-z0-9-]+$/",
+                          "name": "anchor",
+                          "invert": false
+                        }
+                      }
+                    ],
+                    "level": "error",
+                    "message": "Use lowercase letters, numbers, and hyphens only"
+                  }
+                ],
+                "description": "e.g., \"overview\" for #overview (no # symbol)",
+                "name": "anchor",
+                "type": "string",
+                "title": "Anchor ID"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "quickNav",
+        "type": "array",
+        "title": "Quick Navigation (Anchor Links)"
+      },
+      {
+        "description": "Build your page by adding and reordering different section types",
+        "of": [
+          {
+            "type": "heroSection"
+          },
+          {
+            "type": "featureGridSection"
+          },
+          {
+            "type": "statsSection"
+          },
+          {
+            "type": "contentSection",
+            "title": "Rich Content Section"
+          },
+          {
+            "type": "ctaSection",
+            "title": "Call-to-Action Section"
+          },
+          {
+            "type": "launchStatusSection"
+          }
+        ],
+        "name": "pageBuilder",
+        "type": "array",
+        "title": "Page Builder (Drag & Drop Sections)"
+      },
+      {
+        "description": "Old section format - use Page Builder instead",
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "sectionTitle",
+                "type": "string"
+              },
+              {
+                "of": [
+                  {
+                    "marks": {
+                      "annotations": [
+                        {
+                          "i18nTitleKey": "inputs.portable-text.annotation.link",
+                          "options": {
+                            "modal": {
+                              "type": "popover"
+                            }
+                          },
+                          "fields": [
+                            {
+                              "validation": [
+                                {
+                                  "rules": [
+                                    {
+                                      "flag": "uri",
+                                      "constraint": {
+                                        "options": {
+                                          "scheme": [
+                                            "/^http$/",
+                                            "/^https$/",
+                                            "/^tel$/",
+                                            "/^mailto$/"
+                                          ],
+                                          "allowRelative": true,
+                                          "relativeOnly": false,
+                                          "allowCredentials": false
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "level": "error"
+                                }
+                              ],
+                              "description": "A valid web, email, phone, or relative link.",
+                              "name": "href",
+                              "type": "url",
+                              "title": "Link"
+                            }
+                          ],
+                          "name": "link",
+                          "type": "object"
+                        }
+                      ],
+                      "decorators": [
+                        {
+                          "value": "strong",
+                          "title": "Strong"
+                        },
+                        {
+                          "value": "em",
+                          "title": "Italic"
+                        },
+                        {
+                          "value": "code",
+                          "title": "Code"
+                        },
+                        {
+                          "value": "underline",
+                          "title": "Underline"
+                        },
+                        {
+                          "value": "strike-through",
+                          "title": "Strike"
+                        }
+                      ]
+                    },
+                    "lists": [
+                      {
+                        "value": "bullet",
+                        "title": "Bulleted list"
+                      },
+                      {
+                        "value": "number",
+                        "title": "Numbered list"
+                      }
+                    ],
+                    "styles": [
+                      {
+                        "value": "normal",
+                        "title": "Normal"
+                      },
+                      {
+                        "value": "h1",
+                        "title": "Heading 1"
+                      },
+                      {
+                        "value": "h2",
+                        "title": "Heading 2"
+                      },
+                      {
+                        "value": "h3",
+                        "title": "Heading 3"
+                      },
+                      {
+                        "value": "h4",
+                        "title": "Heading 4"
+                      },
+                      {
+                        "value": "h5",
+                        "title": "Heading 5"
+                      },
+                      {
+                        "value": "h6",
+                        "title": "Heading 6"
+                      },
+                      {
+                        "value": "blockquote",
+                        "title": "Quote"
+                      }
+                    ],
+                    "of": [],
+                    "type": "block"
+                  }
+                ],
+                "name": "sectionContent",
+                "type": "array"
+              }
+            ],
+            "type": "object",
+            "name": "section"
+          }
+        ],
+        "name": "sections",
+        "type": "array",
+        "title": "Legacy Content Sections (deprecated)"
+      }
+    ],
+    "name": "page",
+    "type": "document",
+    "title": "Pages"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Session Title"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "date",
+        "type": "datetime",
+        "title": "Session Date"
+      },
+      {
+        "description": "e.g., \"October 15, 2024\"",
+        "name": "dateDisplay",
+        "type": "string",
+        "title": "Date Display Text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "All Products",
+              "value": "all"
+            },
+            {
+              "title": "Sidekick Standalone",
+              "value": "sidekick-standalone"
+            },
+            {
+              "title": "Sidekick Sales",
+              "value": "sidekick-sales"
+            },
+            {
+              "title": "Sidekick Voice",
+              "value": "sidekick-voice"
+            },
+            {
+              "title": "Sidekick Email",
+              "value": "sidekick-email"
+            },
+            {
+              "title": "Hero Platform",
+              "value": "hero"
+            },
+            {
+              "title": "Customer AI",
+              "value": "customer-ai"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "all",
+                  "sidekick-standalone",
+                  "sidekick-sales",
+                  "sidekick-voice",
+                  "sidekick-email",
+                  "hero",
+                  "customer-ai"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "product",
+        "type": "string"
+      },
+      {
+        "name": "productLabel",
+        "type": "string",
+        "title": "Product Display Label"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "description": "e.g., \"60 min\"",
+        "name": "duration",
+        "type": "string"
+      },
+      {
+        "description": "e.g., \"Recording + Deck\"",
+        "name": "materials",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Materials Link"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Last 30 Days",
+              "value": "30days"
+            },
+            {
+              "title": "Last 90 Days",
+              "value": "90days"
+            },
+            {
+              "title": "Q4 2024",
+              "value": "q4-2024"
+            },
+            {
+              "title": "Q3 2024",
+              "value": "q3-2024"
+            },
+            {
+              "title": "Earlier",
+              "value": "earlier"
+            }
+          ]
+        },
+        "name": "dateFilter",
+        "type": "string",
+        "title": "Date Filter Category"
+      }
+    ],
+    "name": "trainingSession",
+    "type": "document",
+    "title": "Training Sessions"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Template Title"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Brand Guidelines",
+              "value": "brand"
+            },
+            {
+              "title": "Pitch Decks",
+              "value": "pitch"
+            },
+            {
+              "title": "Product Decks",
+              "value": "product"
+            },
+            {
+              "title": "Security + RFX",
+              "value": "security"
+            },
+            {
+              "title": "Implementation Decks",
+              "value": "implementation"
+            },
+            {
+              "title": "Feature Slides",
+              "value": "features"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "brand",
+                  "pitch",
+                  "product",
+                  "security",
+                  "implementation",
+                  "features"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Slide deck preview or thumbnail",
+        "name": "image",
+        "type": "image",
+        "title": "Preview Image"
+      },
+      {
+        "description": "e.g., \"45 slides\"",
+        "name": "slideCount",
+        "type": "string"
+      },
+      {
+        "description": "e.g., \"Updated Oct 2024\"",
+        "name": "lastUpdated",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Link to Template"
+      },
+      {
+        "initialValue": false,
+        "description": "Show as larger featured card",
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Template"
+      }
+    ],
+    "name": "templateResource",
+    "type": "document",
+    "title": "Template Resources"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Content Title"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Product Presentations",
+              "value": "presentations"
+            },
+            {
+              "title": "One-Pagers",
+              "value": "one-pagers"
+            },
+            {
+              "title": "Industry Materials",
+              "value": "industry"
+            },
+            {
+              "title": "Case Studies",
+              "value": "case-studies"
+            },
+            {
+              "title": "Marketing Collateral",
+              "value": "marketing"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "presentations",
+                  "one-pagers",
+                  "industry",
+                  "case-studies",
+                  "marketing"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Deck",
+              "value": "deck"
+            },
+            {
+              "title": "One-Pager",
+              "value": "one-pager"
+            },
+            {
+              "title": "Document",
+              "value": "document"
+            },
+            {
+              "title": "Video",
+              "value": "video"
+            }
+          ]
+        },
+        "name": "type",
+        "type": "string",
+        "title": "Content Type"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "description": "Content preview or thumbnail",
+        "name": "image",
+        "type": "image",
+        "title": "Preview Image"
+      },
+      {
+        "description": "Emoji or icon for the card",
+        "name": "icon",
+        "type": "string",
+        "title": "Icon/Emoji"
+      },
+      {
+        "description": "e.g., \"32 slides • Updated Oct 2024\"",
+        "name": "metadata",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Link to Content"
+      },
+      {
+        "initialValue": false,
+        "description": "Use for one-pagers and small items",
+        "name": "compact",
+        "type": "boolean",
+        "title": "Compact Card Style"
+      }
+    ],
+    "name": "contentResource",
+    "type": "document",
+    "title": "Content Library"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Resource Title"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "All Competitors",
+              "value": "all"
+            },
+            {
+              "title": "Zendesk",
+              "value": "zendesk"
+            },
+            {
+              "title": "Salesforce",
+              "value": "salesforce"
+            },
+            {
+              "title": "Freshdesk",
+              "value": "freshdesk"
+            },
+            {
+              "title": "Intercom",
+              "value": "intercom"
+            },
+            {
+              "title": "Genesys",
+              "value": "genesys"
+            },
+            {
+              "title": "Other",
+              "value": "other"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "all",
+                  "zendesk",
+                  "salesforce",
+                  "freshdesk",
+                  "intercom",
+                  "genesys",
+                  "other"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "competitor",
+        "type": "string"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "All Types",
+              "value": "all"
+            },
+            {
+              "title": "Battle Card",
+              "value": "battlecard"
+            },
+            {
+              "title": "Feature Comparison",
+              "value": "comparison"
+            },
+            {
+              "title": "Positioning Guide",
+              "value": "positioning"
+            },
+            {
+              "title": "Win/Loss Analysis",
+              "value": "winloss"
+            },
+            {
+              "title": "Objection Handling",
+              "value": "objections"
+            }
+          ]
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "valid",
+                "constraint": [
+                  "all",
+                  "battlecard",
+                  "comparison",
+                  "positioning",
+                  "winloss",
+                  "objections"
+                ]
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "resourceType",
+        "type": "string"
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "title": "Icon/Emoji"
+      },
+      {
+        "description": "e.g., \"Updated Oct 2024\"",
+        "name": "lastUpdated",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Link to Resource"
+      }
+    ],
+    "name": "competitiveResource",
+    "type": "document",
+    "title": "Competitive Resources"
+  },
+  {
+    "fields": [
+      {
+        "description": "Optional: e.g., \"hero\" for #hero (no # symbol)",
+        "name": "anchorId",
+        "type": "string",
+        "title": "Anchor ID (for quick nav)"
+      },
+      {
+        "description": "Optional badge text shown above the heading",
+        "name": "badge",
+        "type": "string",
+        "title": "Badge Text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "heading",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "subheading",
+        "type": "text"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Centered",
+              "value": "centered"
+            },
+            {
+              "title": "2 Columns (Text Left, Video Right)",
+              "value": "2-column"
+            }
+          ]
+        },
+        "initialValue": "centered",
+        "name": "layout",
+        "type": "string"
+      },
+      {
+        "description": "Optional: Wistia video ID (e.g., \"mwar81dg26\")",
+        "name": "videoMediaId",
+        "type": "string",
+        "title": "Wistia Video Media ID"
+      },
+      {
+        "initialValue": 1.7777777777777777,
+        "description": "Optional: e.g., 1.7777777777777777 for 16:9",
+        "name": "videoAspectRatio",
+        "type": "number"
+      },
+      {
+        "name": "primaryCtaText",
+        "type": "string",
+        "title": "Primary CTA Button Text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/",
+                      "/^mailto$/",
+                      "/^tel$/"
+                    ],
+                    "allowRelative": true,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "primaryCtaLink",
+        "type": "url",
+        "title": "Primary CTA Button Link"
+      },
+      {
+        "name": "secondaryCtaText",
+        "type": "string",
+        "title": "Secondary CTA Button Text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/",
+                      "/^mailto$/",
+                      "/^tel$/"
+                    ],
+                    "allowRelative": true,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "secondaryCtaLink",
+        "type": "url",
+        "title": "Secondary CTA Button Link"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Purple Gradient",
+              "value": "purple"
+            },
+            {
+              "title": "Blue Gradient",
+              "value": "blue"
+            },
+            {
+              "title": "Green Gradient",
+              "value": "green"
+            },
+            {
+              "title": "Orange Gradient",
+              "value": "orange"
+            },
+            {
+              "title": "Dark",
+              "value": "dark"
+            }
+          ]
+        },
+        "initialValue": "purple",
+        "name": "backgroundColor",
+        "type": "string"
+      }
+    ],
+    "name": "heroSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "description": "Optional: e.g., \"features\" for #features (no # symbol)",
+        "name": "anchorId",
+        "type": "string",
+        "title": "Anchor ID (for quick nav)"
+      },
+      {
+        "name": "sectionTitle",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "sectionDescription",
+        "type": "text"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "description": "Add an emoji or icon",
+                "name": "icon",
+                "type": "string",
+                "title": "Icon/Emoji"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "title",
+                "type": "string",
+                "title": "Feature Title"
+              },
+              {
+                "rows": 3,
+                "name": "description",
+                "type": "text",
+                "title": "Feature Description"
+              },
+              {
+                "description": "Optional: Add a URL to make this card clickable (e.g., \"#\" for placeholder, \"/path\" for internal, or \"https://...\" for external)",
+                "name": "link",
+                "type": "string",
+                "title": "Link URL"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "features",
+        "type": "array"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "2 Columns",
+              "value": 2
+            },
+            {
+              "title": "3 Columns",
+              "value": 3
+            },
+            {
+              "title": "4 Columns",
+              "value": 4
+            }
+          ]
+        },
+        "initialValue": 3,
+        "name": "columns",
+        "type": "number",
+        "title": "Number of Columns"
+      }
+    ],
+    "name": "featureGridSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "description": "Optional: e.g., \"stats\" for #stats (no # symbol)",
+        "name": "anchorId",
+        "type": "string",
+        "title": "Anchor ID (for quick nav)"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "White",
+              "value": "white"
+            },
+            {
+              "title": "Light Gray",
+              "value": "gray"
+            },
+            {
+              "title": "Purple",
+              "value": "purple"
+            },
+            {
+              "title": "Dark",
+              "value": "dark"
+            }
+          ]
+        },
+        "initialValue": "gray",
+        "name": "backgroundColor",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "description": "e.g., \"87%\", \"10x\", \"$2M\"",
+                "name": "number",
+                "type": "string"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "label",
+                "type": "string"
+              },
+              {
+                "name": "description",
+                "type": "string",
+                "title": "Description (optional)"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "stats",
+        "type": "array",
+        "title": "Statistics"
+      }
+    ],
+    "name": "statsSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "description": "Optional: e.g., \"content\" for #content (no # symbol)",
+        "name": "anchorId",
+        "type": "string",
+        "title": "Anchor ID (for quick nav)"
+      },
+      {
+        "name": "sectionTitle",
+        "type": "string",
+        "title": "Section Title (optional)"
+      },
+      {
+        "of": [
+          {
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ],
+                          "level": "error"
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "of": [],
+            "type": "block"
+          }
+        ],
+        "name": "content",
+        "type": "array"
+      },
+      {
+        "initialValue": false,
+        "description": "Add a launch status roadmap inside this section",
+        "name": "includeLaunchStatus",
+        "type": "boolean",
+        "title": "Include Launch Status Section"
+      },
+      {
+        "fields": [
+          {
+            "initialValue": "🚀 Launch Status",
+            "name": "heading",
+            "type": "string"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "max",
+                    "constraint": 8
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "of": [
+              {
+                "fields": [
+                  {
+                    "name": "label",
+                    "type": "string"
+                  },
+                  {
+                    "initialValue": false,
+                    "name": "isActive",
+                    "type": "boolean",
+                    "title": "Is Active Stage"
+                  }
+                ],
+                "type": "object"
+              }
+            ],
+            "name": "statusItems",
+            "type": "array",
+            "title": "Status Items (8 items in 2 rows)"
+          },
+          {
+            "rows": 2,
+            "name": "description",
+            "type": "text"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "launchStatus",
+        "type": "object"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "White",
+              "value": "white"
+            },
+            {
+              "title": "Light Gray",
+              "value": "gray"
+            },
+            {
+              "title": "Dark/Black",
+              "value": "dark"
+            }
+          ]
+        },
+        "initialValue": "white",
+        "name": "backgroundColor",
+        "type": "string"
+      }
+    ],
+    "name": "contentSection",
+    "type": "object",
+    "title": "Rich Content Section"
+  },
+  {
+    "fields": [
+      {
+        "description": "Optional: e.g., \"contact\" for #contact (no # symbol)",
+        "name": "anchorId",
+        "type": "string",
+        "title": "Anchor ID (for quick nav)"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "heading",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "primaryButtonText",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/",
+                      "/^mailto$/",
+                      "/^tel$/"
+                    ],
+                    "allowRelative": true,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "primaryButtonLink",
+        "type": "url"
+      },
+      {
+        "name": "secondaryButtonText",
+        "type": "string",
+        "title": "Secondary Button Text (optional)"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/",
+                      "/^mailto$/",
+                      "/^tel$/"
+                    ],
+                    "allowRelative": true,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "secondaryButtonLink",
+        "type": "url"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Purple",
+              "value": "purple"
+            },
+            {
+              "title": "Blue",
+              "value": "blue"
+            },
+            {
+              "title": "Green",
+              "value": "green"
+            },
+            {
+              "title": "Dark",
+              "value": "dark"
+            }
+          ]
+        },
+        "initialValue": "purple",
+        "name": "backgroundColor",
+        "type": "string"
+      }
+    ],
+    "name": "ctaSection",
+    "type": "object",
+    "title": "Call-to-Action Section"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "🚀 Launch Status",
+        "name": "heading",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 8
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "name": "label",
+                "type": "string"
+              },
+              {
+                "initialValue": false,
+                "name": "isActive",
+                "type": "boolean",
+                "title": "Is Active Stage"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "statusItems",
+        "type": "array",
+        "title": "Status Items (8 items in 2 rows)"
+      },
+      {
+        "rows": 2,
+        "name": "description",
+        "type": "text"
+      }
+    ],
+    "name": "launchStatusSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Main heading (displays at 72px)",
+        "name": "heroTitle",
+        "type": "string"
+      },
+      {
+        "description": "Supporting text below title",
+        "name": "heroSubtitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "Search for battle cards, templates, demos, product info...",
+        "name": "searchPlaceholder",
+        "type": "string",
+        "title": "Search Bar Placeholder"
+      }
+    ],
+    "name": "heroWithSearchSection",
+    "type": "object",
+    "title": "Hero with Search Bar"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Start with Your Role",
+        "name": "sectionTitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "Everything you need, organized for your job",
+        "name": "sectionSubtitle",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "description": "Single emoji character",
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              },
+              {
+                "options": {
+                  "list": [
+                    {
+                      "title": "Blue (Sales)",
+                      "value": "blue"
+                    },
+                    {
+                      "title": "Purple (CSM)",
+                      "value": "purple"
+                    },
+                    {
+                      "title": "Green (SC)",
+                      "value": "green"
+                    },
+                    {
+                      "title": "Orange (Marketing)",
+                      "value": "orange"
+                    }
+                  ]
+                },
+                "name": "color",
+                "type": "string",
+                "title": "Color Theme"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "toolkits",
+        "type": "array"
+      }
+    ],
+    "name": "teamToolkitsSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "What do you need to do today?",
+        "name": "sectionTitle",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "tasks",
+        "type": "array",
+        "title": "Quick Tasks"
+      }
+    ],
+    "name": "quickTasksSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Product Knowledge",
+        "name": "sectionTitle",
+        "type": "string"
+      },
+      {
+        "initialValue": "Learn about our products and features",
+        "name": "sectionSubtitle",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "products",
+        "type": "array"
+      }
+    ],
+    "name": "productsGridSection",
+    "type": "object"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "Oct 2025",
+        "description": "Badge text shown next to \"What's New\" heading",
+        "name": "badgeText",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 3
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "fields": [
+              {
+                "description": "Format: MONTH DAY, YEAR (e.g., OCTOBER 1, 2025)",
+                "name": "date",
+                "type": "string"
+              },
+              {
+                "name": "emoji",
+                "type": "string",
+                "title": "Emoji Icon"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 3,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "validation": [
+                  {
+                    "rules": [
+                      {
+                        "flag": "max",
+                        "constraint": 2
+                      }
+                    ],
+                    "level": "error"
+                  }
+                ],
+                "of": [
+                  {
+                    "fields": [
+                      {
+                        "name": "text",
+                        "type": "string",
+                        "title": "Link Text"
+                      },
+                      {
+                        "name": "url",
+                        "type": "string",
+                        "title": "URL"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "name": "links",
+                "type": "array"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "updates",
+        "type": "array"
+      }
+    ],
+    "name": "whatsNewSection",
+    "type": "object",
+    "title": "What's New Section"
+  },
+  {
+    "fields": [
+      {
+        "initialValue": "💡 Can't find what you need?",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "initialValue": "Ask in Slack - the team will help you find it",
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 2
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "text",
+                "type": "string",
+                "title": "Button Text"
+              },
+              {
+                "name": "link",
+                "type": "string"
+              },
+              {
+                "options": {
+                  "list": [
+                    {
+                      "title": "Primary",
+                      "value": "primary"
+                    },
+                    {
+                      "title": "Secondary",
+                      "value": "secondary"
+                    }
+                  ]
+                },
+                "name": "variant",
+                "type": "string",
+                "title": "Button Variant"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "buttons",
+        "type": "array"
+      }
+    ],
+    "name": "helpSection",
+    "type": "object",
+    "title": "Help/CTA Section"
+  }
+]
