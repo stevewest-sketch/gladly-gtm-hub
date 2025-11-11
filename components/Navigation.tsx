@@ -2,23 +2,159 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function Navigation() {
+interface NavigationChild {
+  title: string;
+  href: string;
+  activeColor: string;
+}
+
+interface NavigationItem {
+  title: string;
+  icon?: string;
+  href?: string;
+  defaultExpanded: boolean;
+  activeColor: string;
+  children?: NavigationChild[];
+}
+
+interface NavigationData {
+  logoText: string;
+  items: NavigationItem[];
+}
+
+interface NavigationProps {
+  data?: NavigationData | null;
+}
+
+export default function Navigation({ data }: NavigationProps) {
   const pathname = usePathname();
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    coe: true,
-    enablement: false,
-    toolkits: false,
-    products: true,
-    resources: false,
+
+  // Initialize expanded sections from data if available
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(() => {
+    if (data?.items) {
+      const initial: Record<string, boolean> = {};
+      data.items.forEach((item, index) => {
+        initial[`section-${index}`] = item.defaultExpanded;
+      });
+      return initial;
+    }
+    return {
+      coe: true,
+      enablement: false,
+      toolkits: false,
+      products: true,
+      resources: false,
+    };
   });
+
+  // Update expanded sections if data changes
+  useEffect(() => {
+    if (data?.items) {
+      const initial: Record<string, boolean> = {};
+      data.items.forEach((item, index) => {
+        initial[`section-${index}`] = item.defaultExpanded;
+      });
+      setExpandedSections(initial);
+    }
+  }, [data]);
 
   const isActive = (path: string) => pathname === path || pathname?.startsWith(path + '/');
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => ({ ...prev, [section]: !prev[section] }));
   };
+
+  const getActiveColorClasses = (color: string, isActive: boolean) => {
+    if (!isActive) return 'text-gray-600 hover:bg-gray-100';
+
+    switch (color) {
+      case 'blue':
+        return 'bg-blue-50 text-blue-600 font-semibold';
+      case 'purple':
+        return 'bg-purple-50 text-purple-600 font-semibold';
+      case 'green':
+        return 'bg-green-50 text-green-600 font-semibold';
+      case 'orange':
+        return 'bg-orange-50 text-orange-600 font-semibold';
+      default:
+        return 'bg-blue-50 text-blue-600 font-semibold';
+    }
+  };
+
+  // If data is available and has items, use Sanity-driven navigation
+  if (data && data.items && data.items.length > 0) {
+    return (
+      <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">
+        {/* Logo/Home */}
+        <Link href="/" className="block mb-8">
+          <h2 className="text-2xl font-bold text-gray-900">{data.logoText || 'GTM Hub'}</h2>
+        </Link>
+
+        {/* Navigation Sections */}
+        <div className="space-y-2">
+          {data.items.map((item, index) => {
+            const sectionKey = `section-${index}`;
+            const hasChildren = item.children && item.children.length > 0;
+
+            // Single link item (no children)
+            if (!hasChildren && item.href) {
+              return (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={`block px-3 py-2 rounded-lg font-semibold ${
+                    pathname === item.href
+                      ? getActiveColorClasses(item.activeColor, true)
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  {item.icon && `${item.icon} `}{item.title}
+                </Link>
+              );
+            }
+
+            // Expandable section with children
+            return (
+              <div key={index}>
+                <button
+                  onClick={() => toggleSection(sectionKey)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-left font-semibold text-gray-700 hover:bg-gray-100 rounded-lg"
+                >
+                  <span>
+                    {item.icon && `${item.icon} `}{item.title}
+                  </span>
+                  <span className="text-gray-400">
+                    {expandedSections[sectionKey] ? '▼' : '▶'}
+                  </span>
+                </button>
+                {expandedSections[sectionKey] && item.children && (
+                  <div className="ml-4 mt-1 space-y-1 border-l-2 border-gray-200 pl-2">
+                    {item.children.map((child, childIndex) => (
+                      <Link
+                        key={childIndex}
+                        href={child.href}
+                        className={`block px-3 py-2 rounded-lg text-sm ${
+                          isActive(child.href)
+                            ? getActiveColorClasses(child.activeColor, true)
+                            : 'text-gray-600 hover:bg-gray-100'
+                        }`}
+                      >
+                        {child.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </nav>
+    );
+  }
+
+  // Fallback to hardcoded navigation if no data
 
   return (
     <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">

@@ -4,6 +4,17 @@ export const structure = (S: StructureBuilder) =>
   S.list()
     .title('Content')
     .items([
+      // Navigation
+      S.listItem()
+        .title('🧭 Navigation')
+        .child(
+          S.document()
+            .schemaType('navigation')
+            .documentId('navigation')
+        ),
+
+      S.divider(),
+
       // Homepage
       S.listItem()
         .title('Homepage')
@@ -131,6 +142,13 @@ export const structure = (S: StructureBuilder) =>
       S.divider(),
 
       // Settings
+      S.listItem()
+        .title('⚙️ Site Settings')
+        .child(
+          S.document()
+            .schemaType('siteSettings')
+            .documentId('siteSettings')
+        ),
       S.listItem()
         .title('About')
         .child(

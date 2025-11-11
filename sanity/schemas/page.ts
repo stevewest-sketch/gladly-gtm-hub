@@ -26,6 +26,49 @@ export default {
       type: 'string',
     },
     {
+      name: 'seo',
+      title: 'SEO & Social Sharing',
+      type: 'object',
+      description: 'Override default SEO settings for this page',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+      fields: [
+        {
+          name: 'metaTitle',
+          title: 'Meta Title',
+          type: 'string',
+          description: 'Custom title for search engines (leave empty to use Page Title)',
+          validation: (Rule: any) => Rule.max(60),
+        },
+        {
+          name: 'metaDescription',
+          title: 'Meta Description',
+          type: 'text',
+          rows: 3,
+          description: 'Description shown in search results (150-160 characters)',
+          validation: (Rule: any) => Rule.max(160),
+        },
+        {
+          name: 'ogImage',
+          title: 'Social Share Image',
+          type: 'image',
+          description: 'Image shown when sharing on social media (1200x630px recommended)',
+          options: {
+            hotspot: true,
+          },
+        },
+        {
+          name: 'noIndex',
+          title: 'Hide from Search Engines',
+          type: 'boolean',
+          description: 'Prevent search engines from indexing this page',
+          initialValue: false,
+        },
+      ],
+    },
+    {
       name: 'heroColor',
       title: 'Hero Section Color',
       type: 'string',
@@ -153,6 +196,10 @@ export default {
         { type: 'contentSection' },
         { type: 'ctaSection' },
         { type: 'launchStatusSection' },
+        { type: 'imageTextSection' },
+        { type: 'accordionSection' },
+        { type: 'videoSection' },
+        { type: 'testimonialSection' },
       ],
     },
     {

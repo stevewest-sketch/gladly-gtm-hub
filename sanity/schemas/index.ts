@@ -8,6 +8,9 @@ import learningModule from './learningModule'
 import templateResource from './templateResource'
 import contentResource from './contentResource'
 import competitiveResource from './competitiveResource'
+import { navigation } from './navigation'
+import { navigationItem } from './navigationItem'
+import { siteSettings } from './siteSettings'
 
 // Section types
 import heroSection from './sections/heroSection'
@@ -16,6 +19,10 @@ import statsSection from './sections/statsSection'
 import contentSection from './sections/contentSection'
 import ctaSection from './sections/ctaSection'
 import launchStatusSection from './sections/launchStatusSection'
+import imageTextSection from './sections/imageTextSection'
+import accordionSection from './sections/accordionSection'
+import videoSection from './sections/videoSection'
+import testimonialSection from './sections/testimonialSection'
 
 // Homepage-specific sections
 import heroWithSearchSection from './sections/heroWithSearchSection'
@@ -37,6 +44,9 @@ export const schemaTypes = [
   templateResource,
   contentResource,
   competitiveResource,
+  navigation,
+  navigationItem,
+  siteSettings,
   // Section types
   heroSection,
   featureGridSection,
@@ -44,6 +54,10 @@ export const schemaTypes = [
   contentSection,
   ctaSection,
   launchStatusSection,
+  imageTextSection,
+  accordionSection,
+  videoSection,
+  testimonialSection,
   // Homepage-specific sections
   heroWithSearchSection,
   teamToolkitsSection,
