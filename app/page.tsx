@@ -14,6 +14,11 @@ async function getHomepage() {
     heroSubtitle,
     searchPlaceholder,
     heroPaddingTop,
+    heroStyle,
+    heroGradientStart,
+    heroGradientMiddle,
+    heroGradientEnd,
+    heroSolidColor,
     quickNav,
     pageBuilder,
     teamToolkitsTitle,
@@ -110,6 +115,11 @@ export default async function Home() {
         heroSubtitle={homepage?.heroSubtitle || 'Your central hub for selling, supporting, and growing with Gladly'}
         searchPlaceholder={homepage?.searchPlaceholder || 'Search for battle cards, templates, demos, product info...'}
         paddingTop={homepage?.heroPaddingTop || 'medium'}
+        heroStyle={homepage?.heroStyle || 'gradient'}
+        heroGradientStart={homepage?.heroGradientStart || '#6B46C1'}
+        heroGradientMiddle={homepage?.heroGradientMiddle || '#8C69F0'}
+        heroGradientEnd={homepage?.heroGradientEnd || '#A78BFA'}
+        heroSolidColor={homepage?.heroSolidColor || '#8C69F0'}
       />
 
       {/* Quick Navigation */}
