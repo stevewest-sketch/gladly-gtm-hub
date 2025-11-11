@@ -151,3 +151,4 @@ The website uses Tailwind CSS for styling. Colors, spacing, and layout can be cu
 - Keep your `.env.local` file secret - never share it or commit it to GitHub
 
 Enjoy your new website! 🎉
+
