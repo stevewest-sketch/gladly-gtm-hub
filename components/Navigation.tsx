@@ -31,34 +31,59 @@ interface NavigationProps {
 export default function Navigation({ data }: NavigationProps) {
   const pathname = usePathname();
 
-  // Initialize expanded sections from data if available
+  // Helper function to check if current path is within a section
+  const isPathInSection = (children?: NavigationChild[]) => {
+    if (!children || !pathname) return false;
+    return children.some(child => pathname.startsWith(child.href));
+  };
+
+  // Helper for hardcoded navigation
+  const isPathInHardcodedSection = (paths: string[]) => {
+    if (!pathname) return false;
+    return paths.some(path => pathname.startsWith(path));
+  };
+
+  // Initialize expanded sections based on current path
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(() => {
     if (data?.items) {
       const initial: Record<string, boolean> = {};
       data.items.forEach((item, index) => {
-        initial[`section-${index}`] = item.defaultExpanded;
+        // Auto-expand if current path is in this section
+        initial[`section-${index}`] = isPathInSection(item.children);
       });
       return initial;
     }
+    // Hardcoded navigation - only expand if current path matches
     return {
-      coe: true,
-      enablement: false,
-      toolkits: false,
-      products: true,
-      resources: false,
+      coe: isPathInHardcodedSection(['/coe']),
+      enablement: isPathInHardcodedSection(['/enablement']),
+      toolkits: isPathInHardcodedSection(['/enablement/toolkits']),
+      products: isPathInHardcodedSection(['/product']),
+      resources: isPathInHardcodedSection(['/resources']),
     };
   });
 
-  // Update expanded sections if data changes
+  // Update expanded sections when path changes
   useEffect(() => {
     if (data?.items) {
-      const initial: Record<string, boolean> = {};
+      const updated: Record<string, boolean> = {};
       data.items.forEach((item, index) => {
-        initial[`section-${index}`] = item.defaultExpanded;
+        const sectionKey = `section-${index}`;
+        // Keep current expanded state unless we're navigating to a page in a different section
+        updated[sectionKey] = isPathInSection(item.children);
       });
-      setExpandedSections(initial);
+      setExpandedSections(updated);
+    } else {
+      // Update hardcoded navigation based on current path
+      setExpandedSections({
+        coe: isPathInHardcodedSection(['/coe']),
+        enablement: isPathInHardcodedSection(['/enablement']),
+        toolkits: isPathInHardcodedSection(['/enablement/toolkits']),
+        products: isPathInHardcodedSection(['/product']),
+        resources: isPathInHardcodedSection(['/resources']),
+      });
     }
-  }, [data]);
+  }, [pathname, data]);
 
   const isActive = (path: string) => pathname === path || pathname?.startsWith(path + '/');
 
