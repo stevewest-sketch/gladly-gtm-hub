@@ -6,7 +6,6 @@ import QuickTasksSection from '@/components/sections/QuickTasksSection';
 import ProductsGridSection from '@/components/sections/ProductsGridSection';
 import WhatsNewSection from '@/components/sections/WhatsNewSection';
 import PopularResourcesSection from '@/components/sections/PopularResourcesSection';
-import HelpSection from '@/components/sections/HelpSection';
 
 async function getHomepage() {
   const query = `*[_type == "homepage"][0]{
@@ -32,8 +31,7 @@ async function getHomepage() {
     whatsNewBadge,
     whatsNew,
     popularResourcesTitle,
-    popularResources,
-    helpSection
+    popularResources
   }`;
   return await client.fetch(query);
 }
@@ -86,16 +84,6 @@ function renderSection(section: any, index: number) {
           key={index}
           sectionTitle={section.sectionTitle}
           resources={section.resources}
-        />
-      );
-
-    case 'helpSection':
-      return (
-        <HelpSection
-          key={index}
-          title={section.title}
-          description={section.description}
-          buttons={section.buttons}
         />
       );
 
@@ -186,15 +174,6 @@ function LegacyContent({ homepage }: { homepage: any }) {
         <PopularResourcesSection
           sectionTitle={homepage.popularResourcesTitle || 'Most Useful Resources'}
           resources={homepage.popularResources}
-        />
-      )}
-
-      {/* Help Section */}
-      {homepage?.helpSection && (
-        <HelpSection
-          title={homepage.helpSection.title}
-          description={homepage.helpSection.description}
-          buttons={homepage.helpSection.buttons}
         />
       )}
     </>
