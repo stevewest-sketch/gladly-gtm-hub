@@ -6,6 +6,8 @@ import QuickTasksSection from '@/components/sections/QuickTasksSection';
 import ProductsGridSection from '@/components/sections/ProductsGridSection';
 import WhatsNewSection from '@/components/sections/WhatsNewSection';
 import PopularResourcesSection from '@/components/sections/PopularResourcesSection';
+import QuickStatsSection from '@/components/sections/QuickStatsSection';
+import FeaturedContentSection from '@/components/sections/FeaturedContentSection';
 
 async function getHomepage() {
   const query = `*[_type == "homepage"][0]{
@@ -84,6 +86,29 @@ function renderSection(section: any, index: number) {
           key={index}
           sectionTitle={section.sectionTitle}
           resources={section.resources}
+        />
+      );
+
+    case 'quickStatsSection':
+      return (
+        <QuickStatsSection
+          key={index}
+          sectionTitle={section.sectionTitle}
+          sectionSubtitle={section.sectionSubtitle}
+          stats={section.stats}
+          variant={section.variant}
+        />
+      );
+
+    case 'featuredContentSection':
+      return (
+        <FeaturedContentSection
+          key={index}
+          sectionTitle={section.sectionTitle}
+          sectionSubtitle={section.sectionSubtitle}
+          items={section.items}
+          variant={section.variant}
+          layout={section.layout}
         />
       );
 

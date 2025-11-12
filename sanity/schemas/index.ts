@@ -32,6 +32,8 @@ import productsGridSection from './sections/productsGridSection'
 import whatsNewSection from './sections/whatsNewSection'
 import popularResourcesSection from './sections/popularResourcesSection'
 import helpSection from './sections/helpSection'
+import quickStatsSection from './sections/quickStatsSection'
+import featuredContentSection from './sections/featuredContentSection'
 
 export const schemaTypes = [
   post,
@@ -66,4 +68,6 @@ export const schemaTypes = [
   whatsNewSection,
   popularResourcesSection,
   helpSection,
+  quickStatsSection,
+  featuredContentSection,
 ]
