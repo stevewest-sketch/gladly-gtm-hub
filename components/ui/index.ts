@@ -38,3 +38,7 @@ export type { InfoCalloutProps } from './callout';
 // List
 export { StepList } from './list';
 export type { StepListProps, StepItem } from './list';
+
+// Performance & Optimization
+export { OptimizedImage, BackgroundImage } from './image/OptimizedImage';
+export { LazySection, LazyBelowFold, LazyTab, ProgressiveEnhancement } from './lazy/LazySection';
