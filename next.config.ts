@@ -108,13 +108,21 @@ const nextConfig: NextConfig = {
         destination: '/enablement/toolkits/implementation',
       },
 
-      // Content Section rewrites
+      // Content Section rewrites - new /content/* structure
       {
-        source: '/resources/competitive',
+        source: '/content/templates',
+        destination: '/resources/templates',
+      },
+      {
+        source: '/content/collateral',
+        destination: '/resources/content',
+      },
+      {
+        source: '/content/competitive',
         destination: '/enablement/competitive',
       },
       {
-        source: '/resources/playbooks',
+        source: '/content/playbooks',
         destination: '/enablement/playbooks',
       },
     ];
