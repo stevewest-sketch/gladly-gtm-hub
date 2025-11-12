@@ -41,9 +41,45 @@ export default function HeroWithSearchSection({
   const paddingClass = paddingClasses[paddingTop as keyof typeof paddingClasses] || paddingClasses.medium;
 
   // Generate background style based on heroStyle
-  const backgroundStyle = heroStyle === 'solid'
-    ? { background: heroSolidColor }
-    : { background: `linear-gradient(135deg, ${heroGradientStart} 0%, ${heroGradientMiddle} 50%, ${heroGradientEnd} 100%)` };
+  const getBackgroundStyle = () => {
+    // Gradient presets
+    if (heroStyle === 'gradient-purple') {
+      return { background: 'linear-gradient(135deg, #8C69F0 0%, #A080F0 50%, #B4A0F7 100%)' };
+    }
+    if (heroStyle === 'gradient-blue') {
+      return { background: 'linear-gradient(135deg, #4A90E2 0%, #5BA3F5 50%, #6DB6FF 100%)' };
+    }
+    if (heroStyle === 'gradient-green') {
+      return { background: 'linear-gradient(135deg, #009B00 0%, #00B800 50%, #00D500 100%)' };
+    }
+    if (heroStyle === 'gradient-orange') {
+      return { background: 'linear-gradient(135deg, #F5A623 0%, #FFB84D 50%, #FFCA77 100%)' };
+    }
+    if (heroStyle === 'gradient-pink') {
+      return { background: 'linear-gradient(135deg, #E91E63 0%, #F06292 50%, #F8BBD0 100%)' };
+    }
+    if (heroStyle === 'gradient-teal') {
+      return { background: 'linear-gradient(135deg, #009688 0%, #26A69A 50%, #80CBC4 100%)' };
+    }
+    if (heroStyle === 'gradient-custom') {
+      return { background: `linear-gradient(135deg, ${heroGradientStart} 0%, ${heroGradientMiddle} 50%, ${heroGradientEnd} 100%)` };
+    }
+
+    // Solid color presets
+    if (heroStyle === 'solid-purple') return { background: '#8C69F0' };
+    if (heroStyle === 'solid-blue') return { background: '#4A90E2' };
+    if (heroStyle === 'solid-green') return { background: '#009B00' };
+    if (heroStyle === 'solid-orange') return { background: '#F5A623' };
+    if (heroStyle === 'solid-pink') return { background: '#E91E63' };
+    if (heroStyle === 'solid-teal') return { background: '#009688' };
+    if (heroStyle === 'solid-custom') return { background: heroSolidColor };
+
+    // Legacy/fallback for old 'gradient' and 'solid' values
+    if (heroStyle === 'solid') return { background: heroSolidColor };
+    return { background: `linear-gradient(135deg, ${heroGradientStart} 0%, ${heroGradientMiddle} 50%, ${heroGradientEnd} 100%)` };
+  };
+
+  const backgroundStyle = getBackgroundStyle();
 
   // Comprehensive searchable content with deep linking
   const searchableContent = [

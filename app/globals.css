@@ -5,6 +5,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Gladly Design System Colors */
+  --brand-green-500: #009B00;
+  --brand-purple-500: #8C69F0;
+
+  --neutral-900: #0D0D0D;
+  --neutral-700: #252525;
+  --neutral-200: #DFDFDF;
+  --neutral-100: #F3F3F3;
+
+  --error: #E44F4F;
+  --warning: #F5A623;
+  --success: #009B00;
+
+  --bubble-customer: #F6F6F6;
+  --bubble-agent: #D5F2E8;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -151,10 +151,10 @@ export default function BVAPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#4A90E2] to-[#357ABD] text-white py-[60px] px-10">
+      <div className="bg-gradient-to-br from-[#8C69F0] to-[#7B52D9] text-white py-16 px-10">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-[48px] font-bold mb-4">Business Value Analysis Playbook</h1>
-          <p className="text-[20px] opacity-95 max-w-[900px] mx-auto">
+          <h1 className="text-[40px] font-bold mb-4">Business Value Analysis Playbook</h1>
+          <p className="text-[18px] opacity-95 max-w-[900px] mx-auto">
             Quantify the impact of Gladly Sidekick. Build compelling business cases that win deals and prove ROI.
           </p>
         </div>
@@ -163,56 +163,56 @@ export default function BVAPage() {
       {/* Quick Navigation */}
       <div className="bg-white py-5 px-10 sticky top-0 z-[100] shadow-sm">
         <div className="flex gap-3 justify-center items-center flex-wrap max-w-[1200px] mx-auto">
-          <a href="#overview" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#overview" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             Overview & Impact
           </a>
-          <a href="#getting-started" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#getting-started" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             Getting Started
           </a>
-          <a href="#bva-levels" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#bva-levels" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             BVA Levels
           </a>
-          <a href="#process" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#process" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             Process
           </a>
-          <a href="#tools" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#tools" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             Tools & Resources
           </a>
-          <a href="#best-practices" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#4A90E2] hover:text-white transition-all">
+          <a href="#best-practices" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all">
             Best Practices
           </a>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
+      <div className="max-w-[1200px] mx-auto px-10 py-12">
 
         {/* What is the Business Value Program */}
-        <div id="overview" className="bg-white rounded-xl p-8 mb-[50px] shadow-sm scroll-mt-24">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#BBDEFB]">
+        <div id="overview" className="bg-white rounded-xl p-8 mb-12 shadow-sm scroll-mt-24">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">💼</span>
             <div>
-              <h2 className="text-[32px] text-[#1a1a1a] font-semibold mb-1">Business Value Program</h2>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Business Value Program</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
             <div>
-              <p className="text-[17px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-[15px] text-[#4A4A4A] mb-6 leading-relaxed">
                 Quantify Gladly's financial impact through value-based discovery and structured business cases—from early messaging to full ROI models.
               </p>
 
               <h3 className="text-[16px] font-bold text-[#0D0D0D] mb-3">Three-level framework:</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="text-[#4A90E2] text-xl mt-0.5">101</span>
+                  <span className="text-[#8C69F0] text-xl mt-0.5">101</span>
                   <span className="text-[15px] text-[#4A4A4A]"><strong>Value messaging & metrics</strong> — Lead with key capabilities</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-[#4A90E2] text-xl mt-0.5">201</span>
+                  <span className="text-[#8C69F0] text-xl mt-0.5">201</span>
                   <span className="text-[15px] text-[#4A4A4A]"><strong>Value hypothesis</strong> — Quantify high-level opportunity</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-[#4A90E2] text-xl mt-0.5">301</span>
+                  <span className="text-[#8C69F0] text-xl mt-0.5">301</span>
                   <span className="text-[15px] text-[#4A4A4A]"><strong>Detailed business case</strong> — Discovery + benchmarks + data</span>
                 </div>
               </div>
@@ -221,19 +221,19 @@ export default function BVAPage() {
             <div>
               <h3 className="text-[16px] font-bold text-[#0D0D0D] mb-3">Proven impact:</h3>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white rounded-lg p-4 text-center">
+                <div className="bg-gradient-to-br from-[#8C69F0] to-[#7B52D9] text-white rounded-lg p-4 text-center">
                   <div className="text-[28px] font-bold mb-1">40%</div>
                   <div className="text-xs opacity-90">Higher win rate</div>
                 </div>
-                <div className="bg-gradient-to-br from-[#4A90E2] to-[#357ABD] text-white rounded-lg p-4 text-center">
+                <div className="bg-gradient-to-br from-[#8C69F0] to-[#7B52D9] text-white rounded-lg p-4 text-center">
                   <div className="text-[28px] font-bold mb-1">$500K+</div>
                   <div className="text-xs opacity-90">Avg value shown</div>
                 </div>
-                <div className="bg-gradient-to-br from-[#00b67a] to-[#00a86b] text-white rounded-lg p-4 text-center">
+                <div className="bg-gradient-to-br from-[#009B00] to-[#007A00] text-white rounded-lg p-4 text-center">
                   <div className="text-[28px] font-bold mb-1">15%</div>
                   <div className="text-xs opacity-90">Deal size uplift</div>
                 </div>
-                <div className="bg-gradient-to-br from-[#2c3e50] to-[#34495e] text-white rounded-lg p-4 text-center">
+                <div className="bg-gradient-to-br from-[#252525] to-[#1a1a1a] text-white rounded-lg p-4 text-center">
                   <div className="text-[28px] font-bold mb-1">30 min</div>
                   <div className="text-xs opacity-90">Quick analysis</div>
                 </div>
@@ -243,10 +243,10 @@ export default function BVAPage() {
         </div>
 
         {/* Two Tools, Two Audiences */}
-        <div id="getting-started" className="bg-[#0D0D0D] py-[50px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="getting-started" className="bg-[#0D0D0D] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-3 text-white text-center">Two Tools, Two Audiences</h2>
-            <p className="text-[17px] text-[#CCCCCC] mb-10 text-center max-w-[800px] mx-auto">
+            <h2 className="text-[18px] font-bold mb-3 text-white text-center">Two Tools, Two Audiences</h2>
+            <p className="text-[15px] text-[#CCCCCC] mb-10 text-center max-w-[800px] mx-auto">
               Choose the right approach based on who you're working with and what data you have available
             </p>
 
@@ -255,12 +255,12 @@ export default function BVAPage() {
               <div>
                 <div className="bg-white rounded-xl p-8 shadow-sm">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-[#E3F2FD] rounded-full p-4">
+                    <div className="bg-[#F3F3F3] rounded-full p-4">
                       <span className="text-[36px]">📊</span>
                     </div>
                     <div>
-                      <h3 className="text-[24px] font-bold text-[#0D0D0D]">Pre-Sales BVA</h3>
-                      <p className="text-[15px] text-[#4A90E2] font-semibold">For Prospects</p>
+                      <h3 className="text-[18px] font-bold text-[#0D0D0D]">Pre-Sales BVA</h3>
+                      <p className="text-[15px] text-[#8C69F0] font-semibold">For Prospects</p>
                     </div>
                   </div>
 
@@ -272,15 +272,15 @@ export default function BVAPage() {
                     <p className="text-sm font-semibold text-[#0D0D0D] mb-2">Best for:</p>
                     <ul className="space-y-2 text-[15px] text-[#4A4A4A]">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#4A90E2]">•</span>
+                        <span className="text-[#8C69F0]">•</span>
                         <span>Early deal cycle conversations</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#4A90E2]">•</span>
+                        <span className="text-[#8C69F0]">•</span>
                         <span>Building financial justification</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#4A90E2]">•</span>
+                        <span className="text-[#8C69F0]">•</span>
                         <span>Competitive evaluations</span>
                       </li>
                     </ul>
@@ -290,7 +290,7 @@ export default function BVAPage() {
                     <span className="font-semibold text-[#0D0D0D]">Minimum data:</span> Total volume + one CPC figure
                   </div>
 
-                  <a href="#process" className="block w-full bg-[#4A90E2] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#357ABD] transition-all">
+                  <a href="#process" className="block w-full bg-[#8C69F0] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#7B52D9] transition-all">
                     See BVA Workflow →
                   </a>
                 </div>
@@ -305,7 +305,7 @@ export default function BVAPage() {
                       <span className="text-[36px]">🎯</span>
                     </div>
                     <div>
-                      <h3 className="text-[24px] font-bold text-[#0D0D0D]">ROI Calculator</h3>
+                      <h3 className="text-[18px] font-bold text-[#0D0D0D]">ROI Calculator</h3>
                       <p className="text-[15px] text-[#C084FC] font-semibold">For Customers</p>
                     </div>
                   </div>
@@ -347,16 +347,16 @@ export default function BVAPage() {
         </div>
 
         {/* BVA Levels */}
-        <div id="bva-levels" className="bg-[#F3F3F3] py-[40px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="bva-levels" className="bg-[#F3F3F3] py-[40px] px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-2 text-[#0D0D0D]">Choose Your BVA Level</h2>
+            <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Choose Your BVA Level</h2>
             <p className="text-base text-[#666] mb-6">Match your analysis to your available prospect data</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* BVA 101 */}
-              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-[#E3F2FD] text-[#4A90E2] px-3 py-1 rounded-full font-bold text-sm">101</span>
+                  <span className="bg-[#F3F3F3] text-[#8C69F0] px-3 py-1 rounded-full font-bold text-sm">101</span>
                   <h3 className="text-[16px] font-bold text-[#0D0D0D]">Quick Estimate</h3>
                 </div>
                 <p className="text-sm text-[#666] mb-3">⏱️ 15 min | 📊 Minimal data</p>
@@ -364,9 +364,9 @@ export default function BVAPage() {
               </div>
 
               {/* BVA 201 */}
-              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-[#E3F2FD] text-[#4A90E2] px-3 py-1 rounded-full font-bold text-sm">201</span>
+                  <span className="bg-[#F3F3F3] text-[#8C69F0] px-3 py-1 rounded-full font-bold text-sm">201</span>
                   <h3 className="text-[16px] font-bold text-[#0D0D0D]">Channel Analysis</h3>
                 </div>
                 <p className="text-sm text-[#666] mb-3">⏱️ 30-45 min | 📊 Moderate data</p>
@@ -374,9 +374,9 @@ export default function BVAPage() {
               </div>
 
               {/* BVA 301 */}
-              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-[#E3F2FD] text-[#4A90E2] px-3 py-1 rounded-full font-bold text-sm">301</span>
+                  <span className="bg-[#F3F3F3] text-[#8C69F0] px-3 py-1 rounded-full font-bold text-sm">301</span>
                   <h3 className="text-[16px] font-bold text-[#0D0D0D]">Full ROI Model</h3>
                 </div>
                 <p className="text-sm text-[#666] mb-3">⏱️ 1-2 hours | 📊 Detailed data</p>
@@ -387,24 +387,24 @@ export default function BVAPage() {
         </div>
 
         {/* Step-by-Step Process */}
-        <div id="process" className="bg-[#F5F5F7] py-[35px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="process" className="bg-[#F5F5F7] py-[35px] px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             {/* Pre-Sales BVA Workflow */}
             <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
               <div className="flex items-center gap-2 mb-5">
                 <span className="text-[30px]">📊</span>
                 <div>
-                  <h2 className="text-[20px] text-[#0D0D0D] font-bold mb-0.5">Pre-Sales BVA Workflow</h2>
-                  <p className="text-xs text-[#4A90E2] font-semibold uppercase tracking-wide">FOR PROSPECTS</p>
+                  <h2 className="text-[18px] text-[#0D0D0D] font-bold mb-0.5">Pre-Sales BVA Workflow</h2>
+                  <p className="text-xs text-[#8C69F0] font-semibold uppercase tracking-wide">FOR PROSPECTS</p>
                 </div>
               </div>
 
               {/* Compact Horizontal Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
                 {/* Step 1 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Gather Data</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -415,9 +415,9 @@ export default function BVAPage() {
                 </div>
 
                 {/* Step 2 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Choose Level</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -428,9 +428,9 @@ export default function BVAPage() {
                 </div>
 
                 {/* Step 3 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Input Data</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -441,9 +441,9 @@ export default function BVAPage() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Review Outputs</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -454,9 +454,9 @@ export default function BVAPage() {
                 </div>
 
                 {/* Step 5 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">5</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">5</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Customize Deck</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -467,9 +467,9 @@ export default function BVAPage() {
                 </div>
 
                 {/* Step 6 */}
-                <div className="bg-white border-2 border-[#E3F2FD] rounded-lg p-4 hover:border-[#4A90E2] transition-all">
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-4 hover:border-[#8C69F0] transition-all">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-7 h-7 bg-[#4A90E2] text-white rounded-full flex items-center justify-center font-bold text-sm">6</div>
+                    <div className="w-7 h-7 bg-[#8C69F0] text-white rounded-full flex items-center justify-center font-bold text-sm">6</div>
                     <h4 className="text-[15px] font-bold text-[#0D0D0D]">Present & Iterate</h4>
                   </div>
                   <ul className="space-y-0.5 text-xs text-[#666] ml-9">
@@ -494,7 +494,7 @@ export default function BVAPage() {
                   <p className="text-xs text-[#666] mb-3">
                     See the complete pre-sales BVA process
                   </p>
-                  <a href="https://drive.google.com/file/d/1obQ9In3hYjEwyNJRom1RuXL6AGEP5Qld/view" target="_blank" rel="noopener noreferrer" className="bg-[#10B981] text-white px-4 py-1.5 rounded text-xs font-semibold hover:bg-[#059669] transition-all inline-block">
+                  <a href="https://drive.google.com/file/d/1obQ9In3hYjEwyNJRom1RuXL6AGEP5Qld/view" target="_blank" rel="noopener noreferrer" className="bg-[#009B00] text-white px-4 py-1.5 rounded text-xs font-semibold hover:bg-[#007A00] transition-all inline-block">
                     Watch Demo →
                   </a>
                 </div>
@@ -511,7 +511,7 @@ export default function BVAPage() {
               <div className="flex items-center gap-2 mb-5">
                 <span className="text-[30px]">🎯</span>
                 <div>
-                  <h2 className="text-[20px] text-[#0D0D0D] font-bold mb-0.5">ROI Calculator Workflow</h2>
+                  <h2 className="text-[18px] text-[#0D0D0D] font-bold mb-0.5">ROI Calculator Workflow</h2>
                   <p className="text-xs text-[#C084FC] font-semibold uppercase tracking-wide">FOR CUSTOMERS</p>
                 </div>
               </div>
@@ -585,7 +585,7 @@ export default function BVAPage() {
                   <p className="text-xs text-[#666] mb-3">
                     Learn how to generate executive-ready ROI reports
                   </p>
-                  <a href="https://drive.google.com/file/d/1Nr9U0yuTBw0e0wWN8wr8VvzU4Ujq0skp/view" target="_blank" rel="noopener noreferrer" className="bg-[#3B82F6] text-white px-4 py-1.5 rounded text-xs font-semibold hover:bg-[#2563EB] transition-all inline-block">
+                  <a href="https://drive.google.com/file/d/1Nr9U0yuTBw0e0wWN8wr8VvzU4Ujq0skp/view" target="_blank" rel="noopener noreferrer" className="bg-[#8C69F0] text-white px-4 py-1.5 rounded text-xs font-semibold hover:bg-[#7B52D9] transition-all inline-block">
                     Watch Demo →
                   </a>
                 </div>
@@ -595,74 +595,74 @@ export default function BVAPage() {
         </div>
 
         {/* Best Practices */}
-        <div id="best-practices" className="bg-[#F3F3F3] py-[50px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="best-practices" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-2 text-[#0D0D0D]">Best Practices</h2>
+            <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Best Practices</h2>
             <p className="text-base text-[#666] mb-8">Tips for success from our top performers</p>
 
           {/* Best Practice Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-[#F9FAFB] border-l-4 border-[#4A90E2] rounded p-6">
+            <div className="bg-[#F9FAFB] border-l-2 border-[#8C69F0] rounded p-6">
               <h5 className="text-base font-bold text-[#0D0D0D] mb-4">Before the Meeting</h5>
               <ul className="text-sm text-[#666] space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Send deck 24 hours in advance</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Prepare talking points</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Anticipate questions</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Have backup slides ready</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-[#F9FAFB] border-l-4 border-[#4A90E2] rounded p-6">
+            <div className="bg-[#F9FAFB] border-l-2 border-[#8C69F0] rounded p-6">
               <h5 className="text-base font-bold text-[#0D0D0D] mb-4">During Presentation</h5>
               <ul className="text-sm text-[#666] space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Start with "What We Heard"</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Lead with executive summary</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Use their language</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Focus on outcomes not features</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-[#F9FAFB] border-l-4 border-[#4A90E2] rounded p-6">
+            <div className="bg-[#F9FAFB] border-l-2 border-[#8C69F0] rounded p-6">
               <h5 className="text-base font-bold text-[#0D0D0D] mb-4">After Presentation</h5>
               <ul className="text-sm text-[#666] space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Send summary within 24 hours</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Include links to resources</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Document questions to research</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#4A90E2] flex-shrink-0">•</span>
+                  <span className="text-[#8C69F0] flex-shrink-0">•</span>
                   <span>Schedule next steps</span>
                 </li>
               </ul>
@@ -670,26 +670,26 @@ export default function BVAPage() {
           </div>
 
           {/* Do's and Don'ts - Grouped Layout */}
-          <h3 className="text-[24px] font-bold text-[#0D0D0D] mb-6">Do's and Don'ts</h3>
+          <h3 className="text-[18px] font-bold text-[#0D0D0D] mb-6">Do's and Don'ts</h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Pitfalls Column */}
             <div>
-              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+              <div className="bg-[#FFEBEE] border-2 border-[#E44F4F] rounded-lg p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-red-500 text-2xl">⚠️</span>
                   <h4 className="text-[18px] font-bold text-red-900">Common Pitfalls to Avoid</h4>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-red-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-red-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Don't make up data or guess wildly</p>
                     <p className="text-sm text-[#666]">Use benchmarks and be transparent about assumptions</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-red-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-red-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Don't overpromise results</p>
                     <p className="text-sm text-[#666]">Set realistic expectations based on data</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-red-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-red-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Don't skip validation</p>
                     <p className="text-sm text-[#666]">Always review with SC/manager first</p>
                   </div>
@@ -699,21 +699,21 @@ export default function BVAPage() {
 
             {/* Best Practices Column */}
             <div>
-              <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+              <div className="bg-[#E8F5E9] border-2 border-[#009B00] rounded-lg p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-green-600 text-2xl">✅</span>
                   <h4 className="text-[18px] font-bold text-green-900">Best Practices</h4>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-green-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-green-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Use benchmarks transparently</p>
                     <p className="text-sm text-[#666]">Show conservative and optimistic scenarios</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-green-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-green-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Show multiple scenarios</p>
                     <p className="text-sm text-[#666]">Customize slides with customer context</p>
                   </div>
-                  <div className="bg-white rounded-lg p-4 border-l-4 border-green-400">
+                  <div className="bg-white rounded-lg p-4 border-l-2 border-green-400">
                     <p className="text-[15px] font-semibold text-[#0D0D0D] mb-1">Review before presenting</p>
                     <p className="text-sm text-[#666]">Include quality, experience, revenue impacts</p>
                   </div>
@@ -725,20 +725,20 @@ export default function BVAPage() {
         </div>
 
         {/* Tools & Resources - Organized by Category */}
-        <div id="tools" className="bg-[#F3F3F3] py-[50px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="tools" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-2 text-[#0D0D0D]">Tools & Resources</h2>
+            <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Tools & Resources</h2>
             <p className="text-base text-[#666] mb-10">Everything you need to build compelling value stories</p>
 
             {/* Core Tools - Calculators */}
             <div className="mb-10">
-              <h3 className="text-[20px] font-bold text-[#1a1a1a] mb-4">Calculators</h3>
+              <h3 className="text-[18px] font-bold text-[#1a1a1a] mb-4">Calculators</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {bvaResources.filter(r => r.tag === 'Core Tools').map((resource, idx) => (
                   <a
                     key={idx}
                     href="#"
-                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
+                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
                   >
                     <div className="bg-[#1a1a1a] rounded-lg p-2.5 flex-shrink-0">
                       <span className="text-[20px]">{resource.icon}</span>
@@ -749,7 +749,7 @@ export default function BVAPage() {
                       <p className="text-sm text-[#666] leading-relaxed mb-2">
                         {resource.desc}
                       </p>
-                      <span className="text-[#4A90E2] text-xs font-semibold">{resource.cta}</span>
+                      <span className="text-[#009B00] text-xs font-semibold">{resource.cta}</span>
                     </div>
                   </a>
                 ))}
@@ -758,13 +758,13 @@ export default function BVAPage() {
 
             {/* Templates */}
             <div className="mb-10">
-              <h3 className="text-[20px] font-bold text-[#1a1a1a] mb-4">Templates</h3>
+              <h3 className="text-[18px] font-bold text-[#1a1a1a] mb-4">Templates</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {bvaResources.filter(r => r.tag === 'Templates').map((resource, idx) => (
                   <a
                     key={idx}
                     href="#"
-                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
+                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
                   >
                     <div className="bg-[#1a1a1a] rounded-lg p-2.5 flex-shrink-0">
                       <span className="text-[20px]">{resource.icon}</span>
@@ -775,7 +775,7 @@ export default function BVAPage() {
                       <p className="text-sm text-[#666] leading-relaxed mb-2">
                         {resource.desc}
                       </p>
-                      <span className="text-[#4A90E2] text-xs font-semibold">{resource.cta}</span>
+                      <span className="text-[#009B00] text-xs font-semibold">{resource.cta}</span>
                     </div>
                   </a>
                 ))}
@@ -784,13 +784,13 @@ export default function BVAPage() {
 
             {/* Enablement */}
             <div className="mb-10">
-              <h3 className="text-[20px] font-bold text-[#1a1a1a] mb-4">Enablement & Training</h3>
+              <h3 className="text-[18px] font-bold text-[#1a1a1a] mb-4">Enablement & Training</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {bvaResources.filter(r => r.tag === 'Enablement').map((resource, idx) => (
                   <a
                     key={idx}
                     href="#"
-                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
+                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
                   >
                     <div className="bg-[#1a1a1a] rounded-lg p-2.5 flex-shrink-0">
                       <span className="text-[20px]">{resource.icon}</span>
@@ -801,7 +801,7 @@ export default function BVAPage() {
                       <p className="text-sm text-[#666] leading-relaxed mb-2">
                         {resource.desc}
                       </p>
-                      <span className="text-[#4A90E2] text-xs font-semibold">{resource.cta}</span>
+                      <span className="text-[#009B00] text-xs font-semibold">{resource.cta}</span>
                     </div>
                   </a>
                 ))}
@@ -810,13 +810,13 @@ export default function BVAPage() {
 
             {/* Proof Points */}
             <div>
-              <h3 className="text-[20px] font-bold text-[#1a1a1a] mb-4">Proof Points & Examples</h3>
+              <h3 className="text-[18px] font-bold text-[#1a1a1a] mb-4">Proof Points & Examples</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {bvaResources.filter(r => r.tag === 'Proof Points' || r.tag === 'Best Practices').map((resource, idx) => (
                   <a
                     key={idx}
                     href="#"
-                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
+                    className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline flex items-start gap-4"
                   >
                     <div className="bg-[#1a1a1a] rounded-lg p-2.5 flex-shrink-0">
                       <span className="text-[20px]">{resource.icon}</span>
@@ -827,7 +827,7 @@ export default function BVAPage() {
                       <p className="text-sm text-[#666] leading-relaxed mb-2">
                         {resource.desc}
                       </p>
-                      <span className="text-[#4A90E2] text-xs font-semibold">{resource.cta}</span>
+                      <span className="text-[#009B00] text-xs font-semibold">{resource.cta}</span>
                     </div>
                   </a>
                 ))}
@@ -837,26 +837,26 @@ export default function BVAPage() {
         </div>
 
         {/* How to Request Support */}
-        <div className="bg-[#F3F3F3] py-[35px] px-10 -mx-10 mb-[50px]">
+        <div className="bg-[#F3F3F3] py-[35px] px-10 -mx-10 mb-12">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-2 text-[#0D0D0D]">How to Request Support</h2>
+            <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">How to Request Support</h2>
             <p className="text-base text-[#666] mb-6">Get help with your BVA and business cases</p>
 
-            <div className="bg-[#F9FAFB] border-l-4 border-[#4A90E2] rounded p-5 mb-4">
+            <div className="bg-[#F9FAFB] border-l-2 border-[#8C69F0] rounded p-5 mb-4">
               <p className="text-sm text-[#4A4A4A] mb-3 leading-relaxed">
-                Always start with our self-service BVA tools and <a href="#" className="text-[#4A90E2] font-semibold hover:underline">reach out for enablement support</a> to learn how to use them.
+                Always start with our self-service BVA tools and <a href="#" className="text-[#009B00] font-semibold hover:underline">reach out for enablement support</a> to learn how to use them.
               </p>
               <div className="space-y-2 text-sm text-[#4A4A4A]">
                 <div className="flex gap-3">
-                  <span className="text-[#4A90E2] font-bold flex-shrink-0">1.</span>
+                  <span className="text-[#8C69F0] font-bold flex-shrink-0">1.</span>
                   <p><strong>Identify your need:</strong> Use BVA resources on this site</p>
                 </div>
                 <div className="flex gap-3">
-                  <span className="text-[#4A90E2] font-bold flex-shrink-0">2.</span>
+                  <span className="text-[#8C69F0] font-bold flex-shrink-0">2.</span>
                   <p><strong>Reach out with questions via:</strong> Support request workflow</p>
                 </div>
                 <div className="flex gap-3">
-                  <span className="text-[#4A90E2] font-bold flex-shrink-0">3.</span>
+                  <span className="text-[#8C69F0] font-bold flex-shrink-0">3.</span>
                   <p><strong>Fill out assessment if needed:</strong> 1:1 call with SC (optional)</p>
                 </div>
               </div>
@@ -912,10 +912,10 @@ export default function BVAPage() {
         </div>
 
         {/* Calculator Links */}
-        <div className="bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-12 text-center">
+        <div className="bg-gradient-to-br from-[#F3F3F3] to-[#DFDFDF] rounded-xl p-12 text-center">
           <div className="text-[48px] mb-4">🧮</div>
-          <h2 className="text-[32px] text-[#0D0D0D] font-bold mb-4">Ready to Build Your Analysis?</h2>
-          <p className="text-lg text-[#4A4A4A] mb-8 max-w-[700px] mx-auto">
+          <h2 className="text-[18px] text-[#0D0D0D] font-bold mb-4">Ready to Build Your Analysis?</h2>
+          <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-[700px] mx-auto">
             Access the calculators and start quantifying value today
           </p>
 
@@ -923,18 +923,18 @@ export default function BVAPage() {
             {/* Pre-Sales BVA Calculator */}
             <div className="bg-white rounded-xl p-8 shadow-lg text-left">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-[#E3F2FD] rounded-lg p-3">
+                <div className="bg-[#F3F3F3] rounded-lg p-3">
                   <span className="text-[32px]">📊</span>
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-[#0D0D0D]">Pre-Sales BVA</h3>
-                  <p className="text-sm text-[#4A90E2]">For Prospects</p>
+                  <h3 className="text-[18px] font-bold text-[#0D0D0D]">Pre-Sales BVA</h3>
+                  <p className="text-sm text-[#8C69F0]">For Prospects</p>
                 </div>
               </div>
               <p className="text-[15px] text-[#666] mb-6">
                 Choose from 101, 201, or 301 based on available data. Build projected ROI for deals.
               </p>
-              <a href="#" className="bg-[#4A90E2] text-white px-6 py-3 rounded font-semibold text-base hover:bg-[#357ABD] transition-all inline-block w-full text-center">
+              <a href="#" className="bg-[#8C69F0] text-white px-6 py-3 rounded font-semibold text-base hover:bg-[#7B52D9] transition-all inline-block w-full text-center">
                 Open BVA Calculator →
               </a>
             </div>
@@ -946,7 +946,7 @@ export default function BVAPage() {
                   <span className="text-[32px]">🎯</span>
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-[#0D0D0D]">ROI Calculator</h3>
+                  <h3 className="text-[18px] font-bold text-[#0D0D0D]">ROI Calculator</h3>
                   <p className="text-sm text-[#C084FC]">For Customers</p>
                 </div>
               </div>
@@ -964,7 +964,7 @@ export default function BVAPage() {
 
         {/* Back Link */}
         <div className="text-center mt-12">
-          <a href="/coe" className="text-[#4A90E2] hover:text-[#357ABD] font-semibold">
+          <a href="/coe" className="text-[#009B00] hover:text-[#007A00] font-semibold">
             ← Back to Center of Excellence
           </a>
         </div>

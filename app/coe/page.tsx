@@ -341,9 +341,9 @@ export default function CenterOfExcellencePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="text-white py-[50px] px-10" style={{background: 'linear-gradient(135deg, #6B46C1 0%, #8C69F0 50%, #A78BFA 100%)'}}>
+      <div className="text-white py-12 px-10" style={{background: 'linear-gradient(135deg, #8C69F0 0%, #A080F0 50%, #B4A0F7 100%)'}}>
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-[48px] font-bold mb-4">Center of Excellence</h1>
+          <h1 className="text-[40px] font-bold mb-4">Center of Excellence</h1>
           <p className="text-[18px] max-w-[800px] mx-auto">
             Where customer wins become repeatable success. Discover proven strategies, benchmark performance, and accelerate AI adoption.
           </p>
@@ -371,13 +371,13 @@ export default function CenterOfExcellencePage() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
+      <div className="max-w-[1200px] mx-auto px-10 py-12">
 
         {/* Meet Your CoE Assistant */}
-        <div id="assistant" className="text-white rounded-xl p-[50px] mb-[50px] scroll-mt-24" style={{background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)'}}>
+        <div id="assistant" className="text-white rounded-xl p-12 mb-12 scroll-mt-24" style={{background: 'linear-gradient(135deg, #8C69F0 0%, #A080F0 100%)'}}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-[32px] font-bold mb-6">Meet Your CoE Assistant</h2>
+              <h2 className="text-[18px] font-bold mb-6">Meet Your CoE Assistant</h2>
               <p className="mb-6 opacity-95">Your AI-powered research tool that gives instant access to institutional knowledge across best practices, proof points, and past projects.</p>
               <ul className="list-none mb-6 space-y-3">
                 {[
@@ -392,7 +392,7 @@ export default function CenterOfExcellencePage() {
                   </li>
                 ))}
               </ul>
-              <a href="#" className="inline-block bg-white text-[#4A90E2] px-8 py-3.5 rounded font-semibold text-base border-2 border-white hover:bg-opacity-90 transition-all">
+              <a href="#" className="inline-block bg-white text-[#8C69F0] px-8 py-3.5 rounded font-semibold text-base border-2 border-white hover:bg-opacity-90 transition-all">
                 Access CoE Assistant →
               </a>
             </div>
@@ -409,65 +409,65 @@ export default function CenterOfExcellencePage() {
         </div>
 
         {/* Proof Points & Customer Wins */}
-        <div id="wins" className="bg-white rounded-xl p-8 mb-[50px] shadow-sm scroll-mt-24">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#BBDEFB]">
+        <div id="wins" className="bg-white rounded-xl p-8 mb-12 shadow-sm scroll-mt-24">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🏆</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Proof Points</h2>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Proof Points</h2>
               <p className="text-sm text-[#666]">Customer-approved metrics, testimonials, and success stories</p>
             </div>
           </div>
 
           {/* Proof Point Repository & Social Proof */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
               <div className="text-[36px] mb-3">🏆</div>
-              <h4 className="text-lg font-bold text-[#0D0D0D] mb-2.5">Proof Point Repository</h4>
+              <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-2.5">Proof Point Repository</h4>
               <p className="text-sm text-[#4A4A4A] mb-4 leading-relaxed">Customer proof points: only use externally approved stats for written or verbal use! All proof points are tagged with permission status and include context for when and how to use them.</p>
-              <span className="text-[#4A90E2] font-semibold text-sm">Access Repository →</span>
+              <span className="text-[#009B00] font-semibold text-sm">Access Repository →</span>
             </a>
-            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
               <div className="text-[36px] mb-3">💬</div>
-              <h4 className="text-lg font-bold text-[#0D0D0D] mb-2.5">Social Proof Templates</h4>
+              <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-2.5">Social Proof Templates</h4>
               <p className="text-sm text-[#4A4A4A] mb-4 leading-relaxed">Customer stories and testimonials formatted for different use cases: presentations, proposals, case studies, and website content.</p>
-              <span className="text-[#4A90E2] font-semibold text-sm">View Templates →</span>
+              <span className="text-[#009B00] font-semibold text-sm">View Templates →</span>
             </a>
           </div>
 
           {/* Latest Customer Wins */}
-          <h3 className="text-[20px] font-semibold text-[#1a1a1a] mb-4 mt-6">Latest Customer Wins</h3>
+          <h3 className="text-[18px] font-semibold text-[#1a1a1a] mb-4 mt-6">Latest Customer Wins</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {customerWins.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+              <a key={idx} href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
                 <div className="text-[36px] mb-3">{item.icon}</div>
-                <h4 className="text-lg font-bold text-[#0D0D0D] mb-2.5">{item.title}</h4>
+                <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-2.5">{item.title}</h4>
                 <p className="text-sm text-[#4A4A4A] mb-4 leading-relaxed">{item.desc}</p>
                 <div className="text-xs text-[#888] mb-3">{item.meta}</div>
-                <span className="text-[#4A90E2] font-semibold text-sm">Read More →</span>
+                <span className="text-[#009B00] font-semibold text-sm">Read More →</span>
               </a>
             ))}
           </div>
         </div>
 
         {/* Find Resources for Your Role */}
-        <div id="roles" className="bg-white rounded-xl p-8 mb-[50px] shadow-sm scroll-mt-24">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#BBDEFB]">
+        <div id="roles" className="bg-white rounded-xl p-8 mb-12 shadow-sm scroll-mt-24">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">👥</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Find Resources for Your Role</h2>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Find Resources for Your Role</h2>
               <p className="text-sm text-[#666]">Jump to content designed specifically for how you work with customers</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {roleResources.map((item, idx) => (
-              <div key={idx} className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer">
+              <div key={idx} className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer">
                 <div className="text-[36px] mb-3">{item.icon}</div>
-                <h4 className="text-lg font-bold text-[#0D0D0D] mb-4">{item.title}</h4>
+                <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-4">{item.title}</h4>
                 <p className="text-sm text-[#4A4A4A] mb-4">{item.desc}</p>
                 <ul className="list-none p-0">
                   {item.links.map((link, i) => (
-                    <li key={i} className="text-sm text-[#4A90E2] mb-2 pl-5 relative before:content-['•'] before:absolute before:left-0">
+                    <li key={i} className="text-sm text-[#009B00] mb-2 pl-5 relative before:content-['•'] before:absolute before:left-0">
                       {link}
                     </li>
                   ))}
@@ -478,21 +478,21 @@ export default function CenterOfExcellencePage() {
         </div>
 
         {/* Submit Your Wins CTA */}
-        <div className="bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-12 text-center mb-[50px]">
+        <div className="bg-gradient-to-br from-[#F3F3F3] to-[#DFDFDF] rounded-xl p-12 text-center mb-12">
           <div className="text-[48px] mb-4">🏆</div>
-          <h2 className="text-[32px] text-[#0D0D0D] font-bold mb-3">Submit Your Wins in Slack!</h2>
-          <p className="text-lg text-[#4A4A4A] mb-6">
-            Type <code className="bg-white bg-opacity-80 px-2 py-1 rounded text-[#4A90E2] font-mono font-semibold">/coe</code> to access the form
+          <h2 className="text-[18px] text-[#0D0D0D] font-bold mb-3">Submit Your Wins in Slack!</h2>
+          <p className="text-[16px] text-[#4A4A4A] mb-6">
+            Type <code className="bg-white bg-opacity-80 px-2 py-1 rounded text-[#8C69F0] font-mono font-semibold">/coe</code> to access the form
           </p>
-          <a href="#" className="inline-block bg-[#4A90E2] text-white px-8 py-3.5 rounded font-semibold text-base hover:bg-[#357ABD] transition-all hover:-translate-y-0.5 border-2 border-[#4A90E2]">
+          <a href="#" className="inline-block bg-[#8C69F0] text-white px-8 py-3.5 rounded font-semibold text-base hover:bg-[#7B52D9] transition-all hover:-translate-y-0.5 border-2 border-[#8C69F0]">
             Tips for Submitting
           </a>
         </div>
 
         {/* CoE Resource Library */}
-        <div id="library" className="bg-[#F3F3F3] py-[50px] px-10 -mx-10 mb-[50px] scroll-mt-24">
+        <div id="library" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-[32px] font-bold mb-2 text-[#0D0D0D]">CoE Resource Library</h2>
+            <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">CoE Resource Library</h2>
             <p className="text-base text-[#666] mb-8">Proven templates, guides, and playbooks organized for your needs</p>
 
             {/* Tabs */}
@@ -503,7 +503,7 @@ export default function CenterOfExcellencePage() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-5 py-2.5 rounded text-sm font-semibold transition-all ${
                     activeTab === tab
-                      ? 'bg-[#4A90E2] text-white'
+                      ? 'bg-[#8C69F0] text-white'
                       : 'bg-transparent text-[#666] hover:bg-[#F3F3F3] hover:text-[#0D0D0D]'
                   }`}
                 >
@@ -515,14 +515,14 @@ export default function CenterOfExcellencePage() {
             {/* Resource Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {filteredResources.map((item, idx) => (
-                <a key={idx} href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#4A90E2] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer no-underline flex flex-col">
+                <a key={idx} href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer no-underline flex flex-col">
                   {item.icon && <div className="text-[32px] mb-3">{item.icon}</div>}
                   {item.meta && <div className="text-xs text-[#888] mb-2">{item.meta}</div>}
                   <h4 className="text-base font-bold text-[#0D0D0D] mb-2.5">{item.title}</h4>
                   <p className="text-[13px] text-[#666] mb-4 leading-relaxed flex-grow">{item.desc}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-[#4A90E2] font-semibold text-sm">{item.cta}</span>
-                    <span className="bg-[#E3F2FD] text-[#4A90E2] px-3 py-1 rounded-full font-semibold text-xs">
+                    <span className="text-[#009B00] font-semibold text-sm">{item.cta}</span>
+                    <span className="bg-[#F3F3F3] text-[#8C69F0] px-3 py-1 rounded-full font-semibold text-xs">
                       {item.tag}
                     </span>
                   </div>
@@ -533,11 +533,11 @@ export default function CenterOfExcellencePage() {
         </div>
 
         {/* How CoE Works */}
-        <div id="how-it-works" className="bg-white rounded-xl p-8 mb-[50px] shadow-sm scroll-mt-24">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#BBDEFB]">
+        <div id="how-it-works" className="bg-white rounded-xl p-8 mb-12 shadow-sm scroll-mt-24">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">⚙️</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">How CoE Works</h2>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">How CoE Works</h2>
               <p className="text-sm text-[#666]">Our systematic approach to capturing and distributing success</p>
             </div>
           </div>
@@ -546,7 +546,7 @@ export default function CenterOfExcellencePage() {
             {workSteps.map((step, idx) => (
               <div key={idx} className="text-center">
                 <div className="text-[48px] mb-4">{step.icon}</div>
-                <h4 className="text-xl font-bold text-[#0D0D0D] mb-3">{step.title}</h4>
+                <h4 className="text-[18px] font-bold text-[#0D0D0D] mb-3">{step.title}</h4>
                 <p className="text-sm text-[#666] leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -554,19 +554,19 @@ export default function CenterOfExcellencePage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl p-[50px] text-center">
-          <h2 className="text-[32px] text-[#0D0D0D] font-bold mb-4">Share Your Customer Success</h2>
-          <p className="text-lg text-[#4A4A4A] mb-7 max-w-[700px] mx-auto">
+        <div className="bg-gradient-to-br from-[#F3F3F3] to-[#DFDFDF] rounded-xl p-12 text-center">
+          <h2 className="text-[18px] text-[#0D0D0D] font-bold mb-4">Share Your Customer Success</h2>
+          <p className="text-[16px] text-[#4A4A4A] mb-7 max-w-[700px] mx-auto">
             Help us build the knowledge base. Your wins become everyone&apos;s wins.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="#" className="bg-[#4A90E2] text-white px-8 py-3.5 rounded font-semibold text-base hover:bg-[#357ABD] transition-all hover:-translate-y-0.5 border-2 border-[#4A90E2]">
+            <a href="#" className="bg-[#8C69F0] text-white px-8 py-3.5 rounded font-semibold text-base hover:bg-[#7B52D9] transition-all hover:-translate-y-0.5 border-2 border-[#8C69F0]">
               Submit via Slack →
             </a>
-            <a href="#" className="bg-white text-[#4A90E2] px-8 py-3.5 rounded font-semibold text-base border-2 border-[#4A90E2] hover:bg-[#4A90E2] hover:text-white transition-all">
+            <a href="#" className="bg-white text-[#8C69F0] px-8 py-3.5 rounded font-semibold text-base border-2 border-[#8C69F0] hover:bg-[#8C69F0] hover:text-white transition-all">
               View Submission Tips
             </a>
-            <a href="#" className="bg-white text-[#4A90E2] px-8 py-3.5 rounded font-semibold text-base border-2 border-[#4A90E2] hover:bg-[#4A90E2] hover:text-white transition-all">
+            <a href="#" className="bg-white text-[#8C69F0] px-8 py-3.5 rounded font-semibold text-base border-2 border-[#8C69F0] hover:bg-[#8C69F0] hover:text-white transition-all">
               Get Help (Slack)
             </a>
           </div>
@@ -574,7 +574,7 @@ export default function CenterOfExcellencePage() {
 
         {/* Back Link */}
         <div className="text-center mt-12">
-          <a href="/" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <a href="/" className="text-[#009B00] hover:text-[#007A00] font-semibold">
             ← Back to GTM Hub
           </a>
         </div>

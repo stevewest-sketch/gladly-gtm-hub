@@ -59,32 +59,32 @@ export default function SuccessToolkitPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#8C69F0] to-[#7557d9] text-white py-[60px] px-10">
+      <div className="bg-gradient-to-br from-[#8C69F0] to-[#7B52D9] text-white py-16 px-10">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-[48px] font-bold mb-4">SC Toolkit</h1>
-          <p className="text-[20px] opacity-95 max-w-[800px] mx-auto">
+          <h1 className="text-[40px] font-bold mb-4">SC Toolkit</h1>
+          <p className="text-[18px] opacity-95 max-w-[800px] mx-auto">
             Win deals with technical expertise and compelling demonstrations
           </p>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
+      <div className="max-w-[1200px] mx-auto px-10 py-12">
 
         {/* Quick Access */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">⚡</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Quick Access</h2>
-              <p className="text-sm text-[#666]">Your most-used resources and demo environments</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Quick Access</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Your most-used resources and demo environments</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {quickAccess.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 text-center no-underline">
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 text-center no-underline">
                 <div className="text-[32px] mb-2">{item.icon}</div>
-                <div className="text-sm font-semibold text-[#0D0D0D]">{item.title}</div>
+                <div className="text-[13px] font-semibold text-[#0D0D0D]">{item.title}</div>
               </a>
             ))}
           </div>
@@ -92,20 +92,20 @@ export default function SuccessToolkitPage() {
 
         {/* Demo Resources */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🎬</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Demo Resources</h2>
-              <p className="text-sm text-[#666]">Presentations, environments, and scripts for compelling demos</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Demo Resources</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Presentations, environments, and scripts for compelling demos</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {demoResources.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Resource →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
           </div>
@@ -113,20 +113,20 @@ export default function SuccessToolkitPage() {
 
         {/* Technical Resources */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🔧</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Technical Resources</h2>
-              <p className="text-sm text-[#666]">Architecture diagrams, security docs, and integration specs</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Technical Resources</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Architecture diagrams, security docs, and integration specs</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {technicalResources.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Resource →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
           </div>
@@ -134,20 +134,20 @@ export default function SuccessToolkitPage() {
 
         {/* Proof of Value */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🧪</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Proof of Value & POCs</h2>
-              <p className="text-sm text-[#666]">Structure successful proof of concepts and pilots</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Proof of Value & POCs</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Structure successful proof of concepts and pilots</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {proofOfValue.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Resource →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
           </div>
@@ -155,20 +155,20 @@ export default function SuccessToolkitPage() {
 
         {/* Competitive Intelligence */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">⚔️</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Competitive Intelligence</h2>
-              <p className="text-sm text-[#666]">Battle cards and positioning against key competitors</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Competitive Intelligence</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Battle cards and positioning against key competitors</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {competitiveIntel.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Card →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Card →</span>
               </a>
             ))}
           </div>
@@ -176,20 +176,20 @@ export default function SuccessToolkitPage() {
 
         {/* Discovery & Scoping */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🔍</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Discovery & Scoping</h2>
-              <p className="text-sm text-[#666]">Qualify opportunities and uncover technical requirements</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Discovery & Scoping</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Qualify opportunities and uncover technical requirements</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {discoveryScoping.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Resource →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
           </div>
@@ -197,20 +197,20 @@ export default function SuccessToolkitPage() {
 
         {/* Training & Certification */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🎓</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Training & Certification</h2>
-              <p className="text-sm text-[#666]">Build expertise and stay current on products</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Training & Certification</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Build expertise and stay current on products</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {trainingCertification.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#D1FAE5] hover:border-[#10B981] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
-                <span className="text-[#10B981] font-semibold text-[13px]">View Resource →</span>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#009B00] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
+                <span className="text-[#009B00] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
           </div>
@@ -218,7 +218,7 @@ export default function SuccessToolkitPage() {
 
         {/* Back Link */}
         <div className="text-center mt-8">
-          <a href="/" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <a href="/" className="text-[#009B00] hover:text-[#008000] font-semibold transition-colors duration-200">
             ← Back to GTM Hub
           </a>
         </div>

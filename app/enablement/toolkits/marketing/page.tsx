@@ -59,32 +59,32 @@ export default function MarketingToolkitPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#8C69F0] to-[#7557d9] text-white py-[60px] px-10">
+      <div className="bg-gradient-to-br from-[#8C69F0] to-[#7B52D9] text-white py-16 px-10">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h1 className="text-[48px] font-bold mb-4">Marketing Toolkit</h1>
-          <p className="text-[20px] opacity-95 max-w-[800px] mx-auto">
+          <h1 className="text-[40px] font-bold mb-4">Marketing Toolkit</h1>
+          <p className="text-[18px] opacity-95 max-w-[800px] mx-auto">
             Content, campaigns, and creative resources to drive awareness and pipeline
           </p>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
+      <div className="max-w-[1200px] mx-auto px-10 py-12">
 
         {/* Quick Access */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">⚡</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Quick Access</h2>
-              <p className="text-sm text-[#666]">Your most-used resources and active campaigns</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Quick Access</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Your most-used resources and active campaigns</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {quickAccess.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 text-center no-underline">
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 text-center no-underline">
                 <div className="text-[32px] mb-2">{item.icon}</div>
-                <div className="text-sm font-semibold text-[#0D0D0D]">{item.title}</div>
+                <div className="text-[13px] font-semibold text-[#0D0D0D]">{item.title}</div>
               </a>
             ))}
           </div>
@@ -92,19 +92,19 @@ export default function MarketingToolkitPage() {
 
         {/* Campaigns & Programs */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🚀</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Campaigns & Programs</h2>
-              <p className="text-sm text-[#666]">Active campaigns and marketing program resources</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Campaigns & Programs</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Active campaigns and marketing program resources</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {campaignsPrograms.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -113,19 +113,19 @@ export default function MarketingToolkitPage() {
 
         {/* Content & Messaging */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">✍️</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Content & Messaging</h2>
-              <p className="text-sm text-[#666]">Messaging frameworks, content library, and storytelling resources</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Content & Messaging</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Messaging frameworks, content library, and storytelling resources</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {contentMessaging.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -134,19 +134,19 @@ export default function MarketingToolkitPage() {
 
         {/* Templates & Tools */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🛠️</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Templates & Tools</h2>
-              <p className="text-sm text-[#666]">Ready-to-use templates for marketing execution</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Templates & Tools</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Ready-to-use templates for marketing execution</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {templatesTools.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -155,19 +155,19 @@ export default function MarketingToolkitPage() {
 
         {/* Brand & Creative */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🎨</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Brand & Creative Assets</h2>
-              <p className="text-sm text-[#666]">Logos, design guidelines, and creative resources</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Brand & Creative Assets</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Logos, design guidelines, and creative resources</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {brandCreative.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -176,19 +176,19 @@ export default function MarketingToolkitPage() {
 
         {/* Events & Webinars */}
         <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">🎤</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Events & Webinars</h2>
-              <p className="text-sm text-[#666]">Event marketing materials and webinar resources</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Events & Webinars</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Event marketing materials and webinar resources</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {eventsWebinars.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -197,19 +197,19 @@ export default function MarketingToolkitPage() {
 
         {/* Analytics & Reporting */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
-          <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#E8E0F8]">
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">📊</span>
             <div>
-              <h2 className="text-[26px] text-[#1a1a1a] font-semibold mb-1">Analytics & Reporting</h2>
-              <p className="text-sm text-[#666]">Marketing metrics, dashboards, and performance tracking</p>
+              <h2 className="text-[18px] text-[#1a1a1a] font-semibold mb-1">Analytics & Reporting</h2>
+              <p className="text-[13px] text-[#4A4A4A]">Marketing metrics, dashboards, and performance tracking</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {analyticsReporting.map((item, idx) => (
-              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#F3F3F3] hover:bg-[#E8E0F8] hover:border-[#8C69F0] transition-all hover:-translate-y-0.5 flex flex-col no-underline">
-                <h4 className="text-base text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
-                <p className="text-[13px] text-[#666] mb-3 flex-grow">{item.desc}</p>
+              <a key={idx} href="#" className="bg-white p-5 rounded-lg border-2 border-[#DFDFDF] hover:bg-[#E5E5E5] hover:border-[#8C69F0] transition-all duration-200 hover:-translate-y-0.5 flex flex-col no-underline">
+                <h4 className="text-[15px] text-[#1a1a1a] font-semibold mb-2">{item.title}</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 flex-grow">{item.desc}</p>
                 <span className="text-[#8C69F0] font-semibold text-[13px]">View Resource →</span>
               </a>
             ))}
@@ -218,7 +218,7 @@ export default function MarketingToolkitPage() {
 
         {/* Back Link */}
         <div className="text-center mt-8">
-          <a href="/" className="text-blue-600 hover:text-blue-800 font-semibold">
+          <a href="/" className="text-[#009B00] hover:text-[#008000] font-semibold transition-colors duration-200">
             ← Back to GTM Hub
           </a>
         </div>
