@@ -70,22 +70,6 @@ export default function SuccessToolkitPage() {
 
       <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
 
-        {/* Search Section */}
-        <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="max-w-[700px] mx-auto">
-            <input
-              type="text"
-              placeholder="Search for demo materials, technical docs, or competitive intel..."
-              className="w-full px-6 py-4 text-base border-2 border-[#E5E7EB] rounded-lg focus:outline-none focus:border-[#10B981] focus:ring-4 focus:ring-[#10B981]/10 transition-all"
-            />
-            <div className="text-center mt-4 text-sm text-[#6B7280]">
-              Try: <span className="text-[#10B981] cursor-pointer hover:underline mx-2">"Zendesk migration"</span>
-              <span className="text-[#10B981] cursor-pointer hover:underline mx-2">"voice demo"</span>
-              <span className="text-[#10B981] cursor-pointer hover:underline mx-2">"technical FAQ"</span>
-            </div>
-          </div>
-        </div>
-
         {/* Quick Access */}
         <div className="bg-[#F3F3F3] rounded-xl p-8 mb-6">
           <div className="flex items-center gap-4 mb-6 pb-4 border-b-[3px] border-[#D1FAE5]">

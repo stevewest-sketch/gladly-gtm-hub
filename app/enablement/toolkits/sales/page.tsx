@@ -76,22 +76,6 @@ export default function SalesToolkitPage() {
 
       <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
 
-        {/* Search Section */}
-        <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="max-w-[700px] mx-auto">
-            <input
-              type="text"
-              placeholder="Search for content, tools, or answers..."
-              className="w-full px-6 py-4 text-base border-2 border-[#E5E7EB] rounded-lg focus:outline-none focus:border-[#8C69F0] focus:ring-4 focus:ring-[#8C69F0]/10 transition-all"
-            />
-            <div className="text-center mt-4 text-sm text-[#6B7280]">
-              Try: <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"Zendesk battle card"</span>
-              <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"Sidekick demo"</span>
-              <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"ROI calculator"</span>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Banner */}
         <div className="bg-gradient-to-br from-[#8C69F0] to-[#7557d9] text-white rounded-xl p-8 mb-8 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex-1">

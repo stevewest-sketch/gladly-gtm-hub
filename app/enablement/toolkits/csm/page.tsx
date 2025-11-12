@@ -76,22 +76,6 @@ export default function CSMToolkitPage() {
 
       <div className="max-w-[1200px] mx-auto px-10 py-[50px]">
 
-        {/* Search Section */}
-        <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
-          <div className="max-w-[700px] mx-auto">
-            <input
-              type="text"
-              placeholder="Search for resources, tools, or strategies..."
-              className="w-full px-6 py-4 text-base border-2 border-[#E5E7EB] rounded-lg focus:outline-none focus:border-[#8C69F0] focus:ring-4 focus:ring-[#8C69F0]/10 transition-all"
-            />
-            <div className="text-center mt-4 text-sm text-[#6B7280]">
-              Try: <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"ROI calculator"</span>
-              <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"QBR template"</span>
-              <span className="text-[#8C69F0] cursor-pointer hover:underline mx-2">"adoption playbook"</span>
-            </div>
-          </div>
-        </div>
-
         {/* Primary Actions */}
         <div className="mb-12">
           <h2 className="text-[28px] font-bold text-[#0D0D0D] mb-2">What do you need to do?</h2>
