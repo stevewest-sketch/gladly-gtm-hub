@@ -1,10 +1,23 @@
 'use client';
 
+import QuickNav from '@/components/QuickNav';
+import { GradientDivider } from '@/components/ui';
+import { gradients } from '@/lib/theme';
+
 export default function DemoSetupGuidePage() {
+  const navLinks = [
+    { label: 'Objective', anchor: 'objective' },
+    { label: 'Getting Started', anchor: 'getting-started' },
+    { label: 'Environment', anchor: 'environment' },
+    { label: 'Reset Process', anchor: 'reset' },
+    { label: 'Setup', anchor: 'logging-in' },
+    { label: 'Demo Flow', anchor: 'demo-flow' },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="text-white py-12 px-6" style={{background: 'linear-gradient(135deg, #6B46C1 0%, #8C69F0 50%, #A78BFA 100%)'}}>
+      <div className="text-white py-12 px-6" style={{background: gradients.purple}}>
         <div className="max-w-6xl mx-auto">
           <div className="mb-4">
             <a href="/enablement/demo" className="text-white hover:text-opacity-80 text-sm font-medium">
@@ -25,21 +38,11 @@ export default function DemoSetupGuidePage() {
       </div>
 
       {/* Quick Navigation */}
-      <div className="bg-white py-5 px-10 sticky top-0 z-[100] shadow-sm">
-        <div className="flex gap-3 justify-center items-center flex-wrap max-w-6xl mx-auto">
-          <a href="#objective" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Objective</a>
-          <a href="#getting-started" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Getting Started</a>
-          <a href="#environment" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Environment</a>
-          <a href="#reset" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Reset Process</a>
-          <a href="#logging-in" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Setup</a>
-          <a href="#demo-flow" className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white transition-all whitespace-nowrap">Demo Flow</a>
-        </div>
-      </div>
+      <QuickNav links={navLinks} />
 
       <div className="max-w-6xl mx-auto px-10 py-12">
 
-        {/* Purple Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #E8E0F8 0%, #8C69F0 50%, #E8E0F8 100%)'}}></div>
+        <GradientDivider gradient="purple" />
 
         {/* Demo Objective */}
         <section id="objective" className="mb-16 scroll-mt-20">
@@ -71,8 +74,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Blue Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #DBEAFE 0%, #3B82F6 50%, #DBEAFE 100%)'}}></div>
+        <GradientDivider gradient="blue" />
 
         {/* Getting Started */}
         <section id="getting-started" className="mb-16 scroll-mt-20">
@@ -127,8 +129,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Purple Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #E8E0F8 0%, #8C69F0 50%, #E8E0F8 100%)'}}></div>
+        <GradientDivider gradient="purple" />
 
         {/* Environment Access */}
         <section id="environment" className="mb-16 scroll-mt-20">
@@ -188,8 +189,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Blue Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #DBEAFE 0%, #3B82F6 50%, #DBEAFE 100%)'}}></div>
+        <GradientDivider gradient="blue" />
 
         {/* Demo Reset Process */}
         <section id="reset" className="mb-16 scroll-mt-20">
@@ -261,8 +261,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Purple Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #E8E0F8 0%, #8C69F0 50%, #E8E0F8 100%)'}}></div>
+        <GradientDivider gradient="purple" />
 
         {/* Logging In */}
         <section id="logging-in" className="mb-16 scroll-mt-20">
@@ -321,8 +320,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Blue Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #DBEAFE 0%, #3B82F6 50%, #DBEAFE 100%)'}}></div>
+        <GradientDivider gradient="blue" />
 
         {/* Best Practices */}
         <section id="best-practices" className="mb-16 scroll-mt-20">
@@ -366,8 +364,7 @@ export default function DemoSetupGuidePage() {
           </div>
         </section>
 
-        {/* Purple Gradient Divider */}
-        <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #E8E0F8 0%, #8C69F0 50%, #E8E0F8 100%)'}}></div>
+        <GradientDivider gradient="purple" />
 
         {/* Demo Flow */}
         <section id="demo-flow" className="mb-16 scroll-mt-20">
