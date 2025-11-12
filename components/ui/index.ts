@@ -42,3 +42,11 @@ export type { StepListProps, StepItem } from './list';
 // Performance & Optimization
 export { OptimizedImage, BackgroundImage } from './image/OptimizedImage';
 export { LazySection, LazyBelowFold, LazyTab, ProgressiveEnhancement } from './lazy/LazySection';
+
+// Interactive Components
+export { ScrollToTop } from './interactive/ScrollToTop';
+export { CopyButton, CodeBlock } from './interactive/CopyButton';
+export { ToastProvider, useToast } from './interactive/Toast';
+export { Modal, ModalFooter, ConfirmDialog } from './interactive/Modal';
+export { Tooltip, InfoTooltip } from './interactive/Tooltip';
+export { Accordion, AccordionItem } from './interactive/Accordion';
