@@ -8,6 +8,7 @@ import learningModule from './learningModule'
 import templateResource from './templateResource'
 import contentResource from './contentResource'
 import competitiveResource from './competitiveResource'
+import searchableContent from './searchableContent'
 import { navigation } from './navigation'
 import { navigationItem } from './navigationItem'
 import { siteSettings } from './siteSettings'
@@ -46,6 +47,7 @@ export const schemaTypes = [
   templateResource,
   contentResource,
   competitiveResource,
+  searchableContent,
   navigation,
   navigationItem,
   siteSettings,

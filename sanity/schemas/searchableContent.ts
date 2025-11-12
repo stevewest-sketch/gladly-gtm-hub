@@ -1,0 +1,125 @@
+export default {
+  name: 'searchableContent',
+  title: 'Searchable Content',
+  type: 'document',
+  icon: () => '🔍',
+  fields: [
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      description: 'The display title that appears in search results',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      rows: 2,
+      description: 'Brief description shown in search results',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'url',
+      title: 'URL Path',
+      type: 'string',
+      description: 'URL path (e.g., /enablement/demo or /product/sidekick-email)',
+      validation: (Rule: any) => Rule.required().regex(/^\//, {
+        name: 'url',
+        invert: false,
+      }).error('URL must start with /'),
+    },
+    {
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      description: 'Category label shown in search results',
+      options: {
+        list: [
+          { title: 'Page', value: 'Page' },
+          { title: 'Toolkit', value: 'Toolkit' },
+          { title: 'Product', value: 'Product' },
+          { title: 'CoE', value: 'CoE' },
+          { title: 'Learning', value: 'Learning' },
+          { title: 'Demo', value: 'Demo' },
+          { title: 'Resources', value: 'Resources' },
+          { title: 'Guide', value: 'Guide' },
+          { title: 'Topic', value: 'Topic' },
+          { title: 'Tools', value: 'Tools' },
+          { title: 'Sales', value: 'Sales' },
+          { title: 'CSM', value: 'CSM' },
+          { title: 'Technical', value: 'Technical' },
+          { title: 'Marketing', value: 'Marketing' },
+          { title: 'Support', value: 'Support' },
+          { title: 'Industry', value: 'Industry' },
+          { title: 'Implementation', value: 'Implementation' },
+        ],
+      },
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'keywords',
+      title: 'Keywords',
+      type: 'array',
+      description: 'Search keywords and synonyms (e.g., "demo", "demonstration", "setup")',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+      validation: (Rule: any) => Rule.required().min(1),
+    },
+    {
+      name: 'priority',
+      title: 'Search Priority',
+      type: 'number',
+      description: 'Higher numbers appear first in search results (0-100)',
+      validation: (Rule: any) => Rule.min(0).max(100),
+      initialValue: 50,
+    },
+    {
+      name: 'isActive',
+      title: 'Active in Search',
+      type: 'boolean',
+      description: 'Toggle to show/hide this item from search results',
+      initialValue: true,
+    },
+    {
+      name: 'icon',
+      title: 'Icon (Optional)',
+      type: 'string',
+      description: 'Emoji or icon to display with this item',
+    },
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      category: 'category',
+      url: 'url',
+      isActive: 'isActive',
+    },
+    prepare({ title, category, url, isActive }: any) {
+      return {
+        title: title,
+        subtitle: `${category} - ${url}`,
+        media: isActive ? '✅' : '❌',
+      };
+    },
+  },
+  orderings: [
+    {
+      title: 'Priority (High to Low)',
+      name: 'priorityDesc',
+      by: [{ field: 'priority', direction: 'desc' }],
+    },
+    {
+      title: 'Title (A-Z)',
+      name: 'titleAsc',
+      by: [{ field: 'title', direction: 'asc' }],
+    },
+    {
+      title: 'Category',
+      name: 'categoryAsc',
+      by: [{ field: 'category', direction: 'asc' }],
+    },
+  ],
+}

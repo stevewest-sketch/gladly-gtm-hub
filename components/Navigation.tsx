@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { SearchBar, searchableContent } from '@/components/search';
+import { SearchBar } from '@/components/search';
 
 interface NavigationChild {
   title: string;
@@ -25,11 +25,20 @@ interface NavigationData {
   items: NavigationItem[];
 }
 
-interface NavigationProps {
-  data?: NavigationData | null;
+interface SearchableItem {
+  title: string;
+  description?: string;
+  url: string;
+  category?: string;
+  keywords?: string[];
 }
 
-export default function Navigation({ data }: NavigationProps) {
+interface NavigationProps {
+  data?: NavigationData | null;
+  searchableContent?: SearchableItem[];
+}
+
+export default function Navigation({ data, searchableContent = [] }: NavigationProps) {
   const pathname = usePathname();
 
   // Helper function to check if current path is within a section

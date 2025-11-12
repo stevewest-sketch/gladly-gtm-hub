@@ -243,6 +243,8 @@ export default {
         { type: 'accordionSection' },
         { type: 'videoSection' },
         { type: 'testimonialSection' },
+        { type: 'quickStatsSection' },
+        { type: 'featuredContentSection' },
       ],
     },
     {
