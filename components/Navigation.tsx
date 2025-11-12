@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { SearchBar, searchableContent } from '@/components/search';
 
 interface NavigationChild {
   title: string;
@@ -113,9 +114,17 @@ export default function Navigation({ data }: NavigationProps) {
     return (
       <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">
         {/* Logo/Home */}
-        <Link href="/" className="block mb-8">
+        <Link href="/" className="block mb-6">
           <h2 className="text-2xl font-bold text-gray-900">{data.logoText || 'GTM Hub'}</h2>
         </Link>
+
+        {/* Global Search */}
+        <div className="mb-6">
+          <SearchBar
+            placeholder="Search..."
+            searchableContent={searchableContent}
+          />
+        </div>
 
         {/* Navigation Sections */}
         <div className="space-y-2">
@@ -184,9 +193,17 @@ export default function Navigation({ data }: NavigationProps) {
   return (
     <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">
       {/* Logo/Home */}
-      <Link href="/" className="block mb-8">
+      <Link href="/" className="block mb-6">
         <h2 className="text-2xl font-bold text-gray-900">GTM Hub</h2>
       </Link>
+
+      {/* Global Search */}
+      <div className="mb-6">
+        <SearchBar
+          placeholder="Search..."
+          searchableContent={searchableContent}
+        />
+      </div>
 
       {/* Navigation Sections */}
       <div className="space-y-2">

@@ -12,7 +12,7 @@ export { BaseCard, IconCard } from './cards';
 export type { BaseCardProps, IconCardProps } from './cards';
 
 // Sections
-export { SectionDivider, SectionHeader } from './sections';
+export { SectionDivider, SectionHeader, ContentSection } from './sections';
 export type { SectionDividerProps, SectionHeaderProps } from './sections';
 
 // Badge
@@ -26,3 +26,15 @@ export type { AlertProps } from './alert';
 // Divider
 export { GradientDivider } from './divider';
 export type { GradientDividerProps } from './divider';
+
+// Hero
+export { PageHero } from './hero';
+export type { PageHeroProps } from './hero';
+
+// Callout
+export { InfoCallout } from './callout';
+export type { InfoCalloutProps } from './callout';
+
+// List
+export { StepList } from './list';
+export type { StepListProps, StepItem } from './list';
