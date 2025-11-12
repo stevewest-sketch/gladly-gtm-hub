@@ -1,5 +1,8 @@
 'use client';
 
+import { BaseCard } from '@/components/ui';
+import { colors } from '@/lib/theme';
+
 interface TeamToolkitCardProps {
   emoji: string;
   title: string;
@@ -15,74 +18,33 @@ export default function TeamToolkitCard({
   link,
   color,
 }: TeamToolkitCardProps) {
-  const colorClass =
-    color === 'blue' ? 'sales' :
-    color === 'purple' ? 'csm' :
-    color === 'green' ? 'sc' :
-    'marketing';
+  const colorMap = {
+    blue: colors.primary.blue,
+    purple: colors.primary.purple,
+    green: colors.primary.orange, // 'sc' was mapped to orange in original
+    orange: colors.primary.purple, // 'marketing' was mapped to purple in original
+  };
+
+  const topBarColor = colorMap[color];
 
   return (
-    <a
+    <BaseCard
       href={link}
-      className={`toolkit-card ${colorClass}`}
+      padding="lg"
+      className="text-center relative overflow-hidden rounded-xl hover:bg-primary-purple-light"
     >
-      <span className="text-5xl mb-4 block">{emoji}</span>
-      <h3 className="text-[22px] font-semibold text-[#1a1a1a] mb-2">{title}</h3>
-      <p className="text-sm text-[#666] leading-tight">{description}</p>
+      {/* Top color bar */}
+      <div
+        className="absolute top-0 left-0 right-0 h-1 transition-all duration-300 group-hover:h-full group-hover:opacity-10"
+        style={{ backgroundColor: topBarColor }}
+      />
 
-      <style jsx>{`
-        .toolkit-card {
-          background: white;
-          border: 2px solid #F3F3F3;
-          border-radius: 12px;
-          padding: 32px 24px;
-          transition: all 0.3s ease;
-          text-decoration: none;
-          color: inherit;
-          display: block;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .toolkit-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-          transition: all 0.3s ease;
-        }
-
-        .toolkit-card.sales::before {
-          background: #3B82F6;
-        }
-
-        .toolkit-card.csm::before {
-          background: #8C69F0;
-        }
-
-        .toolkit-card.sc::before {
-          background: #F97316;
-        }
-
-        .toolkit-card.marketing::before {
-          background: #8C69F0;
-        }
-
-        .toolkit-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          background: #E8E0F8;
-          border-color: #8C69F0;
-        }
-
-        .toolkit-card:hover::before {
-          height: 100%;
-          opacity: 0.1;
-        }
-      `}</style>
-    </a>
+      {/* Content */}
+      <div className="relative z-10">
+        <span className="text-5xl mb-4 block">{emoji}</span>
+        <h3 className="text-[22px] font-semibold text-[#1a1a1a] mb-2">{title}</h3>
+        <p className="text-sm text-[#666] leading-tight">{description}</p>
+      </div>
+    </BaseCard>
   );
 }

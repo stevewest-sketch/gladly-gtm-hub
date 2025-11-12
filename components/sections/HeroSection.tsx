@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Button } from '@/components/ui';
+import { gradients, type GradientType } from '@/lib/theme';
 
 interface HeroSectionProps {
   anchorId?: string;
@@ -19,8 +21,9 @@ interface HeroSectionProps {
 
 const colorMap: Record<string, string> = {
   purple: 'linear-gradient(135deg, #6B46C1 0%, #8C69F0 50%, #A78BFA 100%)',
-  blue: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
-  orange: 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
+  blue: gradients.blue,
+  orange: gradients.orange,
+  green: gradients.green,
   dark: 'bg-gradient-to-br from-[#0D0D0D] to-[#2D2D2D]',
 };
 
@@ -92,20 +95,24 @@ export default function HeroSection({
           {(primaryCtaText || secondaryCtaText) && (
             <div className="flex gap-4 flex-wrap" style={{ justifyContent: is2Column ? 'flex-start' : 'center' }}>
               {primaryCtaText && primaryCtaLink && (
-                <a
+                <Button
                   href={primaryCtaLink}
-                  className={`inline-block bg-white ${primaryBtnTextColor} px-7 py-3 rounded font-semibold hover:bg-[#8C69F0] hover:text-white hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(140,105,240,0.3)] transition-all`}
+                  variant="ghost"
+                  size="md"
+                  className={`bg-white ${primaryBtnTextColor} hover:bg-[#8C69F0] hover:text-white hover:shadow-[0_4px_12px_rgba(140,105,240,0.3)]`}
                 >
                   {primaryCtaText}
-                </a>
+                </Button>
               )}
               {secondaryCtaText && secondaryCtaLink && (
-                <a
+                <Button
                   href={secondaryCtaLink}
-                  className="inline-block bg-transparent text-white px-7 py-3 rounded font-semibold border-2 border-white hover:bg-[#8C69F0] hover:border-[#8C69F0] transition-all"
+                  variant="ghost"
+                  size="md"
+                  className="bg-transparent text-white border-2 border-white hover:bg-[#8C69F0] hover:border-[#8C69F0]"
                 >
                   {secondaryCtaText}
-                </a>
+                </Button>
               )}
             </div>
           )}

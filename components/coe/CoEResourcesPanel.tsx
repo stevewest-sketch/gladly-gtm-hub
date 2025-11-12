@@ -53,13 +53,13 @@ export default function CoEResourcesPanel({ resources, quizUrl }: CoEResourcesPa
               href={resource.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-3 bg-gray-50 hover:bg-white border-2 border-transparent hover:border-[#8C69F0] rounded-lg transition-all group"
+              className="flex items-center gap-3 p-3 bg-gray-50 hover:bg-white border-2 border-transparent hover:border-primary-purple rounded-lg transition-all group"
             >
               <span className="text-xl">{resourceIcons[resource.type]}</span>
-              <span className="flex-1 text-sm font-medium text-[#0D0D0D] group-hover:text-[#8C69F0]">
+              <span className="flex-1 text-sm font-medium text-neutral-black group-hover:text-primary-purple">
                 {resource.label}
               </span>
-              <span className="text-[#8C69F0] opacity-0 group-hover:opacity-100 transition-opacity text-xs font-semibold">
+              <span className="text-primary-purple opacity-0 group-hover:opacity-100 transition-opacity text-xs font-semibold">
                 Open →
               </span>
             </a>
@@ -79,7 +79,7 @@ export default function CoEResourcesPanel({ resources, quizUrl }: CoEResourcesPa
           href="https://gladly.slack.com/archives/coe"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-sm text-[#8C69F0] hover:underline font-medium"
+          className="inline-block text-sm text-primary-purple hover:underline font-medium"
         >
           #coe on Slack →
         </a>

@@ -1,4 +1,5 @@
 import QuickTaskCard from '../homepage/QuickTaskCard';
+import { GradientDivider } from '@/components/ui';
 
 interface Resource {
   emoji: string;
@@ -19,8 +20,7 @@ export default function PopularResourcesSection({
 
   return (
     <>
-      {/* Orange Gradient Divider */}
-      <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #FFF7ED 0%, #F97316 50%, #FFF7ED 100%)'}}></div>
+      <GradientDivider gradient="orange" />
 
       <div className="mb-[50px]">
         <h2 className="text-[26px] font-semibold text-[#1a1a1a] mb-6">

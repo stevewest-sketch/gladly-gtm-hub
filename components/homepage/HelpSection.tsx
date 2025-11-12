@@ -1,5 +1,8 @@
 'use client';
 
+import { Button } from '@/components/ui';
+import { gradients } from '@/lib/theme';
+
 interface HelpSectionProps {
   title: string;
   description: string;
@@ -16,77 +19,33 @@ export default function HelpSection({
   buttons,
 }: HelpSectionProps) {
   return (
-    <div className="help-section">
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div
+      className="rounded-xl p-8 text-center"
+      style={{ background: gradients.blue }}
+    >
+      <h3 className="text-xl text-white mb-3 font-semibold">
+        {title}
+      </h3>
+      <p className="text-base text-white mb-5">
+        {description}
+      </p>
       {buttons && buttons.length > 0 && (
-        <div className="help-actions">
+        <div className="flex gap-4 justify-center flex-wrap">
           {buttons.map((button, index) => (
-            <a
+            <Button
               key={index}
               href={button.link}
-              className={`help-button ${button.variant === 'secondary' ? 'secondary' : ''}`}
+              variant={button.variant === 'secondary' ? 'ghost' : 'ghost'}
+              className={button.variant === 'secondary'
+                ? 'bg-transparent border-2 border-white text-white hover:bg-white/10'
+                : 'bg-white text-primary-blue-dark hover:bg-white/90'
+              }
             >
               {button.text}
-            </a>
+            </Button>
           ))}
         </div>
       )}
-
-      <style jsx>{`
-        .help-section {
-          background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
-          border-radius: 12px;
-          padding: 32px;
-          text-align: center;
-        }
-
-        .help-section h3 {
-          font-size: 20px;
-          color: #FFFFFF;
-          margin-bottom: 12px;
-          font-weight: 600;
-        }
-
-        .help-section p {
-          font-size: 15px;
-          color: #FFFFFF;
-          margin-bottom: 20px;
-        }
-
-        .help-actions {
-          display: flex;
-          gap: 16px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-
-        .help-button {
-          background: white;
-          color: #1E40AF;
-          padding: 12px 24px;
-          border-radius: 8px;
-          text-decoration: none;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          display: inline-block;
-        }
-
-        .help-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .help-button.secondary {
-          background: transparent;
-          color: white;
-          border: 2px solid white;
-        }
-
-        .help-button.secondary:hover {
-          background: rgba(255, 255, 255, 0.1);
-        }
-      `}</style>
     </div>
   );
 }

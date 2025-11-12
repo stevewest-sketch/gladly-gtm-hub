@@ -20,8 +20,8 @@ export default function CaseStudyCard({
   keyTakeaway,
   variant = 'primary'
 }: CaseStudyCardProps) {
-  const accentColor = variant === 'primary' ? 'border-[#8C69F0]' : 'border-blue-600';
-  const accentBg = variant === 'primary' ? 'bg-[#8C69F0]' : 'bg-blue-600';
+  const accentColor = variant === 'primary' ? 'border-primary-purple' : 'border-blue-600';
+  const accentBg = variant === 'primary' ? 'bg-primary-purple' : 'bg-blue-600';
 
   return (
     <div className={`bg-white border-2 ${accentColor} rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all`}>
@@ -57,7 +57,7 @@ export default function CaseStudyCard({
               <ul className="space-y-1.5">
                 {approach.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <span className="text-[#8C69F0] font-bold text-xs mt-0.5">•</span>
+                    <span className="text-primary-purple font-bold text-xs mt-0.5">•</span>
                     <span className="text-sm text-gray-700 leading-snug flex-1">
                       {item}
                     </span>
@@ -79,7 +79,7 @@ export default function CaseStudyCard({
               <div className="grid grid-cols-2 gap-x-4 gap-y-3">
                 {metrics.map((metric, index) => (
                   <div key={index}>
-                    <div className={`text-2xl font-bold ${variant === 'primary' ? 'text-[#8C69F0]' : 'text-blue-600'} leading-none mb-1`}>
+                    <div className={`text-2xl font-bold ${variant === 'primary' ? 'text-primary-purple' : 'text-blue-600'} leading-none mb-1`}>
                       {metric.value}
                     </div>
                     <div className="text-xs text-gray-600 font-medium leading-tight">

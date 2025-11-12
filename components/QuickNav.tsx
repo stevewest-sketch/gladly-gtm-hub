@@ -35,7 +35,7 @@ export default function QuickNav({ links }: QuickNavProps) {
             key={index}
             href={`#${link.anchor}`}
             onClick={(e) => handleClick(e, link.anchor)}
-            className="bg-[#F3F3F3] px-5 py-2.5 rounded text-sm font-semibold text-[#0D0D0D] hover:bg-[#8C69F0] hover:text-white hover:-translate-y-0.5 transition-all whitespace-nowrap flex-shrink-0"
+            className="bg-neutral-background px-5 py-2.5 rounded text-sm font-semibold text-neutral-black hover:bg-primary-purple hover:text-white hover:-translate-y-0.5 transition-all whitespace-nowrap flex-shrink-0"
           >
             {link.label}
           </a>

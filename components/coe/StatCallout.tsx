@@ -7,9 +7,9 @@ interface StatCalloutProps {
 
 const variantStyles = {
   primary: {
-    bg: 'bg-gradient-to-br from-[#8C69F0] to-[#7557d9]',
+    bg: 'bg-gradient-to-br from-primary-purple to-primary-purple-dark',
     text: 'text-white',
-    border: 'border-[#8C69F0]',
+    border: 'border-primary-purple',
   },
   success: {
     bg: 'bg-gradient-to-br from-emerald-600 to-emerald-700',

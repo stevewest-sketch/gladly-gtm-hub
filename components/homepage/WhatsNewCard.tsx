@@ -1,5 +1,7 @@
 'use client';
 
+import { BaseCard } from '@/components/ui';
+
 interface WhatsNewCardProps {
   date: string;
   emoji: string;
@@ -19,75 +21,30 @@ export default function WhatsNewCard({
   links,
 }: WhatsNewCardProps) {
   return (
-    <div className="update-item">
-      <div className="update-date">{date}</div>
-      <div className="update-title">
-        <span>{emoji}</span> {title}
+    <BaseCard padding="md" hover={false} className="border-b border-[#eeeeee] last:border-b-0 rounded-none">
+      <div className="text-[13px] text-[#888] font-semibold mb-2">
+        {date}
       </div>
-      <div className="update-description">{description}</div>
+      <div className="text-lg text-[#1a1a1a] font-semibold mb-2">
+        <span className="mr-2">{emoji}</span>
+        {title}
+      </div>
+      <div className="text-[15px] text-[#666] mb-3">
+        {description}
+      </div>
       {links && links.length > 0 && (
-        <div className="update-links">
+        <div className="flex gap-4 flex-wrap">
           {links.map((link, index) => (
-            <a key={index} href={link.url} className="update-link">
+            <a
+              key={index}
+              href={link.url}
+              className="text-[#3B82F6] hover:text-[#1E40AF] hover:underline text-sm font-semibold transition-colors"
+            >
               → {link.text}
             </a>
           ))}
         </div>
       )}
-
-      <style jsx>{`
-        .update-item {
-          padding: 20px 0;
-          border-bottom: 1px solid #eee;
-        }
-
-        .update-item:last-child {
-          border-bottom: none;
-        }
-
-        .update-date {
-          font-size: 13px;
-          color: #888;
-          font-weight: 600;
-          margin-bottom: 8px;
-        }
-
-        .update-title {
-          font-size: 18px;
-          color: #1a1a1a;
-          font-weight: 600;
-          margin-bottom: 8px;
-        }
-
-        .update-title span {
-          margin-right: 8px;
-        }
-
-        .update-description {
-          font-size: 15px;
-          color: #666;
-          margin-bottom: 12px;
-        }
-
-        .update-links {
-          display: flex;
-          gap: 16px;
-          flex-wrap: wrap;
-        }
-
-        .update-link {
-          color: #3B82F6;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 600;
-          transition: color 0.2s ease;
-        }
-
-        .update-link:hover {
-          color: #1E40AF;
-          text-decoration: underline;
-        }
-      `}</style>
-    </div>
+    </BaseCard>
   );
 }

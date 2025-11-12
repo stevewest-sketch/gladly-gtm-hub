@@ -52,7 +52,7 @@ export default function BenchmarkTable({ phases, title = "Performance Benchmarks
                   <div className="font-bold text-[#0D0D0D]">{phase.period}</div>
                 </td>
                 <td className="p-4">
-                  <div className="text-2xl font-bold text-[#8C69F0]">
+                  <div className="text-2xl font-bold text-primary-purple">
                     {phase.target}
                   </div>
                 </td>

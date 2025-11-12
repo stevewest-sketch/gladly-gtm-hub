@@ -1,4 +1,5 @@
 import TeamToolkitCard from '../homepage/TeamToolkitCard';
+import { GradientDivider } from '@/components/ui';
 
 interface Toolkit {
   emoji: string;
@@ -23,8 +24,7 @@ export default function TeamToolkitsSection({
 
   return (
     <>
-      {/* Purple Gradient Divider */}
-      <div className="h-1 mb-[50px]" style={{background: 'linear-gradient(90deg, #E8E0F8 0%, #8C69F0 50%, #E8E0F8 100%)'}}></div>
+      <GradientDivider gradient="purple" />
 
       <div className="mb-[50px]">
         <h2 className="text-[26px] font-semibold text-[#1a1a1a] mb-3">
