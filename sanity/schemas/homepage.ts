@@ -153,6 +153,8 @@ export default {
         { type: 'whatsNewSection' },
         { type: 'popularResourcesSection' },
         { type: 'helpSection' },
+        { type: 'quickStatsSection' },
+        { type: 'featuredContentSection' },
       ],
     },
     // Legacy fields (kept for backwards compatibility)
