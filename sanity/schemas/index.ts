@@ -5,6 +5,7 @@ import contact from './contact'
 import page from './page'
 import trainingSession from './trainingSession'
 import learningModule from './learningModule'
+import enablementArticle from './enablementArticle'
 import templateResource from './templateResource'
 import contentResource from './contentResource'
 import competitiveResource from './competitiveResource'
@@ -44,6 +45,7 @@ export const schemaTypes = [
   page,
   trainingSession,
   learningModule,
+  enablementArticle,
   templateResource,
   contentResource,
   competitiveResource,
