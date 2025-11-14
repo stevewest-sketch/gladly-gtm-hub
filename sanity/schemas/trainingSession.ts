@@ -82,6 +82,13 @@ export default {
       type: 'url',
     },
     {
+      name: 'enablementArticle',
+      title: 'Linked Enablement Article',
+      type: 'reference',
+      to: [{ type: 'enablementArticle' }],
+      description: 'Reference to the associated enablement article (auto-created from transcript processing)',
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',

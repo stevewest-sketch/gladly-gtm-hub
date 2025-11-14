@@ -78,8 +78,11 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
         { set: { keyTakeaways: processedData.keyTakeaways } },
         { set: { sections: sectionsWithKeys } },
         { set: { actionItems: processedData.actionItems || [] } },
+        { set: { videoUrl: processedData.videoUrl || undefined } },
+        { set: { slidesUrl: processedData.slidesUrl || undefined } },
         { set: { tags: processedData.tags } },
         { set: { readingTime: processedData.readingTime } },
+        { set: { publishedDate: new Date().toISOString() } },
         {
           set: {
             slug: {
@@ -98,6 +101,27 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
         },
         { set: { rawTranscript: transcript } }, // Save original
       ]);
+
+      // Create corresponding training session
+      try {
+        await fetch('/api/create-training-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            enablementArticleId: props.id,
+            title: processedData.title,
+            summary: processedData.summary,
+            category: processedData.category,
+            audience: processedData.audience,
+            tags: processedData.tags,
+            slug: processedData.slug,
+            publishedDate: new Date().toISOString(),
+          }),
+        });
+      } catch (trainingError) {
+        console.error('Failed to create training session:', trainingError);
+        // Don't fail the whole operation if training session creation fails
+      }
 
       // Close dialog
       setIsOpen(false);

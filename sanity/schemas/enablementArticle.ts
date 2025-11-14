@@ -134,6 +134,20 @@ export default {
       description: 'Actionable next steps from the content',
     },
     {
+      name: 'videoUrl',
+      title: 'Session Video URL',
+      type: 'url',
+      description: 'Link to recording (Google Drive, Wistia, etc.) - can be auto-extracted from transcript or added manually',
+      placeholder: 'https://drive.google.com/file/d/... or https://gladly.wistia.com/...',
+    },
+    {
+      name: 'slidesUrl',
+      title: 'Presentation Slides URL',
+      type: 'url',
+      description: 'Link to presentation deck (Google Slides, PDF, etc.) - can be auto-extracted from transcript or added manually',
+      placeholder: 'https://docs.google.com/presentation/...',
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
