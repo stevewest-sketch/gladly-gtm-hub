@@ -50,9 +50,7 @@ Your task is to:
   "videoUrl": "URL to session recording if mentioned in transcript (Google Drive, Wistia, etc.) or null if not found",
   "slidesUrl": "URL to presentation slides if mentioned in transcript (Google Slides, PDF, etc.) or null if not found",
   "tags": ["tag1", "tag2", "tag3"],
-  "readingTime": "X minutes",
-  "seoTitle": "SEO-optimized title",
-  "seoDescription": "SEO meta description"
+  "readingTime": "X minutes"
 }
 
 ## Category Assignment:

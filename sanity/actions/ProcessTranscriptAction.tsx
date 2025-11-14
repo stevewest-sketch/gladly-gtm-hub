@@ -91,14 +91,6 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
             },
           },
         },
-        {
-          set: {
-            seo: {
-              metaTitle: processedData.seoTitle,
-              metaDescription: processedData.seoDescription,
-            },
-          },
-        },
         { set: { rawTranscript: transcript } }, // Save original
       ]);
 

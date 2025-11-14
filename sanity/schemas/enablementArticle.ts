@@ -171,8 +171,9 @@ export default {
     },
     {
       name: 'seo',
-      title: 'SEO Metadata',
+      title: 'SEO Metadata (Optional - Internal Use Only)',
       type: 'object',
+      description: 'Optional metadata fields - not required for internal site',
       options: {
         collapsible: true,
         collapsed: true,
@@ -182,14 +183,14 @@ export default {
           name: 'metaTitle',
           title: 'SEO Title',
           type: 'string',
-          validation: (Rule: any) => Rule.max(60),
+          description: 'Optional - leave blank if not needed',
         },
         {
           name: 'metaDescription',
           title: 'SEO Description',
           type: 'text',
           rows: 2,
-          validation: (Rule: any) => Rule.max(160),
+          description: 'Optional - leave blank if not needed',
         },
       ],
     },
