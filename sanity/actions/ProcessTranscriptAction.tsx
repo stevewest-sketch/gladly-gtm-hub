@@ -62,6 +62,12 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
       const result = await response.json();
       const processedData = result.data;
 
+      // Add unique _key to each section for Sanity
+      const sectionsWithKeys = processedData.sections?.map((section: any) => ({
+        ...section,
+        _key: Math.random().toString(36).substring(2, 11),
+      })) || [];
+
       // Patch the document with processed content
       patch.execute([
         { set: { title: processedData.title } },
@@ -70,7 +76,7 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
         { set: { contentType: processedData.contentType } },
         { set: { audience: processedData.audience } },
         { set: { keyTakeaways: processedData.keyTakeaways } },
-        { set: { sections: processedData.sections } },
+        { set: { sections: sectionsWithKeys } },
         { set: { actionItems: processedData.actionItems || [] } },
         { set: { tags: processedData.tags } },
         { set: { readingTime: processedData.readingTime } },
