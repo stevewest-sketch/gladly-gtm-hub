@@ -48,7 +48,7 @@ export default function TemplateGalleryPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 mb-6">
-            <a href="#" className="bg-white border-2 border-[#8C69F0] rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 flex flex-col no-underline">
+            <a href="https://docs.google.com/presentation/d/10SILxH41R64hYfIngnCsO3nZfbJY7zFDGB2cA9b1FoM/edit?slide=id.g36025773fef_0_793#slide=id.g36025773fef_0_793" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#8C69F0] rounded-lg overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-200 flex flex-col no-underline">
               <div className="bg-[#F3F3F3] min-h-[280px] flex items-center justify-center text-[#9ca3af] text-[13px] font-semibold border-b-2 border-[#DFDFDF]">
                 Preview: Brand Guidelines Deck
               </div>
@@ -65,16 +65,16 @@ export default function TemplateGalleryPage() {
             </a>
 
             <div className="flex flex-col gap-4">
-              <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
-                <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Logo Assets</h4>
-                <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">All logo variations and usage guidelines</p>
-                <span className="text-[#8C69F0] font-semibold text-[13px]">Download Assets →</span>
+              <a href="https://drive.google.com/file/d/1VnyDlJmpByt7nBbAmBVXQnA4lpBnqM5v/view" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
+                <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Brand Guidelines PDF</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Complete brand guidelines in PDF format</p>
+                <span className="text-[#8C69F0] font-semibold text-[13px]">Download PDF →</span>
               </a>
 
-              <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
-                <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Color Palette</h4>
-                <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Official color codes and application examples</p>
-                <span className="text-[#8C69F0] font-semibold text-[13px]">View Palette →</span>
+              <a href="https://docs.google.com/presentation/d/19gVbxwGuKvJKGDLAyRg_q_wJPcNXhSef-UgaQohEXCI/edit?slide=id.g36025773fef_0_793#slide=id.g36025773fef_0_793" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
+                <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Gladly Slide Template</h4>
+                <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Standard slide template for presentations</p>
+                <span className="text-[#8C69F0] font-semibold text-[13px]">Open Template →</span>
               </a>
             </div>
           </div>
@@ -109,21 +109,21 @@ export default function TemplateGalleryPage() {
               </a>
 
               <div className="flex flex-col gap-4">
-                <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
-                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Specialized Team Pitch</h4>
-                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Pitch template for specialized team conversations</p>
+                <a href="https://docs.google.com/presentation/d/1KginyjvvQfLHbmLHSP72rkVWGVHSkZoaWU5s8_UNwdA/edit" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
+                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">October Roadmap Deck</h4>
+                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Product roadmap presentation template</p>
                   <span className="text-[#8C69F0] font-semibold text-[13px]">Open Template →</span>
                 </a>
 
-                <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
-                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Custom Template w/o Hero</h4>
-                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Customizable deck template without Hero content</p>
+                <a href="https://docs.google.com/presentation/d/1gFMaHhpjPsdOpitRL-Fz4mmAZchS2OwNOLb3dHqc2FY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
+                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Answer Threads Deck</h4>
+                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Answer Threads feature pitch template</p>
                   <span className="text-[#8C69F0] font-semibold text-[13px]">Open Template →</span>
                 </a>
 
-                <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
-                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Buyer Persona Pitch</h4>
-                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Persona-specific pitch deck template</p>
+                <a href="https://docs.google.com/presentation/d/1cIkq1VaWWpDKbLiloUbFm0y0om6STAOwpBlBxHjjNyw/edit?slide=id.g26455bc3513_4_48#slide=id.g26455bc3513_4_48" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-5 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col no-underline">
+                  <h4 className="text-[16px] text-[#0D0D0D] font-bold mb-2">Buyout Program Deck</h4>
+                  <p className="text-[13px] text-[#4A4A4A] mb-3 leading-snug flex-grow">Buyout program presentation template</p>
                   <span className="text-[#8C69F0] font-semibold text-[13px]">Open Template →</span>
                 </a>
               </div>

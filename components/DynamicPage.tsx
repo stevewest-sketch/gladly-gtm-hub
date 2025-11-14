@@ -11,6 +11,8 @@ import StatsSection from './sections/StatsSection';
 import ContentSection from './sections/ContentSection';
 import CTASection from './sections/CTASection';
 import LaunchStatusSection from './sections/LaunchStatusSection';
+import QuickStatsSection from './sections/QuickStatsSection';
+import FeaturedContentSection from './sections/FeaturedContentSection';
 
 interface DynamicPageProps {
   slug: string;
@@ -72,7 +74,12 @@ export default function DynamicPage({ slug, fallbackTitle, fallbackSubtitle, fal
         return <CTASection key={index} {...section} />;
       case 'launchStatusSection':
         return <LaunchStatusSection key={index} {...section} />;
+      case 'quickStatsSection':
+        return <QuickStatsSection key={index} {...section} />;
+      case 'featuredContentSection':
+        return <FeaturedContentSection key={index} {...section} />;
       default:
+        console.warn(`Unknown section type: ${_type}`);
         return null;
     }
   };

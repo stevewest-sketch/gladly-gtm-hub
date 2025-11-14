@@ -60,7 +60,8 @@ export default function CenterOfExcellencePage() {
       desc: "Complete guide to achieving 90% FCR in chat based on Ulta's journey and proven strategies from high-performing customers.",
       tag: 'Chat Optimization',
       meta: 'Path to 90% FCR',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1aQPaIBAK4Hjw7LK1U_2m8vYKjnIiatT3urUnmUMh10s/edit?tab=t.x15qpd8k7ww0'
     },
     // Email Excellence
     {
@@ -91,49 +92,57 @@ export default function CenterOfExcellencePage() {
       title: 'Cross-Org Guides Dashboard',
       desc: 'Cross-organizational view of Guides performance across multiple teams and implementations for benchmarking and insights.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://gladly.looker.com/dashboards/4218'
     },
     {
       title: 'Sidekick Answers and Guides Dashboard',
       desc: 'Combined dashboard showing performance metrics for both Sidekick Answers and Guides implementations.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://gladly.looker.com/dashboards/4215'
     },
     {
       title: 'Sidekick Sales Resolutions Dashboard',
       desc: 'Resolution tracking and performance metrics for Sidekick Sales implementations with detailed analytics.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://gladly.looker.com/dashboards/4266'
     },
     {
       title: 'How to Interpret Sidekick Guides Performance',
       desc: 'Guide to understanding and analyzing Sidekick Guides performance metrics, including Answer Threads Performance and key indicators.',
       tag: 'Dashboards',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1XANF2CXqwaMNooiz-raP4f0ukKQVyhcS2c_HEOkBffo/edit?tab=t.0#heading=h.a5cvact35pt3'
     },
     {
       title: 'How to Interpret Sidekick Answers and Guides Dashboard',
       desc: 'Comprehensive guide to interpreting Journeys for Guides Report, transaction thread performance, and usage over time trends.',
       tag: 'Dashboards',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1XANF2CXqwaMNooiz-raP4f0ukKQVyhcS2c_HEOkBffo/edit?tab=t.0#heading=h.uf7g68jyftcc'
     },
     {
       title: 'Sidekick Cross-Org Metrics',
       desc: 'Cross-organizational metrics dashboard showing top Sidekick customers, assisted conversation volume over time, and comparative analytics.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://gladly.looker.com/dashboards/2634'
     },
     {
       title: 'Hex Answers Performance',
       desc: 'Hex-based analytics for Sidekick Answers performance tracking with detailed metrics and visualizations.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://app.hex.tech/5fc41969-6b7a-495f-a378-414a6e730bc5/app/Answer-Threads-Performance-4DcbeTyciebU88GgbfPrRG/latest?tab=org-level'
     },
     {
       title: 'Hex Journey for Guides Report',
       desc: 'Journey analytics for Guides showing customer interaction patterns and guide effectiveness over time.',
       tag: 'Dashboards',
-      cta: 'View Dashboard →'
+      cta: 'View Dashboard →',
+      link: 'https://app.hex.tech/5fc41969-6b7a-495f-a378-414a6e730bc5/app/Journeys-for-Guides-Report-2a6f6vphifGwHLgxf1Gael/latest'
     },
     // Implementation
     {
@@ -142,7 +151,8 @@ export default function CenterOfExcellencePage() {
       desc: "Customer success patterns showing how top performers achieve 30%+ resolution in first 30 days. Includes timelines, benchmarks, and proven strategies from MaryRuth's, La Jolla Group, Hot Topic, and more.",
       tag: 'Implementation',
       meta: '15 min read',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1aQPaIBAK4Hjw7LK1U_2m8vYKjnIiatT3urUnmUMh10s/edit?tab=t.hou5gyam9uco'
     },
     {
       icon: '🔌',
@@ -150,7 +160,8 @@ export default function CenterOfExcellencePage() {
       desc: 'How technical capabilities drive resolution performance. Four levels of integration from read-only to full orchestration with customer examples from Chegg, Ulta, Tecovas, and Hot Topic.',
       tag: 'Implementation',
       meta: '18 min read',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1aQPaIBAK4Hjw7LK1U_2m8vYKjnIiatT3urUnmUMh10s/edit?tab=t.bymvtz37h9kt'
     },
     {
       icon: '🎯',
@@ -191,7 +202,8 @@ export default function CenterOfExcellencePage() {
       desc: 'How top performers sustain 70-90% resolution through consistent daily investment. Actual routines from Ulta (89.9% FCR), La Jolla Group (57%), Fetch (77%), and Chegg including time allocation and activities.',
       tag: 'Best Practices',
       meta: '12 min read',
-      cta: 'View Guide →'
+      cta: 'View Guide →',
+      link: 'https://docs.google.com/document/d/1aQPaIBAK4Hjw7LK1U_2m8vYKjnIiatT3urUnmUMh10s/edit?tab=t.t4y35o22uw75'
     },
     {
       icon: '💡',
@@ -199,7 +211,8 @@ export default function CenterOfExcellencePage() {
       desc: 'Centralized playbooks, strategies, and frameworks from Design, PS, TAM, Product and Engineering teams. Drive adoption, efficiency, and ROI.',
       tag: 'Best Practices',
       meta: 'Live resource',
-      cta: 'Access Hub →'
+      cta: 'Access Hub →',
+      link: 'https://docs.google.com/document/d/17xw1-c5Is6tDT7mwR3ZejHhjlU1sanRfdiSjjQrgAbU/edit?tab=t.6jyoekj0psl#heading=h.ln4hvsxicr78'
     },
     // Troubleshooting
     {
@@ -269,7 +282,8 @@ export default function CenterOfExcellencePage() {
       desc: 'Preface: Slide Design. Communicate Clearly and Impactfully. Best practices for creating customer-facing presentations that resonate.',
       tag: 'Templates',
       meta: 'Customer Meeting Examples',
-      cta: 'Customer Presentation Best Practices →'
+      cta: 'Customer Presentation Best Practices →',
+      link: 'https://docs.google.com/document/d/1iSyUqK4DJ20SntBW9sgy7pQrHY2RGDbArf6Aqyiy6TY/edit?tab=t.g3xbr9tk8abx#heading=h.dnz75twoxhkz'
     },
     {
       icon: '📁',
@@ -277,7 +291,8 @@ export default function CenterOfExcellencePage() {
       desc: 'FY25 Q2 - July 2025. Centralized repository of customer meeting assets including decks, ROI calculators, executive briefings, and more.',
       tag: 'Templates',
       meta: 'Customer Meeting Examples',
-      cta: 'Customer Asset Library →'
+      cta: 'Customer Asset Library →',
+      link: 'https://docs.google.com/spreadsheets/d/1F6hagYyIKi614gmOO7WedoCs2CItxOoCVepQTXQiWTQ/edit?gid=1403690311#gid=1403690311'
     },
     {
       icon: '📝',
@@ -285,7 +300,8 @@ export default function CenterOfExcellencePage() {
       desc: 'Please submit your customer asset(s), including a customer meeting deck, ROI calculator, executive briefing doc, etc. to be included in our Customer Asset Library.',
       tag: 'Templates',
       meta: 'Customer Meeting Examples',
-      cta: 'Asset Submission Form →'
+      cta: 'Asset Submission Form →',
+      link: 'https://docs.google.com/forms/d/e/1FAIpQLScT21C-U0bDh0wXbAYRttoNr1pZa-Dhk8UJZdmbhi3pzB7Fdw/viewform'
     },
     {
       icon: '📋',
@@ -293,7 +309,8 @@ export default function CenterOfExcellencePage() {
       desc: 'Template for sales to CS handoff ensuring smooth transition. Includes objectives, handoff process, and key customer information.',
       tag: 'Templates',
       meta: 'Sales to CS Handoff',
-      cta: 'Sales to CS Handoff Template →'
+      cta: 'Sales to CS Handoff Template →',
+      link: 'https://docs.google.com/document/d/1M0rIA7QBIgUsW3FjVgtZDA_46g9ZYp0C8VQ_7NAHnpo/edit?tab=t.0#heading=h.cfwyuyvb0ol1'
     },
     {
       icon: '👓',
@@ -392,7 +409,7 @@ export default function CenterOfExcellencePage() {
                   </li>
                 ))}
               </ul>
-              <a href="#" className="inline-block bg-white text-[#8C69F0] px-8 py-3.5 rounded font-semibold text-base border-2 border-white hover:bg-opacity-90 transition-all">
+              <a href="https://gemini.google.com/gem/1Ni5NH8lMDJ7v_FCN6DdLo2irtn56cLJW?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-[#8C69F0] px-8 py-3.5 rounded font-semibold text-base border-2 border-white hover:bg-opacity-90 transition-all">
                 Access CoE Assistant →
               </a>
             </div>
@@ -420,13 +437,13 @@ export default function CenterOfExcellencePage() {
 
           {/* Proof Point Repository & Social Proof */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+            <a href="https://docs.google.com/spreadsheets/d/1Y0n1rVskWIzWcegwCbfP7YUXkjV58TFf5S7LLxMkFNA/edit?gid=1725734072#gid=1725734072" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
               <div className="text-[36px] mb-3">🏆</div>
               <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-2.5">Proof Point Repository</h4>
               <p className="text-sm text-[#4A4A4A] mb-4 leading-relaxed">Customer proof points: only use externally approved stats for written or verbal use! All proof points are tagged with permission status and include context for when and how to use them.</p>
               <span className="text-[#009B00] font-semibold text-sm">Access Repository →</span>
             </a>
-            <a href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
+            <a href="https://docs.google.com/presentation/d/1Los9XfjtmFBJbbcY5vUf9YuRhlDzocw5Y9wmJq9Slx8/edit?usp=drive_open&ouid=102926403603073320356" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all no-underline">
               <div className="text-[36px] mb-3">💬</div>
               <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-2.5">Social Proof Templates</h4>
               <p className="text-sm text-[#4A4A4A] mb-4 leading-relaxed">Customer stories and testimonials formatted for different use cases: presentations, proposals, case studies, and website content.</p>
@@ -515,7 +532,7 @@ export default function CenterOfExcellencePage() {
             {/* Resource Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {filteredResources.map((item, idx) => (
-                <a key={idx} href="#" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer no-underline flex flex-col">
+                <a key={idx} href={item.link || '#'} target={item.link ? '_blank' : '_self'} rel={item.link ? 'noopener noreferrer' : undefined} className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer no-underline flex flex-col">
                   {item.icon && <div className="text-[32px] mb-3">{item.icon}</div>}
                   {item.meta && <div className="text-xs text-[#888] mb-2">{item.meta}</div>}
                   <h4 className="text-base font-bold text-[#0D0D0D] mb-2.5">{item.title}</h4>

@@ -78,7 +78,7 @@ export default function DemoHubPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1 */}
-            <a href="/enablement/demo/setup-guide" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
+            <a href="https://docs.google.com/document/d/1_ghQAlKgoWlT6vJeZ93hOkP4x6Eg5ft3alxyebSrs5s/edit?tab=t.8he7fz6pw1bq" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
               <h4 className="text-[16px] font-semibold text-[#0D0D0D] mb-3">Complete Demo Setup Instructions</h4>
               <p className="text-[13px] text-[#666666] mb-4 leading-relaxed">
                 Step-by-step guide to access your demo org, install required plugins, configure Retalè storefront, and perform demo resets
@@ -146,7 +146,7 @@ export default function DemoHubPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white border-l-[3px] border-[#3B82F6] rounded-lg p-6 hover:bg-[#DBEAFE] hover:border-[#3B82F6] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
+            <a href="https://www.google.com/url?q=https%3A%2F%2Fsites.google.com%2Fgladly.com%2Fgladlyrevenablement%2Fenablement%2Fcertifications%23%3A~%3Atext%3DField%2520Team%2520Demo%2520Certification%2520%28SCs%29%25C2%25A0&sa=D&sntz=1&usg=AOvVaw37ZHZCfPC9_55nUmljPwFe" target="_blank" rel="noopener noreferrer" className="bg-white border-l-[3px] border-[#3B82F6] rounded-lg p-6 hover:bg-[#DBEAFE] hover:border-[#3B82F6] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-[16px] font-semibold text-[#0D0D0D]">15-Min Platform Demo Certification</h4>
                 <span className="bg-[#1E40AF] text-white px-3 py-1 rounded-full font-semibold text-xs whitespace-nowrap">AE/AM/SC</span>
@@ -198,7 +198,7 @@ export default function DemoHubPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Card 1 */}
-              <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
+              <a href="https://docs.google.com/document/d/12vNcMToBUXSbvCUwiL4gnr-b5Z6x4-pUFUJ5IOxrORg/edit?tab=t.0#heading=h.o17cu6wdbt7y" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
                 <h4 className="text-[16px] font-semibold text-[#0D0D0D] mb-3">Complete Platform Demo Script</h4>
                 <p className="text-[13px] text-[#666666] mb-4 leading-relaxed">
                   10-15 minute demo flow covering proactive chat, Sidekick Actions, Sales, Answers, Voice/SMS, Hero, and Journeys
@@ -243,7 +243,7 @@ export default function DemoHubPage() {
               </a>
 
               {/* Card 6 */}
-              <a href="#" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
+              <a href="https://docs.google.com/document/d/1giuqDNNjtd_ziX4zDraftQtgVBFdoPN7yFP6M7hwkQs/edit?tab=t.496d7ppa3z8w#heading=h.y191vu3qqtk1" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 hover:border-[#8C69F0] hover:bg-[#E8E0F8] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline">
                 <h4 className="text-[16px] font-semibold text-[#0D0D0D] mb-3">Demo Delivery Best Practices</h4>
                 <p className="text-[13px] text-[#666666] mb-4 leading-relaxed">
                   Hardware tips, workspace prep, talk track guidance, and transition questions for compelling demos

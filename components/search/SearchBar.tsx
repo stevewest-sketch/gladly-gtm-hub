@@ -113,7 +113,7 @@ export function SearchBar({
           onKeyDown={handleKeyDown}
           onFocus={() => query && setIsOpen(true)}
           placeholder={placeholder}
-          className="w-full px-4 py-2 pl-10 pr-4 border-2 border-neutral-gray rounded-lg focus:outline-none focus:border-primary-purple transition-colors"
+          className="w-full px-4 py-2 pl-10 pr-4 border-2 border-neutral-gray rounded-lg focus:outline-none focus:border-primary-purple transition-colors text-neutral-black placeholder:text-gray-400"
           aria-label="Search"
           aria-expanded={isOpen}
           aria-controls="search-results"
