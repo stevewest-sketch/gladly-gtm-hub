@@ -94,6 +94,12 @@ export const ProcessTranscriptAction: DocumentActionComponent = (props) => {
         { set: { rawTranscript: transcript } }, // Save original
       ]);
 
+      // Publish the document to ensure it's saved in Sanity
+      publish.execute();
+
+      // Wait a moment for Sanity to process the publish
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       // Create corresponding training session
       try {
         await fetch('/api/create-training-session', {
