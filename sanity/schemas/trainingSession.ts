@@ -79,7 +79,8 @@ export default {
     {
       name: 'link',
       title: 'Materials Link',
-      type: 'url',
+      type: 'string',
+      description: 'Internal path (e.g., /enablement/articles/slug) or external URL',
     },
     {
       name: 'enablementArticle',
@@ -111,6 +112,13 @@ export default {
           { title: 'Earlier', value: 'earlier' },
         ],
       },
+    },
+    {
+      name: 'isActive',
+      title: 'Active',
+      type: 'boolean',
+      description: 'Whether this session should be displayed on the training hub',
+      initialValue: true,
     },
   ],
   orderings: [

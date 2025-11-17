@@ -56,6 +56,7 @@ export async function POST(request: Request) {
       link: `/enablement/articles/${slug}`, // Link to the article page
       tags: tags || [],
       dateFilter: '30days', // Default to recent
+      isActive: true, // Make visible on training hub
       // Store reference to the enablement article
       enablementArticle: {
         _type: 'reference',

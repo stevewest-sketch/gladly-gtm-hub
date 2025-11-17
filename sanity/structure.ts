@@ -74,6 +74,14 @@ export const structure = (S: StructureBuilder) =>
                     .defaultOrdering([{ field: 'title', direction: 'asc' }])
                 ),
               S.listItem()
+                .title('Enablement Articles')
+                .child(
+                  S.documentList()
+                    .title('Enablement Articles')
+                    .filter('_type == "enablementArticle"')
+                    .defaultOrdering([{ field: 'publishedDate', direction: 'desc' }])
+                ),
+              S.listItem()
                 .title('Other Pages')
                 .child(
                   S.documentList()
