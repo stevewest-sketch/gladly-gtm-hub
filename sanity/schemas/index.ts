@@ -14,6 +14,18 @@ import { navigation } from './navigation'
 import { navigationItem } from './navigationItem'
 import { siteSettings } from './siteSettings'
 
+// Universal Catalog System
+import catalogEntry from './catalogEntry'
+
+// Taxonomy types (for universal catalog filtering)
+import product from './taxonomies/product'
+import team from './taxonomies/team'
+import topic from './taxonomies/topic'
+import journeyStage from './taxonomies/journeyStage'
+import industry from './taxonomies/industry'
+import competitor from './taxonomies/competitor'
+import contentType from './taxonomies/contentType'
+
 // Section types
 import heroSection from './sections/heroSection'
 import featureGridSection from './sections/featureGridSection'
@@ -38,6 +50,7 @@ import quickStatsSection from './sections/quickStatsSection'
 import featuredContentSection from './sections/featuredContentSection'
 
 export const schemaTypes = [
+  // Core content types
   post,
   homepage,
   about,
@@ -53,6 +66,16 @@ export const schemaTypes = [
   navigation,
   navigationItem,
   siteSettings,
+  // Universal catalog system
+  catalogEntry,
+  // Taxonomy types
+  product,
+  team,
+  topic,
+  journeyStage,
+  industry,
+  competitor,
+  contentType,
   // Section types
   heroSection,
   featureGridSection,

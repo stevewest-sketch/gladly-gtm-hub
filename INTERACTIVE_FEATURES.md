@@ -30,7 +30,7 @@ import { ScrollToTop } from '@/components/ui/interactive/ScrollToTop';
 **Props:**
 - `showAfter`: Pixels scrolled before showing (default: 300)
 - `className`: Additional CSS classes
-
+3
 **Features:**
 - Smooth scroll animation
 - Hover scale effect
