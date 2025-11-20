@@ -190,7 +190,7 @@ export default function ContentHubClient({
         {/* Category Description - Changes per Button */}
         {activeCategoryData && activeCategoryData.id !== 'all' && (
           <HubSection className="mb-8">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-[#009B00] rounded-lg p-6">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-[#DFDFDF] border-l-4 border-l-[#009B00] rounded-lg p-6">
               <h2 className="text-[18px] leading-[24px] font-semibold tracking-[-0.005em] text-[#0D0D0D] mb-2">
                 {activeCategoryData.icon} {activeCategoryData.label}
               </h2>

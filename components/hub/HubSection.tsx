@@ -42,10 +42,15 @@ export default function HubSection({
   const baseClasses = transparent ? 'mb-8' : (noPadding ? '' : 'rounded-xl p-6 md:p-8')
   const backgroundClass = transparent ? '' : (hasCustomBackground ? '' : backgrounds[background])
 
+  // Add grey border accent for white backgrounds
+  const borderClass = !transparent && background === 'white' && !className.includes('border-')
+    ? 'border border-[#DFDFDF]'
+    : ''
+
   return (
     <div
       id={id}
-      className={`${backgroundClass} ${baseClasses} ${className} scroll-mt-24`}
+      className={`${backgroundClass} ${baseClasses} ${borderClass} ${className} scroll-mt-24`}
     >
       {(title || description || icon) && (
         <div className="mb-6">
