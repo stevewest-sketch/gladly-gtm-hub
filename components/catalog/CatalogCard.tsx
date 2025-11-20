@@ -31,9 +31,9 @@ export default function CatalogCard({
       <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-1">
         {/* Thumbnail with Content Type Badge */}
         <div className="relative h-48 bg-gradient-to-br from-purple-50 to-blue-50 overflow-hidden">
-          {entry.thumbnailImage?.asset && (
+          {entry.thumbnailImage?.asset?.url && (
             <Image
-              src={entry.thumbnailImage.asset._ref}
+              src={entry.thumbnailImage.asset.url}
               alt={entry.title}
               fill
               className="object-cover"
