@@ -24,13 +24,6 @@ const CATEGORIES = [
     contentTypes: [],
   },
   {
-    id: 'training',
-    label: 'Training Hub',
-    icon: '🎓',
-    color: 'bg-[#3B82F6]',  // Blue
-    contentTypes: ['training', 'workshop', 'webinar'],
-  },
-  {
     id: 'templates',
     label: 'Templates',
     icon: '📄',
@@ -195,7 +188,6 @@ export default function ContentHubClient({
                 {activeCategoryData.icon} {activeCategoryData.label}
               </h2>
               <p className="text-[15px] leading-[24px] text-[#252525]">
-                {activeCategoryData.id === 'training' && 'Access training materials, workshops, and learning resources.'}
                 {activeCategoryData.id === 'templates' && 'Browse presentation templates, one-pagers, and ready-to-use decks.'}
                 {activeCategoryData.id === 'competitive' && 'Competitive intelligence, battle cards, and positioning guides.'}
               </p>

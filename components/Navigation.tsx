@@ -121,7 +121,7 @@ export default function Navigation({ data, searchableContent = [] }: NavigationP
   // If data is available and has items, use Sanity-driven navigation
   if (data && data.items && data.items.length > 0) {
     return (
-      <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">
+      <nav className="w-64 bg-white border-r border-gray-200 h-screen p-6 fixed top-0 left-0 overflow-hidden">
         {/* Logo/Home */}
         <Link href="/" className="block mb-6">
           <h2 className="text-2xl font-bold text-gray-900">{data.logoText || 'GTM Hub'}</h2>
@@ -200,7 +200,7 @@ export default function Navigation({ data, searchableContent = [] }: NavigationP
   // Fallback to hardcoded navigation if no data
 
   return (
-    <nav className="w-64 bg-white border-r border-gray-200 min-h-screen p-6 sticky top-0 overflow-y-auto">
+    <nav className="w-64 bg-white border-r border-gray-200 h-screen p-6 fixed top-0 left-0 overflow-hidden">
       {/* Logo/Home */}
       <Link href="/" className="block mb-6">
         <h2 className="text-2xl font-bold text-gray-900">GTM Hub</h2>
@@ -244,6 +244,16 @@ export default function Navigation({ data, searchableContent = [] }: NavigationP
           }`}
         >
           📚 Content
+        </Link>
+
+        {/* Enablement Hub */}
+        <Link
+          href="/enablement-hub"
+          className={`block px-3 py-2 rounded-lg font-semibold ${
+            isActive('/enablement-hub') ? 'bg-[#E0E7FF] text-[#3B82F6]' : 'text-gray-700 hover:bg-gray-100'
+          }`}
+        >
+          🎓 Enablement
         </Link>
       </div>
     </nav>
