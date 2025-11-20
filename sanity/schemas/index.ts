@@ -49,6 +49,13 @@ import helpSection from './sections/helpSection'
 import quickStatsSection from './sections/quickStatsSection'
 import featuredContentSection from './sections/featuredContentSection'
 
+// Hub page system
+import hubPage from './hubPage'
+import hubContentSection from './sections/hubContentSection'
+import hubStatGridSection from './sections/hubStatGridSection'
+import hubFeatureCardsSection from './sections/hubFeatureCardsSection'
+import hubProcessStepsSection from './sections/hubProcessStepsSection'
+
 export const schemaTypes = [
   // Core content types
   post,
@@ -97,4 +104,10 @@ export const schemaTypes = [
   helpSection,
   quickStatsSection,
   featuredContentSection,
+  // Hub page system
+  hubPage,
+  hubContentSection,
+  hubStatGridSection,
+  hubFeatureCardsSection,
+  hubProcessStepsSection,
 ]

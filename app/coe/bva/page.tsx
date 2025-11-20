@@ -187,7 +187,7 @@ export default function BVAPage() {
       <div className="max-w-[1200px] mx-auto px-10 py-12">
 
         {/* What is the Business Value Program */}
-        <div id="overview" className="bg-white rounded-xl p-8 mb-12 shadow-sm scroll-mt-24">
+        <div id="overview" className="bg-white rounded-xl p-8 mb-8 shadow-sm scroll-mt-24">
           <div className="flex items-center gap-4 mb-6 pb-4 border-b-2 border-[#DFDFDF]">
             <span className="text-[40px]">💼</span>
             <div>
@@ -243,7 +243,7 @@ export default function BVAPage() {
         </div>
 
         {/* Two Tools, Two Audiences */}
-        <div id="getting-started" className="bg-[#0D0D0D] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
+        <div id="getting-started" className="bg-[#0D0D0D] py-12 px-10 -mx-10 mb-8 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             <h2 className="text-[18px] font-bold mb-3 text-white text-center">Two Tools, Two Audiences</h2>
             <p className="text-[15px] text-[#CCCCCC] mb-10 text-center max-w-[800px] mx-auto">
@@ -347,7 +347,7 @@ export default function BVAPage() {
         </div>
 
         {/* BVA Levels */}
-        <div id="bva-levels" className="bg-[#F3F3F3] py-[40px] px-10 -mx-10 mb-12 scroll-mt-24">
+        <div id="bva-levels" className="bg-[#F3F3F3] py-[40px] px-10 -mx-10 mb-8 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Choose Your BVA Level</h2>
             <p className="text-base text-[#666] mb-6">Match your analysis to your available prospect data</p>
@@ -387,7 +387,7 @@ export default function BVAPage() {
         </div>
 
         {/* Step-by-Step Process */}
-        <div id="process" className="bg-[#F5F5F7] py-[35px] px-10 -mx-10 mb-12 scroll-mt-24">
+        <div id="process" className="bg-[#F5F5F7] py-[35px] px-10 -mx-10 mb-8 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             {/* Pre-Sales BVA Workflow */}
             <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
@@ -595,7 +595,7 @@ export default function BVAPage() {
         </div>
 
         {/* Best Practices */}
-        <div id="best-practices" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
+        <div id="best-practices" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-8 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Best Practices</h2>
             <p className="text-base text-[#666] mb-8">Tips for success from our top performers</p>
@@ -725,7 +725,7 @@ export default function BVAPage() {
         </div>
 
         {/* Tools & Resources - Organized by Category */}
-        <div id="tools" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-12 scroll-mt-24">
+        <div id="tools" className="bg-[#F3F3F3] py-12 px-10 -mx-10 mb-8 scroll-mt-24">
           <div className="max-w-[1200px] mx-auto">
             <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">Tools & Resources</h2>
             <p className="text-base text-[#666] mb-10">Everything you need to build compelling value stories</p>
@@ -837,7 +837,7 @@ export default function BVAPage() {
         </div>
 
         {/* How to Request Support */}
-        <div className="bg-[#F3F3F3] py-[35px] px-10 -mx-10 mb-12">
+        <div className="bg-[#F3F3F3] py-[35px] px-10 -mx-10 mb-8">
           <div className="max-w-[1200px] mx-auto">
             <h2 className="text-[18px] font-bold mb-2 text-[#0D0D0D]">How to Request Support</h2>
             <p className="text-base text-[#666] mb-6">Get help with your BVA and business cases</p>

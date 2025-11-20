@@ -125,7 +125,7 @@ export default {
       group: 'taxonomies',
     },
 
-    // COE-specific
+    // Hub-Specific Categories
     {
       name: 'coeCategory',
       title: 'COE Category',
@@ -139,6 +139,56 @@ export default {
         ],
       },
       description: 'For Center of Excellence content only',
+      group: 'taxonomies',
+    },
+    {
+      name: 'salesCategory',
+      title: 'Sales Playbook Category',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Discovery Plays', value: 'discovery' },
+          { title: 'Demo Scripts', value: 'demo' },
+          { title: 'Objection Handling', value: 'objections' },
+          { title: 'Negotiation Tactics', value: 'negotiation' },
+          { title: 'Closing Techniques', value: 'closing' },
+          { title: 'Upsell Strategies', value: 'upsell' },
+        ],
+      },
+      description: 'For Sales Playbook Hub only',
+      group: 'taxonomies',
+    },
+    {
+      name: 'trainingCategory',
+      title: 'Training Hub Category',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Onboarding', value: 'onboarding' },
+          { title: 'Product Training', value: 'product-training' },
+          { title: 'Advanced Skills', value: 'advanced-skills' },
+          { title: 'Certifications', value: 'certifications' },
+        ],
+      },
+      description: 'For Training Hub only',
+      group: 'taxonomies',
+    },
+    {
+      name: 'partnerCategory',
+      title: 'Partner Hub Category',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Co-Sell Plays', value: 'co-sell' },
+          { title: 'Partner Onboarding', value: 'onboarding' },
+          { title: 'Marketing Resources', value: 'marketing' },
+          { title: 'Deal Registration', value: 'deal-registration' },
+        ],
+      },
+      description: 'For Partner Hub only',
       group: 'taxonomies',
     },
 
@@ -275,6 +325,16 @@ export default {
       },
       description: 'Recommended: 1200x630px',
       group: 'content',
+    },
+    {
+      name: 'externalUrl',
+      title: 'External Link',
+      type: 'url',
+      description: 'Link to external content (Google Drive, Docs, Sheets, etc.). If provided, clicking this entry will open this URL instead of a detail page.',
+      group: 'content',
+      validation: (Rule: any) => Rule.uri({
+        scheme: ['http', 'https'],
+      }),
     },
     {
       name: 'mainContent',

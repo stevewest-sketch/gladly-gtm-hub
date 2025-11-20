@@ -10,7 +10,8 @@
     "seed": "tsx scripts/seed-searchable-content.ts",
     "seed:all": "tsx scripts/seed-all-content.ts",
     "seed:competitive": "tsx scripts/seed-competitive-resources.ts",
-    "seed:content": "tsx scripts/seed-content-library.ts"
+    "seed:content": "tsx scripts/seed-content-library.ts",
+    "seed:coe-hub": "tsx scripts/seed-coe-hub.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",

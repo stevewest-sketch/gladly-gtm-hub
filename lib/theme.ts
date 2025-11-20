@@ -35,6 +35,20 @@ export const colors = {
     error: '#DC2626',
     info: '#3B82F6',
   },
+
+  // Catalog-specific Colors (Design System Unification)
+  catalog: {
+    borderLight: '#F3F3F3',      // Subtle card borders
+    borderHover: '#8C69F0',      // Purple hover state
+    badgeBackground: '#8C69F0',  // Default badge fill
+    iconBg: {
+      purple: '#F5F3FF',         // Light purple for icon badges
+      blue: '#EFF6FF',           // Light blue for icon badges
+      green: '#F0FDF4',          // Light green for icon badges
+      orange: '#FFF7ED',         // Light orange for icon badges
+      yellow: '#FEFCE8',         // Light yellow for icon badges
+    },
+  },
 } as const;
 
 export const gradients = {
@@ -67,6 +81,11 @@ export const shadows = {
   md: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
   lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
   xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+
+  // Catalog-specific shadows
+  card: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+  cardHover: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+  elevated: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
 } as const;
 
 export const typography = {
@@ -88,10 +107,48 @@ export const typography = {
 } as const;
 
 /**
+ * Badge utility patterns
+ */
+export const badge = {
+  // Badge size variants
+  size: {
+    sm: 'px-2 py-1 text-xs',
+    md: 'px-3 py-1 text-xs',
+    lg: 'px-4 py-2 text-sm',
+  },
+
+  // Badge style variants
+  style: {
+    pill: 'rounded-full font-medium',
+    rounded: 'rounded-lg font-medium',
+    square: 'rounded font-medium',
+  },
+
+  // Badge color schemes
+  colors: {
+    purple: { bg: '#8C69F0', text: '#FFFFFF' },
+    blue: { bg: '#3B82F6', text: '#FFFFFF' },
+    green: { bg: '#009B00', text: '#FFFFFF' },
+    orange: { bg: '#F97316', text: '#FFFFFF' },
+    yellow: { bg: '#EAB308', text: '#FFFFFF' },
+    gray: { bg: '#6B7280', text: '#FFFFFF' },
+  },
+
+  // Icon badge backgrounds (light colors for icon containers)
+  iconBg: {
+    purple: '#F5F3FF',
+    blue: '#EFF6FF',
+    green: '#F0FDF4',
+    orange: '#FFF7ED',
+    yellow: '#FEFCE8',
+  },
+} as const;
+
+/**
  * Tailwind class utilities for consistent styling
  */
 export const tailwindClasses = {
-  // Card styles
+  // Card styles (Legacy)
   card: {
     base: 'bg-white border-2 border-neutral-background rounded-lg transition-all duration-300',
     hover: 'hover:border-primary-purple hover:shadow-lg hover:-translate-y-1',
@@ -102,6 +159,15 @@ export const tailwindClasses = {
     },
   },
 
+  // Catalog Card styles (New unified design)
+  catalogCard: {
+    base: 'bg-white border rounded-lg transition-all duration-200',
+    border: 'border-[#F3F3F3]',
+    hover: 'hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-1',
+    padding: 'p-5',
+    shadow: 'shadow-sm',
+  },
+
   // Button styles
   button: {
     base: 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200',
@@ -109,9 +175,9 @@ export const tailwindClasses = {
     secondary: 'bg-white text-primary-purple border-2 border-primary-purple hover:bg-neutral-background hover:shadow-lg hover:-translate-y-0.5',
     ghost: 'bg-white text-primary-purple hover:bg-neutral-background hover:shadow-md hover:-translate-y-0.5',
     size: {
-      sm: 'px-4 py-2 text-sm',
-      md: 'px-6 py-3 text-base',
-      lg: 'px-8 py-4 text-base',
+      sm: 'px-4 py-2 text-[13px] leading-[20px]',
+      md: 'px-6 py-3 text-[15px] leading-[24px]',
+      lg: 'px-8 py-4 text-[15px] leading-[24px]',
     },
   },
 
@@ -146,11 +212,39 @@ export function getColor(path: string): string {
 }
 
 /**
+ * Helper function to get badge style string
+ */
+export function getBadgeClasses(
+  color: keyof typeof badge.colors,
+  size: keyof typeof badge.size = 'md',
+  style: keyof typeof badge.style = 'pill'
+): string {
+  const sizeClass = badge.size[size];
+  const styleClass = badge.style[style];
+  return `${sizeClass} ${styleClass}`;
+}
+
+/**
+ * Helper function to get badge inline styles
+ */
+export function getBadgeStyle(color: keyof typeof badge.colors): { backgroundColor: string; color: string } {
+  const colorScheme = badge.colors[color];
+  return {
+    backgroundColor: colorScheme.bg,
+    color: colorScheme.text,
+  };
+}
+
+/**
  * Type exports for TypeScript
  */
 export type ColorPath =
   | `primary.${keyof typeof colors.primary}`
   | `neutral.${keyof typeof colors.neutral}`
-  | `semantic.${keyof typeof colors.semantic}`;
+  | `semantic.${keyof typeof colors.semantic}`
+  | `catalog.${keyof typeof colors.catalog}`;
 
 export type GradientType = keyof typeof gradients;
+export type BadgeColor = keyof typeof badge.colors;
+export type BadgeSize = keyof typeof badge.size;
+export type BadgeStyle = keyof typeof badge.style;

@@ -17,12 +17,18 @@ export default function CatalogCard({
     : ''
   const isNew = isRecent(entry.publishDate, 7)
 
+  // If external URL exists, use it; otherwise link to detail page
+  const linkHref = entry.externalUrl || `/catalog/${entry.slug.current}`
+  const isExternal = !!entry.externalUrl
+
   return (
     <Link
-      href={`/catalog/${entry.slug.current}`}
+      href={linkHref}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       className="group block h-full"
     >
-      <div className="h-full border border-[#F3F3F3] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-1">
+      <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-1">
         {/* Thumbnail with Content Type Badge */}
         <div className="relative h-48 bg-gradient-to-br from-purple-50 to-blue-50 overflow-hidden">
           {entry.thumbnailImage?.asset && (
@@ -36,7 +42,7 @@ export default function CatalogCard({
 
           {/* Content Type Badge */}
           <div
-            className="absolute top-3 left-3 px-3 py-1 rounded-full text-white text-xs font-medium"
+            className="absolute top-3 left-3 px-3 py-1 rounded-full text-white text-[12px] leading-[16px] font-semibold"
             style={{ backgroundColor: contentTypeColor }}
           >
             {entry.contentType?.icon && (
@@ -47,14 +53,14 @@ export default function CatalogCard({
 
           {/* New Badge */}
           {isNew && (
-            <div className="absolute top-3 right-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+            <div className="absolute top-3 right-3 bg-[#009B00] text-white px-2 py-1 rounded-full text-[12px] leading-[16px] font-semibold">
               New
             </div>
           )}
 
           {/* Featured Badge */}
           {entry.featured && (
-            <div className="absolute bottom-3 left-3 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
+            <div className="absolute bottom-3 left-3 bg-[#F5A623] text-gray-900 px-2 py-1 rounded text-[12px] leading-[16px] font-semibold flex items-center gap-1">
               <span>⭐</span>
               Featured
             </div>
@@ -64,19 +70,19 @@ export default function CatalogCard({
         {/* Content */}
         <div className="p-5">
           {/* Title */}
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#8C69F0] transition-colors">
+          <h3 className="text-[15px] leading-[24px] tracking-[-0.005em] font-semibold text-[#0D0D0D] mb-2 line-clamp-2 group-hover:text-[#8C69F0] transition-colors">
             {entry.title}
           </h3>
 
           {/* Description */}
           {entry.description && (
-            <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+            <p className="text-[13px] leading-[20px] text-[#252525] mb-4 line-clamp-3">
               {entry.description}
             </p>
           )}
 
           {/* Metadata Row */}
-          <div className="flex flex-wrap items-center gap-2 mb-4 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center gap-2 mb-4 text-[12px] leading-[16px] font-semibold text-[#252525]">
             {publishDate && (
               <div className="flex items-center gap-1">
                 <svg
@@ -116,7 +122,7 @@ export default function CatalogCard({
             )}
 
             {entry.format && (
-              <div className="px-2 py-0.5 bg-gray-100 rounded text-xs">
+              <div className="px-2 py-0.5 bg-[#F3F3F3] rounded text-[12px] leading-[16px] font-semibold">
                 {entry.format === 'live-replay'
                   ? 'Live Replay'
                   : entry.format === 'async'
@@ -151,7 +157,7 @@ export default function CatalogCard({
             {entry.products?.map((product) => (
               <span
                 key={product._id}
-                className="px-2 py-1 rounded text-xs font-medium text-white"
+                className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
                 style={{ backgroundColor: product.color || '#8C69F0' }}
               >
                 {product.name}
@@ -162,7 +168,7 @@ export default function CatalogCard({
             {entry.teams?.map((team) => (
               <span
                 key={team._id}
-                className="px-2 py-1 rounded text-xs font-medium border border-gray-300 text-gray-700"
+                className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#DFDFDF] text-[#252525]"
               >
                 {team.name}
               </span>
@@ -172,13 +178,13 @@ export default function CatalogCard({
             {entry.topics?.slice(0, 3).map((topic) => (
               <span
                 key={topic._id}
-                className="px-2 py-1 rounded text-xs bg-gray-100 text-gray-600"
+                className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]"
               >
                 {topic.name}
               </span>
             ))}
             {entry.topics && entry.topics.length > 3 && (
-              <span className="px-2 py-1 rounded text-xs bg-gray-100 text-gray-600">
+              <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]">
                 +{entry.topics.length - 3} more
               </span>
             )}
@@ -187,7 +193,7 @@ export default function CatalogCard({
             {entry.journeyStages?.map((stage) => (
               <span
                 key={stage._id}
-                className="px-2 py-1 rounded text-xs border border-purple-300 text-purple-700 bg-purple-50"
+                className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#E8E0F8] text-[#8C69F0] bg-[#E8E0F8]"
               >
                 {stage.icon && <span className="mr-1">{stage.icon}</span>}
                 {stage.name}
@@ -197,23 +203,39 @@ export default function CatalogCard({
         </div>
 
         {/* Actions (shown on hover) */}
-        <div className="px-5 pb-5 pt-2 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="px-5 pb-5 pt-2 border-t border-[#F3F3F3] opacity-0 group-hover:opacity-100 transition-opacity">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-[#8C69F0] font-medium flex items-center gap-1">
-              View Content
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+            <span className="text-[13px] leading-[20px] text-[#8C69F0] font-semibold flex items-center gap-1">
+              {isExternal ? 'Open Link' : 'View Content'}
+              {isExternal ? (
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              )}
             </span>
 
             <div className="flex items-center gap-2">

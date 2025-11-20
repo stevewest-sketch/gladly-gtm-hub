@@ -147,8 +147,11 @@ export interface CatalogEntry {
   journeyStages?: JourneyStage[]
   industries?: Industry[]
 
-  // COE-specific
-  coeCategory?: string[]
+  // Hub-specific categories (for multi-hub architecture)
+  coeCategory?: string[]  // COE Hub categories
+  salesCategory?: string[]  // Sales Playbook Hub categories
+  trainingCategory?: string[]  // Training Hub categories
+  partnerCategory?: string[]  // Partner Hub categories
 
   // Competitive-specific
   competitor?: Competitor
@@ -175,6 +178,7 @@ export interface CatalogEntry {
       _type: 'reference'
     }
   }
+  externalUrl?: string  // Link to external content (Google Drive, Docs, etc.)
   mainContent?: MainContent
   keyTakeaways?: string[]
 
@@ -198,7 +202,12 @@ export interface CatalogFilters {
   topics?: string[]
   journeyStages?: string[]
   industries?: string[]
+  // Hub-specific category filters
   coeCategory?: string[]
+  salesCategory?: string[]
+  trainingCategory?: string[]
+  partnerCategory?: string[]
+  // Other filters
   competitor?: string
   format?: string
   difficulty?: string
@@ -222,6 +231,9 @@ export type FilterOption =
   | 'journeyStage'
   | 'industry'
   | 'coeCategory'
+  | 'salesCategory'
+  | 'trainingCategory'
+  | 'partnerCategory'
   | 'competitor'
   | 'difficulty'
   | 'date'

@@ -22,9 +22,9 @@ export function Badge({
   };
 
   const sizeClasses = {
-    sm: 'px-2 py-0.5 text-xs',
-    md: 'px-3 py-1 text-sm',
-    lg: 'px-4 py-1.5 text-base',
+    sm: 'px-2 py-0.5 text-[12px] leading-[16px]',
+    md: 'px-3 py-1 text-[13px] leading-[20px]',
+    lg: 'px-4 py-1.5 text-[15px] leading-[24px]',
   };
 
   return (

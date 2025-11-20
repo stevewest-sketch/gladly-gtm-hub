@@ -1,4 +1,4 @@
-import { CatalogEntry, Product, Team, Topic, ContentType, JourneyStage } from '../types/catalog'
+import { CatalogEntry, Product, Team, Topic, ContentType, JourneyStage, Industry, Competitor } from '../types/catalog'
 
 // Mock Taxonomy Data
 export const mockProducts: Product[] = [
@@ -176,6 +176,60 @@ export const mockJourneyStages: JourneyStage[] = [
     order: 3,
     icon: '💰',
     phase: 'pre-sales',
+  },
+]
+
+export const mockIndustries: Industry[] = [
+  {
+    _id: 'industry-retail',
+    _type: 'industry',
+    name: 'Retail',
+    slug: { current: 'retail' },
+    description: 'Retail and e-commerce customer experience',
+    order: 1,
+  },
+  {
+    _id: 'industry-saas',
+    _type: 'industry',
+    name: 'SaaS',
+    slug: { current: 'saas' },
+    description: 'Software as a service companies',
+    order: 2,
+  },
+  {
+    _id: 'industry-financial',
+    _type: 'industry',
+    name: 'Financial Services',
+    slug: { current: 'financial-services' },
+    description: 'Banking and financial technology',
+    order: 3,
+  },
+]
+
+export const mockCompetitors: Competitor[] = [
+  {
+    _id: 'comp-zendesk',
+    _type: 'competitor',
+    name: 'Zendesk',
+    slug: { current: 'zendesk' },
+    description: 'Customer service software company',
+    website: 'https://www.zendesk.com',
+  },
+  {
+    _id: 'comp-salesforce',
+    _type: 'competitor',
+    name: 'Salesforce Service Cloud',
+    slug: { current: 'salesforce' },
+    description: 'CRM and customer service platform',
+    website: 'https://www.salesforce.com',
+  },
+  {
+    _id: 'comp-freshdesk',
+    _type: 'competitor',
+    name: 'Freshdesk',
+    slug: { current: 'freshdesk' },
+    description: 'Cloud-based customer support software',
+    website: 'https://www.freshdesk.com',
   },
 ]
 
