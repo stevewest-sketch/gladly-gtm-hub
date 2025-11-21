@@ -8,8 +8,7 @@ const query = `{
     status == "published" &&
     "content" in publishedTo &&
     contentType->slug.current != "training" &&
-    pageTemplate != "training-session" &&
-    pageTemplate != "micro-learning"
+    pageTemplate != "training-session"
   ] | order(publishDate desc) {
     _id,
     title,

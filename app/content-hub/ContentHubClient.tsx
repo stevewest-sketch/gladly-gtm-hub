@@ -28,7 +28,21 @@ const CATEGORIES = [
     label: 'Templates',
     icon: '📄',
     color: 'bg-[#8C69F0]',  // Purple
-    contentTypes: ['template', 'deck', 'one-pager'],
+    contentTypes: ['template', 'deck'],
+  },
+  {
+    id: 'one-pagers',
+    label: 'One-Pagers',
+    icon: '📋',
+    color: 'bg-[#3B82F6]',  // Blue
+    contentTypes: ['one-pager'],
+  },
+  {
+    id: 'activation-kits',
+    label: 'Activation Kits',
+    icon: '📦',
+    color: 'bg-[#10B981]',  // Emerald
+    contentTypes: ['activation-kit'],
   },
   {
     id: 'competitive',
@@ -51,8 +65,23 @@ export default function ContentHubClient({
 
   const activeCategoryData = CATEGORIES.find(c => c.id === activeCategory)
 
-  // Filter entries based on active category
-  const getFilteredEntries = (): CatalogEntry[] => {
+  // Get featured entries (only from all entries, not filtered)
+  const featuredEntries = entries
+    .filter((e) => e.featured || e.showInUpcoming)
+    .sort((a, b) => (b.priority || 0) - (a.priority || 0))
+    .slice(0, 3)
+
+  // Get new entries (last 30 days, from all entries)
+  const newEntries = (() => {
+    const thirtyDaysAgo = Date.now() - 30 * 24 * 60 * 60 * 1000
+    return entries
+      .filter((e) => new Date(e.publishDate).getTime() > thirtyDaysAgo)
+      .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+      .slice(0, 4)
+  })()
+
+  // Filter entries for catalog view or curated category view
+  const filteredEntries = (() => {
     if (!activeCategoryData?.contentTypes.length) {
       return entries
     }
@@ -60,29 +89,7 @@ export default function ContentHubClient({
     return entries.filter((entry) =>
       activeCategoryData.contentTypes.includes(entry.contentType?.slug?.current || '')
     )
-  }
-
-  // Get featured entries (featured flag OR showInUpcoming flag)
-  const getFeaturedEntries = (): CatalogEntry[] => {
-    const filtered = getFilteredEntries()
-    return filtered
-      .filter((e) => e.featured || e.showInUpcoming)
-      .sort((a, b) => (b.priority || 0) - (a.priority || 0))
-      .slice(0, 3)
-  }
-
-  // Get new entries (last 30 days)
-  const getNewEntries = (): CatalogEntry[] => {
-    const filtered = getFilteredEntries()
-    const thirtyDaysAgo = Date.now() - 30 * 24 * 60 * 60 * 1000
-    return filtered
-      .filter((e) => new Date(e.publishDate).getTime() > thirtyDaysAgo)
-      .slice(0, 4)
-  }
-
-  const filteredEntries = getFilteredEntries()
-  const featuredEntries = getFeaturedEntries()
-  const newEntries = getNewEntries()
+  })()
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -121,8 +128,8 @@ export default function ContentHubClient({
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Featured Section - Always Visible */}
-        {featuredEntries.length > 0 && (
+        {/* Featured Section - Only show when "All Content" is active */}
+        {activeCategory === 'all' && featuredEntries.length > 0 && (
           <HubSection
             title="⭐ Featured & New"
             description="Recently added and hand-picked content"
@@ -162,8 +169,8 @@ export default function ContentHubClient({
           </HubSection>
         )}
 
-        {/* New Resources Section - Always Visible */}
-        {newEntries.length > 0 && (
+        {/* New Resources Section - Only show when "All Content" is active */}
+        {activeCategory === 'all' && newEntries.length > 0 && (
           <HubSection
             title="🆕 New Resources"
             description={`${newEntries.length} new in the last 30 days`}
@@ -194,30 +201,72 @@ export default function ContentHubClient({
           </HubSection>
         )}
 
-        {/* Universal Catalog - Pre-filtered by Active Button */}
-        <HubSection
-          title="Browse All Resources"
-          description={`${filteredEntries.length} resources available`}
-        >
-          <CatalogView
-            pageType="content-hub"
-            showFilters={true}
-            filterOptions={['product', 'team', 'topic', 'format']}
-            layout="grid"
-            sortBy="date-desc"
-            itemsPerPage={12}
-            cardStyle="standard"
-            showDuration={true}
-            showPresenter={true}
-            featuredSection={false}
-            entries={filteredEntries}
-            availableProducts={availableProducts}
-            availableTeams={availableTeams}
-            availableTopics={availableTopics}
-            availableContentTypes={availableContentTypes}
-            availableJourneyStages={availableJourneyStages}
-          />
-        </HubSection>
+        {/* Show either full catalog (for "All Content") or curated cards (for specific categories) */}
+        {activeCategory === 'all' ? (
+          // Full catalog with filters for "All Content"
+          <HubSection
+            title="📖 Browse All Resources"
+            description={`${entries.length} resources available`}
+          >
+            <CatalogView
+              pageType="content-hub"
+              showFilters={true}
+              filterOptions={['product', 'team', 'topic', 'format']}
+              layout="grid"
+              sortBy="date-desc"
+              itemsPerPage={12}
+              cardStyle="standard"
+              showDuration={true}
+              showPresenter={true}
+              featuredSection={false}
+              entries={entries}
+              availableProducts={availableProducts}
+              availableTeams={availableTeams}
+              availableTopics={availableTopics}
+              availableContentTypes={availableContentTypes}
+              availableJourneyStages={availableJourneyStages}
+            />
+          </HubSection>
+        ) : (
+          // Curated category view for Templates/Competitive
+          <HubSection
+            title={`${activeCategoryData?.icon} ${activeCategoryData?.label}`}
+            description={`${filteredEntries.length} ${activeCategoryData?.label.toLowerCase()} resources`}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredEntries.map((entry) => (
+                <a
+                  key={entry._id}
+                  href={`/catalog/${entry.slug.current}`}
+                  className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#009B00] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-md text-[12px] leading-[16px] font-semibold text-white shadow-sm"
+                      style={{ backgroundColor: entry.contentType?.color || '#8C69F0' }}
+                    >
+                      {entry.contentType?.name}
+                    </span>
+                  </div>
+                  <h3 className="text-[16px] leading-[24px] tracking-[-0.01em] font-bold text-[#0D0D0D] mb-2 group-hover:text-[#009B00] transition-colors">
+                    {entry.title}
+                  </h3>
+                  <p className="text-[14px] leading-[22px] text-[#666] mb-4 line-clamp-2">
+                    {entry.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[13px] leading-[18px] text-[#666]">
+                      {new Date(entry.publishDate).toLocaleDateString()}
+                    </span>
+                    <span className="text-[14px] leading-[20px] font-semibold text-[#009B00] group-hover:text-[#008000] transition-colors">
+                      View →
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </HubSection>
+        )}
       </div>
     </div>
   )
