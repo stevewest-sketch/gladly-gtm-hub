@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
 
 interface BreadcrumbItem {
   label: string
@@ -14,9 +13,6 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ items, currentPage }: BreadcrumbProps) {
-  const searchParams = useSearchParams()
-  const fromPath = searchParams.get('from')
-
   return (
     <nav className="bg-white border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-3">
