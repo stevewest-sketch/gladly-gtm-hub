@@ -1,6 +1,7 @@
 'use client'
 
 import { CatalogEntry } from '@/lib/types/catalog'
+import Breadcrumb from '../ui/Breadcrumb'
 
 interface BattleCardTemplateProps {
   entry: CatalogEntry
@@ -9,8 +10,26 @@ interface BattleCardTemplateProps {
 export default function BattleCardTemplate({ entry }: BattleCardTemplateProps) {
   const competitor = entry.competitor
 
+  // Build breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Enablement Hub', href: '/enablement-hub' },
+  ]
+
+  // Add learning path if available
+  if (entry.learningPaths && entry.learningPaths.length > 0) {
+    const primaryPath = entry.learningPaths[0]
+    breadcrumbItems.push({
+      label: primaryPath.name,
+      href: `/enablement-hub?path=${primaryPath.slug.current}`,
+    })
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={breadcrumbItems} currentPage={entry.title} />
+
       {/* Emergency-Optimized Header - Critical Info Above Fold */}
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-8 px-4">
         <div className="max-w-6xl mx-auto">

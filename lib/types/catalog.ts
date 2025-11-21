@@ -88,6 +88,26 @@ export interface ContentType {
   order?: number
 }
 
+export interface Audience {
+  _id: string
+  _type: 'audience'
+  name: string
+  slug: { current: string }
+  description?: string
+  order?: number
+}
+
+export interface LearningPath {
+  _id: string
+  _type: 'learningPath'
+  name: string
+  slug: { current: string }
+  description: string
+  icon: string
+  color: string
+  order: number
+}
+
 export interface QuarterlyUpdate {
   date: string
   wistiaId?: string
@@ -115,6 +135,28 @@ export interface MainContent {
     }
   }
   additionalResources?: AdditionalResource[]
+}
+
+export interface ContentBlock {
+  _key: string
+  blockType: 'richText' | 'stepByStep' | 'faq' | 'tips' | 'mistakes' | 'useCases' | 'howToUse' | 'dataStats'
+  title: string
+  content?: any[] // Portable Text blocks
+  steps?: Array<{
+    stepTitle: string
+    stepDescription: string
+    stepImage?: {
+      asset: {
+        _ref: string
+        _type: 'reference'
+      }
+    }
+  }>
+  faqs?: Array<{
+    question: string
+    answer: string
+  }>
+  collapsible?: boolean
 }
 
 export interface HowToUseSection {
@@ -146,12 +188,15 @@ export interface CatalogEntry {
   topics?: Topic[]
   journeyStages?: JourneyStage[]
   industries?: Industry[]
+  audiences?: Audience[]
+  learningPaths?: LearningPath[]
 
   // Hub-specific categories (for multi-hub architecture)
   coeCategory?: string[]  // COE Hub categories
   salesCategory?: string[]  // Sales Playbook Hub categories
   trainingCategory?: string[]  // Training Hub categories
   partnerCategory?: string[]  // Partner Hub categories
+  enablementCategory?: string[]  // Enablement Hub categories
 
   // Competitive-specific
   competitor?: Competitor
@@ -181,6 +226,7 @@ export interface CatalogEntry {
   externalUrl?: string  // Link to external content (Google Drive, Docs, etc.)
   mainContent?: MainContent
   keyTakeaways?: string[]
+  contentBlocks?: ContentBlock[]
 
   // Dual View
   hasHowToUse?: boolean
@@ -202,11 +248,13 @@ export interface CatalogFilters {
   topics?: string[]
   journeyStages?: string[]
   industries?: string[]
+  audiences?: string[]
   // Hub-specific category filters
   coeCategory?: string[]
   salesCategory?: string[]
   trainingCategory?: string[]
   partnerCategory?: string[]
+  enablementCategory?: string[]
   // Other filters
   competitor?: string
   format?: string
@@ -230,10 +278,12 @@ export type FilterOption =
   | 'topic'
   | 'journeyStage'
   | 'industry'
+  | 'audience'
   | 'coeCategory'
   | 'salesCategory'
   | 'trainingCategory'
   | 'partnerCategory'
+  | 'enablementCategory'
   | 'competitor'
   | 'difficulty'
   | 'date'
@@ -301,6 +351,7 @@ export interface CatalogViewProps {
   availableIndustries?: Industry[]
   availableCompetitors?: Competitor[]
   availableContentTypes?: ContentType[]
+  availableAudiences?: Audience[]
 }
 
 export interface FilterPanelProps {
@@ -316,6 +367,7 @@ export interface FilterPanelProps {
   availableIndustries?: Industry[]
   availableCompetitors?: Competitor[]
   availableContentTypes?: ContentType[]
+  availableAudiences?: Audience[]
 
   // UI Options
   showSearch?: boolean

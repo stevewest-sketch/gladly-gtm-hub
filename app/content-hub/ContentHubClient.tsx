@@ -85,17 +85,27 @@ export default function ContentHubClient({
   const newEntries = getNewEntries()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Hero Section - Gladly Design */}
-      <div className="bg-[#252525] text-white py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section - Purple Brand */}
+      <div className="relative bg-gradient-to-br from-[#8C69F0] via-[#7C59D0] to-[#6B46C1] text-white py-20 px-4 overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+
+        {/* Accent shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto relative">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl">📚</span>
-            <h1 className="text-[28px] leading-[32px] tracking-[-0.01em] font-bold">
+            <h1 className="text-[32px] leading-[38px] tracking-[-0.02em] font-bold">
               Content Hub
             </h1>
           </div>
-          <p className="text-[15px] leading-[24px] text-gray-300 max-w-2xl">
+          <p className="text-[17px] leading-[28px] text-purple-50 max-w-2xl">
             Your repository for templates, collateral, and competitive intelligence. Everything
             you need to win deals and enable your success.
           </p>
@@ -120,10 +130,10 @@ export default function ContentHubClient({
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredEntries.map((entry) => (
-                <div key={entry._id} className="bg-white border border-[#DFDFDF] rounded-lg p-5 hover:border-[#009B00] hover:shadow-lg transition-all duration-200">
-                  <div className="flex items-start justify-between mb-3">
+                <div key={entry._id} className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-[#009B00] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-4">
                     <span
-                      className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
+                      className="px-3 py-1.5 rounded-md text-[12px] leading-[16px] font-semibold text-white shadow-sm"
                       style={{ backgroundColor: entry.contentType?.color || '#8C69F0' }}
                     >
                       {entry.contentType?.name}
@@ -134,15 +144,15 @@ export default function ContentHubClient({
                       </span>
                     )}
                   </div>
-                  <h3 className="text-[15px] leading-[24px] tracking-[-0.005em] font-semibold text-[#0D0D0D] mb-2">
+                  <h3 className="text-[16px] leading-[24px] tracking-[-0.01em] font-bold text-[#0D0D0D] mb-2 group-hover:text-[#009B00] transition-colors">
                     {entry.title}
                   </h3>
-                  <p className="text-[13px] leading-[20px] text-[#252525] mb-3 line-clamp-2">
+                  <p className="text-[14px] leading-[22px] text-[#666] mb-4 line-clamp-2">
                     {entry.description}
                   </p>
                   <a
                     href={`/catalog/${entry.slug.current}`}
-                    className="inline-flex items-center text-[13px] leading-[20px] font-semibold text-[#009B00] hover:text-[#008000]"
+                    className="inline-flex items-center text-[14px] leading-[20px] font-semibold text-[#009B00] hover:text-[#008000] transition-colors"
                   >
                     View Content →
                   </a>
@@ -161,36 +171,25 @@ export default function ContentHubClient({
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {newEntries.map((entry) => (
-                <div key={entry._id} className="bg-white border border-[#DFDFDF] rounded-lg p-4 hover:border-[#8C69F0] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+                <a
+                  key={entry._id}
+                  href={`/catalog/${entry.slug.current}`}
+                  className="group bg-white border border-gray-200 rounded-xl p-5 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
                   <span
-                    className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white mb-2"
+                    className="inline-block px-3 py-1.5 rounded-md text-[12px] leading-[16px] font-semibold text-white mb-3 shadow-sm"
                     style={{ backgroundColor: entry.contentType?.color || '#8C69F0' }}
                   >
                     {entry.contentType?.name}
                   </span>
-                  <h3 className="text-[15px] leading-[24px] font-semibold text-[#0D0D0D] mb-1 line-clamp-2">
+                  <h3 className="text-[15px] leading-[22px] tracking-[-0.01em] font-bold text-[#0D0D0D] mb-2 line-clamp-2 group-hover:text-[#009B00] transition-colors">
                     {entry.title}
                   </h3>
-                  <p className="text-[12px] leading-[16px] text-[#252525]">
+                  <p className="text-[13px] leading-[18px] text-[#666]">
                     {new Date(entry.publishDate).toLocaleDateString()}
                   </p>
-                </div>
+                </a>
               ))}
-            </div>
-          </HubSection>
-        )}
-
-        {/* Category Description - Changes per Button */}
-        {activeCategoryData && activeCategoryData.id !== 'all' && (
-          <HubSection className="mb-8">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-[#DFDFDF] border-l-4 border-l-[#009B00] rounded-lg p-6">
-              <h2 className="text-[18px] leading-[24px] font-semibold tracking-[-0.005em] text-[#0D0D0D] mb-2">
-                {activeCategoryData.icon} {activeCategoryData.label}
-              </h2>
-              <p className="text-[15px] leading-[24px] text-[#252525]">
-                {activeCategoryData.id === 'templates' && 'Browse presentation templates, one-pagers, and ready-to-use decks.'}
-                {activeCategoryData.id === 'competitive' && 'Competitive intelligence, battle cards, and positioning guides.'}
-              </p>
             </div>
           </HubSection>
         )}

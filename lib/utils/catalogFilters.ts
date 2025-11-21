@@ -92,12 +92,35 @@ export function matchesFilters(
     }
   }
 
+  // Audiences filter (multi-select, OR within category)
+  if (filters.audiences && filters.audiences.length > 0) {
+    if (!entry.audiences || entry.audiences.length === 0) {
+      return false
+    }
+    const entryAudienceIds = entry.audiences.map((a) => a._id || a.slug?.current)
+    const hasMatch = entryAudienceIds.some((id) => filters.audiences!.includes(id))
+    if (!hasMatch) {
+      return false
+    }
+  }
+
   // COE Category filter (multi-select, OR within category)
   if (filters.coeCategory && filters.coeCategory.length > 0) {
     if (!entry.coeCategory || entry.coeCategory.length === 0) {
       return false
     }
     const hasMatch = entry.coeCategory.some((cat) => filters.coeCategory!.includes(cat))
+    if (!hasMatch) {
+      return false
+    }
+  }
+
+  // Enablement Category filter (multi-select, OR within category)
+  if (filters.enablementCategory && filters.enablementCategory.length > 0) {
+    if (!entry.enablementCategory || entry.enablementCategory.length === 0) {
+      return false
+    }
+    const hasMatch = entry.enablementCategory.some((cat) => filters.enablementCategory!.includes(cat))
     if (!hasMatch) {
       return false
     }
@@ -273,7 +296,9 @@ export function mergeFilters(
     topics: userFilters.topics || pageFilters.topics,
     journeyStages: userFilters.journeyStages || pageFilters.journeyStages,
     industries: userFilters.industries || pageFilters.industries,
+    audiences: userFilters.audiences || pageFilters.audiences,
     coeCategory: userFilters.coeCategory || pageFilters.coeCategory,
+    enablementCategory: userFilters.enablementCategory || pageFilters.enablementCategory,
     status: userFilters.status || pageFilters.status,
   }
 }
@@ -290,7 +315,9 @@ export function getActiveFilterCount(filters: CatalogFilters): number {
   if (filters.topics && filters.topics.length > 0) count += filters.topics.length
   if (filters.journeyStages && filters.journeyStages.length > 0) count += filters.journeyStages.length
   if (filters.industries && filters.industries.length > 0) count += filters.industries.length
+  if (filters.audiences && filters.audiences.length > 0) count += filters.audiences.length
   if (filters.coeCategory && filters.coeCategory.length > 0) count += filters.coeCategory.length
+  if (filters.enablementCategory && filters.enablementCategory.length > 0) count += filters.enablementCategory.length
   if (filters.competitor) count++
   if (filters.format && filters.format !== 'all') count++
   if (filters.difficulty && filters.difficulty !== 'all') count++

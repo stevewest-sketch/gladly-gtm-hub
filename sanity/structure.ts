@@ -265,6 +265,22 @@ export const structure = (S: StructureBuilder) =>
                             .filter('_type == "competitor"')
                             .defaultOrdering([{ field: 'order', direction: 'asc' }])
                         ),
+                      S.listItem()
+                        .title('Audiences')
+                        .child(
+                          S.documentList()
+                            .title('Audiences')
+                            .filter('_type == "audience"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('Learning Paths')
+                        .child(
+                          S.documentList()
+                            .title('Learning Paths')
+                            .filter('_type == "learningPath"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
                     ])
                 ),
             ])

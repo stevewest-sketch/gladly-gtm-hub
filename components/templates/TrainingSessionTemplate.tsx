@@ -1,6 +1,8 @@
 'use client'
 
 import { CatalogEntry } from '@/lib/types/catalog'
+import ContentBlockRenderer from './ContentBlockRenderer'
+import Breadcrumb from '../ui/Breadcrumb'
 
 interface TrainingSessionTemplateProps {
   entry: CatalogEntry
@@ -9,30 +11,58 @@ interface TrainingSessionTemplateProps {
 export default function TrainingSessionTemplate({ entry }: TrainingSessionTemplateProps) {
   const formatBadgeColor = entry.format === 'live-replay' ? 'bg-blue-500' : 'bg-purple-500'
 
+  // Build breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Enablement Hub', href: '/enablement-hub' },
+  ]
+
+  // Add learning path if available
+  if (entry.learningPaths && entry.learningPaths.length > 0) {
+    const primaryPath = entry.learningPaths[0]
+    breadcrumbItems.push({
+      label: primaryPath.name,
+      href: `/enablement-hub?path=${primaryPath.slug.current}`,
+    })
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-8">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={breadcrumbItems} currentPage={entry.title} />
+
+      {/* Header - Green Brand */}
+      <div className="relative bg-gradient-to-br from-[#009B00] via-[#008000] to-[#006B00] text-white overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+
+        {/* Accent shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-6xl mx-auto px-4 py-12 relative">
           <div className="flex items-center gap-2 mb-4">
-            <span className={`${formatBadgeColor} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+            <span className={`${formatBadgeColor} text-white px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg`}>
               {entry.format === 'live-replay' ? '🎥 Live Replay' : '📚 E-Learning'}
             </span>
             {entry.difficulty && (
-              <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+              <span className="px-3 py-1.5 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
                 {entry.difficulty.charAt(0).toUpperCase() + entry.difficulty.slice(1)}
               </span>
             )}
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{entry.title}</h1>
+          <h1 className="text-[40px] leading-[48px] tracking-[-0.02em] font-bold mb-4">{entry.title}</h1>
 
           {entry.description && (
-            <p className="text-xl text-gray-600 mb-6">{entry.description}</p>
+            <p className="text-[18px] leading-[28px] text-green-50 mb-6 max-w-4xl">{entry.description}</p>
           )}
 
           {/* Metadata Row */}
-          <div className="flex flex-wrap items-center gap-6 text-gray-600">
+          <div className="flex flex-wrap items-center gap-6 text-green-100">
             {entry.publishDate && (
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,6 +172,11 @@ export default function TrainingSessionTemplate({ entry }: TrainingSessionTempla
                   <p className="text-gray-700 whitespace-pre-wrap">{entry.mainContent.transcript}</p>
                 </div>
               </details>
+            )}
+
+            {/* Additional Content Blocks */}
+            {entry.contentBlocks && entry.contentBlocks.length > 0 && (
+              <ContentBlockRenderer blocks={entry.contentBlocks} />
             )}
           </div>
 

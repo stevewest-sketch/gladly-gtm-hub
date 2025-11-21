@@ -380,15 +380,25 @@ export default function COEHubClient({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
-      {/* Hero Section */}
-      <div className={`${hubData.hero.backgroundColor} text-white py-16 px-4`}>
-        <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section - Amber Brand */}
+      <div className="relative bg-gradient-to-br from-[#F59E0B] via-[#D97706] to-[#B45309] text-white py-20 px-4 overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+
+        {/* Accent shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto relative">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-5xl">{hubData.hero.icon}</span>
-            <h1 className="text-5xl font-bold">{hubData.hero.title}</h1>
+            <h1 className="text-[36px] leading-[42px] tracking-[-0.02em] font-bold">{hubData.hero.title}</h1>
           </div>
-          <p className="text-xl text-yellow-100 max-w-3xl">
+          <p className="text-[18px] leading-[28px] text-amber-50 max-w-3xl">
             {hubData.hero.subtitle}
           </p>
         </div>

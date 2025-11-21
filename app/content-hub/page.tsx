@@ -1,9 +1,16 @@
 import { client } from '@/lib/sanity'
 import ContentHubClient from './ContentHubClient'
 
-// GROQ query to fetch ALL catalog entries for Content Hub
+// GROQ query to fetch catalog entries published to Content Hub only (excluding training/enablement)
 const query = `{
-  "entries": *[_type == "catalogEntry" && status == "published"] | order(publishDate desc) {
+  "entries": *[
+    _type == "catalogEntry" &&
+    status == "published" &&
+    "content" in publishedTo &&
+    contentType->slug.current != "training" &&
+    pageTemplate != "training-session" &&
+    pageTemplate != "micro-learning"
+  ] | order(publishDate desc) {
     _id,
     title,
     description,

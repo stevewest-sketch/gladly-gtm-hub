@@ -2,14 +2,33 @@
 
 import { CatalogEntry } from '@/lib/types/catalog'
 import Image from 'next/image'
+import Breadcrumb from '../ui/Breadcrumb'
 
 interface MicroLearningTemplateProps {
   entry: CatalogEntry
 }
 
 export default function MicroLearningTemplate({ entry }: MicroLearningTemplateProps) {
+  // Build breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Enablement Hub', href: '/enablement-hub' },
+  ]
+
+  // Add learning path if available
+  if (entry.learningPaths && entry.learningPaths.length > 0) {
+    const primaryPath = entry.learningPaths[0]
+    breadcrumbItems.push({
+      label: primaryPath.name,
+      href: `/enablement-hub?path=${primaryPath.slug.current}`,
+    })
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={breadcrumbItems} currentPage={entry.title} />
+
       {/* Hero Section - Compact */}
       <div className="bg-gradient-to-r from-[#2563EB] to-[#8C69F0] text-white py-12 px-4">
         <div className="max-w-4xl mx-auto">

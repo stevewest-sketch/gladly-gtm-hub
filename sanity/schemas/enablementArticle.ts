@@ -148,6 +148,34 @@ export default {
       placeholder: 'https://docs.google.com/presentation/...',
     },
     {
+      name: 'transcriptUrl',
+      title: 'Meeting Transcript URL',
+      type: 'url',
+      description: 'Link to meeting transcript (Google Doc, PDF, etc.)',
+      placeholder: 'https://docs.google.com/document/...',
+    },
+    {
+      name: 'keyAssetUrl',
+      title: 'Key Asset URL',
+      type: 'url',
+      description: 'Link to downloadable resource or takeaway (battle card, playbook, template, etc.)',
+      placeholder: 'https://drive.google.com/file/...',
+    },
+    {
+      name: 'keyAssetLabel',
+      title: 'Key Asset Label',
+      type: 'string',
+      description: 'Custom label for the key asset button (e.g., "Battle Card", "Playbook", "Template")',
+      placeholder: 'Battle Card',
+    },
+    {
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
+      description: 'Toggle to feature this enablement in the hub',
+      initialValue: false,
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -155,7 +183,7 @@ export default {
       options: {
         layout: 'tags',
       },
-      description: 'Topics and keywords for search and filtering',
+      description: 'Topics and keywords for search and filtering. Use session type tags: live-training, enablement-hour, team-call, async-learning, certification',
     },
     {
       name: 'readingTime',
@@ -213,10 +241,11 @@ export default {
       category: 'category',
       contentType: 'contentType',
       audience: 'audience',
+      featured: 'featured',
     },
-    prepare({ title, category, contentType, audience }: any) {
+    prepare({ title, category, contentType, audience, featured }: any) {
       return {
-        title,
+        title: featured ? `⭐ ${title}` : title,
         subtitle: `${contentType} • ${category} • ${audience}`,
       };
     },

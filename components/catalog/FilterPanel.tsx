@@ -15,6 +15,7 @@ export default function FilterPanel({
   availableIndustries = [],
   availableCompetitors = [],
   availableContentTypes = [],
+  availableAudiences = [],
   showSearch = true,
   showClearAll = true,
 }: FilterPanelProps) {
@@ -180,6 +181,45 @@ export default function FilterPanel({
                 </button>
               ) : null
             })}
+
+            {/* Audiences */}
+            {filters.audiences?.map((audienceId) => {
+              const audience = availableAudiences.find((a) => a._id === audienceId)
+              return audience ? (
+                <button
+                  key={audienceId}
+                  onClick={() => removeFilter('audiences', audienceId)}
+                  className="flex items-center gap-1 px-2 py-1 text-xs bg-[#009B00] text-white rounded"
+                >
+                  {audience.name}
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              ) : null
+            })}
+
+            {/* Enablement Categories */}
+            {filters.enablementCategory?.map((category) => (
+              <button
+                key={category}
+                onClick={() => removeFilter('enablementCategory', category)}
+                className="flex items-center gap-1 px-2 py-1 text-xs bg-[#8C69F0] text-white rounded"
+              >
+                {category}
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            ))}
           </div>
         </div>
       )}
@@ -294,6 +334,36 @@ export default function FilterPanel({
                   label={industry.name}
                   checked={(filters.industries || []).includes(industry._id)}
                   onChange={() => toggleArrayFilter('industries', industry._id)}
+                />
+              ))}
+            </FilterGroup>
+          )}
+
+          {/* Audiences Filter */}
+          {filterOptions.includes('audience') && availableAudiences.length > 0 && (
+            <FilterGroup label="Audience">
+              {availableAudiences
+                .sort((a, b) => (a.order || 50) - (b.order || 50))
+                .map((audience) => (
+                  <Checkbox
+                    key={audience._id}
+                    label={audience.name}
+                    checked={(filters.audiences || []).includes(audience._id)}
+                    onChange={() => toggleArrayFilter('audiences', audience._id)}
+                  />
+                ))}
+            </FilterGroup>
+          )}
+
+          {/* Enablement Category Filter */}
+          {filterOptions.includes('enablementCategory') && (
+            <FilterGroup label="Category">
+              {['Product', 'Toolkit', 'Competitive', 'Learning', 'CoE', 'Resources'].map((category) => (
+                <Checkbox
+                  key={category}
+                  label={category}
+                  checked={(filters.enablementCategory || []).includes(category)}
+                  onChange={() => toggleArrayFilter('enablementCategory', category)}
                 />
               ))}
             </FilterGroup>

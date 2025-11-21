@@ -80,10 +80,8 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <div className="flex">
-          <Navigation data={navigationData} searchableContent={searchableContent} />
-          <main className="flex-1">{children}</main>
-        </div>
+        <Navigation data={navigationData} searchableContent={searchableContent} />
+        <main className="ml-64 min-h-screen overflow-y-auto">{children}</main>
       </body>
     </html>
   );

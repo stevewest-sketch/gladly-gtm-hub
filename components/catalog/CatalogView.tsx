@@ -32,6 +32,7 @@ export default function CatalogView({
   availableIndustries,
   availableCompetitors,
   availableContentTypes,
+  availableAudiences,
 }: CatalogViewProps) {
   const [userFilters, setUserFilters] = useState<CatalogFilters>({})
   const [currentPage, setCurrentPage] = useState(1)
@@ -141,6 +142,7 @@ export default function CatalogView({
                 availableIndustries={availableIndustries}
                 availableCompetitors={availableCompetitors}
                 availableContentTypes={availableContentTypes}
+                availableAudiences={availableAudiences}
                 showSearch={true}
                 showClearAll={true}
               />

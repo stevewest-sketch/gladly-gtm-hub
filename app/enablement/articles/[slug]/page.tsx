@@ -19,6 +19,9 @@ interface EnablementArticle {
   actionItems?: string[];
   videoUrl?: string;
   slidesUrl?: string;
+  transcriptUrl?: string;
+  keyAssetUrl?: string;
+  keyAssetLabel?: string;
   tags?: string[];
   readingTime?: string;
   publishedDate: string;
@@ -38,6 +41,9 @@ async function getEnablementArticle(slug: string): Promise<EnablementArticle | n
     actionItems,
     videoUrl,
     slidesUrl,
+    transcriptUrl,
+    keyAssetUrl,
+    keyAssetLabel,
     tags,
     readingTime,
     publishedDate
@@ -106,7 +112,7 @@ export default async function EnablementArticlePage({
   const quickNavLinks = [
     article.videoUrl && { label: 'Video', anchor: 'video' },
     article.keyTakeaways && article.keyTakeaways.length > 0 && { label: 'Takeaways', anchor: 'takeaways' },
-    article.sections && article.sections.length > 0 && { label: 'Details', anchor: 'details' },
+    article.sections && article.sections.length > 0 && { label: 'Why This Matters', anchor: 'details' },
     article.actionItems && article.actionItems.length > 0 && { label: 'Actions', anchor: 'actions' },
   ].filter(Boolean) as { label: string; anchor: string }[];
 
@@ -185,7 +191,7 @@ export default async function EnablementArticlePage({
             {/* Content Sections */}
             {article.sections && article.sections.length > 0 && (
               <section id="details" className="mb-[60px]">
-                <h2 className="text-[32px] font-bold mb-6 text-[#0D0D0D]">Session Details</h2>
+                <h2 className="text-[32px] font-bold mb-6 text-[#0D0D0D]">Why This Matters</h2>
                 <div className="space-y-6">
                   {article.sections.map((section, index) => (
                     <div
@@ -244,6 +250,63 @@ export default async function EnablementArticlePage({
                 >
                   📄 Download Training Slides
                 </a>
+              )}
+
+              {/* Quick Access Buttons */}
+              {(article.transcriptUrl || article.slidesUrl || article.keyAssetUrl) && (
+                <div className="bg-white border-2 border-[#F3F3F3] rounded-lg p-6 shadow-sm">
+                  <h3 className="text-xl font-bold mb-4 text-[#0D0D0D]">Quick Access</h3>
+                  <div className="space-y-3">
+                    {article.transcriptUrl && (
+                      <a
+                        href={article.transcriptUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between w-full bg-white border-2 border-[#F3F3F3] text-[#0D0D0D] py-3 px-4 rounded-lg font-semibold hover:border-[#009B00] hover:bg-[#DCFCE7] hover:shadow-md transition-all group"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-lg">📄</span>
+                          <span>Meeting Transcript</span>
+                        </span>
+                        <svg className="w-4 h-4 opacity-50 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                    {article.slidesUrl && (
+                      <a
+                        href={article.slidesUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between w-full bg-white border-2 border-[#F3F3F3] text-[#0D0D0D] py-3 px-4 rounded-lg font-semibold hover:border-[#009B00] hover:bg-[#DCFCE7] hover:shadow-md transition-all group"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-lg">📊</span>
+                          <span>Enablement Deck</span>
+                        </span>
+                        <svg className="w-4 h-4 opacity-50 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                    {article.keyAssetUrl && (
+                      <a
+                        href={article.keyAssetUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between w-full bg-white border-2 border-[#F3F3F3] text-[#0D0D0D] py-3 px-4 rounded-lg font-semibold hover:border-[#009B00] hover:bg-[#DCFCE7] hover:shadow-md transition-all group"
+                      >
+                        <span className="flex items-center gap-2">
+                          <span className="text-lg">🎯</span>
+                          <span>{article.keyAssetLabel || 'Key Asset'}</span>
+                        </span>
+                        <svg className="w-4 h-4 opacity-50 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
               )}
 
               {/* Article Info */}

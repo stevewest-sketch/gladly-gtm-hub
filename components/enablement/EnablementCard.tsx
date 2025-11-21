@@ -1,25 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-
-interface EnablementArticle {
-  _id: string
-  title: string
-  slug: { current: string }
-  summary: string
-  category: string
-  contentType: string
-  audience: string
-  keyTakeaways?: string[]
-  tags?: string[]
-  readingTime?: string
-  publishedDate: string
-  videoUrl?: string
-  slidesUrl?: string
-}
+import { CatalogEntry } from '@/lib/types/catalog'
 
 interface EnablementCardProps {
-  entry: EnablementArticle
+  entry: CatalogEntry
   variant?: 'featured' | 'compact' | 'standard'
   showVideo?: boolean
 }
@@ -29,47 +14,26 @@ export default function EnablementCard({
   variant = 'standard',
   showVideo = false,
 }: EnablementCardProps) {
-  const publishDate = entry.publishedDate
-    ? new Date(entry.publishedDate).toLocaleDateString()
+  const publishDate = entry.publishDate
+    ? new Date(entry.publishDate).toLocaleDateString()
     : ''
 
-  // Link to existing enablement article detail page
-  const linkHref = entry.slug?.current ? `/enablement/articles/${entry.slug.current}` : '#'
+  // Link to catalog entry detail page
+  const linkHref = entry.slug?.current ? `/catalog/${entry.slug.current}` : '#'
 
-  // Get color based on content type
-  const getContentTypeColor = (type: string) => {
-    switch (type) {
-      case 'Training':
-        return '#3B82F6'  // Blue
-      case 'Meeting':
-        return '#8C69F0'  // Purple
-      case 'Demo':
-        return '#F97316'  // Orange
-      case 'Guide':
-        return '#10B981'  // Emerald
-      default:
-        return '#009B00'  // Gladly green
-    }
-  }
+  // Get content type details
+  const contentTypeName = entry.contentType?.name || 'Enablement'
+  const contentTypeColor = entry.contentType?.color || '#009B00'
+  const contentTypeIcon = entry.contentType?.icon || '📄'
 
-  // Get icon based on content type
-  const getContentTypeIcon = (type: string) => {
-    switch (type) {
-      case 'Training':
-        return '🎓'
-      case 'Meeting':
-        return '🎥'
-      case 'Demo':
-        return '🖥️'
-      case 'Guide':
-        return '📖'
-      default:
-        return '📄'
-    }
-  }
+  // Get audiences
+  const audiences = entry.audiences?.map(a => a.name).join(', ') || ''
 
-  const contentTypeColor = getContentTypeColor(entry.contentType)
-  const contentTypeIcon = getContentTypeIcon(entry.contentType)
+  // Get first category
+  const category = entry.enablementCategory?.[0] || ''
+
+  // Format duration
+  const duration = entry.duration ? `${entry.duration} minutes` : ''
 
   // Featured variant - larger card with more details
   if (variant === 'featured') {
@@ -77,13 +41,20 @@ export default function EnablementCard({
       <Link href={linkHref} className="group block h-full">
         <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1">
           <div className="p-5">
-            {/* Content Type Badge */}
-            <div
-              className="inline-block px-3 py-1 rounded-full text-white text-[12px] leading-[16px] font-semibold mb-3"
-              style={{ backgroundColor: contentTypeColor }}
-            >
-              <span className="mr-1">{contentTypeIcon}</span>
-              {entry.contentType}
+            {/* Content Type Badge and Featured Badge */}
+            <div className="flex items-center gap-2 mb-3">
+              <div
+                className="inline-block px-3 py-1 rounded-full text-white text-[12px] leading-[16px] font-semibold"
+                style={{ backgroundColor: contentTypeColor }}
+              >
+                <span className="mr-1">{contentTypeIcon}</span>
+                {contentTypeName}
+              </div>
+              {entry.featured && (
+                <div className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F5A623] text-gray-900">
+                  ⭐ Featured
+                </div>
+              )}
             </div>
 
             {/* Title */}
@@ -93,7 +64,7 @@ export default function EnablementCard({
 
             {/* Summary */}
             <p className="text-[13px] leading-[20px] text-[#252525] mb-4 line-clamp-3">
-              {entry.summary}
+              {entry.description}
             </p>
 
             {/* Metadata Row */}
@@ -107,38 +78,33 @@ export default function EnablementCard({
                 </div>
               )}
 
-              {entry.readingTime && (
+              {duration && (
                 <div className="flex items-center gap-1">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>{entry.readingTime}</span>
+                  <span>{duration}</span>
                 </div>
               )}
 
-              {entry.audience && (
+              {audiences && (
                 <span className="px-2 py-0.5 bg-[#F3F3F3] rounded text-[12px] leading-[16px] font-semibold">
-                  {entry.audience}
+                  {audiences}
                 </span>
               )}
             </div>
 
-            {/* Tags */}
-            {entry.tags && entry.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {entry.tags.slice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]"
-                  >
-                    {tag}
-                  </span>
+            {/* Key Takeaways */}
+            {entry.keyTakeaways && entry.keyTakeaways.length > 0 && (
+              <div className="space-y-1">
+                {entry.keyTakeaways.slice(0, 2).map((takeaway, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <span className="text-[#009B00] text-[12px] mt-0.5">✓</span>
+                    <span className="text-[12px] leading-[16px] text-[#252525] line-clamp-1">
+                      {takeaway}
+                    </span>
+                  </div>
                 ))}
-                {entry.tags.length > 3 && (
-                  <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]">
-                    +{entry.tags.length - 3} more
-                  </span>
-                )}
               </div>
             )}
           </div>
@@ -162,22 +128,29 @@ export default function EnablementCard({
     return (
       <Link href={linkHref} className="group block h-full">
         <div className="h-full bg-white border border-[#DFDFDF] rounded-lg p-4 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-          <span
-            className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white mb-2"
-            style={{ backgroundColor: contentTypeColor }}
-          >
-            <span className="mr-1">{contentTypeIcon}</span>
-            {entry.contentType}
-          </span>
+          <div className="flex items-center gap-2 mb-2">
+            <span
+              className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
+              style={{ backgroundColor: contentTypeColor }}
+            >
+              <span className="mr-1">{contentTypeIcon}</span>
+              {contentTypeName}
+            </span>
+            {entry.featured && (
+              <span className="inline-block px-1.5 py-0.5 rounded text-[11px] leading-[14px] font-semibold bg-[#F5A623] text-gray-900">
+                ⭐
+              </span>
+            )}
+          </div>
           <h3 className="text-[15px] leading-[24px] font-semibold text-[#0D0D0D] mb-1 line-clamp-2 group-hover:text-[#009B00] transition-colors">
             {entry.title}
           </h3>
           <p className="text-[12px] leading-[16px] text-[#252525] mb-2">
             {publishDate}
           </p>
-          {entry.audience && (
+          {audiences && (
             <span className="inline-block px-2 py-0.5 bg-[#F3F3F3] rounded text-[11px] leading-[14px] font-semibold text-[#252525]">
-              {entry.audience}
+              {audiences}
             </span>
           )}
         </div>
@@ -190,13 +163,20 @@ export default function EnablementCard({
     <Link href={linkHref} className="group block h-full">
       <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1">
         <div className="p-5">
-          {/* Content Type Badge */}
-          <div
-            className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white mb-3"
-            style={{ backgroundColor: contentTypeColor }}
-          >
-            <span className="mr-1">{contentTypeIcon}</span>
-            {entry.contentType}
+          {/* Content Type Badge and Featured Badge */}
+          <div className="flex items-center gap-2 mb-3">
+            <div
+              className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
+              style={{ backgroundColor: contentTypeColor }}
+            >
+              <span className="mr-1">{contentTypeIcon}</span>
+              {contentTypeName}
+            </div>
+            {entry.featured && (
+              <div className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F5A623] text-gray-900">
+                ⭐
+              </div>
+            )}
           </div>
 
           {/* Title */}
@@ -206,7 +186,7 @@ export default function EnablementCard({
 
           {/* Summary */}
           <p className="text-[13px] leading-[20px] text-[#252525] mb-3 line-clamp-2">
-            {entry.summary}
+            {entry.description}
           </p>
 
           {/* Metadata */}
@@ -214,24 +194,24 @@ export default function EnablementCard({
             {publishDate && (
               <span className="text-[#666666]">{publishDate}</span>
             )}
-            {entry.readingTime && (
-              <span className="text-[#666666]">• {entry.readingTime}</span>
+            {duration && (
+              <span className="text-[#666666]">• {duration}</span>
             )}
           </div>
 
           {/* Audience & Category */}
           <div className="flex flex-wrap gap-2">
-            {entry.audience && (
+            {audiences && (
               <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#DFDFDF] text-[#252525]">
-                {entry.audience}
+                {audiences}
               </span>
             )}
-            {entry.category && (
+            {category && (
               <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#E8E0F8] text-[#8C69F0]">
-                {entry.category}
+                {category}
               </span>
             )}
-            {showVideo && entry.videoUrl && (
+            {showVideo && entry.mainContent?.videoUrl && (
               <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#3B82F6] text-white">
                 🎥 Video
               </span>

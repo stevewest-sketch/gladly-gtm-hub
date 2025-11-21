@@ -25,6 +25,8 @@ import journeyStage from './taxonomies/journeyStage'
 import industry from './taxonomies/industry'
 import competitor from './taxonomies/competitor'
 import contentType from './taxonomies/contentType'
+import audience from './taxonomies/audience'
+import learningPath from './taxonomies/learningPath'
 
 // Section types
 import heroSection from './sections/heroSection'
@@ -83,6 +85,8 @@ export const schemaTypes = [
   industry,
   competitor,
   contentType,
+  audience,
+  learningPath,
   // Section types
   heroSection,
   featureGridSection,

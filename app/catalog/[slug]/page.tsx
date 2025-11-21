@@ -1,19 +1,105 @@
-'use client'
-
-import { useParams } from 'next/navigation'
-import { mockCatalogEntries, mockProducts } from '@/lib/data/mockCatalogData'
+import { client } from '@/lib/sanity'
 import MicroLearningTemplate from '@/components/templates/MicroLearningTemplate'
 import TrainingSessionTemplate from '@/components/templates/TrainingSessionTemplate'
 import BattleCardTemplate from '@/components/templates/BattleCardTemplate'
 import PlayTemplate from '@/components/templates/PlayTemplate'
 import ProductTemplate from '@/components/templates/ProductTemplate'
+import { CatalogEntry } from '@/lib/types/catalog'
 
-export default function CatalogDetailPage() {
-  const params = useParams()
-  const slug = params.slug as string
+// GROQ query to fetch a single catalog entry by slug
+const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
+  _id,
+  title,
+  slug,
+  description,
+  "contentType": contentType->{
+    _id,
+    name,
+    slug,
+    icon,
+    color
+  },
+  pageTemplate,
+  format,
+  "audiences": audiences[]->{
+    _id,
+    name,
+    slug
+  },
+  "learningPaths": learningPaths[]->{
+    _id,
+    name,
+    slug,
+    description,
+    icon,
+    color,
+    order
+  },
+  "products": products[]->{
+    _id,
+    name,
+    slug,
+    color,
+    description
+  },
+  enablementCategory,
+  publishDate,
+  duration,
+  difficulty,
+  presenter,
+  thumbnailImage,
+  externalUrl,
+  mainContent {
+    transcript,
+    videoUrl,
+    wistiaId,
+    documentUrl,
+    additionalResources[] {
+      title,
+      url,
+      type
+    }
+  },
+  keyTakeaways,
+  contentBlocks[] {
+    _key,
+    blockType,
+    title,
+    content,
+    steps[] {
+      stepTitle,
+      stepDescription,
+      stepImage
+    },
+    faqs[] {
+      question,
+      answer
+    },
+    collapsible
+  },
+  featured,
+  priority,
+  status,
+  "competitor": competitor->{
+    _id,
+    name,
+    slug
+  },
+  battleCardFile,
+  quarterlyUpdates
+}`
 
-  // Find the entry by slug
-  const entry = mockCatalogEntries.find((e) => e.slug.current === slug)
+interface PageProps {
+  params: {
+    slug: string
+  }
+}
+
+export default async function CatalogDetailPage({ params }: PageProps) {
+  const { slug } = params
+
+  // Fetch the entry from Sanity
+  const entry: CatalogEntry = await client.fetch(query, { slug })
 
   if (!entry) {
     return (
@@ -24,10 +110,10 @@ export default function CatalogDetailPage() {
             The requested catalog entry could not be found.
           </p>
           <a
-            href="/catalog-demo"
-            className="inline-block px-6 py-3 bg-[#8C69F0] text-white font-semibold rounded-lg hover:bg-[#7C59D0] transition-colors"
+            href="/enablement-hub"
+            className="inline-block px-6 py-3 bg-[#009B00] text-white font-semibold rounded-lg hover:bg-[#008000] transition-colors"
           >
-            Back to Catalog
+            Back to Enablement Hub
           </a>
         </div>
       </div>
@@ -50,11 +136,53 @@ export default function CatalogDetailPage() {
 
     case 'product':
       // For product template, we need to pass the product data
-      const product = entry.products?.[0] || mockProducts[0]
-      return <ProductTemplate product={product} allEntries={mockCatalogEntries} />
+      const product = entry.products?.[0]
+      if (!product) {
+        // Fallback to training session if no product
+        return <TrainingSessionTemplate entry={entry} />
+      }
+      // Fetch all entries for this product
+      const allEntriesQuery = `*[_type == "catalogEntry" && references($productId)]{
+        _id,
+        title,
+        slug,
+        description,
+        "contentType": contentType->{ name, icon, color },
+        pageTemplate,
+        publishDate,
+        duration
+      }`
+      const allEntries = await client.fetch(allEntriesQuery, { productId: product._id })
+      return <ProductTemplate product={product} allEntries={allEntries} />
 
     default:
       // Default to training session template
       return <TrainingSessionTemplate entry={entry} />
   }
+}
+
+// Generate metadata for SEO
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = params
+  const entry: CatalogEntry = await client.fetch(query, { slug })
+
+  if (!entry) {
+    return {
+      title: 'Content Not Found',
+    }
+  }
+
+  return {
+    title: `${entry.title} | Gladly Enablement`,
+    description: entry.description || `View ${entry.title} - ${entry.contentType?.name || 'Enablement'}`,
+  }
+}
+
+// Generate static params for build-time rendering (optional - can remove for fully dynamic)
+export async function generateStaticParams() {
+  const slugs = await client.fetch<string[]>(`*[_type == "catalogEntry" && defined(slug.current)].slug.current`)
+
+  return slugs.map((slug) => ({
+    slug,
+  }))
 }

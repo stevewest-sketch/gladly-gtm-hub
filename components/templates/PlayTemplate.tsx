@@ -1,14 +1,33 @@
 'use client'
 
 import { CatalogEntry } from '@/lib/types/catalog'
+import Breadcrumb from '../ui/Breadcrumb'
 
 interface PlayTemplateProps {
   entry: CatalogEntry
 }
 
 export default function PlayTemplate({ entry }: PlayTemplateProps) {
+  // Build breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Enablement Hub', href: '/enablement-hub' },
+  ]
+
+  // Add learning path if available
+  if (entry.learningPaths && entry.learningPaths.length > 0) {
+    const primaryPath = entry.learningPaths[0]
+    breadcrumbItems.push({
+      label: primaryPath.name,
+      href: `/enablement-hub?path=${primaryPath.slug.current}`,
+    })
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb items={breadcrumbItems} currentPage={entry.title} />
+
       {/* Engaging Hero */}
       <div className="bg-gradient-to-br from-[#8C69F0] via-[#7C59D0] to-[#6B46C1] text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
