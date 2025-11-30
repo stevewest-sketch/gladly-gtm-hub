@@ -1,0 +1,174 @@
+{
+  "audiences": [
+    {
+      "name": "Sales",
+      "slug": "sales"
+    },
+    {
+      "name": "CSM",
+      "slug": "csm"
+    },
+    {
+      "name": "SC",
+      "slug": "sc"
+    },
+    {
+      "name": "Marketing",
+      "slug": "marketing"
+    },
+    {
+      "name": "Product",
+      "slug": "product"
+    },
+    {
+      "name": "Leadership",
+      "slug": "leadership"
+    },
+    {
+      "name": "All Teams",
+      "slug": "all-teams"
+    }
+  ],
+  "competitors": [],
+  "contentTypes": [
+    {
+      "name": "Training",
+      "slug": "training"
+    },
+    {
+      "name": "Workshop",
+      "slug": "workshop"
+    },
+    {
+      "name": "Webinar",
+      "slug": "webinar"
+    },
+    {
+      "name": "Template",
+      "slug": "template"
+    },
+    {
+      "name": "Deck",
+      "slug": "deck"
+    },
+    {
+      "name": "Activation Kit",
+      "slug": "activation-kit"
+    },
+    {
+      "name": "One Pager",
+      "slug": "one-pager"
+    },
+    {
+      "name": "Battle Card",
+      "slug": "battle-card"
+    },
+    {
+      "name": "Competitive",
+      "slug": "competitive"
+    },
+    {
+      "name": "Demo",
+      "slug": "demo"
+    },
+    {
+      "name": "Guide",
+      "slug": "guide"
+    },
+    {
+      "name": "Meeting",
+      "slug": "meeting"
+    }
+  ],
+  "journeyStages": [],
+  "products": [
+    {
+      "name": "Sidekick",
+      "slug": "sidekick"
+    },
+    {
+      "name": "Voice",
+      "slug": "voice"
+    },
+    {
+      "name": "Classic",
+      "slug": "classic"
+    },
+    {
+      "name": null,
+      "slug": "sidekick-email"
+    },
+    {
+      "name": null,
+      "slug": "sidekick-sales"
+    },
+    {
+      "name": null,
+      "slug": "sidekick-voice"
+    },
+    {
+      "name": null,
+      "slug": "app-platform"
+    },
+    {
+      "name": null,
+      "slug": "sidekick-standalone"
+    },
+    {
+      "name": null,
+      "slug": "customer-ai"
+    },
+    {
+      "name": null,
+      "slug": "guides-and-journeys"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Sales",
+      "slug": "sales"
+    },
+    {
+      "name": "Customer Success",
+      "slug": "customer-success"
+    },
+    {
+      "name": "Onboarding",
+      "slug": "onboarding"
+    },
+    {
+      "name": "Support",
+      "slug": "support"
+    },
+    {
+      "name": "Partner",
+      "slug": "partner"
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI",
+      "slug": "ai"
+    },
+    {
+      "name": "Product Training",
+      "slug": "product-training"
+    },
+    {
+      "name": "Best Practices",
+      "slug": "best-practices"
+    },
+    {
+      "name": "Templates",
+      "slug": "templates"
+    },
+    {
+      "name": "Competitive Intelligence",
+      "slug": "competitive-intelligence"
+    },
+    {
+      "name": "Proof Points",
+      "slug": "proof-points"
+    }
+  ]
+}

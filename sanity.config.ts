@@ -1,12 +1,61 @@
-import { defineConfig } from 'sanity'
+import { defineConfig, Template } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { schemaTypes } from './sanity/schemas'
 import { structure } from './sanity/structure'
-import { ProcessTranscriptAction } from './sanity/actions/ProcessTranscriptAction'
+import { ProcessContentAction } from './sanity/actions/ProcessContentAction'
+
+// Streamlined initial value templates for the new schema
+const initialValueTemplates: Template[] = [
+  // Content Hub entry
+  {
+    id: 'catalogEntry-content-hub',
+    title: 'Content Hub Card',
+    schemaType: 'catalogEntry',
+    value: {
+      publishedTo: ['content'],
+      status: 'draft',
+      aiInput: { inputMode: 'manual' },
+    },
+  },
+  // Enablement Hub entries by template type
+  {
+    id: 'catalogEntry-training',
+    title: 'Training Session',
+    schemaType: 'catalogEntry',
+    value: {
+      publishedTo: ['enablement'],
+      pageTemplate: 'training',
+      status: 'draft',
+      aiInput: { inputMode: 'paste' },
+    },
+  },
+  {
+    id: 'catalogEntry-playbook',
+    title: 'Playbook / How-To',
+    schemaType: 'catalogEntry',
+    value: {
+      publishedTo: ['enablement'],
+      pageTemplate: 'playbook',
+      status: 'draft',
+      aiInput: { inputMode: 'paste' },
+    },
+  },
+  {
+    id: 'catalogEntry-battle-card',
+    title: 'Battle Card',
+    schemaType: 'catalogEntry',
+    value: {
+      publishedTo: ['enablement'],
+      pageTemplate: 'battle-card',
+      status: 'draft',
+      aiInput: { inputMode: 'manual' },
+    },
+  },
+]
 
 export default defineConfig({
   name: 'default',
-  title: 'My Website',
+  title: 'GTM Hub',
   basePath: '/studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '9epiazve',
@@ -20,13 +69,14 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+    templates: (prev) => [...prev, ...initialValueTemplates],
   },
 
   document: {
     actions: (prev, context) => {
-      // Add Process Transcript action only for enablementArticle documents
-      if (context.schemaType === 'enablementArticle') {
-        return [...prev, ProcessTranscriptAction]
+      // Add Process Content action for catalogEntry documents
+      if (context.schemaType === 'catalogEntry') {
+        return [...prev, ProcessContentAction]
       }
       return prev
     },

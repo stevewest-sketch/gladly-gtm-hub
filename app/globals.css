@@ -6,7 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Gladly Design System Colors */
+  /* Gladly Design System Colors (existing) */
   --brand-green-500: #009B00;
   --brand-purple-500: #8C69F0;
 
@@ -21,6 +21,44 @@
 
   --bubble-customer: #F6F6F6;
   --bubble-agent: #D5F2E8;
+
+  /* ===========================================
+     V2 Design System - Hub Theme Variables
+     Default: Content Hub (Purple)
+     =========================================== */
+  --theme-primary: #7C3AED;
+  --theme-primary-dark: #6D28D9;
+  --theme-primary-light: #F3E8FD;
+  --theme-gradient: linear-gradient(135deg, #6D28D9 0%, #7C3AED 50%, #8B5CF6 100%);
+
+  /* V2 Gray Scale */
+  --v2-gray-50: #F8F9FC;
+  --v2-gray-100: #F1F3F9;
+  --v2-gray-200: #E8EBF2;
+  --v2-gray-300: #E2E6EF;
+  --v2-gray-400: #CBD2E0;
+  --v2-gray-500: #8B93A7;
+  --v2-gray-600: #5C6578;
+  --v2-gray-700: #1A1D26;
+
+  /* V2 Featured Section Colors (Content Hub default) */
+  --featured-bg: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+  --featured-border: #E9D5FF;
+}
+
+/* ===========================================
+   Enablement Hub Theme Override
+   Apply to any element with data-hub="enablement"
+   =========================================== */
+[data-hub="enablement"] {
+  --theme-primary: #16A34A;
+  --theme-primary-dark: #15803D;
+  --theme-primary-light: #DCFCE7;
+  --theme-gradient: linear-gradient(135deg, #15803D 0%, #16A34A 50%, #22C55E 100%);
+
+  /* Featured Section Colors for Enablement */
+  --featured-bg: linear-gradient(135deg, #FEFCF6 0%, #FEF9EE 100%);
+  --featured-border: #FDE68A;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -53,9 +53,12 @@ export default function EnablementHubClient({
   const availableCategories = useMemo(() => {
     const categories = new Set<string>()
     entries.forEach(entry => {
-      entry.enablementCategory?.forEach(cat => {
-        categories.add(cat)
-      })
+      const cats = entry.enablementCategory
+      if (Array.isArray(cats)) {
+        cats.forEach(cat => categories.add(cat))
+      } else if (typeof cats === 'string') {
+        categories.add(cats)
+      }
     })
     return Array.from(categories).sort()
   }, [entries])
@@ -120,9 +123,15 @@ export default function EnablementHubClient({
 
     // Apply category filters
     if (selectedCategories.length > 0) {
-      filtered = filtered.filter(entry =>
-        entry.enablementCategory?.some(cat => selectedCategories.includes(cat))
-      )
+      filtered = filtered.filter(entry => {
+        const cats = entry.enablementCategory
+        if (Array.isArray(cats)) {
+          return cats.some(cat => selectedCategories.includes(cat))
+        } else if (typeof cats === 'string') {
+          return selectedCategories.includes(cats)
+        }
+        return false
+      })
     }
 
     return filtered

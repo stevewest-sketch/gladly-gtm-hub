@@ -154,49 +154,49 @@ export default function CatalogCard({
           {/* Multi-Tag Pills */}
           <div className="flex flex-wrap gap-2">
             {/* Products - Colored tags */}
-            {entry.products?.map((product) => (
+            {entry.products?.filter(Boolean).map((product) => (
               <span
                 key={product._id}
                 className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
-                style={{ backgroundColor: product.color || '#8C69F0' }}
+                style={{ backgroundColor: product?.color || '#8C69F0' }}
               >
-                {product.name}
+                {product?.name}
               </span>
             ))}
 
             {/* Teams - Outline tags */}
-            {entry.teams?.map((team) => (
+            {entry.teams?.filter(Boolean).map((team) => (
               <span
                 key={team._id}
                 className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#DFDFDF] text-[#252525]"
               >
-                {team.name}
+                {team?.name}
               </span>
             ))}
 
             {/* Topics - Subtle tags (max 3, then +N more) */}
-            {entry.topics?.slice(0, 3).map((topic) => (
+            {entry.topics?.filter(Boolean).slice(0, 3).map((topic) => (
               <span
                 key={topic._id}
                 className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]"
               >
-                {topic.name}
+                {topic?.name}
               </span>
             ))}
-            {entry.topics && entry.topics.length > 3 && (
+            {entry.topics && entry.topics.filter(Boolean).length > 3 && (
               <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F3F3F3] text-[#252525]">
-                +{entry.topics.length - 3} more
+                +{entry.topics.filter(Boolean).length - 3} more
               </span>
             )}
 
             {/* Journey Stage tags */}
-            {entry.journeyStages?.map((stage) => (
+            {entry.journeyStages?.filter(Boolean).map((stage) => (
               <span
                 key={stage._id}
                 className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#E8E0F8] text-[#8C69F0] bg-[#E8E0F8]"
               >
-                {stage.icon && <span className="mr-1">{stage.icon}</span>}
-                {stage.name}
+                {stage?.icon && <span className="mr-1">{stage.icon}</span>}
+                {stage?.name}
               </span>
             ))}
           </div>

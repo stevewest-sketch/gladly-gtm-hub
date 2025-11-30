@@ -170,12 +170,37 @@ export interface HowToUseContent {
   sections: HowToUseSection[]
 }
 
+export interface ArticleSection {
+  _key?: string
+  heading: string
+  content: string
+}
+
+export interface ResourceLinks {
+  videoUrl?: string
+  slidesUrl?: string
+  transcriptUrl?: string
+  keyAssetUrl?: string
+  keyAssetLabel?: string
+}
+
+export interface RelatedContent {
+  _id: string
+  title: string
+  slug: { current: string }
+  description?: string
+  cardType?: string
+}
+
 export interface CatalogEntry {
   _id: string
   _type: 'catalogEntry'
   title: string
   description?: string
   slug: { current: string }
+
+  // Card Type (new unified schema)
+  cardType?: 'content-card' | 'enablement-article' | 'best-practice' | 'play' | 'battle-card'
 
   // Classification
   contentType: ContentType
@@ -228,6 +253,13 @@ export interface CatalogEntry {
   keyTakeaways?: string[]
   contentBlocks?: ContentBlock[]
 
+  // Article Content (for enablement articles)
+  articleSections?: ArticleSection[]
+  actionItems?: string[]
+  resourceLinks?: ResourceLinks
+  relatedContent?: RelatedContent[]
+  readingTime?: string
+
   // Dual View
   hasHowToUse?: boolean
   howToUseContent?: HowToUseContent
@@ -235,6 +267,7 @@ export interface CatalogEntry {
   // Display
   featured?: boolean
   priority?: number
+  viewCount?: number
   showInUpcoming?: boolean
   publishedTo?: string[]
   status: 'draft' | 'submitted' | 'in-review' | 'approved' | 'published' | 'archived'

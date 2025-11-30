@@ -12,6 +12,7 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
   title,
   slug,
   description,
+  cardType,
   "contentType": contentType->{
     _id,
     name,
@@ -61,6 +62,28 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
     }
   },
   keyTakeaways,
+  // Article-specific fields
+  articleSections[] {
+    _key,
+    heading,
+    content
+  },
+  actionItems,
+  resourceLinks {
+    videoUrl,
+    slidesUrl,
+    transcriptUrl,
+    keyAssetUrl,
+    keyAssetLabel
+  },
+  "relatedContent": relatedContent[]->{
+    _id,
+    title,
+    slug,
+    description,
+    cardType
+  },
+  readingTime,
   contentBlocks[] {
     _key,
     blockType,
@@ -90,13 +113,13 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
 }`
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function CatalogDetailPage({ params }: PageProps) {
-  const { slug } = params
+  const { slug } = await params
 
   // Fetch the entry from Sanity
   const entry: CatalogEntry = await client.fetch(query, { slug })
@@ -163,7 +186,7 @@ export default async function CatalogDetailPage({ params }: PageProps) {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = params
+  const { slug } = await params
   const entry: CatalogEntry = await client.fetch(query, { slug })
 
   if (!entry) {

@@ -3,472 +3,292 @@ export default {
   title: 'Catalog Entries',
   type: 'document',
   groups: [
-    { name: 'basics', title: '📝 Basics', default: true },
-    { name: 'content', title: '💎 Content' },
-    { name: 'tagging', title: '🏷️ Tagging' },
-    { name: 'publishing', title: '🚀 Publishing' },
-    { name: 'advanced', title: '⚙️ Advanced' },
-  ],
-  fieldsets: [
-    {
-      name: 'contentClassification',
-      title: 'Content Classification',
-      description: 'How should this content be categorized and displayed?',
-      options: { collapsible: false },
-    },
-    {
-      name: 'targetingCore',
-      title: 'Core Targeting (Most Common)',
-      description: 'Who should see this and where?',
-      options: { collapsible: false },
-    },
-    {
-      name: 'targetingAdditional',
-      title: 'Additional Targeting (Optional)',
-      description: 'Add more specific targeting if needed',
-      options: { collapsible: true, collapsed: true },
-    },
-    {
-      name: 'publishSettings',
-      title: 'Publish Settings',
-      description: 'Control visibility and status',
-      options: { collapsible: false },
-    },
-    {
-      name: 'displayOptions',
-      title: 'Display Options',
-      description: 'Featured content and priority',
-      options: { collapsible: true, collapsed: false },
-    },
+    { name: 'create', title: '✨ Create', default: true },
+    { name: 'content', title: '📝 Content' },
+    { name: 'resources', title: '📦 Resources' },
+    { name: 'publish', title: '🚀 Publish' },
   ],
   fields: [
     // ========================================
-    // BASICS TAB
+    // CREATE TAB - Hub Selection & AI Processing
     // ========================================
+
+    // Step 1: Choose which hub
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: (Rule: any) => Rule.required(),
-      description: 'Clear, descriptive title for this content',
-      group: 'basics',
-    },
-    {
-      name: 'slug',
-      title: 'URL Slug',
-      type: 'slug',
+      name: 'publishedTo',
+      title: 'Where does this live?',
+      type: 'array',
+      of: [{ type: 'string' }],
       options: {
-        source: 'title',
-        maxLength: 96,
+        list: [
+          { title: '📚 Content Hub', value: 'content' },
+          { title: '🎓 Enablement Hub', value: 'enablement' },
+        ],
+        layout: 'grid',
       },
-      validation: (Rule: any) => Rule.required(),
-      description: 'Auto-generated from title - this creates the URL',
-      group: 'basics',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      rows: 3,
-      description: '2-3 sentence summary that appears in cards and previews',
-      group: 'basics',
+      description: 'Select which hub(s) this content should appear in',
+      validation: (Rule: any) => Rule.required().min(1),
+      group: 'create',
     },
 
-    // Content Classification Fieldset
-    {
-      name: 'contentType',
-      title: 'Content Type',
-      type: 'reference',
-      to: [{ type: 'contentType' }],
-      description: 'What kind of content is this? (Training, Template, Guide, etc.)',
-      validation: (Rule: any) => Rule.required(),
-      fieldset: 'contentClassification',
-      group: 'basics',
-    },
+    // Step 2: Enablement-specific - Template type
     {
       name: 'pageTemplate',
       title: 'Page Template',
       type: 'string',
       options: {
         list: [
-          { title: '🎓 Training Session', value: 'training-session' },
-          { title: '📚 Micro-Learning', value: 'micro-learning' },
-          { title: '⚔️ Battle Card', value: 'battle-card' },
-          { title: '🎯 Play', value: 'play' },
-          { title: '📦 Product', value: 'product' },
+          { title: '📺 Training — Session recording + takeaways', value: 'training' },
+          { title: '📋 Playbook — How-to guide with assets', value: 'playbook' },
+          { title: '⚔️ Battle Card — Competitive positioning', value: 'battle-card' },
         ],
+        layout: 'radio',
       },
-      description: 'Template determines page layout',
-      validation: (Rule: any) => Rule.required(),
-      initialValue: 'training-session',
-      fieldset: 'contentClassification',
-      group: 'basics',
+      description: 'How should this content be displayed?',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      validation: (Rule: any) => Rule.custom((value: any, context: any) => {
+        if (context.parent?.publishedTo?.includes('enablement') && !value) {
+          return 'Template is required for Enablement Hub content'
+        }
+        return true
+      }),
+      group: 'create',
     },
+
+    // Step 3: AI Content Generation
     {
-      name: 'format',
-      title: 'Format',
-      type: 'string',
-      options: {
-        list: [
-          { title: '🎥 Live Replay', value: 'live-replay' },
-          { title: '💻 Async/E-Learning', value: 'async' },
-          { title: '📄 Document', value: 'document' },
-          { title: '🎬 Video', value: 'video' },
-          { title: '📝 Article', value: 'article' },
-          { title: '📋 Template', value: 'template' },
-        ],
-      },
-      description: 'How is this content delivered?',
-      fieldset: 'contentClassification',
-      group: 'basics',
+      name: 'aiInput',
+      title: '🤖 AI Content Generation',
+      type: 'object',
+      description: 'Upload content and let AI generate fields, or edit existing content with AI',
+      options: { collapsible: true, collapsed: false },
+      fields: [
+        {
+          name: 'inputMode',
+          title: 'How do you want to create content?',
+          type: 'string',
+          options: {
+            list: [
+              { title: '📝 Paste transcript/document', value: 'paste' },
+              { title: '✏️ Manual entry', value: 'manual' },
+              { title: '🔄 Edit with AI', value: 'edit' },
+            ],
+            layout: 'radio',
+          },
+          initialValue: 'manual',
+        },
+        {
+          name: 'rawContent',
+          title: 'Paste your content here',
+          type: 'text',
+          rows: 10,
+          description: 'Transcript, document, or description. AI will generate title, description, takeaways, etc.',
+          hidden: ({ parent }: any) => parent?.inputMode !== 'paste',
+        },
+        {
+          name: 'editPrompt',
+          title: 'What should AI change?',
+          type: 'text',
+          rows: 3,
+          description: 'Describe what you want to update. AI will edit only those fields while preserving the rest.',
+          hidden: ({ parent }: any) => parent?.inputMode !== 'edit',
+        },
+        {
+          name: 'preserveFields',
+          title: 'Fields to preserve (AI won\'t change these)',
+          type: 'array',
+          of: [{ type: 'string' }],
+          options: {
+            list: [
+              { title: 'Title', value: 'title' },
+              { title: 'Description', value: 'description' },
+              { title: 'Key Takeaways', value: 'keyTakeaways' },
+              { title: 'How-To Steps', value: 'articleSections' },
+              { title: 'Action Items', value: 'actionItems' },
+              { title: 'FAQs', value: 'faqs' },
+            ],
+          },
+          hidden: ({ parent }: any) => parent?.inputMode !== 'edit',
+        },
+      ],
+      group: 'create',
     },
 
     // ========================================
-    // CONTENT TAB
+    // CONTENT TAB - Core Fields
     // ========================================
+
     {
-      name: 'thumbnailImage',
-      title: 'Thumbnail Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      description: 'Card thumbnail (recommended: 1200x630px)',
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
       group: 'content',
     },
+    {
+      name: 'slug',
+      title: 'URL Slug',
+      type: 'slug',
+      options: { source: 'title', maxLength: 96 },
+      validation: (Rule: any) => Rule.required(),
+      group: 'content',
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      rows: 2,
+      description: '1-2 sentences for card preview',
+      group: 'content',
+    },
+
+    // Content Hub only - External Link
     {
       name: 'externalUrl',
-      title: 'External Link (Optional)',
+      title: 'External Link',
       type: 'url',
-      description: '🔗 If this content lives elsewhere (Google Drive, Docs, etc.), paste the link here. The card will link directly to this URL instead of creating a detail page.',
+      description: 'Where does this link to? (Google Drive, Docs, etc.)',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('content') || parent?.publishedTo?.includes('enablement'),
       group: 'content',
-      validation: (Rule: any) => Rule.uri({
-        scheme: ['http', 'https'],
-      }),
     },
+
+    // Content Hub - Content Type reference
     {
-      name: 'mainContent',
-      title: 'Main Content',
-      type: 'object',
-      description: 'The actual content - videos, documents, transcripts',
-      options: { collapsible: false },
-      fields: [
+      name: 'contentType',
+      title: 'Content Type',
+      type: 'reference',
+      to: [{ type: 'contentType' }],
+      description: 'Template, Guide, Training, etc.',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('content'),
+      group: 'content',
+    },
+
+    // Enablement - Key Takeaways
+    {
+      name: 'keyTakeaways',
+      title: 'Key Takeaways',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: '5-7 bullet points of main learnings',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'content',
+    },
+
+    // Enablement - How-To Steps (for Playbooks)
+    {
+      name: 'articleSections',
+      title: 'How-To Steps',
+      type: 'array',
+      description: 'Step-by-step guide (Prep, Navigate, Pitch, etc.)',
+      hidden: ({ parent }: any) => parent?.pageTemplate !== 'playbook',
+      of: [
         {
-          name: 'videoUrl',
-          title: '🎥 Video URL',
-          type: 'url',
-          description: 'YouTube, Vimeo, or other video link',
-        },
-        {
-          name: 'wistiaId',
-          title: 'Wistia Video ID',
-          type: 'string',
-          description: 'If using Wistia hosting',
-        },
-        {
-          name: 'documentUrl',
-          title: '📄 Document URL',
-          type: 'url',
-          description: 'Google Docs, Slides, or other document link',
-        },
-        {
-          name: 'slidesDeck',
-          title: '📊 Slides File',
-          type: 'file',
-          description: 'Upload PowerPoint, PDF, etc.',
-        },
-        {
-          name: 'transcript',
-          title: '📝 Transcript',
-          type: 'text',
-          rows: 8,
-          description: 'Full transcript of video/presentation',
-        },
-        {
-          name: 'additionalResources',
-          title: '🔗 Additional Resources',
-          type: 'array',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                {
-                  name: 'title',
-                  title: 'Resource Title',
-                  type: 'string',
-                },
-                {
-                  name: 'url',
-                  title: 'URL',
-                  type: 'url',
-                },
-                {
-                  name: 'type',
-                  title: 'Type',
-                  type: 'string',
-                  options: {
-                    list: ['link', 'download', 'external'],
-                  },
-                },
-              ],
-            },
+          type: 'object',
+          fields: [
+            { name: 'heading', title: 'Step Name', type: 'string', validation: (Rule: any) => Rule.required() },
+            { name: 'content', title: 'Instructions', type: 'text', rows: 4, validation: (Rule: any) => Rule.required() },
           ],
+          preview: {
+            select: { title: 'heading', subtitle: 'content' },
+            prepare({ title, subtitle }: any) {
+              return { title, subtitle: subtitle?.slice(0, 60) + '...' }
+            },
+          },
         },
       ],
       group: 'content',
     },
+
+    // Enablement - Action Items (Tips & Pitfalls)
     {
-      name: 'keyTakeaways',
-      title: '⭐ Key Takeaways',
+      name: 'actionItems',
+      title: 'Tips & Pitfalls',
       type: 'array',
       of: [{ type: 'string' }],
-      description: '3-5 bullet points of main learnings',
-      group: 'content',
-    },
-    {
-      name: 'duration',
-      title: '⏱️ Duration (minutes)',
-      type: 'number',
-      description: 'For videos/training content',
-      group: 'content',
-    },
-    {
-      name: 'difficulty',
-      title: '📊 Difficulty Level',
-      type: 'string',
-      options: {
-        list: [
-          { title: '🟢 Beginner', value: 'beginner' },
-          { title: '🟡 Intermediate', value: 'intermediate' },
-          { title: '🔴 Advanced', value: 'advanced' },
-        ],
-      },
-      group: 'content',
-    },
-    {
-      name: 'presenter',
-      title: '👤 Presenter/Author',
-      type: 'string',
-      description: 'Who created or presented this?',
+      description: 'Tips start normally. Pitfalls start with "Don\'t"',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
       group: 'content',
     },
 
-    // Additional Content Blocks
+    // Enablement - Content Blocks (FAQs, Assets, Checklists)
     {
       name: 'contentBlocks',
-      title: '📦 Additional Content Blocks',
+      title: 'Additional Sections',
       type: 'array',
-      description: 'Add flexible content sections (How to Use, FAQs, Step-by-Step guides, etc.)',
+      description: 'FAQs, Asset lists, Checklists, etc.',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
       of: [
         {
           type: 'object',
           name: 'contentBlock',
-          title: 'Content Block',
           fields: [
             {
               name: 'blockType',
-              title: 'Block Type',
+              title: 'Section Type',
               type: 'string',
               options: {
                 list: [
-                  { title: '📝 Rich Text Section', value: 'richText' },
-                  { title: '📋 Step-by-Step Guide', value: 'stepByStep' },
-                  { title: '❓ FAQ', value: 'faq' },
-                  { title: '💡 Tips & Best Practices', value: 'tips' },
-                  { title: '⚠️ Common Mistakes', value: 'mistakes' },
-                  { title: '🎯 Use Cases', value: 'useCases' },
-                  { title: '🔧 How to Use', value: 'howToUse' },
-                  { title: '📊 Data/Stats', value: 'dataStats' },
+                  { title: '❓ FAQs', value: 'faq' },
+                  { title: '📦 Assets', value: 'assets' },
+                  { title: '✅ Checklist', value: 'checklist' },
+                  { title: '📝 Text', value: 'text' },
                 ],
               },
               validation: (Rule: any) => Rule.required(),
             },
-            {
-              name: 'title',
-              title: 'Section Title',
-              type: 'string',
-              description: 'e.g., "How to Use This Feature", "Common Questions"',
-              validation: (Rule: any) => Rule.required(),
-            },
-            {
-              name: 'content',
-              title: 'Rich Text Content',
-              type: 'array',
-              of: [
-                {
-                  type: 'block',
-                  styles: [
-                    { title: 'Normal', value: 'normal' },
-                    { title: 'H2', value: 'h2' },
-                    { title: 'H3', value: 'h3' },
-                    { title: 'H4', value: 'h4' },
-                    { title: 'Quote', value: 'blockquote' },
-                  ],
-                  lists: [
-                    { title: 'Bullet', value: 'bullet' },
-                    { title: 'Numbered', value: 'number' },
-                  ],
-                  marks: {
-                    decorators: [
-                      { title: 'Strong', value: 'strong' },
-                      { title: 'Emphasis', value: 'em' },
-                      { title: 'Code', value: 'code' },
-                      { title: 'Underline', value: 'underline' },
-                      { title: 'Strike', value: 'strike-through' },
-                    ],
-                    annotations: [
-                      {
-                        name: 'link',
-                        type: 'object',
-                        title: 'Link',
-                        fields: [
-                          {
-                            name: 'href',
-                            type: 'url',
-                            title: 'URL',
-                          },
-                        ],
-                      },
-                      {
-                        name: 'highlight',
-                        type: 'object',
-                        title: 'Highlight',
-                        fields: [
-                          {
-                            name: 'color',
-                            type: 'string',
-                            title: 'Highlight Color',
-                            options: {
-                              list: [
-                                { title: 'Yellow', value: 'yellow' },
-                                { title: 'Green', value: 'green' },
-                                { title: 'Blue', value: 'blue' },
-                                { title: 'Purple', value: 'purple' },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                },
-                {
-                  type: 'image',
-                  options: { hotspot: true },
-                  fields: [
-                    {
-                      name: 'alt',
-                      type: 'string',
-                      title: 'Alternative text',
-                    },
-                    {
-                      name: 'caption',
-                      type: 'string',
-                      title: 'Caption',
-                    },
-                  ],
-                },
-              ],
-              hidden: ({ parent }: any) => parent?.blockType === 'stepByStep' || parent?.blockType === 'faq',
-            },
-            // Step-by-Step specific fields
-            {
-              name: 'steps',
-              title: 'Steps',
-              type: 'array',
-              of: [
-                {
-                  type: 'object',
-                  fields: [
-                    {
-                      name: 'stepTitle',
-                      title: 'Step Title',
-                      type: 'string',
-                    },
-                    {
-                      name: 'stepDescription',
-                      title: 'Step Description',
-                      type: 'text',
-                      rows: 3,
-                    },
-                    {
-                      name: 'stepImage',
-                      title: 'Step Image (Optional)',
-                      type: 'image',
-                      options: { hotspot: true },
-                    },
-                  ],
-                  preview: {
-                    select: {
-                      title: 'stepTitle',
-                      subtitle: 'stepDescription',
-                      media: 'stepImage',
-                    },
-                  },
-                },
-              ],
-              hidden: ({ parent }: any) => parent?.blockType !== 'stepByStep',
-            },
-            // FAQ specific fields
+            { name: 'title', title: 'Section Title', type: 'string' },
+            { name: 'description', title: 'Section Description', type: 'string', hidden: ({ parent }: any) => parent?.blockType !== 'checklist' },
+            { name: 'content', title: 'Content', type: 'text', rows: 4, hidden: ({ parent }: any) => parent?.blockType !== 'text' },
             {
               name: 'faqs',
-              title: 'Questions & Answers',
+              title: 'Q&A Items',
               type: 'array',
-              of: [
-                {
-                  type: 'object',
-                  fields: [
-                    {
-                      name: 'question',
-                      title: 'Question',
-                      type: 'string',
-                    },
-                    {
-                      name: 'answer',
-                      title: 'Answer',
-                      type: 'text',
-                      rows: 4,
-                    },
-                  ],
-                  preview: {
-                    select: {
-                      title: 'question',
-                      subtitle: 'answer',
-                    },
-                  },
-                },
-              ],
               hidden: ({ parent }: any) => parent?.blockType !== 'faq',
+              of: [{
+                type: 'object',
+                fields: [
+                  { name: 'question', title: 'Question', type: 'string' },
+                  { name: 'answer', title: 'Answer', type: 'text', rows: 3 },
+                ],
+                preview: { select: { title: 'question', subtitle: 'answer' } },
+              }],
             },
-            // Collapsible option
             {
-              name: 'collapsible',
-              title: 'Make Collapsible',
-              type: 'boolean',
-              description: 'Allow users to expand/collapse this section',
-              initialValue: false,
+              name: 'items',
+              title: 'Asset Items',
+              type: 'array',
+              hidden: ({ parent }: any) => parent?.blockType !== 'assets',
+              of: [{
+                type: 'object',
+                fields: [
+                  { name: 'icon', title: 'Icon', type: 'string', description: 'Emoji icon' },
+                  { name: 'title', title: 'Asset Name', type: 'string' },
+                  { name: 'description', title: 'Description', type: 'string' },
+                  { name: 'url', title: 'Link', type: 'url' },
+                ],
+                preview: { select: { title: 'title', subtitle: 'description' } },
+              }],
+            },
+            {
+              name: 'columns',
+              title: 'Checklist Columns',
+              type: 'array',
+              hidden: ({ parent }: any) => parent?.blockType !== 'checklist',
+              of: [{
+                type: 'object',
+                fields: [
+                  { name: 'title', title: 'Column Title', type: 'string' },
+                  { name: 'items', title: 'Items', type: 'array', of: [{ type: 'string' }] },
+                ],
+                preview: { select: { title: 'title' } },
+              }],
             },
           ],
           preview: {
-            select: {
-              title: 'title',
-              blockType: 'blockType',
-            },
+            select: { title: 'title', blockType: 'blockType' },
             prepare({ title, blockType }: any) {
-              const icons: any = {
-                richText: '📝',
-                stepByStep: '📋',
-                faq: '❓',
-                tips: '💡',
-                mistakes: '⚠️',
-                useCases: '🎯',
-                howToUse: '🔧',
-                dataStats: '📊',
-              }
-              return {
-                title: title || 'Untitled Block',
-                subtitle: `${icons[blockType] || '📦'} ${blockType}`,
-              }
+              const icons: any = { faq: '❓', assets: '📦', checklist: '✅', text: '📝' }
+              return { title: title || blockType, subtitle: `${icons[blockType] || '📦'} ${blockType}` }
             },
           },
         },
@@ -477,137 +297,75 @@ export default {
     },
 
     // ========================================
-    // TAGGING TAB
+    // RESOURCES TAB - Links & Assets
     // ========================================
 
-    // Core Targeting Fieldset
     {
-      name: 'audiences',
-      title: '👥 Audiences',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'audience' }] }],
-      description: 'Who is this for? (Sales, CSM, SC, All Teams, etc.)',
-      fieldset: 'targetingCore',
-      group: 'tagging',
-    },
-    {
-      name: 'learningPaths',
-      title: '🎓 Learning Paths',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'learningPath' }] }],
-      description: 'Add to curated learning paths (New Hire Onboarding, Product Mastery, etc.)',
-      fieldset: 'targetingCore',
-      group: 'tagging',
-    },
-    {
-      name: 'enablementCategory',
-      title: '📂 Enablement Categories',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          { title: '🎓 Learning', value: 'Learning' },
-          { title: '📦 Product', value: 'Product' },
-          { title: '🛠️ Toolkit', value: 'Toolkit' },
-          { title: '⚔️ Competitive', value: 'Competitive' },
-          { title: '🎯 CoE', value: 'CoE' },
-          { title: '📚 Resources', value: 'Resources' },
-        ],
-      },
-      description: 'Filter categories for Enablement Hub',
-      fieldset: 'targetingCore',
-      group: 'tagging',
+      name: 'resourceLinks',
+      title: 'Session Materials',
+      type: 'object',
+      description: 'Links to recording, slides, transcript',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      options: { collapsible: false },
+      fields: [
+        { name: 'videoUrl', title: '🎥 Recording URL', type: 'url' },
+        { name: 'slidesUrl', title: '📊 Slides URL', type: 'url' },
+        { name: 'transcriptUrl', title: '📄 Transcript URL', type: 'url' },
+        { name: 'keyAssetUrl', title: '📦 Primary Asset URL', type: 'url' },
+        { name: 'keyAssetLabel', title: 'Primary Asset Label', type: 'string', description: 'e.g., "First Meeting Deck 2.0"' },
+      ],
+      group: 'resources',
     },
 
-    // Additional Targeting Fieldset (Collapsed by default)
     {
-      name: 'products',
-      title: 'Products',
+      name: 'modules',
+      title: 'Training Modules',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'product' }] }],
-      description: 'Which products does this relate to?',
-      fieldset: 'targetingAdditional',
-      group: 'tagging',
-    },
-    {
-      name: 'teams',
-      title: 'Teams',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'team' }] }],
-      description: 'Which teams should see this?',
-      fieldset: 'targetingAdditional',
-      group: 'tagging',
-    },
-    {
-      name: 'topics',
-      title: 'Topics',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'topic' }] }],
-      description: 'Related topics',
-      fieldset: 'targetingAdditional',
-      group: 'tagging',
-    },
-    {
-      name: 'journeyStages',
-      title: 'Journey Stages',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'journeyStage' }] }],
-      description: 'Customer lifecycle stages',
-      fieldset: 'targetingAdditional',
-      group: 'tagging',
-    },
-    {
-      name: 'industries',
-      title: 'Industries',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'industry' }] }],
-      description: 'Relevant industries',
-      fieldset: 'targetingAdditional',
-      group: 'tagging',
+      description: 'For multi-part training series',
+      hidden: ({ parent }: any) => parent?.pageTemplate !== 'training',
+      of: [{
+        type: 'object',
+        fields: [
+          { name: 'moduleNumber', title: '#', type: 'number', validation: (Rule: any) => Rule.required().min(1) },
+          { name: 'title', title: 'Title', type: 'string', validation: (Rule: any) => Rule.required() },
+          { name: 'description', title: 'Description', type: 'text', rows: 2 },
+          { name: 'videoUrl', title: 'Video URL', type: 'url' },
+          { name: 'duration', title: 'Duration', type: 'string' },
+        ],
+        preview: {
+          select: { num: 'moduleNumber', title: 'title', duration: 'duration' },
+          prepare({ num, title, duration }: any) {
+            return { title: `${num}. ${title}`, subtitle: duration }
+          },
+        },
+      }],
+      group: 'resources',
     },
 
-    // Other Hub Categories (Collapsed)
     {
-      name: 'coeCategory',
-      title: 'COE Categories',
+      name: 'keyAssets',
+      title: 'Key Assets',
       type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          { title: 'Proof Points & Best Practices', value: 'proof-points' },
-          { title: 'Templates & Reusable Content', value: 'templates' },
-          { title: 'In-Product Changes', value: 'in-product-changes' },
-        ],
-      },
-      description: 'For COE Hub content',
-      hidden: ({ document }: any) => !document?.publishedTo?.includes('coe'),
-      group: 'tagging',
+      of: [{ type: 'reference', to: [{ type: 'catalogEntry' }] }],
+      description: 'Link to Content Hub items (decks, templates) to show as assets',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'resources',
     },
+
     {
-      name: 'salesCategory',
-      title: 'Sales Playbook Categories',
+      name: 'relatedContent',
+      title: 'Related Content',
       type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          { title: 'Discovery Plays', value: 'discovery' },
-          { title: 'Demo Scripts', value: 'demo' },
-          { title: 'Objection Handling', value: 'objections' },
-          { title: 'Negotiation Tactics', value: 'negotiation' },
-          { title: 'Closing Techniques', value: 'closing' },
-          { title: 'Upsell Strategies', value: 'upsell' },
-        ],
-      },
-      description: 'For Sales Hub content',
-      hidden: ({ document }: any) => !document?.publishedTo?.includes('content'),
-      group: 'tagging',
+      of: [{ type: 'reference', to: [{ type: 'catalogEntry' }] }],
+      description: 'Related enablement articles',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'resources',
     },
 
     // ========================================
-    // PUBLISHING TAB
+    // PUBLISH TAB - Metadata & Publishing
     // ========================================
 
-    // Publish Settings Fieldset
     {
       name: 'status',
       title: 'Status',
@@ -615,237 +373,193 @@ export default {
       options: {
         list: [
           { title: '📝 Draft', value: 'draft' },
-          { title: '📤 Submitted for Review', value: 'submitted' },
-          { title: '👀 In Review', value: 'in-review' },
-          { title: '✅ Approved', value: 'approved' },
           { title: '🚀 Published', value: 'published' },
           { title: '📦 Archived', value: 'archived' },
         ],
+        layout: 'radio',
       },
       initialValue: 'draft',
       validation: (Rule: any) => Rule.required(),
-      fieldset: 'publishSettings',
-      group: 'publishing',
+      group: 'publish',
     },
-    {
-      name: 'publishedTo',
-      title: 'Published To',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          { title: '🎓 Enablement Hub', value: 'enablement' },
-          { title: '📚 Content Hub', value: 'content' },
-          { title: '🎯 COE Hub', value: 'coe' },
-          { title: '🏋️ Training Hub', value: 'training' },
-          { title: '🔄 Customer Lifecycle', value: 'customer-lifecycle' },
-          { title: '🌐 All Hubs', value: 'all' },
-        ],
-      },
-      description: '⚠️ IMPORTANT: Select which hubs should display this content',
-      validation: (Rule: any) => Rule.required().min(1).error('You must select at least one hub'),
-      fieldset: 'publishSettings',
-      group: 'publishing',
-    },
+
     {
       name: 'publishDate',
       title: 'Publish Date',
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
-      description: 'When was this published?',
-      fieldset: 'publishSettings',
-      group: 'publishing',
+      group: 'publish',
     },
 
-    // Display Options Fieldset
+    {
+      name: 'presenter',
+      title: 'Author / Presenter',
+      type: 'string',
+      group: 'publish',
+    },
+
+    {
+      name: 'duration',
+      title: 'Duration',
+      type: 'string',
+      description: 'e.g., "45 min" or "5 min read"',
+      group: 'publish',
+    },
+
+    {
+      name: 'difficulty',
+      title: 'Difficulty',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Beginner', value: 'beginner' },
+          { title: 'Intermediate', value: 'intermediate' },
+          { title: 'Advanced', value: 'advanced' },
+        ],
+      },
+      group: 'publish',
+    },
+
     {
       name: 'featured',
-      title: '⭐ Featured Content',
+      title: 'Featured',
       type: 'boolean',
       description: 'Show in featured sections',
       initialValue: false,
-      fieldset: 'displayOptions',
-      group: 'publishing',
+      group: 'publish',
     },
+
     {
       name: 'priority',
-      title: '📊 Priority (0-100)',
+      title: 'Priority',
       type: 'number',
-      description: 'Higher numbers appear first in featured sections',
+      description: 'Higher = appears first (0-100)',
       initialValue: 50,
       validation: (Rule: any) => Rule.min(0).max(100),
-      fieldset: 'displayOptions',
-      group: 'publishing',
+      group: 'publish',
     },
+
+    // Tagging
     {
-      name: 'showInUpcoming',
-      title: '🆕 Show in "New" Section',
-      type: 'boolean',
-      description: 'Display in "Recently Added" sections',
-      initialValue: false,
-      fieldset: 'displayOptions',
-      group: 'publishing',
+      name: 'audiences',
+      title: 'Audiences',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'audience' }] }],
+      description: 'Who is this for?',
+      group: 'publish',
     },
 
-    // ========================================
-    // ADVANCED TAB
-    // ========================================
+    {
+      name: 'products',
+      title: 'Products',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'product' }] }],
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'publish',
+    },
 
-    // Competitive Battle Card Features
+    {
+      name: 'enablementCategory',
+      title: 'Enablement Category',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Learning', value: 'Learning' },
+          { title: 'Product', value: 'Product' },
+          { title: 'Toolkit', value: 'Toolkit' },
+          { title: 'Competitive', value: 'Competitive' },
+          { title: 'Playbook', value: 'Playbook' },
+        ],
+      },
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'publish',
+    },
+
+    // Battle Card specific
     {
       name: 'competitor',
-      title: '🥊 Primary Competitor',
+      title: 'Competitor',
       type: 'reference',
       to: [{ type: 'competitor' }],
-      description: 'For battle cards - single competitor focus',
-      group: 'advanced',
-    },
-    {
-      name: 'relatedCompetitors',
-      title: '🥊 Related Competitors',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'competitor' }] }],
-      description: 'Multiple competitors mentioned',
-      group: 'advanced',
-    },
-    {
-      name: 'battleCardFile',
-      title: '📄 Battle Card PDF',
-      type: 'file',
-      description: 'Upload PDF battle card',
-      group: 'advanced',
-    },
-    {
-      name: 'quarterlyUpdates',
-      title: '📅 Quarterly Updates',
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'date',
-              title: 'Update Date',
-              type: 'datetime',
-            },
-            {
-              name: 'wistiaId',
-              title: 'Wistia Video ID',
-              type: 'string',
-            },
-            {
-              name: 'presenter',
-              title: 'Presenter',
-              type: 'string',
-            },
-            {
-              name: 'transcript',
-              title: 'Transcript',
-              type: 'text',
-              rows: 10,
-            },
-            {
-              name: 'whatsNew',
-              title: "What's New Highlights",
-              type: 'array',
-              of: [{ type: 'string' }],
-            },
-          ],
-        },
-      ],
-      description: 'For competitive battle cards - video updates',
-      group: 'advanced',
+      hidden: ({ parent }: any) => parent?.pageTemplate !== 'battle-card',
+      group: 'publish',
     },
 
-    // Dual View Support
+    // Legacy fields for backwards compatibility (hidden)
     {
-      name: 'hasHowToUse',
-      title: '📖 Enable "How to Use" Tab',
-      type: 'boolean',
-      description: 'Add a separate "How to Use" view with instructions',
-      initialValue: false,
-      group: 'advanced',
+      name: 'cardType',
+      title: 'Card Type (Legacy)',
+      type: 'string',
+      hidden: true,
     },
     {
-      name: 'howToUseContent',
-      title: 'How to Use Content',
+      name: 'format',
+      title: 'Format (Legacy)',
+      type: 'string',
+      hidden: true,
+    },
+    {
+      name: 'thumbnailImage',
+      title: 'Thumbnail',
+      type: 'image',
+      options: { hotspot: true },
+      group: 'publish',
+    },
+    {
+      name: 'mainContent',
+      title: 'Main Content (Legacy)',
       type: 'object',
+      hidden: true,
       fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-        },
-        {
-          name: 'sections',
-          title: 'Sections',
-          type: 'array',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                {
-                  name: 'heading',
-                  title: 'Heading',
-                  type: 'string',
-                },
-                {
-                  name: 'content',
-                  title: 'Content',
-                  type: 'text',
-                  rows: 5,
-                },
-                {
-                  name: 'examples',
-                  title: 'Examples',
-                  type: 'array',
-                  of: [{ type: 'string' }],
-                },
-              ],
-            },
-          ],
-        },
+        { name: 'videoUrl', type: 'url' },
+        { name: 'wistiaId', type: 'string' },
+        { name: 'documentUrl', type: 'url' },
+        { name: 'transcript', type: 'text' },
       ],
-      hidden: ({ parent }: any) => !parent?.hasHowToUse,
-      group: 'advanced',
     },
-
-    // Additional Metadata
+    // View count - tracked automatically
     {
-      name: 'lastUpdated',
-      title: 'Last Updated',
-      type: 'datetime',
-      description: 'When was this content last modified?',
-      group: 'advanced',
+      name: 'viewCount',
+      title: 'View Count',
+      type: 'number',
+      description: 'Number of views (updated automatically)',
+      initialValue: 0,
+      readOnly: true,
+      group: 'publish',
     },
   ],
   preview: {
     select: {
       title: 'title',
-      contentType: 'contentType.name',
+      publishedTo: 'publishedTo',
+      pageTemplate: 'pageTemplate',
       status: 'status',
       media: 'thumbnailImage',
-      publishDate: 'publishDate',
     },
     prepare(selection: any) {
-      const { title, contentType, status, media, publishDate } = selection;
-      const date = publishDate ? new Date(publishDate).toLocaleDateString() : '';
+      const { title, publishedTo, pageTemplate, status, media } = selection
 
-      // Status emoji
-      const statusEmoji = {
+      const hubIcon = publishedTo?.includes('enablement') ? '🎓' : '📚'
+      const templateIcon: Record<string, string> = {
+        'training': '📺',
+        'playbook': '📋',
+        'battle-card': '⚔️',
+      }
+      const statusIcon: Record<string, string> = {
         draft: '📝',
-        submitted: '📤',
-        'in-review': '👀',
-        approved: '✅',
         published: '🚀',
         archived: '📦',
-      }[status] || '📄';
+      }
+
+      const typeIcon = pageTemplate ? templateIcon[pageTemplate] || hubIcon : hubIcon
+      const stIcon = statusIcon[status] || '📝'
 
       return {
-        title: title,
-        subtitle: `${statusEmoji} ${status} • ${contentType || 'No type'} ${date ? `• ${date}` : ''}`,
-        media: media,
-      };
+        title: `${typeIcon} ${title}`,
+        subtitle: `${stIcon} ${status}`,
+        media,
+      }
     },
   },
 }

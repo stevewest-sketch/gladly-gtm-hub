@@ -1,7 +1,23 @@
 import type { Metadata } from "next";
+import { DM_Sans, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { client } from "@/lib/sanity";
+
+// V2 Design System Fonts
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   title: "GTM Hub - Gladly Revenue Enablement",
@@ -78,10 +94,10 @@ export default async function RootLayout({
   const searchableContent = await getSearchableContent();
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang="en" className={`${dmSans.variable} ${ibmPlexSans.variable}`} suppressHydrationWarning>
+      <body className="font-body" suppressHydrationWarning>
         <Navigation data={navigationData} searchableContent={searchableContent} />
-        <main className="ml-64 min-h-screen overflow-y-auto">{children}</main>
+        <main className="ml-64 min-h-screen">{children}</main>
       </body>
     </html>
   );
