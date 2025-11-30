@@ -163,23 +163,36 @@ export default {
       group: 'content',
     },
 
-    // Enablement - Key Takeaways
+    // ========================================
+    // NEW: Flexible Page Sections (replaces scattered fields)
+    // ========================================
     {
-      name: 'keyTakeaways',
-      title: 'Key Takeaways',
+      name: 'pageSections',
+      title: '📄 Page Sections (NEW - Recommended)',
       type: 'array',
-      of: [{ type: 'string' }],
-      description: '5-7 bullet points of main learnings',
+      description: '🎯 Build your page with flexible, orderable sections. Drag to reorder. This replaces keyTakeaways, actionItems, articleSections, and contentBlocks.',
+      of: [{ type: 'pageSection' }],
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
       group: 'content',
     },
 
-    // Enablement - How-To Steps (for Playbooks)
+    // Enablement - Key Takeaways (LEGACY - use pageSections instead)
+    {
+      name: 'keyTakeaways',
+      title: 'Key Takeaways (LEGACY)',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: '⚠️ LEGACY: Use Page Sections instead for better control',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'content',
+    },
+
+    // Enablement - How-To Steps (for Playbooks) (LEGACY)
     {
       name: 'articleSections',
-      title: 'How-To Steps',
+      title: 'How-To Steps (LEGACY)',
       type: 'array',
-      description: 'Step-by-step guide (Prep, Navigate, Pitch, etc.)',
+      description: '⚠️ LEGACY: Use Page Sections instead for better control',
       hidden: ({ parent }: any) => parent?.pageTemplate !== 'playbook',
       of: [
         {
@@ -199,23 +212,23 @@ export default {
       group: 'content',
     },
 
-    // Enablement - Action Items (Tips & Pitfalls)
+    // Enablement - Action Items (Tips & Pitfalls) (LEGACY)
     {
       name: 'actionItems',
-      title: 'Tips & Pitfalls',
+      title: 'Tips & Pitfalls (LEGACY)',
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'Tips start normally. Pitfalls start with "Don\'t"',
+      description: '⚠️ LEGACY: Use Page Sections instead for better control',
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
       group: 'content',
     },
 
-    // Enablement - Content Blocks (FAQs, Assets, Checklists)
+    // Enablement - Content Blocks (FAQs, Assets, Checklists) (LEGACY)
     {
       name: 'contentBlocks',
-      title: 'Additional Sections',
+      title: 'Additional Sections (LEGACY)',
       type: 'array',
-      description: 'FAQs, Asset lists, Checklists, etc.',
+      description: '⚠️ LEGACY: Use Page Sections instead for better control',
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
       of: [
         {

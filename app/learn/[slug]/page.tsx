@@ -63,8 +63,30 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
       type
     }
   },
+  // NEW: Flexible page sections
+  pageSections[] {
+    _key,
+    sectionType,
+    title,
+    description,
+    collapsible,
+    defaultExpanded,
+    overviewCards[] { label, content },
+    videoUrl,
+    wistiaId,
+    sessionMaterials { videoUrl, slidesUrl, transcriptUrl },
+    takeaways,
+    processLayout,
+    processSteps[] { heading, content },
+    processText,
+    tips,
+    faqs[] { question, answer },
+    assetItems[] { icon, title, description, url },
+    textContent,
+    checklistColumns[] { title, items }
+  },
+  // Legacy fields (for backwards compatibility)
   keyTakeaways,
-  // Article-specific fields
   articleSections[] {
     _key,
     heading,

@@ -3,6 +3,7 @@
 import { CatalogEntry } from '@/lib/types/catalog'
 import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
+import PageSectionRenderer from '@/components/sections/PageSectionRenderer'
 
 // Collapsible section component
 function ContentSection({
@@ -202,7 +203,12 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
         {/* Main Content */}
         <main className="space-y-4">
 
-          {/* 1. Quick Overview - Always first */}
+          {/* NEW: Use PageSectionRenderer if pageSections exist */}
+          {entry.pageSections && entry.pageSections.length > 0 ? (
+            <PageSectionRenderer sections={entry.pageSections} />
+          ) : (
+            <>
+          {/* LEGACY: 1. Quick Overview - Always first */}
           <ContentSection id="overview" title="Quick Overview" defaultExpanded={true} collapsible={true}>
             {overviewBlock?.content ? (
               <div className="prose prose-sm max-w-none text-[14px] text-[#5C6578] leading-relaxed">
@@ -497,6 +503,8 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
                 )}
               </div>
             </ContentSection>
+          )}
+            </>
           )}
 
         </main>

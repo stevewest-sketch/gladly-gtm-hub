@@ -3,6 +3,7 @@
 import { CatalogEntry } from '@/lib/types/catalog'
 import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
+import PageSectionRenderer from '@/components/sections/PageSectionRenderer'
 
 // Helper function to convert Google Drive URL to embeddable format
 function convertGoogleDriveUrl(url: string): string {
@@ -320,7 +321,12 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
         {/* Main Content */}
         <main className="space-y-4">
 
-          {/* Quick Overview - Collapsible like Playbooks */}
+          {/* NEW: Use PageSectionRenderer if pageSections exist */}
+          {entry.pageSections && entry.pageSections.length > 0 ? (
+            <PageSectionRenderer sections={entry.pageSections} />
+          ) : (
+            <>
+          {/* LEGACY: Quick Overview - Collapsible like Playbooks */}
           <ContentSection id="overview" title="Quick Overview" collapsible={true}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-3 bg-[#F8F9FC] rounded-md">
@@ -515,6 +521,8 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
                 ))}
               </div>
             </ContentSection>
+          )}
+            </>
           )}
 
         </main>

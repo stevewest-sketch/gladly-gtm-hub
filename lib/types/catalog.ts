@@ -184,6 +184,80 @@ export interface ResourceLinks {
   keyAssetLabel?: string
 }
 
+// New Page Section Types
+export interface OverviewCard {
+  label: string
+  content: string
+}
+
+export interface SessionMaterials {
+  videoUrl?: string
+  slidesUrl?: string
+  transcriptUrl?: string
+}
+
+export interface ProcessStep {
+  heading: string
+  content: string
+}
+
+export interface FAQ {
+  question: string
+  answer: string
+}
+
+export interface AssetItem {
+  icon?: string
+  title: string
+  description?: string
+  url: string
+}
+
+export interface ChecklistColumn {
+  title: string
+  items: string[]
+}
+
+export interface PageSection {
+  _key: string
+  sectionType: 'overview' | 'video' | 'takeaways' | 'process' | 'tips' | 'faq' | 'assets' | 'text' | 'checklist'
+  title: string
+  description?: string
+  collapsible?: boolean
+  defaultExpanded?: boolean
+
+  // Overview section
+  overviewCards?: OverviewCard[]
+
+  // Video section
+  videoUrl?: string
+  wistiaId?: string
+  sessionMaterials?: SessionMaterials
+
+  // Takeaways section
+  takeaways?: string[]
+
+  // Process section
+  processLayout?: 'steps' | 'text' | 'bullets'
+  processSteps?: ProcessStep[]
+  processText?: string
+
+  // Tips section
+  tips?: string[]
+
+  // FAQ section
+  faqs?: FAQ[]
+
+  // Assets section
+  assetItems?: AssetItem[]
+
+  // Text section
+  textContent?: string
+
+  // Checklist section
+  checklistColumns?: ChecklistColumn[]
+}
+
 export interface RelatedContent {
   _id: string
   title: string
@@ -204,7 +278,7 @@ export interface CatalogEntry {
 
   // Classification
   contentType: ContentType
-  pageTemplate: 'micro-learning' | 'battle-card' | 'play' | 'product' | 'training-session'
+  pageTemplate: 'micro-learning' | 'battle-card' | 'play' | 'product' | 'training-session' | 'playbook' | 'training'
   format?: 'live-replay' | 'async' | 'document' | 'video' | 'article' | 'template'
 
   // Taxonomies (multi-select arrays)
@@ -250,6 +324,11 @@ export interface CatalogEntry {
   }
   externalUrl?: string  // Link to external content (Google Drive, Docs, etc.)
   mainContent?: MainContent
+
+  // New flexible page sections (replaces scattered fields)
+  pageSections?: PageSection[]
+
+  // Legacy fields (deprecated - use pageSections instead)
   keyTakeaways?: string[]
   contentBlocks?: ContentBlock[]
 

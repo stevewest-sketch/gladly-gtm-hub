@@ -16,6 +16,7 @@ import { siteSettings } from './siteSettings'
 
 // Universal Catalog System
 import catalogEntry from './catalogEntry'
+import pageSection from './pageSection'
 
 // Taxonomy types (for universal catalog filtering)
 import product from './taxonomies/product'
@@ -77,6 +78,7 @@ export const schemaTypes = [
   siteSettings,
   // Universal catalog system
   catalogEntry,
+  pageSection,
   // Taxonomy types
   product,
   team,
