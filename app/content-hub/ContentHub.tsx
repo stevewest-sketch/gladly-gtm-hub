@@ -322,9 +322,9 @@ export default function ContentHub({
       {/* Sticky Header - includes quick nav for curated tabs */}
       <header className="sticky top-0 z-20">
         <div className="bg-gradient-to-r from-purple-700 via-purple-600 to-violet-500 text-white">
-          <div className="max-w-[1400px] mx-auto px-8 pt-6 pb-0">
-            <div className="mb-4">
-              <h1 className="text-2xl font-bold flex items-center gap-3 mb-1">
+          <div className="max-w-[1400px] mx-auto px-8 pt-8 pb-0">
+            <div className="mb-6">
+              <h1 className="text-[42px] leading-[48px] font-bold flex items-center gap-3 mb-2">
                 <span>📚</span>
                 Content Hub
               </h1>
