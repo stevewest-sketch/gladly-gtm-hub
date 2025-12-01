@@ -105,8 +105,21 @@ const GENERATION_OUTPUT_FORMAT = `
   "pageSections": [
     {
       "sectionType": "overview",
-      "title": "Quick Overview",
-      "overviewText": "A concise 2-3 sentence summary of what this content covers and why it matters."
+      "title": "Overview",
+      "overviewCards": [
+        {
+          "label": "What It Is",
+          "content": "A brief explanation of what this content covers and its purpose."
+        },
+        {
+          "label": "Who It's For",
+          "content": "The target audience - e.g., Sales reps, CSMs, New hires, etc."
+        },
+        {
+          "label": "Key Outcome",
+          "content": "What the reader will be able to do or understand after engaging with this."
+        }
+      ]
     },
     {
       "sectionType": "takeaways",
@@ -156,11 +169,12 @@ const GENERATION_OUTPUT_FORMAT = `
 }
 
 IMPORTANT:
-- Only include pageSections that have actual content from the source material
+- ALWAYS include an "overview" section with overviewCards as the FIRST section
+- The overview section MUST have 2-4 cards with labels like "What It Is", "Who It's For", "Key Outcome", "When to Use"
 - Each pageSection MUST have a sectionType and title
 - For takeaways, use **bold** for the key point followed by an em-dash and explanation
 - For process steps, each step needs a heading and content
-- Skip sections if there's no relevant content (e.g., skip FAQ if no questions are evident)`;
+- Skip other sections if there's no relevant content (e.g., skip FAQ if no questions are evident)`;
 
 // ==========================================
 // HELPER FUNCTIONS
@@ -465,7 +479,7 @@ ${GENERATION_OUTPUT_FORMAT}`;
       const userMessage = `${contextStr ? `Context:\n${contextStr}\n` : ''}Process this content into a structured ${pageTemplate || 'training'} document:\n\n${content}`;
 
       const message = await anthropic.messages.create({
-        model: 'claude-3-haiku-20240307', // Haiku is fine for generation (speed)
+        model: 'claude-sonnet-4-20250514', // Using Sonnet for better quality generation
         max_tokens: 4096,
         messages: [
           {

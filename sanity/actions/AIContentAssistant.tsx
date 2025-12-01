@@ -319,6 +319,14 @@ export const AIContentAssistant: DocumentActionComponent = (props) => {
           };
 
           // Copy over section-specific fields
+          // Handle overview cards with keys
+          if (section.overviewCards && Array.isArray(section.overviewCards)) {
+            formattedSection.overviewCards = (section.overviewCards as Array<Record<string, unknown>>).map(card => ({
+              _key: generateKey(),
+              label: card.label,
+              content: card.content,
+            }));
+          }
           if (section.overviewText) formattedSection.overviewText = section.overviewText;
           if (section.takeaways) formattedSection.takeaways = section.takeaways;
           if (section.tips) formattedSection.tips = section.tips;
