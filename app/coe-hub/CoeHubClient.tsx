@@ -546,7 +546,7 @@ export default function CoeHubClient({
           {[
             { id: 'all', label: 'All', icon: '📋' },
             { id: 'new', label: 'New', icon: '✨' },
-            { id: 'popular', label: 'Featured', icon: '⭐' },
+            { id: 'popular', label: 'Most Popular', icon: '🔥' },
           ].map((filter) => (
             <button
               key={filter.id}
@@ -691,7 +691,7 @@ export default function CoeHubClient({
               <option value="newest">Newest</option>
               <option value="oldest">Oldest</option>
               <option value="az">A-Z</option>
-              <option value="featured">Featured</option>
+              <option value="featured">Most Popular</option>
             </select>
             <div className="flex gap-1">
               <button
