@@ -2,6 +2,7 @@
 
 import { CatalogEntry } from '@/lib/types/catalog'
 import Breadcrumb from '../ui/Breadcrumb'
+import PageSectionRenderer from '../sections/PageSectionRenderer'
 
 interface BattleCardTemplateProps {
   entry: CatalogEntry
@@ -179,6 +180,11 @@ export default function BattleCardTemplate({ entry }: BattleCardTemplateProps) {
               ))}
             </div>
           </div>
+        )}
+
+        {/* Flexible Page Sections */}
+        {entry.pageSections && entry.pageSections.length > 0 && (
+          <PageSectionRenderer sections={entry.pageSections} excludeTypes={[]} />
         )}
       </div>
     </div>

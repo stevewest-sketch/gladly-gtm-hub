@@ -2,7 +2,7 @@
 
 import { CatalogEntry } from '@/lib/types/catalog'
 import ContentBlockRenderer from './ContentBlockRenderer'
-import Breadcrumb from '../ui/Breadcrumb'
+import PageSectionRenderer from '../sections/PageSectionRenderer'
 import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -158,20 +158,6 @@ export default function StandardArticleTemplate({ entry }: StandardArticleTempla
   const [activeSection, setActiveSection] = useState('session')
   const [openAccordions, setOpenAccordions] = useState<Set<number>>(new Set([0]))
 
-  // Build breadcrumb items
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Enablement Hub', href: '/enablement-hub' },
-  ]
-
-  if (entry.learningPaths && entry.learningPaths.length > 0) {
-    const primaryPath = entry.learningPaths[0]
-    breadcrumbItems.push({
-      label: primaryPath.name,
-      href: `/enablement-hub?path=${primaryPath.slug.current}`,
-    })
-  }
-
   // Determine what sections exist for quick nav
   const hasSession = entry.mainContent?.wistiaId || entry.mainContent?.videoUrl || entry.resourceLinks?.videoUrl || (entry.modules && entry.modules.length > 0)
   const hasTakeaways = entry.keyTakeaways && entry.keyTakeaways.length > 0
@@ -222,9 +208,6 @@ export default function StandardArticleTemplate({ entry }: StandardArticleTempla
 
   return (
     <div className="min-h-screen bg-[#F8F9FC]">
-      {/* Breadcrumb */}
-      <Breadcrumb items={breadcrumbItems} currentPage={entry.title} />
-
       {/* Hero Header */}
       <header className="bg-gradient-to-br from-[#15803D] via-[#16A34A] to-[#22C55E] text-white py-8 px-6 lg:px-12 min-h-[180px] flex items-center">
         <div className="max-w-[1400px] mx-auto w-full">
@@ -353,7 +336,7 @@ export default function StandardArticleTemplate({ entry }: StandardArticleTempla
 
       {/* Main Content */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
           {/* Left Column - Main Content */}
           <main className="space-y-8">
             {/* Session Recording */}
@@ -549,6 +532,11 @@ export default function StandardArticleTemplate({ entry }: StandardArticleTempla
               <ContentBlockRenderer blocks={entry.contentBlocks} />
             )}
 
+            {/* Flexible Page Sections (new system) */}
+            {entry.pageSections && entry.pageSections.length > 0 && (
+              <PageSectionRenderer sections={entry.pageSections} excludeTypes={[]} />
+            )}
+
             {/* Related Sessions */}
             {entry.relatedContent && entry.relatedContent.length > 0 && (
               <section className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
@@ -585,7 +573,7 @@ export default function StandardArticleTemplate({ entry }: StandardArticleTempla
           </main>
 
           {/* Right Sidebar */}
-          <aside className="space-y-6">
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
             {/* Resources */}
             {(entry.resourceLinks?.videoUrl || entry.resourceLinks?.slidesUrl || entry.resourceLinks?.transcriptUrl) && (
               <div className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">

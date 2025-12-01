@@ -1,7 +1,7 @@
-import { client } from '@/lib/sanity'
-import ContentHubClient from './ContentHubClient'
+import { client } from '@/lib/sanity';
+import ContentHub from './ContentHub';
 
-// GROQ query to fetch catalog entries published to Content Hub only (excluding training/enablement)
+// GROQ query to fetch catalog entries published to Content Hub
 const query = `{
   "entries": *[
     _type == "catalogEntry" &&
@@ -35,6 +35,7 @@ const query = `{
     featured,
     showInUpcoming,
     priority,
+    viewCount,
     products[]->{
       _id,
       name,
@@ -80,59 +81,60 @@ const query = `{
     slug,
     icon,
     color
-  },
-  "journeyStages": *[_type == "journeyStage"] | order(order asc) {
-    _id,
-    name,
-    slug,
-    icon
   }
-}`
+}`;
 
-export default async function ContentHubPage() {
+export default async function ContentPage() {
   // Fetch all catalog entries and taxonomies from Sanity
-  const data = await client.fetch(query, {}, {
-    next: { revalidate: 60 } // Revalidate every 60 seconds
-  })
+  const data = await client.fetch(
+    query,
+    {},
+    {
+      next: { revalidate: 60 }, // Revalidate every 60 seconds
+    }
+  );
 
   // If no data, show message to create content in Sanity
   if (!data.entries || data.entries.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-8">
+      <div className="min-h-screen bg-v2-gray-50 flex items-center justify-center p-8">
         <div className="text-center max-w-md">
           <div className="text-6xl mb-4">📚</div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-3">Content Hub</h1>
-          <p className="text-gray-600 mb-6">
-            No catalog entries found. Create your first catalog entry in Sanity Studio.
+          <h1 className="font-display text-2xl font-bold text-v2-gray-700 mb-3">
+            Content Hub
+          </h1>
+          <p className="font-body text-v2-gray-600 mb-6">
+            No catalog entries found. Create your first catalog entry in Sanity
+            Studio.
           </p>
           <a
             href="/studio"
-            className="inline-block bg-[#009B00] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#008000] transition-all"
+            className="inline-block bg-hub-content-primary text-white px-6 py-3 rounded-v2-md font-semibold hover:bg-hub-content-dark transition-all"
           >
             Go to Sanity Studio
           </a>
         </div>
       </div>
-    )
+    );
   }
 
   // Pass Sanity data to client component
   return (
-    <ContentHubClient
+    <ContentHub
       entries={data.entries}
-      availableProducts={data.products}
-      availableTeams={data.teams}
-      availableTopics={data.topics}
-      availableContentTypes={data.contentTypes}
-      availableJourneyStages={data.journeyStages}
+      products={data.products}
+      teams={data.teams}
+      topics={data.topics}
+      contentTypes={data.contentTypes}
     />
-  )
+  );
 }
 
 // Generate metadata for SEO
 export async function generateMetadata() {
   return {
     title: 'Content Hub | Gladly Enablement',
-    description: 'Your repository for templates, collateral, and competitive intelligence. Everything you need to win deals and enable success.',
-  }
+    description:
+      'Your repository for templates, collateral, and competitive intelligence. Everything you need to win deals and enable success.',
+  };
 }

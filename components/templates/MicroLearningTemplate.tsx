@@ -3,6 +3,7 @@
 import { CatalogEntry } from '@/lib/types/catalog'
 import Image from 'next/image'
 import Breadcrumb from '../ui/Breadcrumb'
+import PageSectionRenderer from '../sections/PageSectionRenderer'
 
 interface MicroLearningTemplateProps {
   entry: CatalogEntry
@@ -127,6 +128,11 @@ export default function MicroLearningTemplate({ entry }: MicroLearningTemplatePr
               Download Resource
             </a>
           </div>
+        )}
+
+        {/* Flexible Page Sections */}
+        {entry.pageSections && entry.pageSections.length > 0 && (
+          <PageSectionRenderer sections={entry.pageSections} excludeTypes={[]} />
         )}
 
         {/* Tags */}

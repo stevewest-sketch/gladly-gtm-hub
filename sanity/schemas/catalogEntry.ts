@@ -31,89 +31,6 @@ export default {
       group: 'create',
     },
 
-    // Step 2: Enablement-specific - Template type
-    {
-      name: 'pageTemplate',
-      title: 'Page Template',
-      type: 'string',
-      options: {
-        list: [
-          { title: '📺 Training — Session recording + takeaways', value: 'training' },
-          { title: '📋 Playbook — How-to guide with assets', value: 'playbook' },
-          { title: '⚔️ Battle Card — Competitive positioning', value: 'battle-card' },
-        ],
-        layout: 'radio',
-      },
-      description: 'How should this content be displayed?',
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      validation: (Rule: any) => Rule.custom((value: any, context: any) => {
-        if (context.parent?.publishedTo?.includes('enablement') && !value) {
-          return 'Template is required for Enablement Hub content'
-        }
-        return true
-      }),
-      group: 'create',
-    },
-
-    // Step 3: AI Content Generation
-    {
-      name: 'aiInput',
-      title: '🤖 AI Content Generation',
-      type: 'object',
-      description: 'Upload content and let AI generate fields, or edit existing content with AI',
-      options: { collapsible: true, collapsed: false },
-      fields: [
-        {
-          name: 'inputMode',
-          title: 'How do you want to create content?',
-          type: 'string',
-          options: {
-            list: [
-              { title: '📝 Paste transcript/document', value: 'paste' },
-              { title: '✏️ Manual entry', value: 'manual' },
-              { title: '🔄 Edit with AI', value: 'edit' },
-            ],
-            layout: 'radio',
-          },
-          initialValue: 'manual',
-        },
-        {
-          name: 'rawContent',
-          title: 'Paste your content here',
-          type: 'text',
-          rows: 10,
-          description: 'Transcript, document, or description. AI will generate title, description, takeaways, etc.',
-          hidden: ({ parent }: any) => parent?.inputMode !== 'paste',
-        },
-        {
-          name: 'editPrompt',
-          title: 'What should AI change?',
-          type: 'text',
-          rows: 3,
-          description: 'Describe what you want to update. AI will edit only those fields while preserving the rest.',
-          hidden: ({ parent }: any) => parent?.inputMode !== 'edit',
-        },
-        {
-          name: 'preserveFields',
-          title: 'Fields to preserve (AI won\'t change these)',
-          type: 'array',
-          of: [{ type: 'string' }],
-          options: {
-            list: [
-              { title: 'Title', value: 'title' },
-              { title: 'Description', value: 'description' },
-              { title: 'Key Takeaways', value: 'keyTakeaways' },
-              { title: 'How-To Steps', value: 'articleSections' },
-              { title: 'Action Items', value: 'actionItems' },
-              { title: 'FAQs', value: 'faqs' },
-            ],
-          },
-          hidden: ({ parent }: any) => parent?.inputMode !== 'edit',
-        },
-      ],
-      group: 'create',
-    },
-
     // ========================================
     // CONTENT TAB - Core Fields
     // ========================================
@@ -164,148 +81,15 @@ export default {
     },
 
     // ========================================
-    // NEW: Flexible Page Sections (replaces scattered fields)
+    // Flexible Page Sections
     // ========================================
     {
       name: 'pageSections',
-      title: '📄 Page Sections (NEW - Recommended)',
+      title: '📄 Page Sections',
       type: 'array',
-      description: '🎯 Build your page with flexible, orderable sections. Drag to reorder. This replaces keyTakeaways, actionItems, articleSections, and contentBlocks.',
+      description: 'Build your page with flexible, orderable sections. Drag to reorder.',
       of: [{ type: 'pageSection' }],
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      group: 'content',
-    },
-
-    // Enablement - Key Takeaways (LEGACY - use pageSections instead)
-    {
-      name: 'keyTakeaways',
-      title: 'Key Takeaways (LEGACY)',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: '⚠️ LEGACY: Use Page Sections instead for better control',
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      group: 'content',
-    },
-
-    // Enablement - How-To Steps (for Playbooks) (LEGACY)
-    {
-      name: 'articleSections',
-      title: 'How-To Steps (LEGACY)',
-      type: 'array',
-      description: '⚠️ LEGACY: Use Page Sections instead for better control',
-      hidden: ({ parent }: any) => parent?.pageTemplate !== 'playbook',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            { name: 'heading', title: 'Step Name', type: 'string', validation: (Rule: any) => Rule.required() },
-            { name: 'content', title: 'Instructions', type: 'text', rows: 4, validation: (Rule: any) => Rule.required() },
-          ],
-          preview: {
-            select: { title: 'heading', subtitle: 'content' },
-            prepare({ title, subtitle }: any) {
-              return { title, subtitle: subtitle?.slice(0, 60) + '...' }
-            },
-          },
-        },
-      ],
-      group: 'content',
-    },
-
-    // Enablement - Action Items (Tips & Pitfalls) (LEGACY)
-    {
-      name: 'actionItems',
-      title: 'Tips & Pitfalls (LEGACY)',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: '⚠️ LEGACY: Use Page Sections instead for better control',
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      group: 'content',
-    },
-
-    // Enablement - Content Blocks (FAQs, Assets, Checklists) (LEGACY)
-    {
-      name: 'contentBlocks',
-      title: 'Additional Sections (LEGACY)',
-      type: 'array',
-      description: '⚠️ LEGACY: Use Page Sections instead for better control',
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      of: [
-        {
-          type: 'object',
-          name: 'contentBlock',
-          fields: [
-            {
-              name: 'blockType',
-              title: 'Section Type',
-              type: 'string',
-              options: {
-                list: [
-                  { title: '❓ FAQs', value: 'faq' },
-                  { title: '📦 Assets', value: 'assets' },
-                  { title: '✅ Checklist', value: 'checklist' },
-                  { title: '📝 Text', value: 'text' },
-                ],
-              },
-              validation: (Rule: any) => Rule.required(),
-            },
-            { name: 'title', title: 'Section Title', type: 'string' },
-            { name: 'description', title: 'Section Description', type: 'string', hidden: ({ parent }: any) => parent?.blockType !== 'checklist' },
-            { name: 'content', title: 'Content', type: 'text', rows: 4, hidden: ({ parent }: any) => parent?.blockType !== 'text' },
-            {
-              name: 'faqs',
-              title: 'Q&A Items',
-              type: 'array',
-              hidden: ({ parent }: any) => parent?.blockType !== 'faq',
-              of: [{
-                type: 'object',
-                fields: [
-                  { name: 'question', title: 'Question', type: 'string' },
-                  { name: 'answer', title: 'Answer', type: 'text', rows: 3 },
-                ],
-                preview: { select: { title: 'question', subtitle: 'answer' } },
-              }],
-            },
-            {
-              name: 'items',
-              title: 'Asset Items',
-              type: 'array',
-              hidden: ({ parent }: any) => parent?.blockType !== 'assets',
-              of: [{
-                type: 'object',
-                fields: [
-                  { name: 'icon', title: 'Icon', type: 'string', description: 'Emoji icon' },
-                  { name: 'title', title: 'Asset Name', type: 'string' },
-                  { name: 'description', title: 'Description', type: 'string' },
-                  { name: 'url', title: 'Link', type: 'url' },
-                ],
-                preview: { select: { title: 'title', subtitle: 'description' } },
-              }],
-            },
-            {
-              name: 'columns',
-              title: 'Checklist Columns',
-              type: 'array',
-              hidden: ({ parent }: any) => parent?.blockType !== 'checklist',
-              of: [{
-                type: 'object',
-                fields: [
-                  { name: 'title', title: 'Column Title', type: 'string' },
-                  { name: 'items', title: 'Items', type: 'array', of: [{ type: 'string' }] },
-                ],
-                preview: { select: { title: 'title' } },
-              }],
-            },
-          ],
-          preview: {
-            select: { title: 'title', blockType: 'blockType' },
-            prepare({ title, blockType }: any) {
-              const icons: any = { faq: '❓', assets: '📦', checklist: '✅', text: '📝' }
-              return { title: title || blockType, subtitle: `${icons[blockType] || '📦'} ${blockType}` }
-            },
-          },
-        },
-      ],
       group: 'content',
     },
 
@@ -335,12 +119,14 @@ export default {
       title: 'Training Modules',
       type: 'array',
       description: 'For multi-part training series',
-      hidden: ({ parent }: any) => parent?.pageTemplate !== 'training',
+      hidden: ({ parent }: any) => parent?.pageTemplate !== 'training-session',
       of: [{
         type: 'object',
+        name: 'trainingModule',
+        title: 'Training Module',
         fields: [
-          { name: 'moduleNumber', title: '#', type: 'number', validation: (Rule: any) => Rule.required().min(1) },
-          { name: 'title', title: 'Title', type: 'string', validation: (Rule: any) => Rule.required() },
+          { name: 'moduleNumber', title: '#', type: 'number', validation: (Rule: any) => Rule.min(1) },
+          { name: 'title', title: 'Title', type: 'string' },
           { name: 'description', title: 'Description', type: 'text', rows: 2 },
           { name: 'videoUrl', title: 'Video URL', type: 'url' },
           { name: 'duration', title: 'Duration', type: 'string' },
@@ -348,7 +134,7 @@ export default {
         preview: {
           select: { num: 'moduleNumber', title: 'title', duration: 'duration' },
           prepare({ num, title, duration }: any) {
-            return { title: `${num}. ${title}`, subtitle: duration }
+            return { title: `${num || ''}. ${title || 'Untitled'}`, subtitle: duration }
           },
         },
       }],
@@ -420,20 +206,6 @@ export default {
     },
 
     {
-      name: 'difficulty',
-      title: 'Difficulty',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Beginner', value: 'beginner' },
-          { title: 'Intermediate', value: 'intermediate' },
-          { title: 'Advanced', value: 'advanced' },
-        ],
-      },
-      group: 'publish',
-    },
-
-    {
       name: 'featured',
       title: 'Featured',
       type: 'boolean',
@@ -467,7 +239,7 @@ export default {
       title: 'Products',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'product' }] }],
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      description: 'Which product(s) does this content relate to?',
       group: 'publish',
     },
 
@@ -478,11 +250,13 @@ export default {
       of: [{ type: 'string' }],
       options: {
         list: [
-          { title: 'Learning', value: 'Learning' },
           { title: 'Product', value: 'Product' },
-          { title: 'Toolkit', value: 'Toolkit' },
+          { title: 'GTM Strategy', value: 'GTM Strategy' },
+          { title: 'Internal Ops', value: 'Internal Ops' },
           { title: 'Competitive', value: 'Competitive' },
-          { title: 'Playbook', value: 'Playbook' },
+          { title: 'Technical', value: 'Technical' },
+          { title: 'Partner', value: 'Partner' },
+          { title: 'Value Realization', value: 'Value Realization' },
         ],
       },
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),

@@ -9,6 +9,8 @@ import CoEResourcesPanel from '@/components/coe/CoEResourcesPanel';
 import StatCallout from '@/components/coe/StatCallout';
 import CaseStudyCard from '@/components/coe/CaseStudyCard';
 import BenchmarkTable from '@/components/coe/BenchmarkTable';
+import PageSectionRenderer from '@/components/sections/PageSectionRenderer';
+import { PageSection } from '@/lib/types/catalog';
 
 interface LearningModule {
   _id: string;
@@ -64,6 +66,8 @@ interface LearningModule {
   }>;
   productTags: string[];
   isActive: boolean;
+  // New flexible page sections
+  pageSections?: PageSection[];
   coeCaseStudies?: Array<{
     company: string;
     challenge: string;
@@ -107,6 +111,28 @@ async function getLearningModule(slug: string): Promise<LearningModule | null> {
     relatedModules,
     productTags,
     isActive,
+    // New flexible page sections
+    pageSections[] {
+      _key,
+      sectionType,
+      title,
+      description,
+      collapsible,
+      defaultExpanded,
+      overviewCards[] { label, content },
+      videoUrl,
+      wistiaId,
+      sessionMaterials { videoUrl, slidesUrl, transcriptUrl },
+      takeaways,
+      processLayout,
+      processSteps[] { heading, content },
+      processText,
+      tips,
+      faqs[] { question, answer },
+      assetItems[] { icon, title, description, url },
+      textContent,
+      checklistColumns[] { title, items }
+    },
     coeCaseStudies,
     coeStats,
     coeBenchmarks
@@ -221,7 +247,12 @@ export default async function LearningModulePage({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Main Column (2/3) */}
           <div className="lg:col-span-2">
-            {/* Video Section */}
+            {/* NEW: Use PageSectionRenderer if pageSections exist */}
+            {module.pageSections && module.pageSections.length > 0 ? (
+              <PageSectionRenderer sections={module.pageSections} />
+            ) : (
+              <>
+            {/* LEGACY: Video Section */}
             {module.videoUrl && (
               <section id="video" className="mb-[60px]">
                 <div className="bg-white border-2 border-[#F3F3F3] rounded-lg overflow-hidden shadow-sm">
@@ -332,6 +363,8 @@ export default async function LearningModulePage({
                   </div>
                 </div>
               </section>
+            )}
+              </>
             )}
           </div>
 

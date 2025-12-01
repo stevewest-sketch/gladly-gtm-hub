@@ -5,6 +5,27 @@ import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
 import PageSectionRenderer from '@/components/sections/PageSectionRenderer'
 
+// Section type to title mapping for navigation
+const SECTION_TYPE_TITLES: Record<string, string> = {
+  'overview': 'Quick Overview',
+  'video': 'Session Recording',
+  'takeaways': 'Key Takeaways',
+  'process': 'How to Run',
+  'tips': 'Best Practices',
+  'faq': 'FAQs',
+  'assets': 'Key Assets',
+  'text': 'Content',
+  'checklist': 'Checklist',
+}
+
+// Helper to extract navigation items from pageSections
+function extractNavFromSections(sections: any[]): { id: string; label: string }[] {
+  return sections.map((section) => ({
+    id: `section-${section._key}`,
+    label: section.title || SECTION_TYPE_TITLES[section.sectionType] || 'Section',
+  }))
+}
+
 // Collapsible section component
 function ContentSection({
   id,
@@ -75,7 +96,9 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
   const hasBestPractices = entry.actionItems && entry.actionItems.length > 0
   const hasFaqs = entry.contentBlocks?.some((b: any) => b.blockType === 'faq')
   const hasChecklist = entry.contentBlocks?.some((b: any) => b.blockType === 'checklist')
-  const hasTraining = (entry.modules && entry.modules.length > 0) || entry.mainContent?.wistiaId || hasRecording
+  // Only show legacy training if NOT using pageSections (pageSections is the new way)
+  const usingPageSections = entry.pageSections && entry.pageSections.length > 0
+  const hasTraining = !usingPageSections && ((entry.modules && entry.modules.length > 0) || entry.mainContent?.wistiaId || hasRecording)
 
   // Get overview from contentBlocks (blockType='text' with title containing 'overview')
   const overviewBlock = entry.contentBlocks?.find((b: any) =>
@@ -128,14 +151,26 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
     item.toLowerCase().startsWith("don't") || item.toLowerCase().startsWith("dont")
   ).slice(0, 5) || []
 
+  // Build navigation items from pageSections if they exist
+  const pageSectionNav = entry.pageSections && entry.pageSections.length > 0
+    ? [
+        ...extractNavFromSections(entry.pageSections),
+        // Add Optional Training to nav if modules exist
+        ...(hasTraining ? [{ id: 'training', label: 'Optional Training' }] : [])
+      ]
+    : null
+
   // Scroll spy effect
   useEffect(() => {
     const handleScroll = () => {
-      const sectionIds = ['overview', 'key-assets', 'how-to-run', 'best-practices', 'loe-checklist', 'faqs', 'training']
-      const stepIds = howToSteps.map(s => s.id)
+      // Use pageSectionNav if available, otherwise use legacy section IDs
+      const sectionIds = pageSectionNav
+        ? pageSectionNav.map(s => s.id)
+        : ['overview', 'key-assets', 'how-to-run', 'best-practices', 'loe-checklist', 'faqs', 'training']
+      const stepIds = pageSectionNav ? [] : howToSteps.map(s => s.id)
       const allIds = [...sectionIds, ...stepIds]
 
-      let current = 'overview'
+      let current = allIds[0] || 'overview'
 
       for (const id of allIds) {
         const element = document.getElementById(id)
@@ -152,7 +187,7 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [howToSteps])
+  }, [howToSteps, pageSectionNav])
 
   const scrollToSection = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault()
@@ -169,17 +204,6 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
 
   return (
     <div className="min-h-screen bg-[#F8F9FC]" data-template-type="playbook">
-      {/* Breadcrumb */}
-      <nav className="px-12 py-3 text-[13px] text-[#8B93A7] bg-white border-b border-[#E8EBF2]">
-        <a href="/" className="text-[#5C6578] hover:text-[#16A34A]">Home</a>
-        <span className="mx-2">&rsaquo;</span>
-        <a href="/learn" className="text-[#5C6578] hover:text-[#16A34A]">Enablement Hub</a>
-        <span className="mx-2">&rsaquo;</span>
-        <a href="/learn?category=playbooks" className="text-[#5C6578] hover:text-[#16A34A]">Playbooks</a>
-        <span className="mx-2">&rsaquo;</span>
-        <strong className="text-[#1A1D26]">{entry.title}</strong>
-      </nav>
-
       {/* Hero Header */}
       <header className="bg-gradient-to-br from-[#15803D] via-[#16A34A] to-[#22C55E] text-white py-6 px-12">
         <div className="max-w-[1400px] mx-auto">
@@ -205,7 +229,60 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
 
           {/* NEW: Use PageSectionRenderer if pageSections exist */}
           {entry.pageSections && entry.pageSections.length > 0 ? (
-            <PageSectionRenderer sections={entry.pageSections} />
+            <>
+              <PageSectionRenderer sections={entry.pageSections} />
+              {/* Optional Training - render after pageSections if modules exist */}
+              {hasTraining && (
+                <ContentSection id="training" title="Optional Training" collapsible={false}>
+                  <p className="text-[13px] text-[#8B93A7] italic mb-4 px-3 py-2 bg-[#F8F9FC] rounded-md">
+                    Nice-to-have, not required. You can run this play without watching.
+                  </p>
+                  <div className="space-y-3">
+                    {entry.modules && entry.modules.length > 0 ? (
+                      entry.modules.map((module: any, index: number) => (
+                        <a
+                          key={module._key || index}
+                          href={module.videoUrl || entry.resourceLinks?.videoUrl || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex gap-4 p-4 bg-[#F8F9FC] rounded-[10px] hover:bg-[#DCFCE7] transition-colors"
+                        >
+                          <div className="w-[120px] h-[68px] bg-[#1a1a1a] rounded-md flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-lg opacity-90">▶</span>
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-[14px] font-semibold text-[#1A1D26] mb-1">{module.title}</div>
+                            <div className="text-[12px] text-[#8B93A7] mb-1">
+                              {module.duration} {module.presenter && `• ${module.presenter}`}
+                            </div>
+                            {module.description && (
+                              <div className="text-[13px] text-[#5C6578] line-clamp-2">{module.description}</div>
+                            )}
+                          </div>
+                        </a>
+                      ))
+                    ) : hasRecording && (
+                      <a
+                        href={entry.resourceLinks?.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex gap-4 p-4 bg-[#F8F9FC] rounded-[10px] hover:bg-[#DCFCE7] transition-colors"
+                      >
+                        <div className="w-[120px] h-[68px] bg-[#1a1a1a] rounded-md flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-lg opacity-90">▶</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-[14px] font-semibold text-[#1A1D26] mb-1">{entry.title} Walkthrough</div>
+                          <div className="text-[12px] text-[#8B93A7]">
+                            {entry.duration} {entry.presenter && `• ${entry.presenter}`}
+                          </div>
+                        </div>
+                      </a>
+                    )}
+                  </div>
+                </ContentSection>
+              )}
+            </>
           ) : (
             <>
           {/* LEGACY: 1. Quick Overview - Always first */}
@@ -510,7 +587,7 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
         </main>
 
         {/* Sidebar */}
-        <aside className="space-y-4 lg:sticky lg:top-6 lg:max-h-[calc(100vh-48px)] lg:overflow-y-auto">
+        <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto">
 
           {/* On This Page */}
           <div className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
@@ -518,132 +595,153 @@ export default function PlaybookTemplate({ entry }: PlaybookTemplateProps) {
               <span className="text-[12px] font-semibold uppercase tracking-wide text-[#8B93A7]">On This Page</span>
             </div>
             <nav className="p-2">
-              <a
-                href="#overview"
-                onClick={(e) => scrollToSection(e, 'overview')}
-                className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                  activeSection === 'overview'
-                    ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                    : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                }`}
-              >
-                Overview
-              </a>
-
-              {entry.keyTakeaways && entry.keyTakeaways.length > 0 && (
-                <a
-                  href="#key-takeaways"
-                  onClick={(e) => scrollToSection(e, 'key-takeaways')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'key-takeaways'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  Key Takeaways
-                </a>
-              )}
-
-              {hasKeyAssets && (
-                <a
-                  href="#key-assets"
-                  onClick={(e) => scrollToSection(e, 'key-assets')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'key-assets'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  Key Assets
-                </a>
-              )}
-
-              {hasHowTo && (
-                <>
+              {/* Dynamic navigation from pageSections */}
+              {pageSectionNav ? (
+                pageSectionNav.map((section) => (
                   <a
-                    href="#how-to-run"
-                    onClick={(e) => scrollToSection(e, 'how-to-run')}
+                    key={section.id}
+                    href={`#${section.id}`}
+                    onClick={(e) => scrollToSection(e, section.id)}
                     className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                      activeSection === 'how-to-run' || howToSteps.some(s => activeSection === s.id)
+                      activeSection === section.id
                         ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
                         : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
                     }`}
                   >
-                    How to Run
+                    {section.label}
                   </a>
-                  <div className="pl-4">
-                    {howToSteps.map((step) => (
+                ))
+              ) : (
+                <>
+                  {/* Legacy navigation */}
+                  <a
+                    href="#overview"
+                    onClick={(e) => scrollToSection(e, 'overview')}
+                    className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                      activeSection === 'overview'
+                        ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                        : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                    }`}
+                  >
+                    Overview
+                  </a>
+
+                  {entry.keyTakeaways && entry.keyTakeaways.length > 0 && (
+                    <a
+                      href="#key-takeaways"
+                      onClick={(e) => scrollToSection(e, 'key-takeaways')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'key-takeaways'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      Key Takeaways
+                    </a>
+                  )}
+
+                  {hasKeyAssets && (
+                    <a
+                      href="#key-assets"
+                      onClick={(e) => scrollToSection(e, 'key-assets')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'key-assets'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      Key Assets
+                    </a>
+                  )}
+
+                  {hasHowTo && (
+                    <>
                       <a
-                        key={step.id}
-                        href={`#${step.id}`}
-                        onClick={(e) => scrollToSection(e, step.id)}
-                        className={`block px-3 py-1 text-[12px] rounded-md transition-colors ${
-                          activeSection === step.id
-                            ? 'text-[#16A34A] font-medium'
-                            : 'text-[#8B93A7] hover:text-[#15803D]'
+                        href="#how-to-run"
+                        onClick={(e) => scrollToSection(e, 'how-to-run')}
+                        className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                          activeSection === 'how-to-run' || howToSteps.some(s => activeSection === s.id)
+                            ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                            : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
                         }`}
                       >
-                        {step.title}
+                        How to Run
                       </a>
-                    ))}
-                  </div>
+                      <div className="pl-4">
+                        {howToSteps.map((step) => (
+                          <a
+                            key={step.id}
+                            href={`#${step.id}`}
+                            onClick={(e) => scrollToSection(e, step.id)}
+                            className={`block px-3 py-1 text-[12px] rounded-md transition-colors ${
+                              activeSection === step.id
+                                ? 'text-[#16A34A] font-medium'
+                                : 'text-[#8B93A7] hover:text-[#15803D]'
+                            }`}
+                          >
+                            {step.title}
+                          </a>
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  {hasBestPractices && (
+                    <a
+                      href="#best-practices"
+                      onClick={(e) => scrollToSection(e, 'best-practices')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'best-practices'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      Best Practices
+                    </a>
+                  )}
+
+                  {hasChecklist && (
+                    <a
+                      href="#loe-checklist"
+                      onClick={(e) => scrollToSection(e, 'loe-checklist')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'loe-checklist'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      LOE Checklist
+                    </a>
+                  )}
+
+                  {faqs.length > 0 && (
+                    <a
+                      href="#faqs"
+                      onClick={(e) => scrollToSection(e, 'faqs')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'faqs'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      FAQs
+                    </a>
+                  )}
+
+                  {hasTraining && (
+                    <a
+                      href="#training"
+                      onClick={(e) => scrollToSection(e, 'training')}
+                      className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
+                        activeSection === 'training'
+                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
+                      }`}
+                    >
+                      Optional Training
+                    </a>
+                  )}
                 </>
-              )}
-
-              {hasBestPractices && (
-                <a
-                  href="#best-practices"
-                  onClick={(e) => scrollToSection(e, 'best-practices')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'best-practices'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  Best Practices
-                </a>
-              )}
-
-              {hasChecklist && (
-                <a
-                  href="#loe-checklist"
-                  onClick={(e) => scrollToSection(e, 'loe-checklist')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'loe-checklist'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  LOE Checklist
-                </a>
-              )}
-
-              {faqs.length > 0 && (
-                <a
-                  href="#faqs"
-                  onClick={(e) => scrollToSection(e, 'faqs')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'faqs'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  FAQs
-                </a>
-              )}
-
-              {hasTraining && (
-                <a
-                  href="#training"
-                  onClick={(e) => scrollToSection(e, 'training')}
-                  className={`block px-3 py-2 text-[13px] rounded-md transition-colors ${
-                    activeSection === 'training'
-                      ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
-                      : 'text-[#5C6578] hover:bg-[#DCFCE7] hover:text-[#15803D]'
-                  }`}
-                >
-                  Optional Training
-                </a>
               )}
             </nav>
           </div>

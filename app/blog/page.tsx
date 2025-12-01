@@ -1,17 +1,19 @@
-import { client, urlFor } from "@/lib/sanity";
+import { client } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 
 async function getPosts() {
-  const query = `*[_type == "post"] | order(publishedAt desc){
-    _id,
-    title,
-    slug,
-    excerpt,
-    mainImage,
-    publishedAt
-  }`;
-  return await client.fetch(query);
+  const query = `*[_type == "post" && !(_id in path("drafts.**"))]
+    | order(publishedAt desc)
+    [0...50] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      "imageUrl": mainImage.asset->url,
+      publishedAt
+    }`;
+  return await client.fetch(query, {}, { next: { revalidate: 60 } });
 }
 
 export default async function Blog() {
@@ -29,10 +31,10 @@ export default async function Blog() {
                 key={post._id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
               >
-                {post.mainImage && (
+                {post.imageUrl && (
                   <div className="relative h-48 w-full">
                     <Image
-                      src={urlFor(post.mainImage).url()}
+                      src={post.imageUrl}
                       alt={post.title}
                       fill
                       className="object-cover"

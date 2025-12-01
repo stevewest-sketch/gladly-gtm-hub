@@ -67,6 +67,19 @@ export default {
       title: 'Last Updated',
       type: 'datetime',
     },
+    // ========================================
+    // FLEXIBLE PAGE SECTIONS (new - replaces legacy fields below)
+    // ========================================
+    {
+      name: 'pageSections',
+      title: '📄 Page Sections (Flexible Builder)',
+      type: 'array',
+      description: '🎯 Build your module with flexible, reorderable sections. This replaces keyTakeaways, interactiveFlow, examples, and faqs.',
+      of: [{ type: 'pageSection' }],
+    },
+    // ========================================
+    // LEGACY FIELDS (kept for migration, will be deprecated)
+    // ========================================
     {
       name: 'keyTakeaways',
       title: 'Key Takeaways',

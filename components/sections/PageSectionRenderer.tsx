@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { PageSection } from '@/lib/types/catalog'
 
@@ -145,53 +144,49 @@ function VideoEmbed({ url, wistiaId, title }: { url?: string; wistiaId?: string;
   )
 }
 
-// Collapsible section wrapper
+// Section wrapper - always shows content (no collapsing)
 function SectionWrapper({
   id,
   title,
   description,
-  children,
-  collapsible = false,
-  defaultExpanded = true
+  children
 }: {
   id: string
   title: string
   description?: string
   children: React.ReactNode
-  collapsible?: boolean
-  defaultExpanded?: boolean
+  collapsible?: boolean  // Ignored - kept for backward compatibility
+  defaultExpanded?: boolean  // Ignored - kept for backward compatibility
 }) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
-
   return (
     <section id={id} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
-      <div
-        className={`px-6 py-4 border-b border-[#E8EBF2] flex items-center justify-between ${
-          collapsible ? 'cursor-pointer hover:bg-[#FAFBFC]' : ''
-        } transition-colors select-none`}
-        onClick={() => collapsible && setIsExpanded(!isExpanded)}
-      >
-        <div>
-          <h2 className="font-semibold text-[16px] text-[#1A1D26]">{title}</h2>
-          {description && (
-            <p className="text-[13px] text-[#8B93A7] mt-0.5">{description}</p>
-          )}
-        </div>
-        {collapsible && (
-          <div className={`text-[#8B93A7] transition-transform ${isExpanded ? '' : '-rotate-90'}`}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </div>
+      <div className="px-6 py-4 border-b border-[#E8EBF2]">
+        <h2 className="font-semibold text-[16px] text-[#1A1D26]">{title}</h2>
+        {description && (
+          <p className="text-[13px] text-[#8B93A7] mt-0.5">{description}</p>
         )}
       </div>
-      {isExpanded && (
-        <div className="p-6">
-          {children}
-        </div>
-      )}
+      <div className="p-6">
+        {children}
+      </div>
     </section>
   )
+}
+
+// Icon and color mapping for overview cards
+const overviewCardStyles: Record<string, { icon: string; bg: string; color: string }> = {
+  'what it is': { icon: '📋', bg: 'bg-blue-100', color: 'text-blue-600' },
+  'who it\'s for': { icon: '👥', bg: 'bg-green-100', color: 'text-green-600' },
+  'key outcome': { icon: '🎯', bg: 'bg-rose-100', color: 'text-rose-600' },
+  'why it matters': { icon: '💡', bg: 'bg-purple-100', color: 'text-purple-600' },
+  'when to use it': { icon: '⏰', bg: 'bg-amber-100', color: 'text-amber-600' },
+  'four pillars': { icon: '🏛️', bg: 'bg-indigo-100', color: 'text-indigo-600' },
+  'default': { icon: '📌', bg: 'bg-gray-100', color: 'text-gray-600' },
+}
+
+function getOverviewCardStyle(label: string) {
+  const key = label.toLowerCase()
+  return overviewCardStyles[key] || overviewCardStyles['default']
 }
 
 // Individual section renderers
@@ -199,26 +194,28 @@ function OverviewSection({ section }: { section: PageSection }) {
   if (!section.overviewCards || section.overviewCards.length === 0) return null
 
   return (
-    <SectionWrapper
-      id={`section-${section._key}`}
-      title={section.title}
-      description={section.description}
-      collapsible={section.collapsible}
-      defaultExpanded={section.defaultExpanded}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {section.overviewCards.map((card, idx) => (
-          <div key={idx} className="p-3 bg-[#F8F9FC] rounded-md">
-            <div className="text-[11px] font-semibold uppercase tracking-wide text-[#8B93A7] mb-1">
-              {card.label}
+    <section id={`section-${section._key}`} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
+      <div className="p-4 space-y-2">
+        {section.overviewCards.map((card, idx) => {
+          const style = getOverviewCardStyle(card.label)
+          return (
+            <div key={idx} className="flex gap-3 p-3 bg-[#F8F9FC] rounded-lg">
+              <div className={`w-9 h-9 ${style.bg} rounded-lg flex items-center justify-center text-base flex-shrink-0`}>
+                {style.icon}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className={`text-[11px] font-bold uppercase tracking-wider ${style.color} mb-0.5`}>
+                  {card.label}
+                </div>
+                <div className="text-[13px] text-[#374151] leading-snug">
+                  {card.content}
+                </div>
+              </div>
             </div>
-            <div className="text-[14px] text-[#1A1D26] leading-relaxed">
-              {card.content}
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
-    </SectionWrapper>
+    </section>
   )
 }
 
@@ -352,6 +349,11 @@ function ProcessSection({ section }: { section: PageSection }) {
 
   if (!hasSteps && !hasText) return null
 
+  // Determine layout - default to 'steps' if we have processSteps
+  const layout = section.processLayout || (hasSteps ? 'steps' : 'text')
+  const useStepsLayout = (layout === 'steps' || layout === 'numbered') && hasSteps
+  const useTextLayout = (layout === 'text' || layout === 'bullets') && hasText
+
   return (
     <SectionWrapper
       id={`section-${section._key}`}
@@ -361,7 +363,7 @@ function ProcessSection({ section }: { section: PageSection }) {
       defaultExpanded={section.defaultExpanded}
     >
       {/* Step-by-step layout */}
-      {section.processLayout === 'steps' && hasSteps && (
+      {useStepsLayout && (
         <div className="space-y-0">
           {section.processSteps!.map((step, index) => (
             <div
@@ -395,7 +397,7 @@ function ProcessSection({ section }: { section: PageSection }) {
       )}
 
       {/* Text/bullet layout */}
-      {(section.processLayout === 'text' || section.processLayout === 'bullets') && hasText && (
+      {useTextLayout && (
         <div className="prose prose-sm max-w-none text-[14px] text-[#5C6578] leading-relaxed">
           <ReactMarkdown
             components={{
@@ -413,8 +415,8 @@ function ProcessSection({ section }: { section: PageSection }) {
         </div>
       )}
 
-      {/* Fallback: render steps as bordered cards */}
-      {!section.processLayout && hasSteps && (
+      {/* Fallback: render steps if we have them but no layout matched */}
+      {!useStepsLayout && !useTextLayout && hasSteps && (
         <div className="space-y-3">
           {section.processSteps!.map((step, index) => (
             <div key={index} className="p-4 bg-[#F8F9FC] rounded-md border-l-[3px] border-[#16A34A]">
@@ -523,38 +525,37 @@ function AssetsSection({ section }: { section: PageSection }) {
   if (!section.assetItems || section.assetItems.length === 0) return null
 
   return (
-    <SectionWrapper
-      id={`section-${section._key}`}
-      title={section.title}
-      description={section.description}
-      collapsible={section.collapsible}
-      defaultExpanded={section.defaultExpanded}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {section.assetItems.map((item, idx) => (
-          <a
-            key={idx}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-start gap-3 p-3 bg-[#F8F9FC] rounded-[10px] hover:bg-[#DCFCE7] transition-colors border border-[#E2E6EF]"
-          >
-            <div className="w-10 h-10 bg-[#E0E7FF] rounded-md flex items-center justify-center text-lg flex-shrink-0">
-              {item.icon || '📄'}
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="text-[14px] font-semibold text-[#1A1D26] mb-0.5">{item.title}</div>
-              {item.description && (
-                <div className="text-[12px] text-[#5C6578] leading-snug line-clamp-2">
-                  {item.description}
-                </div>
-              )}
-            </div>
-            <span className="text-[#16A34A] text-[14px]">→</span>
-          </a>
-        ))}
+    <section id={`section-${section._key}`} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
+      <div className="px-4 py-3 border-b border-[#E8EBF2]">
+        <h2 className="font-semibold text-[15px] text-[#1A1D26]">{section.title}</h2>
       </div>
-    </SectionWrapper>
+      <div className="p-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {section.assetItems.map((item, idx) => (
+            <a
+              key={idx}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 p-2.5 bg-[#F8F9FC] rounded-lg hover:bg-[#DCFCE7] transition-colors border border-[#E2E6EF]"
+            >
+              <div className="w-8 h-8 bg-[#E0E7FF] rounded-md flex items-center justify-center text-sm flex-shrink-0">
+                {item.icon || '📄'}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-[13px] font-medium text-[#1A1D26]">{item.title}</div>
+                {item.description && (
+                  <div className="text-[11px] text-[#5C6578] leading-tight line-clamp-1">
+                    {item.description}
+                  </div>
+                )}
+              </div>
+              <span className="text-[#16A34A] text-[13px]">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -645,14 +646,18 @@ function ChecklistSection({ section }: { section: PageSection }) {
 interface PageSectionRendererProps {
   sections: PageSection[]
   className?: string
+  excludeTypes?: string[] // Section types to exclude from rendering (e.g., 'assets' for sidebar-only)
 }
 
-export default function PageSectionRenderer({ sections, className = '' }: PageSectionRendererProps) {
+export default function PageSectionRenderer({ sections, className = '', excludeTypes = ['assets'] }: PageSectionRendererProps) {
   if (!sections || sections.length === 0) return null
+
+  // Filter out excluded section types (assets go in sidebar, not main content)
+  const filteredSections = sections.filter(s => !excludeTypes.includes(s.sectionType))
 
   return (
     <div className={`space-y-4 ${className}`}>
-      {sections.map((section) => {
+      {filteredSections.map((section) => {
         switch (section.sectionType) {
           case 'overview':
             return <OverviewSection key={section._key} section={section} />

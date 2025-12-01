@@ -29,7 +29,7 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.documentList()
                     .title('Training Sessions')
-                    .filter('_type == "catalogEntry" && pageTemplate == "training"')
+                    .filter('_type == "catalogEntry" && pageTemplate == "training-session"')
                     .defaultOrdering([{ field: 'publishDate', direction: 'desc' }])
                     .initialValueTemplates([
                       S.initialValueTemplateItem('catalogEntry-training'),
@@ -40,7 +40,7 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.documentList()
                     .title('Playbooks')
-                    .filter('_type == "catalogEntry" && pageTemplate == "playbook"')
+                    .filter('_type == "catalogEntry" && pageTemplate == "play"')
                     .defaultOrdering([{ field: 'publishDate', direction: 'desc' }])
                     .initialValueTemplates([
                       S.initialValueTemplateItem('catalogEntry-playbook'),
@@ -160,7 +160,7 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.documentList()
                     .title('Training Sessions')
-                    .filter('_type == "catalogEntry" && pageTemplate == "training"')
+                    .filter('_type == "catalogEntry" && pageTemplate == "training-session"')
                     .defaultOrdering([{ field: 'publishDate', direction: 'desc' }])
                 ),
               S.listItem()
@@ -168,7 +168,7 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.documentList()
                     .title('Playbooks')
-                    .filter('_type == "catalogEntry" && pageTemplate == "playbook"')
+                    .filter('_type == "catalogEntry" && pageTemplate == "play"')
                     .defaultOrdering([{ field: 'publishDate', direction: 'desc' }])
                 ),
               S.listItem()
@@ -178,6 +178,292 @@ export const structure = (S: StructureBuilder) =>
                     .title('Battle Cards')
                     .filter('_type == "catalogEntry" && pageTemplate == "battle-card"')
                     .defaultOrdering([{ field: 'publishDate', direction: 'desc' }])
+                ),
+            ])
+        ),
+
+      S.divider(),
+
+      // ========================================
+      // CoE HUB
+      // ========================================
+      S.listItem()
+        .title('🎯 CoE Hub')
+        .child(
+          S.list()
+            .title('Center of Excellence')
+            .items([
+              // Hub Settings (Singleton)
+              S.listItem()
+                .title('⚙️ Hub Settings')
+                .child(
+                  S.document()
+                    .schemaType('coeHub')
+                    .documentId('coeHub')
+                    .title('CoE Hub Settings')
+                ),
+
+              S.divider(),
+
+              // All Entries
+              S.listItem()
+                .title('📋 All Entries')
+                .child(
+                  S.documentList()
+                    .title('All CoE Entries')
+                    .filter('_type == "coeEntry"')
+                    .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+                ),
+
+              S.divider(),
+
+              // By Entry Type
+              S.listItem()
+                .title('📋 Best Practices')
+                .child(
+                  S.documentList()
+                    .title('Best Practices')
+                    .filter('_type == "coeEntry" && entryType == "best-practice"')
+                    .defaultOrdering([{ field: 'priority', direction: 'desc' }])
+                ),
+              S.listItem()
+                .title('💡 Process Innovations')
+                .child(
+                  S.documentList()
+                    .title('Process Innovations')
+                    .filter('_type == "coeEntry" && entryType == "process-innovation"')
+                    .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+                ),
+              S.listItem()
+                .title('🏢 Internal Best Practices')
+                .child(
+                  S.documentList()
+                    .title('Internal Best Practices')
+                    .filter('_type == "coeEntry" && entryType == "internal-best-practice"')
+                    .defaultOrdering([{ field: 'priority', direction: 'desc' }])
+                ),
+              S.listItem()
+                .title('📊 Proof Points')
+                .child(
+                  S.list()
+                    .title('Proof Points')
+                    .items([
+                      S.listItem()
+                        .title('All Proof Points')
+                        .child(
+                          S.documentList()
+                            .title('All Proof Points')
+                            .filter('_type == "coeEntry" && entryType == "proof-point"')
+                            .defaultOrdering([{ field: '_updatedAt', direction: 'desc' }])
+                        ),
+                      S.divider(),
+                      S.listItem()
+                        .title('📈 Stats')
+                        .child(
+                          S.documentList()
+                            .title('Stats')
+                            .filter('_type == "coeEntry" && entryType == "proof-point" && proofType == "stat"')
+                        ),
+                      S.listItem()
+                        .title('💬 Anecdotes')
+                        .child(
+                          S.documentList()
+                            .title('Anecdotes')
+                            .filter('_type == "coeEntry" && entryType == "proof-point" && proofType == "anecdote"')
+                        ),
+                      S.listItem()
+                        .title('🗣️ Quotes')
+                        .child(
+                          S.documentList()
+                            .title('Quotes')
+                            .filter('_type == "coeEntry" && entryType == "proof-point" && proofType == "quote"')
+                        ),
+                      S.listItem()
+                        .title('📊 Benchmarks')
+                        .child(
+                          S.documentList()
+                            .title('Benchmarks')
+                            .filter('_type == "coeEntry" && entryType == "proof-point" && proofType == "benchmark"')
+                        ),
+                      S.listItem()
+                        .title('📖 Case Studies')
+                        .child(
+                          S.documentList()
+                            .title('Case Studies')
+                            .filter('_type == "coeEntry" && entryType == "proof-point" && proofType == "case-study"')
+                        ),
+                    ])
+                ),
+              S.listItem()
+                .title('🛠️ Tools & Calculators')
+                .child(
+                  S.documentList()
+                    .title('Tools & Calculators')
+                    .filter('_type == "coeEntry" && entryType == "tool"')
+                    .defaultOrdering([{ field: 'priority', direction: 'desc' }])
+                ),
+              S.listItem()
+                .title('📁 Meeting Assets')
+                .child(
+                  S.list()
+                    .title('Meeting Assets')
+                    .items([
+                      S.listItem()
+                        .title('All Meeting Assets')
+                        .child(
+                          S.documentList()
+                            .title('All Meeting Assets')
+                            .filter('_type == "coeEntry" && entryType == "meeting-asset"')
+                            .defaultOrdering([{ field: 'deliveryDate', direction: 'desc' }])
+                        ),
+                      S.divider(),
+                      S.listItem()
+                        .title('Pre-Sales')
+                        .child(
+                          S.documentList()
+                            .title('Pre-Sales Assets')
+                            .filter('_type == "coeEntry" && entryType == "meeting-asset" && salesStage == "pre-sales"')
+                        ),
+                      S.listItem()
+                        .title('Post-Sales')
+                        .child(
+                          S.documentList()
+                            .title('Post-Sales Assets')
+                            .filter('_type == "coeEntry" && entryType == "meeting-asset" && salesStage == "post-sales"')
+                        ),
+                    ])
+                ),
+
+              S.divider(),
+
+              // By Status
+              S.listItem()
+                .title('📊 By Status')
+                .child(
+                  S.list()
+                    .title('By Status')
+                    .items([
+                      S.listItem()
+                        .title('📝 Drafts')
+                        .child(
+                          S.documentList()
+                            .title('Drafts')
+                            .filter('_type == "coeEntry" && status == "draft"')
+                        ),
+                      S.listItem()
+                        .title('👀 In Review')
+                        .child(
+                          S.documentList()
+                            .title('In Review')
+                            .filter('_type == "coeEntry" && status == "in-review"')
+                        ),
+                      S.listItem()
+                        .title('🚀 Published')
+                        .child(
+                          S.documentList()
+                            .title('Published')
+                            .filter('_type == "coeEntry" && status == "published"')
+                        ),
+                      S.listItem()
+                        .title('🔄 Needs Update')
+                        .child(
+                          S.documentList()
+                            .title('Needs Update')
+                            .filter('_type == "coeEntry" && status == "needs-update"')
+                        ),
+                      S.listItem()
+                        .title('📦 Archived')
+                        .child(
+                          S.documentList()
+                            .title('Archived')
+                            .filter('_type == "coeEntry" && status == "archived"')
+                        ),
+                    ])
+                ),
+
+              // Featured
+              S.listItem()
+                .title('⭐ Featured')
+                .child(
+                  S.documentList()
+                    .title('Featured Entries')
+                    .filter('_type == "coeEntry" && featured == true')
+                ),
+
+              S.divider(),
+
+              // Taxonomy Management
+              S.listItem()
+                .title('🏷️ CoE Taxonomy')
+                .child(
+                  S.list()
+                    .title('CoE Taxonomy')
+                    .items([
+                      S.listItem()
+                        .title('📂 Sections')
+                        .child(
+                          S.documentList()
+                            .title('Sections')
+                            .filter('_type == "coeSection"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('📱 Channels')
+                        .child(
+                          S.documentList()
+                            .title('Channels')
+                            .filter('_type == "coeChannel"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('⚙️ Capabilities')
+                        .child(
+                          S.documentList()
+                            .title('Capabilities')
+                            .filter('_type == "coeCapability"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('🏷️ Content Categories')
+                        .child(
+                          S.documentList()
+                            .title('Content Categories')
+                            .filter('_type == "coeContentCategory"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('👥 Audiences')
+                        .child(
+                          S.documentList()
+                            .title('Audiences')
+                            .filter('_type == "coeAudience"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('🏢 Industries')
+                        .child(
+                          S.documentList()
+                            .title('Industries')
+                            .filter('_type == "coeIndustry"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('🔐 Permissions')
+                        .child(
+                          S.documentList()
+                            .title('Permissions')
+                            .filter('_type == "coePermission"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                      S.listItem()
+                        .title('📁 Asset Types')
+                        .child(
+                          S.documentList()
+                            .title('Asset Types')
+                            .filter('_type == "coeAssetType"')
+                            .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                        ),
+                    ])
                 ),
             ])
         ),

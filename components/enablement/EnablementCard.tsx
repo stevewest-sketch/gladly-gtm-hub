@@ -18,19 +18,26 @@ export default function EnablementCard({
     ? new Date(entry.publishDate).toLocaleDateString()
     : ''
 
-  // Link to catalog entry detail page
-  const linkHref = entry.slug?.current ? `/catalog/${entry.slug.current}` : '#'
-
-  // Get content type details
-  const contentTypeName = entry.contentType?.name || 'Enablement'
-  const contentTypeColor = entry.contentType?.color || '#009B00'
-  const contentTypeIcon = entry.contentType?.icon || '📄'
+  // Link to enablement hub detail page
+  const linkHref = entry.slug?.current ? `/enablement-hub/${entry.slug.current}` : '#'
 
   // Get audiences
   const audiences = entry.audiences?.map(a => a.name).join(', ') || ''
 
-  // Get first category
+  // Get first category with color mapping
   const category = entry.enablementCategory?.[0] || ''
+
+  // Category color and icon mapping for distinctive tags
+  const categoryConfig: Record<string, { bg: string; text: string; icon: string }> = {
+    'Product': { bg: '#E0F2FE', text: '#0369A1', icon: '📦' },        // Sky blue
+    'GTM Strategy': { bg: '#DCFCE7', text: '#166534', icon: '🚀' },   // Green
+    'Internal Ops': { bg: '#F3E8FF', text: '#7C3AED', icon: '⚙️' },  // Purple
+    'Competitive': { bg: '#FFE4E6', text: '#BE123C', icon: '⚔️' },   // Rose
+    'Technical': { bg: '#E0E7FF', text: '#4338CA', icon: '🔧' },     // Indigo
+    'Partner': { bg: '#FFEDD5', text: '#C2410C', icon: '🤝' },       // Orange
+    'Value Realization': { bg: '#D1FAE5', text: '#047857', icon: '💰' }, // Emerald
+  }
+  const categoryStyle = categoryConfig[category] || { bg: '#F3F4F6', text: '#374151', icon: '📄' }
 
   // Format duration
   const duration = entry.duration ? `${entry.duration} minutes` : ''
@@ -41,15 +48,17 @@ export default function EnablementCard({
       <Link href={linkHref} className="group block h-full">
         <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1">
           <div className="p-5">
-            {/* Content Type Badge and Featured Badge */}
+            {/* Category Badge (top left, color coded) and Featured Badge */}
             <div className="flex items-center gap-2 mb-3">
-              <div
-                className="inline-block px-3 py-1 rounded-full text-white text-[12px] leading-[16px] font-semibold"
-                style={{ backgroundColor: contentTypeColor }}
-              >
-                <span className="mr-1">{contentTypeIcon}</span>
-                {contentTypeName}
-              </div>
+              {category && (
+                <div
+                  className="inline-block px-3 py-1 rounded-full text-[12px] leading-[16px] font-bold uppercase tracking-wide"
+                  style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
+                >
+                  <span className="mr-1">{categoryStyle.icon}</span>
+                  {category}
+                </div>
+              )}
               {entry.featured && (
                 <div className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F5A623] text-gray-900">
                   ⭐ Featured
@@ -128,14 +137,16 @@ export default function EnablementCard({
     return (
       <Link href={linkHref} className="group block h-full">
         <div className="h-full bg-white border border-[#DFDFDF] rounded-lg p-4 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-          <div className="flex items-center gap-2 mb-2">
-            <span
-              className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
-              style={{ backgroundColor: contentTypeColor }}
-            >
-              <span className="mr-1">{contentTypeIcon}</span>
-              {contentTypeName}
-            </span>
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            {category && (
+              <span
+                className="inline-block px-2 py-1 rounded-full text-[11px] leading-[14px] font-bold uppercase tracking-wide"
+                style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
+              >
+                <span className="mr-1">{categoryStyle.icon}</span>
+                {category}
+              </span>
+            )}
             {entry.featured && (
               <span className="inline-block px-1.5 py-0.5 rounded text-[11px] leading-[14px] font-semibold bg-[#F5A623] text-gray-900">
                 ⭐
@@ -163,18 +174,20 @@ export default function EnablementCard({
     <Link href={linkHref} className="group block h-full">
       <div className="h-full border border-[#DFDFDF] rounded-lg overflow-hidden bg-white transition-all duration-200 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1">
         <div className="p-5">
-          {/* Content Type Badge and Featured Badge */}
-          <div className="flex items-center gap-2 mb-3">
-            <div
-              className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold text-white"
-              style={{ backgroundColor: contentTypeColor }}
-            >
-              <span className="mr-1">{contentTypeIcon}</span>
-              {contentTypeName}
-            </div>
+          {/* Category Badge and Featured Badge */}
+          <div className="flex items-center gap-2 mb-3 flex-wrap">
+            {category && (
+              <div
+                className="inline-block px-3 py-1 rounded-full text-[12px] leading-[16px] font-bold uppercase tracking-wide"
+                style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
+              >
+                <span className="mr-1">{categoryStyle.icon}</span>
+                {category}
+              </div>
+            )}
             {entry.featured && (
               <div className="inline-block px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#F5A623] text-gray-900">
-                ⭐
+                ⭐ Featured
               </div>
             )}
           </div>
@@ -199,16 +212,11 @@ export default function EnablementCard({
             )}
           </div>
 
-          {/* Audience & Category */}
+          {/* Audience & Video indicator */}
           <div className="flex flex-wrap gap-2">
             {audiences && (
               <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold border border-[#DFDFDF] text-[#252525]">
                 {audiences}
-              </span>
-            )}
-            {category && (
-              <span className="px-2 py-1 rounded text-[12px] leading-[16px] font-semibold bg-[#E8E0F8] text-[#8C69F0]">
-                {category}
               </span>
             )}
             {showVideo && entry.mainContent?.videoUrl && (

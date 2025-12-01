@@ -5,6 +5,29 @@ import ReactMarkdown from 'react-markdown'
 import { useState, useEffect } from 'react'
 import PageSectionRenderer from '@/components/sections/PageSectionRenderer'
 
+// Section type to title mapping for navigation
+const SECTION_TYPE_TITLES: Record<string, string> = {
+  'overview': 'Quick Overview',
+  'video': 'Session Recording',
+  'takeaways': 'Key Takeaways',
+  'process': 'How We Do It',
+  'tips': 'Best Practices',
+  'faq': 'FAQs',
+  'assets': 'Key Assets',
+  'text': 'Content',
+  'checklist': 'Action Items',
+}
+
+// Helper to extract navigation items from pageSections (excluding assets - they go in sidebar)
+function extractNavFromSections(sections: any[]): { id: string; label: string }[] {
+  return sections
+    .filter((section) => section.sectionType !== 'assets')
+    .map((section) => ({
+      id: `section-${section._key}`,
+      label: section.title || SECTION_TYPE_TITLES[section.sectionType] || 'Section',
+    }))
+}
+
 // Helper function to convert Google Drive URL to embeddable format
 function convertGoogleDriveUrl(url: string): string {
   let fileId = ''
@@ -230,8 +253,13 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
   // Get FAQs
   const faqs = entry.contentBlocks?.find((b: any) => b.blockType === 'faq')?.faqs || []
 
-  // Get key assets (not session materials - those are slides/recording/transcript)
+  // Get key assets from both legacy keyAssets reference field AND pageSections with sectionType='assets'
   const keyAssets = entry.keyAssets || []
+
+  // Extract assets from pageSections (new format)
+  const pageSectionAssets = entry.pageSections
+    ?.filter((s: any) => s.sectionType === 'assets')
+    ?.flatMap((s: any) => s.assetItems || []) || []
 
   // Check what sections exist
   const hasSession = entry.resourceLinks?.videoUrl || entry.mainContent?.wistiaId
@@ -239,10 +267,15 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
   const hasProcess = processBlock || entry.articleSections?.length > 0
   const hasActions = actionItems.length > 0
   const hasFaqs = faqs.length > 0
-  const hasKeyAssets = keyAssets.length > 0
+  const hasKeyAssets = keyAssets.length > 0 || pageSectionAssets.length > 0
 
-  // Build nav sections - strict Training template IDs only
-  const navSections: { id: string; label: string }[] = [
+  // Build navigation items from pageSections if they exist
+  const pageSectionNav = entry.pageSections && entry.pageSections.length > 0
+    ? extractNavFromSections(entry.pageSections)
+    : null
+
+  // Build nav sections - use pageSectionNav if available, otherwise legacy
+  const navSections: { id: string; label: string }[] = pageSectionNav || [
     { id: 'overview', label: 'Overview' },
     { id: 'session', label: 'Session Recording' },
     ...(hasTakeaways ? [{ id: 'takeaways', label: 'Key Takeaways' }] : []),
@@ -254,7 +287,7 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
   // Scroll spy effect
   useEffect(() => {
     const handleScroll = () => {
-      let current = 'session'
+      let current = navSections[0]?.id || 'session'
       for (const section of navSections) {
         const element = document.getElementById(section.id)
         if (element) {
@@ -284,18 +317,7 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
 
   return (
     <div className="min-h-screen bg-[#F8F9FC]" data-template-type="training">
-      {/* Breadcrumb */}
-      <nav className="px-12 py-3 text-[13px] text-[#8B93A7] bg-white border-b border-[#E8EBF2]">
-        <a href="/" className="text-[#5C6578] hover:text-[#16A34A]">Home</a>
-        <span className="mx-2">&rsaquo;</span>
-        <a href="/learn" className="text-[#5C6578] hover:text-[#16A34A]">Enablement Hub</a>
-        <span className="mx-2">&rsaquo;</span>
-        <a href="/learn?category=training" className="text-[#5C6578] hover:text-[#16A34A]">Training</a>
-        <span className="mx-2">&rsaquo;</span>
-        <strong className="text-[#1A1D26]">{entry.title}</strong>
-      </nav>
-
-      {/* Hero Header - Simplified */}
+      {/* Hero Header */}
       <header className="bg-gradient-to-br from-[#15803D] via-[#16A34A] to-[#22C55E] text-white py-6 px-12">
         <div className="max-w-[1400px] mx-auto">
           <h1 className="text-[28px] font-bold mb-2">{entry.title}</h1>
@@ -527,8 +549,8 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
 
         </main>
 
-        {/* Sidebar */}
-        <aside className="space-y-4 lg:sticky lg:top-6 lg:max-h-[calc(100vh-48px)] lg:overflow-y-auto">
+        {/* Sidebar - sticky positioning to stay fixed while scrolling */}
+        <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
 
           {/* On This Page */}
           <div className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
@@ -560,6 +582,7 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
                 <span className="text-[12px] font-semibold uppercase tracking-wide text-[#8B93A7]">Key Assets</span>
               </div>
               <div className="p-2">
+                {/* Render legacy keyAssets (reference-based) */}
                 {keyAssets.map((asset: any) => (
                   <a
                     key={asset._id}
@@ -569,6 +592,19 @@ export default function TrainingTemplate({ entry }: TrainingTemplateProps) {
                     className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-[#DCFCE7] transition-colors"
                   >
                     <span className="text-base">{asset.contentType?.icon || '📄'}</span>
+                    <span className="text-[13px] font-medium text-[#1A1D26]">{asset.title}</span>
+                  </a>
+                ))}
+                {/* Render pageSections assets (inline asset items) */}
+                {pageSectionAssets.map((asset: any, idx: number) => (
+                  <a
+                    key={`ps-asset-${idx}`}
+                    href={asset.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-[#DCFCE7] transition-colors"
+                  >
+                    <span className="text-base">{asset.icon || '📄'}</span>
                     <span className="text-[13px] font-medium text-[#1A1D26]">{asset.title}</span>
                   </a>
                 ))}

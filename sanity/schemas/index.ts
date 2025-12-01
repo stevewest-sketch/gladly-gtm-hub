@@ -10,6 +10,7 @@ import templateResource from './templateResource'
 import contentResource from './contentResource'
 import competitiveResource from './competitiveResource'
 import searchableContent from './searchableContent'
+import searchEmbedding from './searchEmbedding'
 import { navigation } from './navigation'
 import { navigationItem } from './navigationItem'
 import { siteSettings } from './siteSettings'
@@ -28,6 +29,21 @@ import competitor from './taxonomies/competitor'
 import contentType from './taxonomies/contentType'
 import audience from './taxonomies/audience'
 import learningPath from './taxonomies/learningPath'
+
+// CoE Hub taxonomy types
+import {
+  coeSection,
+  coeChannel,
+  coeCapability,
+  coeContentCategory,
+  coeAudience,
+  coeIndustry,
+  coePermission,
+  coeAssetType,
+  coeEntry,
+  coeHub,
+  coeEmbedding,
+} from './coe'
 
 // Section types
 import heroSection from './sections/heroSection'
@@ -73,6 +89,7 @@ export const schemaTypes = [
   contentResource,
   competitiveResource,
   searchableContent,
+  searchEmbedding,
   navigation,
   navigationItem,
   siteSettings,
@@ -116,4 +133,16 @@ export const schemaTypes = [
   hubStatGridSection,
   hubFeatureCardsSection,
   hubProcessStepsSection,
+  // CoE Hub taxonomy types
+  coeSection,
+  coeChannel,
+  coeCapability,
+  coeContentCategory,
+  coeAudience,
+  coeIndustry,
+  coePermission,
+  coeAssetType,
+  coeEntry,
+  coeHub,
+  coeEmbedding,
 ]

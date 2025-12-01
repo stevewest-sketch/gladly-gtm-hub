@@ -1,8 +1,9 @@
 import { defineConfig, Template } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import { assist } from '@sanity/assist'
 import { schemaTypes } from './sanity/schemas'
 import { structure } from './sanity/structure'
-import { ProcessContentAction } from './sanity/actions/ProcessContentAction'
+import { AIContentAssistant } from './sanity/actions/AIContentAssistant'
 
 // Streamlined initial value templates for the new schema
 const initialValueTemplates: Template[] = [
@@ -24,7 +25,7 @@ const initialValueTemplates: Template[] = [
     schemaType: 'catalogEntry',
     value: {
       publishedTo: ['enablement'],
-      pageTemplate: 'training',
+      pageTemplate: 'training-session',
       status: 'draft',
       aiInput: { inputMode: 'paste' },
     },
@@ -35,7 +36,7 @@ const initialValueTemplates: Template[] = [
     schemaType: 'catalogEntry',
     value: {
       publishedTo: ['enablement'],
-      pageTemplate: 'playbook',
+      pageTemplate: 'play',
       status: 'draft',
       aiInput: { inputMode: 'paste' },
     },
@@ -65,6 +66,7 @@ export default defineConfig({
     structureTool({
       structure,
     }),
+    assist(),
   ],
 
   schema: {
@@ -74,9 +76,9 @@ export default defineConfig({
 
   document: {
     actions: (prev, context) => {
-      // Add Process Content action for catalogEntry documents
-      if (context.schemaType === 'catalogEntry') {
-        return [...prev, ProcessContentAction]
+      // Add AI Content Assistant for catalogEntry and coeEntry documents
+      if (['catalogEntry', 'coeEntry'].includes(context.schemaType)) {
+        return [AIContentAssistant, ...prev]
       }
       return prev
     },

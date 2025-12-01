@@ -5,7 +5,9 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-// Template-specific prompts
+// ==========================================
+// TEMPLATE-SPECIFIC GENERATION PROMPTS
+// ==========================================
 const TEMPLATE_PROMPTS: Record<string, string> = {
   training: `You are processing content for a Training Session article.
 Focus on:
@@ -29,67 +31,285 @@ Focus on:
 - Win themes and proof points`,
 };
 
-const OUTPUT_FORMAT = `
-## Output Format (Return ONLY valid JSON):
+// ==========================================
+// FIELD-SPECIFIC EDIT PROMPTS
+// ==========================================
+const FIELD_EDIT_PROMPTS: Record<string, string> = {
+  title: `You are editing a document title.
+
+Rules:
+- Keep it clear, descriptive, and action-oriented
+- Typically 5-15 words
+- Should tell the reader what they'll learn or be able to do
+- Use title case
+
+Return ONLY the new title as plain text, no quotes, no JSON, no explanation.`,
+
+  description: `You are editing a document description/summary.
+
+Rules:
+- Keep it to 2-3 sentences maximum
+- Should work as a card preview - hook the reader
+- Be specific about what the content covers
+- Use active voice
+
+Return ONLY the new description as plain text, no quotes, no JSON, no explanation.`,
+
+  keyTakeaways: `You are editing a list of key takeaways.
+
+Rules:
+- Each takeaway should be actionable and specific
+- Format: Start with **Bold key point** followed by a dash and explanation
+- Example: "**Always confirm the decision maker** — Before diving into a demo, verify who has budget authority"
+- Keep each takeaway to 1-2 sentences
+- Aim for 3-5 takeaways total
+- Use active voice and action verbs
+
+Return ONLY a JSON array of strings. Example:
+["**Point one** — Explanation here", "**Point two** — Another explanation"]`,
+
+  articleSections: `You are editing how-to steps/sections for a playbook.
+
+Rules:
+- Each section needs a clear heading (the step name) and detailed content
+- Headings should be action-oriented (e.g., "Prep the Account", "Run Discovery", "Handle Objections")
+- Content should be practical instructions, can include bullet points within the text
+- Keep steps in logical order
+- Each section's content should be 2-4 sentences or a short paragraph
+
+Return ONLY a JSON array of objects. Example:
+[{"heading": "Step Name", "content": "Detailed instructions for this step..."}]`,
+
+  actionItems: `You are editing a list of tips and pitfalls.
+
+Rules:
+- Tips should start with "**Do this**" or similar positive framing
+- Pitfalls should start with "**Don't**" or "**Avoid**" as a warning
+- Each item should be actionable and specific
+- Mix of tips (things to do) and pitfalls (things to avoid)
+- Keep each item to 1-2 sentences
+
+Return ONLY a JSON array of strings. Example:
+["**Do this** — Positive tip with explanation", "**Don't skip** — Warning about common mistake"]`,
+};
+
+// ==========================================
+// OUTPUT FORMAT FOR GENERATION (pageSections format)
+// ==========================================
+const GENERATION_OUTPUT_FORMAT = `
+## Output Format (Return ONLY valid JSON, no markdown code blocks, no explanation):
 {
   "title": "Clear, descriptive, action-oriented title",
   "slug": "url-friendly-slug-lowercase-with-dashes",
   "summary": "2-3 sentence description for the card preview",
-  "keyTakeaways": [
-    "**Key Point 1** — Brief explanation (can use markdown bold)",
-    "**Key Point 2** — Another key learning",
-    "**Key Point 3** — Action-oriented takeaway",
-    "**Key Point 4** — If applicable"
-  ],
-  "sections": [
+  "pageSections": [
     {
-      "heading": "Step Name (e.g., Prep, Navigate, Pitch)",
-      "content": "Detailed instructions for this step. Use bullet points separated by newlines."
+      "sectionType": "overview",
+      "title": "Quick Overview",
+      "overviewText": "A concise 2-3 sentence summary of what this content covers and why it matters."
+    },
+    {
+      "sectionType": "takeaways",
+      "title": "Key Takeaways",
+      "takeaways": [
+        "**Key Point 1** — Brief explanation of the first key learning",
+        "**Key Point 2** — Another important takeaway",
+        "**Key Point 3** — Action-oriented insight"
+      ]
+    },
+    {
+      "sectionType": "process",
+      "title": "How To",
+      "processLayout": "numbered",
+      "processSteps": [
+        {
+          "heading": "Step Name",
+          "content": "Detailed instructions for this step."
+        }
+      ]
+    },
+    {
+      "sectionType": "tips",
+      "title": "Tips & Best Practices",
+      "tips": [
+        "**Do this** — Tip for success with explanation",
+        "**Avoid this** — Common pitfall to watch out for"
+      ]
+    },
+    {
+      "sectionType": "faq",
+      "title": "FAQs",
+      "faqs": [
+        {
+          "question": "Common question?",
+          "answer": "Helpful, detailed answer."
+        }
+      ]
     }
   ],
-  "actionItems": [
-    "**Do this** — Tip for success with brief explanation",
-    "**Also consider** — Another positive tip",
-    "Don't skip this step — Pitfall warning",
-    "Don't forget to — Another pitfall to avoid"
-  ],
-  "faqs": [
-    {
-      "question": "Common question?",
-      "answer": "Helpful answer with context."
-    }
-  ],
-  "videoUrl": "Extract Google Drive, Wistia, YouTube, Vimeo, or Loom URLs, or null",
-  "slidesUrl": "Extract Google Slides or presentation URLs, or null",
-  "transcriptUrl": "Extract Google Doc URLs, or null",
+  "videoUrl": "Extract video URLs (Google Drive, Wistia, YouTube, Loom) or null",
+  "slidesUrl": "Extract presentation URLs or null",
   "suggestedCategory": "Learning|Product|Toolkit|Competitive|Playbook",
   "suggestedDifficulty": "beginner|intermediate|advanced",
-  "duration": "Estimated duration in minutes (number only)",
-  "presenter": "Name of presenter if mentioned, or null"
+  "duration": "Estimated minutes as number only",
+  "presenter": "Name if mentioned, or null"
 }
 
-Return ONLY the JSON object, no additional text or markdown formatting.`;
+IMPORTANT:
+- Only include pageSections that have actual content from the source material
+- Each pageSection MUST have a sectionType and title
+- For takeaways, use **bold** for the key point followed by an em-dash and explanation
+- For process steps, each step needs a heading and content
+- Skip sections if there's no relevant content (e.g., skip FAQ if no questions are evident)`;
 
-const EDIT_PROMPT = `You are editing existing content based on user instructions.
+// ==========================================
+// HELPER FUNCTIONS
+// ==========================================
+function parseJsonResponse(text: string, expectArray: boolean = false): unknown {
+  // Clean up the response
+  let cleaned = text.trim();
 
-You will receive:
-1. The current document content (title, description, takeaways, etc.)
-2. Fields to preserve (do NOT change these)
-3. Edit instructions (what the user wants changed)
+  // Remove markdown code blocks if present
+  cleaned = cleaned.replace(/^```json?\s*/i, '').replace(/\s*```$/i, '');
 
-Your task:
-- Apply the edit instructions to the appropriate fields
-- Do NOT modify fields listed in "preserve"
-- Maintain the same structure and format
-- Keep the same tone and style as the original`;
+  // Try to extract JSON
+  if (expectArray) {
+    const arrayMatch = cleaned.match(/\[[\s\S]*\]/);
+    if (arrayMatch) {
+      return JSON.parse(arrayMatch[0]);
+    }
+  } else {
+    const objectMatch = cleaned.match(/\{[\s\S]*\}/);
+    if (objectMatch) {
+      return JSON.parse(objectMatch[0]);
+    }
+  }
 
+  // If no JSON found, return the cleaned text for string fields
+  return cleaned;
+}
+
+function cleanStringResponse(text: string): string {
+  return text
+    .trim()
+    .replace(/^["']|["']$/g, '') // Remove surrounding quotes
+    .replace(/^```[\s\S]*?```$/gm, '') // Remove code blocks
+    .trim();
+}
+
+// ==========================================
+// MAIN HANDLER
+// ==========================================
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { mode, content, pageTemplate, editPrompt, preserveFields, currentDocument } = body;
+    const { mode } = body;
 
-    // Handle EDIT mode
+    // ==========================================
+    // MODE: edit-field (Single field targeted edit)
+    // ==========================================
+    if (mode === 'edit-field') {
+      const { targetField, currentValue, editPrompt, context } = body;
+
+      // Validate
+      if (!targetField || !FIELD_EDIT_PROMPTS[targetField]) {
+        return NextResponse.json(
+          { error: `Invalid or unsupported field: ${targetField}` },
+          { status: 400 }
+        );
+      }
+
+      if (!editPrompt || editPrompt.trim().length < 3) {
+        return NextResponse.json(
+          { error: 'Edit prompt is required' },
+          { status: 400 }
+        );
+      }
+
+      if (currentValue === undefined || currentValue === null ||
+          (Array.isArray(currentValue) && currentValue.length === 0) ||
+          (typeof currentValue === 'string' && currentValue.trim() === '')) {
+        return NextResponse.json(
+          { error: 'Cannot edit empty field. Add content first.' },
+          { status: 400 }
+        );
+      }
+
+      const fieldPrompt = FIELD_EDIT_PROMPTS[targetField];
+      const isStringField = targetField === 'title' || targetField === 'description';
+
+      // Format current value for the prompt
+      let currentValueStr: string;
+      if (Array.isArray(currentValue)) {
+        currentValueStr = JSON.stringify(currentValue, null, 2);
+      } else {
+        currentValueStr = String(currentValue);
+      }
+
+      const message = await anthropic.messages.create({
+        model: 'claude-sonnet-4-20250514', // Use Sonnet for better editing quality
+        max_tokens: 2048,
+        messages: [
+          {
+            role: 'user',
+            content: `${fieldPrompt}
+
+CURRENT VALUE:
+${currentValueStr}
+
+CONTEXT:
+- Document title: ${context?.title || 'Untitled'}
+- Template type: ${context?.pageTemplate || 'training'}
+
+USER'S EDIT REQUEST:
+"${editPrompt}"
+
+Apply the requested edit. Return ONLY the new value in the exact format specified above.`,
+          },
+        ],
+      });
+
+      const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+
+      let newValue: unknown;
+      try {
+        if (isStringField) {
+          newValue = cleanStringResponse(responseText);
+        } else {
+          newValue = parseJsonResponse(responseText, true);
+          if (!Array.isArray(newValue)) {
+            throw new Error('Expected array response');
+          }
+        }
+      } catch (parseError) {
+        console.error(`Failed to parse ${targetField} edit response:`, responseText);
+        return NextResponse.json(
+          {
+            error: 'Failed to parse AI response. Try a simpler edit request.',
+            details: responseText.slice(0, 500)
+          },
+          { status: 500 }
+        );
+      }
+
+      return NextResponse.json({
+        success: true,
+        data: { [targetField]: newValue },
+        mode: 'edit-field',
+        targetField,
+        usage: {
+          inputTokens: message.usage.input_tokens,
+          outputTokens: message.usage.output_tokens,
+        },
+      });
+    }
+
+    // ==========================================
+    // MODE: edit (Bulk edit multiple fields)
+    // ==========================================
     if (mode === 'edit') {
+      const { editPrompt, preserveFields = [], pageTemplate, currentDocument } = body;
+
       if (!editPrompt || editPrompt.trim().length < 10) {
         return NextResponse.json(
           { error: 'Edit prompt must be at least 10 characters' },
@@ -97,69 +317,130 @@ export async function POST(request: Request) {
         );
       }
 
-      const editSystemPrompt = `${EDIT_PROMPT}
-
-## Current Document:
-${JSON.stringify(currentDocument, null, 2)}
-
-## Fields to Preserve (DO NOT CHANGE):
-${preserveFields?.length > 0 ? preserveFields.join(', ') : 'None - you may edit all fields'}
-
-## Your Edit Instructions:
-${editPrompt}
-
-Return the updated document in this format:
-${OUTPUT_FORMAT}`;
-
-      const message = await anthropic.messages.create({
-        model: 'claude-3-haiku-20240307',
-        max_tokens: 4096,
-        messages: [
-          {
-            role: 'user',
-            content: `Apply these edits to the document:\n\n${editSystemPrompt}`,
-          },
-        ],
+      // Determine which fields have content and can be edited
+      const editableFields = ['title', 'description', 'keyTakeaways', 'articleSections', 'actionItems'];
+      const fieldsWithContent = editableFields.filter(field => {
+        const value = currentDocument?.[field];
+        if (Array.isArray(value)) return value.length > 0;
+        if (typeof value === 'string') return value.trim().length > 0;
+        return false;
       });
 
-      const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+      const fieldsToEdit = fieldsWithContent.filter(f => !preserveFields.includes(f));
 
-      try {
-        const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-        const jsonText = jsonMatch ? jsonMatch[0] : responseText;
-        const processedContent = JSON.parse(jsonText);
-
+      if (fieldsToEdit.length === 0) {
         return NextResponse.json({
           success: true,
-          data: processedContent,
+          data: currentDocument,
           mode: 'edit',
-          usage: {
-            inputTokens: message.usage.input_tokens,
-            outputTokens: message.usage.output_tokens,
-          },
+          fieldsEdited: [],
+          message: 'No fields to edit (all preserved or empty)',
         });
-      } catch (parseError) {
-        console.error('Failed to parse edit response:', responseText);
+      }
+
+      // Edit each field that needs updating
+      const updates: Record<string, unknown> = {};
+      let totalInputTokens = 0;
+      let totalOutputTokens = 0;
+
+      for (const field of fieldsToEdit) {
+        const fieldPrompt = FIELD_EDIT_PROMPTS[field];
+        if (!fieldPrompt) continue;
+
+        const currentValue = currentDocument[field];
+        const isStringField = field === 'title' || field === 'description';
+
+        let currentValueStr: string;
+        if (Array.isArray(currentValue)) {
+          currentValueStr = JSON.stringify(currentValue, null, 2);
+        } else {
+          currentValueStr = String(currentValue);
+        }
+
+        try {
+          const fieldMessage = await anthropic.messages.create({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 2048,
+            messages: [
+              {
+                role: 'user',
+                content: `${fieldPrompt}
+
+CURRENT VALUE:
+${currentValueStr}
+
+CONTEXT:
+- Document title: ${currentDocument.title || 'Untitled'}
+- Template type: ${pageTemplate || 'training'}
+- This is part of a bulk edit. The user wants: "${editPrompt}"
+
+Apply the requested changes to this field. Return ONLY the new value in the exact format specified above.`,
+              },
+            ],
+          });
+
+          totalInputTokens += fieldMessage.usage.input_tokens;
+          totalOutputTokens += fieldMessage.usage.output_tokens;
+
+          const responseText = fieldMessage.content[0].type === 'text' ? fieldMessage.content[0].text : '';
+
+          if (isStringField) {
+            updates[field] = cleanStringResponse(responseText);
+          } else {
+            const parsed = parseJsonResponse(responseText, true);
+            if (Array.isArray(parsed)) {
+              updates[field] = parsed;
+            }
+          }
+        } catch (fieldError) {
+          console.error(`Failed to edit ${field}:`, fieldError);
+          // Continue with other fields
+        }
+      }
+
+      // Merge updates with original document
+      const result = { ...currentDocument };
+      for (const [field, value] of Object.entries(updates)) {
+        result[field] = value;
+      }
+
+      // Generate new slug if title changed
+      if (updates.title && updates.title !== currentDocument.title) {
+        result.slug = (updates.title as string)
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '')
+          .slice(0, 96);
+      }
+
+      return NextResponse.json({
+        success: true,
+        data: result,
+        mode: 'edit',
+        fieldsEdited: Object.keys(updates),
+        usage: {
+          inputTokens: totalInputTokens,
+          outputTokens: totalOutputTokens,
+        },
+      });
+    }
+
+    // ==========================================
+    // MODE: paste (Generate from content)
+    // ==========================================
+    if (mode === 'paste' || !mode) {
+      const { content, pageTemplate, metadata } = body;
+
+      if (!content || content.trim().length < 50) {
         return NextResponse.json(
-          { error: 'Failed to parse AI response', details: responseText },
-          { status: 500 }
+          { error: 'Content must be at least 50 characters' },
+          { status: 400 }
         );
       }
-    }
 
-    // Handle PASTE mode (generate from content)
-    if (!content || content.trim().length < 50) {
-      return NextResponse.json(
-        { error: 'Content must be at least 50 characters' },
-        { status: 400 }
-      );
-    }
+      const templatePrompt = TEMPLATE_PROMPTS[pageTemplate] || TEMPLATE_PROMPTS.training;
 
-    // Select the appropriate template prompt
-    const templatePrompt = TEMPLATE_PROMPTS[pageTemplate] || TEMPLATE_PROMPTS.training;
-
-    // Build the full system prompt
-    const systemPrompt = `You are a content processor that transforms transcripts and documents into structured, publishable content for a GTM enablement platform.
+      const systemPrompt = `You are a content processor that transforms transcripts and documents into structured, publishable content for a GTM enablement platform.
 
 ${templatePrompt}
 
@@ -169,54 +450,80 @@ ${templatePrompt}
 - **Completeness**: Capture all key points, include important examples, preserve technical details
 - **Readability**: Active voice, short paragraphs, bullet points for lists
 - **Actionable**: Focus on what people should DO, not just know
-- **Markdown**: Use **bold** for emphasis in takeaways and action items
+- **Formatting**: Use **bold** for emphasis in takeaways and action items
 
-${OUTPUT_FORMAT}`;
+${GENERATION_OUTPUT_FORMAT}`;
 
-    // Build user message
-    let userMessage = `Process this content into a structured ${pageTemplate || 'training'} document:\n\n${content}`;
+      // Build context from metadata
+      let contextStr = '';
+      if (metadata) {
+        if (metadata.title) contextStr += `Suggested title: ${metadata.title}\n`;
+        if (metadata.presenter) contextStr += `Presenter: ${metadata.presenter}\n`;
+        if (metadata.audience) contextStr += `Target audience: ${metadata.audience}\n`;
+      }
 
-    // Call Claude API
-    const message = await anthropic.messages.create({
-      model: 'claude-3-haiku-20240307',
-      max_tokens: 4096,
-      messages: [
-        {
-          role: 'user',
-          content: `${systemPrompt}\n\n${userMessage}`,
+      const userMessage = `${contextStr ? `Context:\n${contextStr}\n` : ''}Process this content into a structured ${pageTemplate || 'training'} document:\n\n${content}`;
+
+      const message = await anthropic.messages.create({
+        model: 'claude-3-haiku-20240307', // Haiku is fine for generation (speed)
+        max_tokens: 4096,
+        messages: [
+          {
+            role: 'user',
+            content: `${systemPrompt}\n\n${userMessage}`,
+          },
+        ],
+      });
+
+      const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+
+      let processedContent: Record<string, unknown>;
+      try {
+        const parsed = parseJsonResponse(responseText, false);
+        if (typeof parsed !== 'object' || Array.isArray(parsed) || parsed === null) {
+          throw new Error('Expected object response');
+        }
+        processedContent = parsed as Record<string, unknown>;
+      } catch (parseError) {
+        console.error('Failed to parse generation response:', responseText);
+        return NextResponse.json(
+          { error: 'Failed to parse AI response', details: responseText.slice(0, 500) },
+          { status: 500 }
+        );
+      }
+
+      // Add presenter from metadata if not extracted
+      if (metadata?.presenter && !processedContent.presenter) {
+        processedContent.presenter = metadata.presenter;
+      }
+
+      return NextResponse.json({
+        success: true,
+        data: processedContent,
+        mode: 'paste',
+        pageTemplate,
+        usage: {
+          inputTokens: message.usage.input_tokens,
+          outputTokens: message.usage.output_tokens,
         },
-      ],
-    });
-
-    // Extract the response
-    const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
-
-    // Parse the JSON response
-    let processedContent;
-    try {
-      const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-      const jsonText = jsonMatch ? jsonMatch[0] : responseText;
-      processedContent = JSON.parse(jsonText);
-    } catch (parseError) {
-      console.error('Failed to parse Claude response:', responseText);
-      return NextResponse.json(
-        { error: 'Failed to parse AI response', details: responseText },
-        { status: 500 }
-      );
+      });
     }
 
-    return NextResponse.json({
-      success: true,
-      data: processedContent,
-      mode: 'paste',
-      pageTemplate,
-      usage: {
-        inputTokens: message.usage.input_tokens,
-        outputTokens: message.usage.output_tokens,
-      },
-    });
+    // Unknown mode
+    return NextResponse.json(
+      { error: `Unknown mode: ${mode}` },
+      { status: 400 }
+    );
+
   } catch (error: unknown) {
     console.error('Error processing content:', error);
+
+    if (error instanceof Anthropic.APIError) {
+      return NextResponse.json(
+        { error: 'AI service error', message: error.message },
+        { status: 502 }
+      );
+    }
 
     if (error instanceof Error) {
       return NextResponse.json(

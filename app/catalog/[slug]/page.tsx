@@ -103,6 +103,28 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
   featured,
   priority,
   status,
+  // Flexible page sections
+  pageSections[] {
+    _key,
+    sectionType,
+    title,
+    description,
+    collapsible,
+    defaultExpanded,
+    overviewCards[] { _key, label, content },
+    videoUrl,
+    wistiaId,
+    sessionMaterials { videoUrl, slidesUrl, transcriptUrl },
+    takeaways,
+    processLayout,
+    processSteps[] { _key, heading, content },
+    processText,
+    tips,
+    faqs[] { _key, question, answer },
+    assetItems[] { _key, icon, title, description, url },
+    textContent,
+    checklistColumns[] { _key, title, items }
+  },
   "competitor": competitor->{
     _id,
     name,
@@ -110,6 +132,13 @@ const query = `*[_type == "catalogEntry" && slug.current == $slug][0]{
   },
   battleCardFile,
   quarterlyUpdates
+}`
+
+// Lightweight query for SEO metadata only
+const metadataQuery = `*[_type == "catalogEntry" && slug.current == $slug][0]{
+  title,
+  description,
+  "contentTypeName": contentType->name
 }`
 
 interface PageProps {
@@ -184,10 +213,13 @@ export default async function CatalogDetailPage({ params }: PageProps) {
   }
 }
 
-// Generate metadata for SEO
+// Generate metadata for SEO (uses lightweight query)
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
-  const entry: CatalogEntry = await client.fetch(query, { slug })
+  const entry = await client.fetch<{ title: string; description: string; contentTypeName: string } | null>(
+    metadataQuery,
+    { slug }
+  )
 
   if (!entry) {
     return {
@@ -197,7 +229,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${entry.title} | Gladly Enablement`,
-    description: entry.description || `View ${entry.title} - ${entry.contentType?.name || 'Enablement'}`,
+    description: entry.description || `View ${entry.title} - ${entry.contentTypeName || 'Enablement'}`,
   }
 }
 
