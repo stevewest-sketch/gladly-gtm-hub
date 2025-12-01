@@ -451,7 +451,7 @@ export default function EnablementHub({
                   className={`text-sm font-medium px-4 py-2.5 rounded-t-lg border-none cursor-pointer transition-all whitespace-nowrap ${
                     activeTab === tab.id
                       ? 'bg-[#F8F9FC] text-gray-900'
-                      : 'bg-white/15 text-white/90 hover:bg-white/25 hover:text-white'
+                      : 'bg-white/30 text-white hover:bg-white/45'
                   }`}
                 >
                   {tab.icon && <span className="mr-1.5">{tab.icon}</span>}
@@ -495,7 +495,7 @@ export default function EnablementHub({
         )}
       </header>
 
-      <main className="max-w-[1400px] mx-auto px-8 py-8">
+      <main className="max-w-[1400px] mx-auto px-8 pt-5 pb-8">
         {/* "All Training" Tab - Full Catalog */}
         {activeTab === 'all' ? (
           <>
