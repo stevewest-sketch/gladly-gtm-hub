@@ -438,7 +438,7 @@ export default function EnablementHub({
                 Enablement Hub
               </h1>
               <p className="text-emerald-100 text-sm max-w-lg">
-                Your learning center for product knowledge, sales skills, and professional development.
+                Become the Gladly expert everyone turns to. Training videos, product deep-dives, and skills for every role.
               </p>
             </div>
 

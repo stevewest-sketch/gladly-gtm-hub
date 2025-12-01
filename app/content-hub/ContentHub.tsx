@@ -329,7 +329,7 @@ export default function ContentHub({
                 Content Hub
               </h1>
               <p className="text-purple-100 text-sm max-w-lg">
-                Templates, collateral, and competitive intelligence to win deals.
+                Find it fast, use it now. Decks, one-pagers, battle cards, templates and more.
               </p>
             </div>
 
