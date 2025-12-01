@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Sans, IBM_Plex_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/TopNavigation";
 import { client } from "@/lib/sanity";
 
-// V2 Design System Fonts
-const dmSans = DM_Sans({
+// Using Inter font
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-inter",
   display: "swap",
   weight: ["400", "500", "600", "700"],
-});
-
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -62,8 +55,8 @@ export default async function RootLayout({
   const searchableContent = await getSearchableContent();
 
   return (
-    <html lang="en" className={`${dmSans.variable} ${ibmPlexSans.variable}`} suppressHydrationWarning>
-      <body className="font-body" suppressHydrationWarning>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="font-sans" suppressHydrationWarning>
         <TopNavigation searchableContent={searchableContent} />
         <main className="pt-16 min-h-screen overflow-x-clip">{children}</main>
       </body>

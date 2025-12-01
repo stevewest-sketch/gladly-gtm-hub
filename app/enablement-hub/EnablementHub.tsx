@@ -451,7 +451,7 @@ export default function EnablementHub({
                   className={`text-sm font-medium px-4 py-2.5 rounded-t-lg border-none cursor-pointer transition-all whitespace-nowrap ${
                     activeTab === tab.id
                       ? 'bg-[#F8F9FC] text-gray-900'
-                      : 'bg-white/30 text-white hover:bg-white/45'
+                      : 'bg-black/20 text-white hover:bg-black/30'
                   }`}
                 >
                   {tab.icon && <span className="mr-1.5">{tab.icon}</span>}
