@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { CatalogEntry } from '@/lib/types/catalog'
-import PageSectionRenderer from '../sections/PageSectionRenderer'
+import PageSectionRenderer, { VideoEmbed } from '../sections/PageSectionRenderer'
 
 interface PlayTemplateProps {
   entry: CatalogEntry
@@ -13,6 +13,20 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
 
   // Build navigation sections from pageSections
   const navSections: { id: string; label: string }[] = []
+
+  // Check for legacy video sources
+  const hasVideoInPageSections = entry.pageSections?.some(s => s.sectionType === 'video')
+  const legacyVideoUrl = entry.mainContent?.videoUrl || entry.resourceLinks?.videoUrl
+  const legacyWistiaId = entry.mainContent?.wistiaId
+  const hasLegacyVideo = !hasVideoInPageSections && (legacyVideoUrl || legacyWistiaId)
+
+  // Add legacy video to nav if present
+  if (hasLegacyVideo) {
+    navSections.push({
+      id: 'legacy-video-section',
+      label: 'Session Recording'
+    })
+  }
 
   if (entry.pageSections && entry.pageSections.length > 0) {
     entry.pageSections.forEach((section) => {
@@ -114,12 +128,43 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 items-start">
           {/* Main Content Column */}
           <div className="space-y-6">
+            {/* Check for legacy video sources when no video section in pageSections */}
+            {(() => {
+              const hasVideoInPageSections = entry.pageSections?.some(s => s.sectionType === 'video')
+              const legacyVideoUrl = entry.mainContent?.videoUrl || entry.resourceLinks?.videoUrl
+              const legacyWistiaId = entry.mainContent?.wistiaId
+              const hasLegacyVideo = !hasVideoInPageSections && (legacyVideoUrl || legacyWistiaId)
+
+              if (hasLegacyVideo) {
+                return (
+                  <section id="legacy-video-section" className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
+                    <div className="px-6 py-4 border-b border-[#E8EBF2]">
+                      <h2 className="font-semibold text-[16px] text-[#1A1D26]">Session Recording</h2>
+                    </div>
+                    <div className="p-6">
+                      <div className="relative bg-[#1a1a1a] rounded-[10px] overflow-hidden aspect-video">
+                        <VideoEmbed
+                          url={legacyVideoUrl}
+                          wistiaId={legacyWistiaId}
+                          title={entry.title}
+                        />
+                      </div>
+                    </div>
+                  </section>
+                )
+              }
+              return null
+            })()}
+
             {entry.pageSections && entry.pageSections.length > 0 ? (
               <PageSectionRenderer sections={entry.pageSections} excludeTypes={['assets']} />
             ) : (
-              <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
-                <p className="text-[#6B7280]">No content sections configured for this entry.</p>
-              </div>
+              // Only show "no content" if there's also no legacy video
+              !entry.mainContent?.videoUrl && !entry.mainContent?.wistiaId && !entry.resourceLinks?.videoUrl && (
+                <div className="bg-white rounded-xl border border-[#E5E7EB] p-6">
+                  <p className="text-[#6B7280]">No content sections configured for this entry.</p>
+                </div>
+              )
             )}
           </div>
 
