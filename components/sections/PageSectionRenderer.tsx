@@ -212,43 +212,112 @@ const colorPresets: Record<OverviewCardColorPreset | 'default', { bg: string; co
   default: { bg: 'bg-gray-100', color: 'text-gray-600', defaultIcon: '📌' },
 }
 
-// Label-based fallback mapping for auto-detecting card style
-const labelToColorPreset: Record<string, OverviewCardColorPreset> = {
-  'what it is': 'blue',
-  'who it\'s for': 'green',
-  'key outcome': 'rose',
-  'why it matters': 'purple',
-  'when to use it': 'amber',
-  'four pillars': 'indigo',
-  'how it works': 'cyan',
-  'what you get': 'pink',
+// Keyword-based intelligent detection for colors
+// Maps keywords found in labels to appropriate color presets
+const keywordToColorPreset: Array<{ keywords: string[]; color: OverviewCardColorPreset }> = [
+  // Blue - Information, definitions, explanations
+  { keywords: ['what it is', 'what is', 'definition', 'overview', 'about', 'description', 'summary'], color: 'blue' },
+  // Green - People, audience, teams
+  { keywords: ['who', 'audience', 'team', 'people', 'user', 'customer', 'prospect', 'for whom'], color: 'green' },
+  // Rose - Outcomes, results, goals, success
+  { keywords: ['outcome', 'result', 'goal', 'success', 'achieve', 'benefit', 'impact', 'value', 'roi'], color: 'rose' },
+  // Purple - Insights, reasons, importance
+  { keywords: ['why', 'matter', 'important', 'reason', 'insight', 'learn', 'understand'], color: 'purple' },
+  // Amber - Timing, when, triggers
+  { keywords: ['when', 'time', 'trigger', 'moment', 'stage', 'phase', 'timing', 'schedule'], color: 'amber' },
+  // Indigo - Structure, pillars, framework, principles
+  { keywords: ['pillar', 'framework', 'principle', 'foundation', 'structure', 'component', 'element', 'step'], color: 'indigo' },
+  // Cyan - Process, how, method
+  { keywords: ['how', 'process', 'method', 'approach', 'workflow', 'procedure', 'guide', 'instruction'], color: 'cyan' },
+  // Pink - Benefits, what you get, deliverables
+  { keywords: ['get', 'receive', 'deliverable', 'include', 'feature', 'offer', 'provide', 'expect'], color: 'pink' },
+]
+
+// Keyword-based intelligent detection for emojis
+// Maps keywords found in labels to appropriate emojis
+const keywordToIcon: Array<{ keywords: string[]; icon: string }> = [
+  // Information/Definition
+  { keywords: ['what it is', 'what is', 'definition', 'overview', 'about', 'description'], icon: '📋' },
+  { keywords: ['summary', 'brief', 'snapshot'], icon: '📝' },
+  // People/Audience
+  { keywords: ['who it\'s for', 'who\'s it for', 'who is it for', 'audience', 'for whom'], icon: '👥' },
+  { keywords: ['team', 'people', 'user'], icon: '👤' },
+  { keywords: ['customer', 'client'], icon: '🤝' },
+  // Outcomes/Goals
+  { keywords: ['outcome', 'result', 'goal'], icon: '🎯' },
+  { keywords: ['success', 'win', 'achieve'], icon: '🏆' },
+  { keywords: ['value', 'roi', 'impact'], icon: '💰' },
+  // Insights/Why
+  { keywords: ['why', 'matter', 'important', 'reason'], icon: '💡' },
+  { keywords: ['insight', 'learn'], icon: '🧠' },
+  // Timing/When
+  { keywords: ['when to use', 'when to', 'timing'], icon: '⏰' },
+  { keywords: ['time to value', 'timeline'], icon: '⚡' },
+  { keywords: ['stage', 'phase'], icon: '📊' },
+  // Structure/Framework
+  { keywords: ['pillar', 'foundation'], icon: '🏛️' },
+  { keywords: ['framework', 'structure'], icon: '🔧' },
+  { keywords: ['step', 'component', 'element'], icon: '🔢' },
+  // Process/How
+  { keywords: ['how it works', 'how to', 'process'], icon: '⚙️' },
+  { keywords: ['method', 'approach', 'workflow'], icon: '🔄' },
+  { keywords: ['guide', 'instruction'], icon: '📖' },
+  // Benefits/What you get
+  { keywords: ['what you get', 'get', 'receive'], icon: '🎁' },
+  { keywords: ['benefit', 'advantage'], icon: '✨' },
+  { keywords: ['feature', 'include'], icon: '✅' },
+  // Special labels
+  { keywords: ['key takeaway', 'takeaway'], icon: '💎' },
+  { keywords: ['prerequisite', 'require'], icon: '📌' },
+  { keywords: ['tip', 'best practice'], icon: '💪' },
+  { keywords: ['warning', 'caution', 'avoid'], icon: '⚠️' },
+  { keywords: ['example', 'case', 'scenario'], icon: '📎' },
+  { keywords: ['resource', 'tool', 'asset'], icon: '🛠️' },
+  { keywords: ['contact', 'support', 'help'], icon: '📞' },
+  { keywords: ['next step', 'action'], icon: '➡️' },
+]
+
+// Intelligent label detection - finds the best match based on keywords
+function detectColorFromLabel(label: string): OverviewCardColorPreset {
+  const normalized = label.toLowerCase()
+
+  for (const mapping of keywordToColorPreset) {
+    for (const keyword of mapping.keywords) {
+      if (normalized.includes(keyword)) {
+        return mapping.color
+      }
+    }
+  }
+
+  return 'gray' // Default fallback
 }
 
-const labelToIcon: Record<string, string> = {
-  'what it is': '📋',
-  'who it\'s for': '👥',
-  'key outcome': '🎯',
-  'why it matters': '💡',
-  'when to use it': '⏰',
-  'four pillars': '🏛️',
-  'how it works': '⚙️',
-  'what you get': '🎁',
+function detectIconFromLabel(label: string): string {
+  const normalized = label.toLowerCase()
+
+  for (const mapping of keywordToIcon) {
+    for (const keyword of mapping.keywords) {
+      if (normalized.includes(keyword)) {
+        return mapping.icon
+      }
+    }
+  }
+
+  return '📌' // Default fallback
 }
 
-// Get style for an overview card - prefers CMS values, falls back to label detection
+// Get style for an overview card - prefers CMS values, falls back to intelligent label detection
 function getOverviewCardStyle(
   label: string,
   cmsIcon?: string,
   cmsColorPreset?: OverviewCardColorPreset
 ): { icon: string; bg: string; color: string } {
-  const normalizedLabel = label.toLowerCase()
+  // Determine color preset: CMS value > intelligent detection
+  const colorPreset = cmsColorPreset || detectColorFromLabel(label)
+  const preset = colorPresets[colorPreset] || colorPresets.default
 
-  // Determine color preset: CMS value > label detection > default
-  const colorPreset = cmsColorPreset || labelToColorPreset[normalizedLabel] || 'default'
-  const preset = colorPresets[colorPreset]
-
-  // Determine icon: CMS value > label detection > preset default
-  const icon = cmsIcon || labelToIcon[normalizedLabel] || preset.defaultIcon
+  // Determine icon: CMS value > intelligent detection
+  const icon = cmsIcon || detectIconFromLabel(label)
 
   return {
     icon,
