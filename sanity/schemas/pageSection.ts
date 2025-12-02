@@ -84,9 +84,53 @@ export default {
         fields: [
           { name: 'label', title: 'Card Label', type: 'string', description: 'E.g., "What It Is", "Who It\'s For"' },
           { name: 'content', title: 'Card Content', type: 'text', rows: 3 },
+          {
+            name: 'icon',
+            title: 'Icon/Emoji',
+            type: 'string',
+            description: 'Emoji for this card (e.g., 📋, 👥, 🎯, 💡). Leave empty to auto-select based on label.',
+          },
+          {
+            name: 'colorPreset',
+            title: 'Color Theme',
+            type: 'string',
+            description: 'Card color theme. Leave empty to auto-select based on label.',
+            options: {
+              list: [
+                { title: '🔵 Blue - Information, "What It Is"', value: 'blue' },
+                { title: '🟢 Green - People, "Who It\'s For"', value: 'green' },
+                { title: '🌹 Rose - Goals, "Key Outcome"', value: 'rose' },
+                { title: '🟣 Purple - Insights, "Why It Matters"', value: 'purple' },
+                { title: '🟡 Amber - Timing, "When To Use It"', value: 'amber' },
+                { title: '🔷 Indigo - Structure, "Four Pillars"', value: 'indigo' },
+                { title: '🩵 Cyan - Process, "How It Works"', value: 'cyan' },
+                { title: '🩷 Pink - Benefits, "What You Get"', value: 'pink' },
+                { title: '⚫ Gray - Default/Other', value: 'gray' },
+              ],
+              layout: 'dropdown',
+            },
+          },
         ],
         preview: {
-          select: { title: 'label', subtitle: 'content' },
+          select: { title: 'label', subtitle: 'content', icon: 'icon', color: 'colorPreset' },
+          prepare({ title, subtitle, icon, color }: any) {
+            const colorIcons: Record<string, string> = {
+              blue: '🔵',
+              green: '🟢',
+              rose: '🌹',
+              purple: '🟣',
+              amber: '🟡',
+              indigo: '🔷',
+              cyan: '🩵',
+              pink: '🩷',
+              gray: '⚫',
+            };
+            const displayIcon = icon || colorIcons[color] || '📌';
+            return {
+              title: `${displayIcon} ${title}`,
+              subtitle: subtitle,
+            };
+          },
         },
       }],
       validation: (Rule: any) => Rule.custom((value: any, context: any) => {

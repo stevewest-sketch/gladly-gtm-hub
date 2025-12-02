@@ -1,7 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { PageSection } from '@/lib/types/catalog'
+import { PageSection, OverviewCardColorPreset } from '@/lib/types/catalog'
 
 // Video URL conversion helpers
 function convertGoogleDriveUrl(url: string): string {
@@ -144,49 +145,116 @@ function VideoEmbed({ url, wistiaId, title }: { url?: string; wistiaId?: string;
   )
 }
 
-// Section wrapper - always shows content (no collapsing)
+// Section wrapper with optional collapsible functionality
 function SectionWrapper({
   id,
   title,
   description,
-  children
+  children,
+  collapsible = false,
+  defaultExpanded = true
 }: {
   id: string
   title: string
   description?: string
   children: React.ReactNode
-  collapsible?: boolean  // Ignored - kept for backward compatibility
-  defaultExpanded?: boolean  // Ignored - kept for backward compatibility
+  collapsible?: boolean
+  defaultExpanded?: boolean
 }) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+
   return (
     <section id={id} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
-      <div className="px-6 py-4 border-b border-[#E8EBF2]">
-        <h2 className="font-semibold text-[16px] text-[#1A1D26]">{title}</h2>
-        {description && (
-          <p className="text-[13px] text-[#8B93A7] mt-0.5">{description}</p>
-        )}
+      <div
+        className={`px-6 py-4 border-b border-[#E8EBF2] ${collapsible ? 'cursor-pointer select-none hover:bg-[#F8F9FC] transition-colors' : ''}`}
+        onClick={collapsible ? () => setIsExpanded(!isExpanded) : undefined}
+      >
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="font-semibold text-[16px] text-[#1A1D26]">{title}</h2>
+            {description && (
+              <p className="text-[13px] text-[#8B93A7] mt-0.5">{description}</p>
+            )}
+          </div>
+          {collapsible && (
+            <div className={`text-[#8B93A7] transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          )}
+        </div>
       </div>
-      <div className="p-6">
-        {children}
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          collapsible && !isExpanded ? 'max-h-0 overflow-hidden opacity-0' : 'max-h-[5000px] opacity-100'
+        }`}
+      >
+        <div className="p-6">
+          {children}
+        </div>
       </div>
     </section>
   )
 }
 
-// Icon and color mapping for overview cards
-const overviewCardStyles: Record<string, { icon: string; bg: string; color: string }> = {
-  'what it is': { icon: '📋', bg: 'bg-blue-100', color: 'text-blue-600' },
-  'who it\'s for': { icon: '👥', bg: 'bg-green-100', color: 'text-green-600' },
-  'key outcome': { icon: '🎯', bg: 'bg-rose-100', color: 'text-rose-600' },
-  'why it matters': { icon: '💡', bg: 'bg-purple-100', color: 'text-purple-600' },
-  'when to use it': { icon: '⏰', bg: 'bg-amber-100', color: 'text-amber-600' },
-  'four pillars': { icon: '🏛️', bg: 'bg-indigo-100', color: 'text-indigo-600' },
-  'default': { icon: '📌', bg: 'bg-gray-100', color: 'text-gray-600' },
+// Color presets for overview cards - matches Sanity schema options
+const colorPresets: Record<OverviewCardColorPreset | 'default', { bg: string; color: string; defaultIcon: string }> = {
+  blue: { bg: 'bg-blue-100', color: 'text-blue-600', defaultIcon: '📋' },
+  green: { bg: 'bg-green-100', color: 'text-green-600', defaultIcon: '👥' },
+  rose: { bg: 'bg-rose-100', color: 'text-rose-600', defaultIcon: '🎯' },
+  purple: { bg: 'bg-purple-100', color: 'text-purple-600', defaultIcon: '💡' },
+  amber: { bg: 'bg-amber-100', color: 'text-amber-600', defaultIcon: '⏰' },
+  indigo: { bg: 'bg-indigo-100', color: 'text-indigo-600', defaultIcon: '🏛️' },
+  cyan: { bg: 'bg-cyan-100', color: 'text-cyan-600', defaultIcon: '⚙️' },
+  pink: { bg: 'bg-pink-100', color: 'text-pink-600', defaultIcon: '🎁' },
+  gray: { bg: 'bg-gray-100', color: 'text-gray-600', defaultIcon: '📌' },
+  default: { bg: 'bg-gray-100', color: 'text-gray-600', defaultIcon: '📌' },
 }
 
-function getOverviewCardStyle(label: string) {
-  const key = label.toLowerCase()
-  return overviewCardStyles[key] || overviewCardStyles['default']
+// Label-based fallback mapping for auto-detecting card style
+const labelToColorPreset: Record<string, OverviewCardColorPreset> = {
+  'what it is': 'blue',
+  'who it\'s for': 'green',
+  'key outcome': 'rose',
+  'why it matters': 'purple',
+  'when to use it': 'amber',
+  'four pillars': 'indigo',
+  'how it works': 'cyan',
+  'what you get': 'pink',
+}
+
+const labelToIcon: Record<string, string> = {
+  'what it is': '📋',
+  'who it\'s for': '👥',
+  'key outcome': '🎯',
+  'why it matters': '💡',
+  'when to use it': '⏰',
+  'four pillars': '🏛️',
+  'how it works': '⚙️',
+  'what you get': '🎁',
+}
+
+// Get style for an overview card - prefers CMS values, falls back to label detection
+function getOverviewCardStyle(
+  label: string,
+  cmsIcon?: string,
+  cmsColorPreset?: OverviewCardColorPreset
+): { icon: string; bg: string; color: string } {
+  const normalizedLabel = label.toLowerCase()
+
+  // Determine color preset: CMS value > label detection > default
+  const colorPreset = cmsColorPreset || labelToColorPreset[normalizedLabel] || 'default'
+  const preset = colorPresets[colorPreset]
+
+  // Determine icon: CMS value > label detection > preset default
+  const icon = cmsIcon || labelToIcon[normalizedLabel] || preset.defaultIcon
+
+  return {
+    icon,
+    bg: preset.bg,
+    color: preset.color
+  }
 }
 
 // Individual section renderers
@@ -194,10 +262,17 @@ function OverviewSection({ section }: { section: PageSection }) {
   if (!section.overviewCards || section.overviewCards.length === 0) return null
 
   return (
-    <section id={`section-${section._key}`} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
-      <div className="p-4 space-y-2">
+    <SectionWrapper
+      id={`section-${section._key}`}
+      title={section.title}
+      description={section.description}
+      collapsible={section.collapsible}
+      defaultExpanded={section.defaultExpanded}
+    >
+      <div className="space-y-2 -mt-2">
         {section.overviewCards.map((card, idx) => {
-          const style = getOverviewCardStyle(card.label)
+          // Use CMS values with fallback to label-based detection
+          const style = getOverviewCardStyle(card.label, card.icon, card.colorPreset)
           return (
             <div key={idx} className="flex gap-3 p-3 bg-[#F8F9FC] rounded-lg">
               <div className={`w-9 h-9 ${style.bg} rounded-lg flex items-center justify-center text-base flex-shrink-0`}>
@@ -215,7 +290,7 @@ function OverviewSection({ section }: { section: PageSection }) {
           )
         })}
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

@@ -185,9 +185,22 @@ export interface ResourceLinks {
 }
 
 // New Page Section Types
+export type OverviewCardColorPreset =
+  | 'blue'
+  | 'green'
+  | 'rose'
+  | 'purple'
+  | 'amber'
+  | 'indigo'
+  | 'cyan'
+  | 'pink'
+  | 'gray'
+
 export interface OverviewCard {
   label: string
   content: string
+  icon?: string // Custom emoji, falls back to label-based detection
+  colorPreset?: OverviewCardColorPreset // Custom color, falls back to label-based detection
 }
 
 export interface SessionMaterials {
