@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { PageSection, OverviewCardColorPreset } from '@/lib/types/catalog'
+import { ThemeColors, getThemeColors } from '@/lib/theme-colors'
 
 // Video URL conversion helpers
 function convertGoogleDriveUrl(url: string): string {
@@ -363,9 +364,10 @@ function OverviewSection({ section }: { section: PageSection }) {
   )
 }
 
-function VideoSection({ section }: { section: PageSection }) {
+function VideoSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   const hasVideo = section.videoUrl || section.wistiaId
   const hasMaterials = section.sessionMaterials?.videoUrl || section.sessionMaterials?.slidesUrl || section.sessionMaterials?.transcriptUrl
+  const colors = theme || getThemeColors('green')
 
   if (!hasVideo && !hasMaterials) return null
 
@@ -401,7 +403,9 @@ function VideoSection({ section }: { section: PageSection }) {
                 href={section.sessionMaterials.videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md hover:bg-[#DCFCE7] transition-colors"
+                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.hoverBg}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F8F9FC'}
               >
                 <div className="w-9 h-9 bg-[#FEE2E2] rounded-md flex items-center justify-center text-base flex-shrink-0">
                   🎬
@@ -418,7 +422,9 @@ function VideoSection({ section }: { section: PageSection }) {
                 href={section.sessionMaterials.slidesUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md hover:bg-[#DCFCE7] transition-colors"
+                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.hoverBg}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F8F9FC'}
               >
                 <div className="w-9 h-9 bg-[#FEF3C7] rounded-md flex items-center justify-center text-base flex-shrink-0">
                   📊
@@ -435,7 +441,9 @@ function VideoSection({ section }: { section: PageSection }) {
                 href={section.sessionMaterials.transcriptUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md hover:bg-[#DCFCE7] transition-colors"
+                className="flex items-center gap-3 p-3 bg-[#F8F9FC] rounded-md transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.hoverBg}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F8F9FC'}
               >
                 <div className="w-9 h-9 bg-[#E0E7FF] rounded-md flex items-center justify-center text-base flex-shrink-0">
                   📄
@@ -453,8 +461,9 @@ function VideoSection({ section }: { section: PageSection }) {
   )
 }
 
-function TakeawaysSection({ section }: { section: PageSection }) {
+function TakeawaysSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   if (!section.takeaways || section.takeaways.length === 0) return null
+  const colors = theme || getThemeColors('green')
 
   return (
     <SectionWrapper
@@ -467,7 +476,10 @@ function TakeawaysSection({ section }: { section: PageSection }) {
       <div className="space-y-2">
         {section.takeaways.map((takeaway, index) => (
           <div key={index} className="flex gap-3 p-3 bg-[#F8F9FC] rounded-md">
-            <span className="flex-shrink-0 w-5 h-5 bg-[#DCFCE7] text-[#16A34A] rounded-full flex items-center justify-center text-[12px]">
+            <span
+              className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[12px]"
+              style={{ backgroundColor: colors.accentLight, color: colors.accent }}
+            >
               ✓
             </span>
             <span className="text-[14px] text-[#5C6578] leading-relaxed">
@@ -487,9 +499,10 @@ function TakeawaysSection({ section }: { section: PageSection }) {
   )
 }
 
-function ProcessSection({ section }: { section: PageSection }) {
+function ProcessSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   const hasSteps = section.processSteps && section.processSteps.length > 0
   const hasText = section.processText
+  const colors = theme || getThemeColors('green')
 
   if (!hasSteps && !hasText) return null
 
@@ -515,7 +528,10 @@ function ProcessSection({ section }: { section: PageSection }) {
               className="flex gap-4 py-4 border-b border-[#E8EBF2] last:border-0"
             >
               <div className="flex flex-col items-center gap-1">
-                <span className="w-7 h-7 bg-[#16A34A] text-white rounded-full flex items-center justify-center text-[13px] font-bold flex-shrink-0">
+                <span
+                  className="w-7 h-7 text-white rounded-full flex items-center justify-center text-[13px] font-bold flex-shrink-0"
+                  style={{ backgroundColor: colors.accent }}
+                >
                   {index + 1}
                 </span>
                 {index < section.processSteps!.length - 1 && (
@@ -548,7 +564,7 @@ function ProcessSection({ section }: { section: PageSection }) {
               strong: ({ children }) => <strong className="text-[#1A1D26]">{children}</strong>,
               li: ({ children }) => (
                 <li className="flex gap-2">
-                  <span className="text-[#16A34A] flex-shrink-0">•</span>
+                  <span style={{ color: colors.accent }} className="flex-shrink-0">•</span>
                   <span>{children}</span>
                 </li>
               )
@@ -563,7 +579,7 @@ function ProcessSection({ section }: { section: PageSection }) {
       {!useStepsLayout && !useTextLayout && hasSteps && (
         <div className="space-y-3">
           {section.processSteps!.map((step, index) => (
-            <div key={index} className="p-4 bg-[#F8F9FC] rounded-md border-l-[3px] border-[#16A34A]">
+            <div key={index} className="p-4 bg-[#F8F9FC] rounded-md border-l-[3px]" style={{ borderLeftColor: colors.accent }}>
               <div className="text-[14px] font-semibold text-[#1A1D26] mb-1">{step.heading}</div>
               <div className="text-[13px] text-[#5C6578] leading-relaxed">{step.content}</div>
             </div>
@@ -574,8 +590,9 @@ function ProcessSection({ section }: { section: PageSection }) {
   )
 }
 
-function TipsSection({ section }: { section: PageSection }) {
+function TipsSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   if (!section.tips || section.tips.length === 0) return null
+  const colors = theme || getThemeColors('green')
 
   // Separate tips (normal items) from pitfalls (items starting with "Don't")
   const tips = section.tips.filter(item =>
@@ -595,12 +612,15 @@ function TipsSection({ section }: { section: PageSection }) {
     >
       {/* Tips */}
       {tips.length > 0 && (
-        <div className="mb-4 p-4 bg-[#DCFCE7] border border-[#16A34A]/20 rounded-md">
-          <div className="text-[13px] font-semibold text-[#15803D] mb-2">Best Practices</div>
+        <div
+          className="mb-4 p-4 rounded-md"
+          style={{ backgroundColor: colors.accentLight, borderColor: `${colors.accent}33`, borderWidth: '1px', borderStyle: 'solid' }}
+        >
+          <div className="text-[13px] font-semibold mb-2" style={{ color: colors.accentDark }}>Best Practices</div>
           <ul className="space-y-1">
             {tips.map((tip, idx) => (
               <li key={idx} className="text-[13px] text-[#5C6578] pl-4 relative">
-                <span className="absolute left-0 text-[#16A34A]">✓</span>
+                <span className="absolute left-0" style={{ color: colors.accent }}>✓</span>
                 <ReactMarkdown
                   components={{
                     strong: ({ children }) => <strong className="text-[#1A1D26]">{children}</strong>,
@@ -665,8 +685,9 @@ function FAQSection({ section }: { section: PageSection }) {
   )
 }
 
-function AssetsSection({ section }: { section: PageSection }) {
+function AssetsSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   if (!section.assetItems || section.assetItems.length === 0) return null
+  const colors = theme || getThemeColors('green')
 
   return (
     <section id={`section-${section._key}`} className="bg-white rounded-[14px] border border-[#E2E6EF] overflow-hidden">
@@ -681,7 +702,9 @@ function AssetsSection({ section }: { section: PageSection }) {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2.5 p-2.5 bg-[#F8F9FC] rounded-lg hover:bg-[#DCFCE7] transition-colors border border-[#E2E6EF]"
+              className="flex items-center gap-2.5 p-2.5 bg-[#F8F9FC] rounded-lg transition-colors border border-[#E2E6EF]"
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.hoverBg}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F8F9FC'}
             >
               <div className="w-8 h-8 bg-[#E0E7FF] rounded-md flex items-center justify-center text-sm flex-shrink-0">
                 {item.icon || '📄'}
@@ -694,7 +717,7 @@ function AssetsSection({ section }: { section: PageSection }) {
                   </div>
                 )}
               </div>
-              <span className="text-[#16A34A] text-[13px]">→</span>
+              <span className="text-[13px]" style={{ color: colors.accent }}>→</span>
             </a>
           ))}
         </div>
@@ -703,8 +726,9 @@ function AssetsSection({ section }: { section: PageSection }) {
   )
 }
 
-function TextSection({ section }: { section: PageSection }) {
+function TextSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   if (!section.textContent) return null
+  const colors = theme || getThemeColors('green')
 
   return (
     <SectionWrapper
@@ -724,7 +748,7 @@ function TextSection({ section }: { section: PageSection }) {
             ul: ({ children }) => <ul className="space-y-1 my-2">{children}</ul>,
             li: ({ children }) => (
               <li className="flex gap-2">
-                <span className="text-[#16A34A] flex-shrink-0">•</span>
+                <span className="flex-shrink-0" style={{ color: colors.accent }}>•</span>
                 <span>{children}</span>
               </li>
             )
@@ -737,21 +761,31 @@ function TextSection({ section }: { section: PageSection }) {
   )
 }
 
-function ChecklistSection({ section }: { section: PageSection }) {
+function ChecklistSection({ section, theme }: { section: PageSection; theme?: ThemeColors }) {
   if (!section.checklistColumns || section.checklistColumns.length === 0) return null
+  const colors = theme || getThemeColors('green')
 
-  // Determine column colors based on position (green, yellow, red pattern)
+  // Determine column colors based on position
+  // Single column uses theme colors; multiple columns use semantic green/yellow/red pattern
   const getColumnStyle = (index: number, total: number) => {
-    if (total === 1) return { bg: 'bg-[#DCFCE7]', border: 'border-[#16A34A]/20', text: 'text-[#15803D]', check: 'text-[#16A34A]' }
+    if (total === 1) {
+      // Single column uses theme colors
+      return {
+        bg: colors.accentLight,
+        border: `${colors.accent}33`,
+        text: colors.accentDark,
+        check: colors.accent
+      }
+    }
     if (total === 2) {
       return index === 0
-        ? { bg: 'bg-[#DCFCE7]', border: 'border-[#16A34A]/20', text: 'text-[#15803D]', check: 'text-[#16A34A]' }
-        : { bg: 'bg-[#FEE2E2]', border: 'border-[#EF4444]/20', text: 'text-[#DC2626]', check: 'text-[#EF4444]' }
+        ? { bg: '#DCFCE7', border: 'rgba(22, 163, 74, 0.2)', text: '#15803D', check: '#16A34A' }
+        : { bg: '#FEE2E2', border: 'rgba(239, 68, 68, 0.2)', text: '#DC2626', check: '#EF4444' }
     }
-    // 3+ columns
-    if (index === 0) return { bg: 'bg-[#DCFCE7]', border: 'border-[#16A34A]/20', text: 'text-[#15803D]', check: 'text-[#16A34A]' }
-    if (index === total - 1) return { bg: 'bg-[#FEE2E2]', border: 'border-[#EF4444]/20', text: 'text-[#DC2626]', check: 'text-[#EF4444]' }
-    return { bg: 'bg-[#FEF3C7]', border: 'border-[#F59E0B]/20', text: 'text-[#B45309]', check: 'text-[#F59E0B]' }
+    // 3+ columns: green/yellow/red semantic pattern
+    if (index === 0) return { bg: '#DCFCE7', border: 'rgba(22, 163, 74, 0.2)', text: '#15803D', check: '#16A34A' }
+    if (index === total - 1) return { bg: '#FEE2E2', border: 'rgba(239, 68, 68, 0.2)', text: '#DC2626', check: '#EF4444' }
+    return { bg: '#FEF3C7', border: 'rgba(245, 158, 11, 0.2)', text: '#B45309', check: '#F59E0B' }
   }
 
   return (
@@ -766,14 +800,21 @@ function ChecklistSection({ section }: { section: PageSection }) {
         {section.checklistColumns.map((column, colIdx) => {
           const style = getColumnStyle(colIdx, section.checklistColumns!.length)
           return (
-            <div key={colIdx} className={`p-4 rounded-[10px] border ${style.bg} ${style.border}`}>
-              <div className={`text-[14px] font-semibold mb-3 ${style.text}`}>
+            <div
+              key={colIdx}
+              className="p-4 rounded-[10px] border"
+              style={{
+                backgroundColor: style.bg,
+                borderColor: style.border
+              }}
+            >
+              <div className="text-[14px] font-semibold mb-3" style={{ color: style.text }}>
                 {column.title}
               </div>
               <ul className="space-y-2">
                 {column.items?.map((item, itemIdx) => (
                   <li key={itemIdx} className="flex gap-2 text-[13px] text-[#5C6578]">
-                    <span className={`flex-shrink-0 mt-0.5 ${style.check}`}>✓</span>
+                    <span className="flex-shrink-0 mt-0.5" style={{ color: style.check }}>✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -791,10 +832,14 @@ interface PageSectionRendererProps {
   sections: PageSection[]
   className?: string
   excludeTypes?: string[] // Section types to exclude from rendering (e.g., 'assets' for sidebar-only)
+  theme?: ThemeColors // Optional theme colors
 }
 
-export default function PageSectionRenderer({ sections, className = '', excludeTypes = ['assets'] }: PageSectionRendererProps) {
+export default function PageSectionRenderer({ sections, className = '', excludeTypes = ['assets'], theme }: PageSectionRendererProps) {
   if (!sections || sections.length === 0) return null
+
+  // Use provided theme or default green
+  const themeColors = theme || getThemeColors('green')
 
   // Filter out excluded section types (assets go in sidebar, not main content)
   const filteredSections = sections.filter(s => !excludeTypes.includes(s.sectionType))
@@ -806,21 +851,21 @@ export default function PageSectionRenderer({ sections, className = '', excludeT
           case 'overview':
             return <OverviewSection key={section._key} section={section} />
           case 'video':
-            return <VideoSection key={section._key} section={section} />
+            return <VideoSection key={section._key} section={section} theme={themeColors} />
           case 'takeaways':
-            return <TakeawaysSection key={section._key} section={section} />
+            return <TakeawaysSection key={section._key} section={section} theme={themeColors} />
           case 'process':
-            return <ProcessSection key={section._key} section={section} />
+            return <ProcessSection key={section._key} section={section} theme={themeColors} />
           case 'tips':
-            return <TipsSection key={section._key} section={section} />
+            return <TipsSection key={section._key} section={section} theme={themeColors} />
           case 'faq':
             return <FAQSection key={section._key} section={section} />
           case 'assets':
-            return <AssetsSection key={section._key} section={section} />
+            return <AssetsSection key={section._key} section={section} theme={themeColors} />
           case 'text':
-            return <TextSection key={section._key} section={section} />
+            return <TextSection key={section._key} section={section} theme={themeColors} />
           case 'checklist':
-            return <ChecklistSection key={section._key} section={section} />
+            return <ChecklistSection key={section._key} section={section} theme={themeColors} />
           default:
             return null
         }

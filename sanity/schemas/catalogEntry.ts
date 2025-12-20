@@ -5,15 +5,15 @@ export default {
   groups: [
     { name: 'create', title: '✨ Create', default: true },
     { name: 'content', title: '📝 Content' },
+    { name: 'links', title: '🔗 Links' },
     { name: 'resources', title: '📦 Resources' },
     { name: 'publish', title: '🚀 Publish' },
   ],
   fields: [
     // ========================================
-    // CREATE TAB - Hub Selection & AI Processing
+    // CREATE TAB - Hub Selection & Format
     // ========================================
 
-    // Step 1: Choose which hub
     {
       name: 'publishedTo',
       title: 'Where does this live?',
@@ -28,6 +28,33 @@ export default {
       },
       description: 'Select which hub(s) this content should appear in',
       validation: (Rule: any) => Rule.required().min(1),
+      group: 'create',
+    },
+
+    {
+      name: 'format',
+      title: 'Format',
+      type: 'string',
+      options: {
+        list: [
+          { title: '📄 Document', value: 'document' },
+          { title: '📊 Slides', value: 'slides' },
+          { title: '🎬 Video', value: 'video' },
+          { title: '📋 One-Pager', value: 'one-pager' },
+          { title: '⚔️ Battle Card', value: 'battlecard' },
+          { title: '🔍 Competitive', value: 'competitive' },
+          { title: '📖 Guide', value: 'guide' },
+          { title: '💬 Messaging', value: 'messaging' },
+          { title: '🤝 Meeting Asset', value: 'meeting-asset' },
+          { title: '🎯 Playbook', value: 'playbook' },
+          { title: '🧪 Prototype', value: 'prototype' },
+          { title: '🛠️ Tool', value: 'tool' },
+          { title: '🎥 Live Replay', value: 'live-replay' },
+          { title: '📺 On-Demand', value: 'on-demand' },
+        ],
+        layout: 'dropdown',
+      },
+      description: 'What type of content is this?',
       group: 'create',
     },
 
@@ -59,13 +86,26 @@ export default {
       group: 'content',
     },
 
-    // Content Hub only - External Link
+    // Session Date for Live Replays
     {
-      name: 'externalUrl',
-      title: 'External Link',
+      name: 'sessionDate',
+      title: 'Session Date',
+      type: 'date',
+      description: 'Date of the enablement session (shown on card)',
+      hidden: ({ parent }: any) => parent?.format !== 'live-replay' && parent?.format !== 'on-demand',
+      options: {
+        dateFormat: 'M/D/YY',
+      },
+      group: 'content',
+    },
+
+    // Customer Logo for Meeting Assets
+    {
+      name: 'customerLogoUrl',
+      title: 'Customer Logo URL',
       type: 'url',
-      description: 'Where does this link to? (Google Drive, Docs, etc.)',
-      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('content') || parent?.publishedTo?.includes('enablement'),
+      description: 'URL to customer logo image (for meeting assets)',
+      hidden: ({ parent }: any) => parent?.format !== 'meeting-asset',
       group: 'content',
     },
 
@@ -81,7 +121,60 @@ export default {
     },
 
     // ========================================
-    // Flexible Page Sections
+    // LINKS TAB - URL Hierarchy
+    // ========================================
+
+    {
+      name: 'externalUrl',
+      title: '🔗 Primary Link',
+      type: 'url',
+      description: 'Main link - for single documents, this is where users go. For Live Replays, this is the folder link.',
+      group: 'links',
+    },
+
+    {
+      name: 'videoUrl',
+      title: '🎥 Video / Recording URL',
+      type: 'url',
+      description: 'Link to video recording (Wistia, Google Drive, etc.)',
+      group: 'links',
+    },
+
+    {
+      name: 'slidesUrl',
+      title: '📊 Slides URL',
+      type: 'url',
+      description: 'Link to presentation slides',
+      group: 'links',
+    },
+
+    {
+      name: 'keyAssetUrl',
+      title: '📦 Key Asset URL',
+      type: 'url',
+      description: 'Additional important asset (e.g., template, calculator)',
+      group: 'links',
+    },
+
+    {
+      name: 'keyAssetLabel',
+      title: 'Key Asset Label',
+      type: 'string',
+      description: 'Label for the key asset button (e.g., "First Meeting Deck 2.0")',
+      hidden: ({ parent }: any) => !parent?.keyAssetUrl,
+      group: 'links',
+    },
+
+    {
+      name: 'transcriptUrl',
+      title: '📄 Transcript URL',
+      type: 'url',
+      description: 'Link to transcript or notes document',
+      group: 'links',
+    },
+
+    // ========================================
+    // Page Sections (Enablement only)
     // ========================================
     {
       name: 'pageSections',
@@ -94,32 +187,40 @@ export default {
     },
 
     // ========================================
-    // RESOURCES TAB - Links & Assets
+    // Page Theme (Enablement only)
     // ========================================
-
     {
-      name: 'resourceLinks',
-      title: 'Session Materials',
-      type: 'object',
-      description: 'Links to recording, slides, transcript',
+      name: 'pageTheme',
+      title: '🎨 Page Theme',
+      type: 'string',
+      description: 'Color theme for the detail page header and accents',
+      options: {
+        list: [
+          { title: '🟢 Green (Default)', value: 'green' },
+          { title: '🔵 Blue', value: 'blue' },
+          { title: '🟣 Purple', value: 'purple' },
+          { title: '🟠 Orange', value: 'orange' },
+          { title: '🔴 Rose', value: 'rose' },
+          { title: '🌊 Teal', value: 'teal' },
+          { title: '⚫ Slate', value: 'slate' },
+        ],
+        layout: 'dropdown',
+      },
+      initialValue: 'green',
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
-      options: { collapsible: false },
-      fields: [
-        { name: 'videoUrl', title: '🎥 Recording URL', type: 'url' },
-        { name: 'slidesUrl', title: '📊 Slides URL', type: 'url' },
-        { name: 'transcriptUrl', title: '📄 Transcript URL', type: 'url' },
-        { name: 'keyAssetUrl', title: '📦 Primary Asset URL', type: 'url' },
-        { name: 'keyAssetLabel', title: 'Primary Asset Label', type: 'string', description: 'e.g., "First Meeting Deck 2.0"' },
-      ],
-      group: 'resources',
+      group: 'content',
     },
+
+    // ========================================
+    // RESOURCES TAB - Related Content
+    // ========================================
 
     {
       name: 'modules',
       title: 'Training Modules',
       type: 'array',
       description: 'For multi-part training series',
-      hidden: ({ parent }: any) => parent?.pageTemplate !== 'training-session',
+      hidden: ({ parent }: any) => parent?.format !== 'on-demand',
       of: [{
         type: 'object',
         name: 'trainingModule',
@@ -250,13 +351,13 @@ export default {
       of: [{ type: 'string' }],
       options: {
         list: [
-          { title: 'Product', value: 'Product' },
-          { title: 'GTM Strategy', value: 'GTM Strategy' },
-          { title: 'Internal Ops', value: 'Internal Ops' },
-          { title: 'Competitive', value: 'Competitive' },
-          { title: 'Technical', value: 'Technical' },
-          { title: 'Partner', value: 'Partner' },
-          { title: 'Value Realization', value: 'Value Realization' },
+          { title: '📦 Product', value: 'product' },
+          { title: '🎯 GTM Strategy', value: 'gtm-strategy' },
+          { title: '⚙️ Internal Ops', value: 'internal-ops' },
+          { title: '⚔️ Competitive', value: 'competitive' },
+          { title: '🔧 Technical', value: 'technical' },
+          { title: '🤝 Partner', value: 'partner' },
+          { title: '💰 Value Realization', value: 'value-realization' },
         ],
       },
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
@@ -269,7 +370,26 @@ export default {
       title: 'Competitor',
       type: 'reference',
       to: [{ type: 'competitor' }],
-      hidden: ({ parent }: any) => parent?.pageTemplate !== 'battle-card',
+      hidden: ({ parent }: any) => parent?.format !== 'battlecard',
+      group: 'publish',
+    },
+
+    {
+      name: 'thumbnailImage',
+      title: 'Thumbnail',
+      type: 'image',
+      options: { hotspot: true },
+      group: 'publish',
+    },
+
+    // View count - tracked automatically
+    {
+      name: 'viewCount',
+      title: 'View Count',
+      type: 'number',
+      description: 'Number of views (updated automatically)',
+      initialValue: 0,
+      readOnly: true,
       group: 'publish',
     },
 
@@ -281,17 +401,10 @@ export default {
       hidden: true,
     },
     {
-      name: 'format',
-      title: 'Format (Legacy)',
+      name: 'pageTemplate',
+      title: 'Page Template (Legacy)',
       type: 'string',
       hidden: true,
-    },
-    {
-      name: 'thumbnailImage',
-      title: 'Thumbnail',
-      type: 'image',
-      options: { hotspot: true },
-      group: 'publish',
     },
     {
       name: 'mainContent',
@@ -305,33 +418,46 @@ export default {
         { name: 'transcript', type: 'text' },
       ],
     },
-    // View count - tracked automatically
     {
-      name: 'viewCount',
-      title: 'View Count',
-      type: 'number',
-      description: 'Number of views (updated automatically)',
-      initialValue: 0,
-      readOnly: true,
-      group: 'publish',
+      name: 'resourceLinks',
+      title: 'Resource Links (Legacy)',
+      type: 'object',
+      hidden: true,
+      fields: [
+        { name: 'videoUrl', type: 'url' },
+        { name: 'slidesUrl', type: 'url' },
+        { name: 'transcriptUrl', type: 'url' },
+        { name: 'keyAssetUrl', type: 'url' },
+        { name: 'keyAssetLabel', type: 'string' },
+      ],
     },
   ],
   preview: {
     select: {
       title: 'title',
       publishedTo: 'publishedTo',
-      pageTemplate: 'pageTemplate',
+      format: 'format',
       status: 'status',
       media: 'thumbnailImage',
     },
     prepare(selection: any) {
-      const { title, publishedTo, pageTemplate, status, media } = selection
+      const { title, publishedTo, format, status, media } = selection
 
-      const hubIcon = publishedTo?.includes('enablement') ? '🎓' : '📚'
-      const templateIcon: Record<string, string> = {
-        'training': '📺',
-        'playbook': '📋',
-        'battle-card': '⚔️',
+      const formatIcons: Record<string, string> = {
+        'document': '📄',
+        'slides': '📊',
+        'video': '🎬',
+        'one-pager': '📋',
+        'battlecard': '⚔️',
+        'competitive': '🔍',
+        'guide': '📖',
+        'messaging': '💬',
+        'meeting-asset': '🤝',
+        'playbook': '🎯',
+        'prototype': '🧪',
+        'tool': '🛠️',
+        'live-replay': '🎥',
+        'on-demand': '📺',
       }
       const statusIcon: Record<string, string> = {
         draft: '📝',
@@ -339,12 +465,13 @@ export default {
         archived: '📦',
       }
 
-      const typeIcon = pageTemplate ? templateIcon[pageTemplate] || hubIcon : hubIcon
+      const hubIcon = publishedTo?.includes('enablement') ? '🎓' : '📚'
+      const fmtIcon = format ? formatIcons[format] || hubIcon : hubIcon
       const stIcon = statusIcon[status] || '📝'
 
       return {
-        title: `${typeIcon} ${title}`,
-        subtitle: `${stIcon} ${status}`,
+        title: `${fmtIcon} ${title}`,
+        subtitle: `${stIcon} ${status || 'draft'}`,
         media,
       }
     },

@@ -290,9 +290,12 @@ export interface CatalogEntry {
   cardType?: 'content-card' | 'enablement-article' | 'best-practice' | 'play' | 'battle-card'
 
   // Classification
-  contentType: ContentType
-  pageTemplate: 'micro-learning' | 'battle-card' | 'play' | 'product' | 'training-session' | 'playbook' | 'training'
-  format?: 'live-replay' | 'async' | 'document' | 'video' | 'article' | 'template'
+  contentType?: ContentType
+  pageTemplate?: 'micro-learning' | 'battle-card' | 'play' | 'product' | 'training-session' | 'playbook' | 'training'
+  format?: 'document' | 'slides' | 'video' | 'one-pager' | 'battlecard' | 'competitive' | 'guide' | 'messaging' | 'meeting-asset' | 'playbook' | 'prototype' | 'tool' | 'live-replay' | 'on-demand'
+
+  // Session date for live-replay and on-demand formats
+  sessionDate?: string
 
   // Taxonomies (multi-select arrays)
   products?: Product[]
@@ -335,11 +338,20 @@ export interface CatalogEntry {
       _type: 'reference'
     }
   }
-  externalUrl?: string  // Link to external content (Google Drive, Docs, etc.)
+  externalUrl?: string  // Primary link (Google Drive, Docs, etc.)
+  videoUrl?: string     // Video/Recording URL
+  slidesUrl?: string    // Slides URL
+  keyAssetUrl?: string  // Key asset URL
+  keyAssetLabel?: string // Label for key asset button
+  transcriptUrl?: string // Transcript URL
+  customerLogoUrl?: string // Customer logo URL (for meeting-assets)
   mainContent?: MainContent
 
   // New flexible page sections (replaces scattered fields)
   pageSections?: PageSection[]
+
+  // Page theming
+  pageTheme?: 'green' | 'blue' | 'purple' | 'orange' | 'rose' | 'teal' | 'slate'
 
   // Legacy fields (deprecated - use pageSections instead)
   keyTakeaways?: string[]

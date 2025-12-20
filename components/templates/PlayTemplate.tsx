@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { CatalogEntry } from '@/lib/types/catalog'
 import PageSectionRenderer, { VideoEmbed } from '../sections/PageSectionRenderer'
+import { getThemeColors, ThemeColors } from '@/lib/theme-colors'
 
 interface PlayTemplateProps {
   entry: CatalogEntry
@@ -10,6 +11,9 @@ interface PlayTemplateProps {
 
 export default function PlayTemplate({ entry }: PlayTemplateProps) {
   const [activeSection, setActiveSection] = useState<string>('')
+
+  // Get theme colors
+  const theme = getThemeColors(entry.pageTheme)
 
   // Build navigation sections from pageSections
   const navSections: { id: string; label: string }[] = []
@@ -91,7 +95,10 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
   return (
     <div className="min-h-screen bg-[#F8F9FC]">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-[#16A34A] to-[#15803D] text-white">
+      <div
+        className="text-white"
+        style={{ background: `linear-gradient(to right, ${theme.headerGradientFrom}, ${theme.headerGradientTo})` }}
+      >
         <div className="max-w-7xl mx-auto px-6 py-6">
           <h1 className="text-[28px] font-bold mb-3">{entry.title}</h1>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] text-white/90">
@@ -157,7 +164,7 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
             })()}
 
             {entry.pageSections && entry.pageSections.length > 0 ? (
-              <PageSectionRenderer sections={entry.pageSections} excludeTypes={['assets']} />
+              <PageSectionRenderer sections={entry.pageSections} excludeTypes={['assets']} theme={theme} />
             ) : (
               // Only show "no content" if there's also no legacy video
               !entry.mainContent?.videoUrl && !entry.mainContent?.wistiaId && !entry.resourceLinks?.videoUrl && (
@@ -183,9 +190,13 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
                       onClick={() => scrollToSection(section.id)}
                       className={`block w-full text-left px-3 py-2 rounded-md text-[14px] transition-colors ${
                         activeSection === section.id
-                          ? 'bg-[#DCFCE7] text-[#16A34A] font-medium'
+                          ? 'font-medium'
                           : 'text-[#374151] hover:bg-[#F3F4F6]'
                       }`}
+                      style={activeSection === section.id ? {
+                        backgroundColor: theme.accentLight,
+                        color: theme.accent
+                      } : undefined}
                     >
                       {section.label}
                     </button>
@@ -216,7 +227,10 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-3 bg-[#F9FAFB] rounded-lg hover:bg-[#F3F4F6] transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-[#F9FAFB] rounded-lg transition-colors group"
+                        style={{ ['--hover-bg' as string]: theme.hoverBg }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = theme.hoverBg}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F9FAFB'}
                       >
                         <div className="w-9 h-9 bg-[#DBEAFE] rounded-lg flex items-center justify-center text-base flex-shrink-0">
                           {item.icon || '📄'}
@@ -227,7 +241,7 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
                             <div className="text-[12px] text-[#6B7280] line-clamp-1">{item.description}</div>
                           )}
                         </div>
-                        <span className="text-[#9CA3AF] group-hover:text-[#16A34A] transition-colors">↗</span>
+                        <span className="text-[#9CA3AF] transition-colors" style={{ color: theme.accent }}>↗</span>
                       </a>
                     ))}
                     {/* Key assets from reference field */}
@@ -237,7 +251,9 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
                         href={asset.externalUrl || `/enablement-hub/${asset.slug?.current}`}
                         target={asset.externalUrl ? '_blank' : undefined}
                         rel={asset.externalUrl ? 'noopener noreferrer' : undefined}
-                        className="flex items-center gap-3 p-3 bg-[#F9FAFB] rounded-lg hover:bg-[#F3F4F6] transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-[#F9FAFB] rounded-lg transition-colors group"
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = theme.hoverBg}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F9FAFB'}
                       >
                         <div className="w-9 h-9 bg-[#DBEAFE] rounded-lg flex items-center justify-center text-base flex-shrink-0">
                           📁
@@ -246,7 +262,7 @@ export default function PlayTemplate({ entry }: PlayTemplateProps) {
                           <div className="text-[14px] font-medium text-[#111827]">{asset.title}</div>
                           <div className="text-[12px] text-[#6B7280]">{asset.contentType?.name || 'Documentation'}</div>
                         </div>
-                        <span className="text-[#9CA3AF] group-hover:text-[#16A34A] transition-colors">↗</span>
+                        <span className="text-[#9CA3AF] transition-colors" style={{ color: theme.accent }}>↗</span>
                       </a>
                     ))}
                   </div>
