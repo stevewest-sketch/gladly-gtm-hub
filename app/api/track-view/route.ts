@@ -3,7 +3,7 @@ import { createClient } from '@sanity/client';
 
 // Create Sanity client with write access
 const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '9epiazve',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   token: process.env.SANITY_API_TOKEN,
   apiVersion: '2024-01-01',

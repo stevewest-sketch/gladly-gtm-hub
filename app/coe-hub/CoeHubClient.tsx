@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import ProofPointFinder from '@/components/ProofPointFinder'
 
 // Types
 interface CoeSection {
@@ -27,13 +28,30 @@ interface CoeEntry {
   permission?: { name: string; color: string }
   section?: { name: string; icon: string; slug: { current: string } }
   _createdAt: string
+  // External link fields
+  externalUrl?: string
+  videoUrl?: string
+  slidesUrl?: string
   // Meeting asset specific fields
   account?: string
   meetingType?: string
   customerLogoUrl?: string
   deliveryDate?: string
   salesStage?: string
-  slidesUrl?: string
+}
+
+interface ProofPoint {
+  _id: string
+  stat: string
+  customer: string
+  isBlind: boolean
+  kpiCategory: string
+  product: string[]
+  channel: string | null
+  approved: boolean
+  sourceUrl?: string
+  context?: string
+  industry?: string
 }
 
 interface CoeHubClientProps {
@@ -41,6 +59,7 @@ interface CoeHubClientProps {
   bestPractices: CoeEntry[]
   tools: CoeEntry[]
   proofPoints: CoeEntry[]
+  newProofPoints: ProofPoint[]
   dashboards: CoeEntry[]
   counts: {
     total: number
@@ -50,12 +69,12 @@ interface CoeHubClientProps {
   }
 }
 
-// Navigation tabs
+// Navigation tabs (updated per spec: removed BVA & ROI Tools, kept Proof Points with table UI)
 const NAVIGATION_TABS = [
   { id: 'all', label: 'Best Practice Library', icon: null },
-  { id: 'bva-tools', label: 'BVA & ROI Tools', icon: '🧮' },
   { id: 'proof-points', label: 'Proof Points', icon: '📊' },
   { id: 'dashboards', label: 'Performance Dashboards', icon: '📈' },
+  { id: 'meeting-assets', label: 'Meeting Assets', icon: '📁' },
 ]
 
 // Entry type filters (excluding proof points - they have their own tab)
@@ -135,6 +154,7 @@ export default function CoeHubClient({
   bestPractices,
   tools,
   proofPoints,
+  newProofPoints,
   dashboards,
   counts,
 }: CoeHubClientProps) {
@@ -161,12 +181,14 @@ export default function CoeHubClient({
     // Filter by tab
     if (activeTab === 'all') {
       result = [...bestPracticeEntries]
-    } else if (activeTab === 'bva-tools') {
-      result = [...tools]
     } else if (activeTab === 'proof-points') {
+      // Proof points now use the new table UI, not this filter
       result = [...proofPoints]
     } else if (activeTab === 'dashboards') {
       result = [...dashboards]
+    } else if (activeTab === 'meeting-assets') {
+      // Filter for meeting assets only
+      result = bestPracticeEntries.filter(e => e.entryType === 'meeting-asset')
     }
 
     // Filter by catalog filter (All, New, Popular)
@@ -234,9 +256,10 @@ export default function CoeHubClient({
       ? `${entry.account} ${entry.meetingType}`
       : entry.title
 
-    // Use external slides URL if available, otherwise fallback to internal page
-    const href = entry.slidesUrl || `/coe-hub/${entry.slug.current}`
-    const isExternal = !!entry.slidesUrl
+    // Use external URL if available, otherwise fallback to internal page
+    const externalLink = entry.externalUrl || entry.slidesUrl || entry.videoUrl
+    const href = externalLink || `/coe-hub/${entry.slug.current}`
+    const isExternal = !!externalLink
 
     return (
       <a
@@ -298,10 +321,17 @@ export default function CoeHubClient({
     const badgeColors = TYPE_BADGE_COLORS[entry.entryType] || { bg: 'bg-gray-100', text: 'text-gray-600' }
     const icon = entry.icon || TYPE_ICONS[entry.entryType] || '📄'
 
+    // Use external URL if available, otherwise fallback to internal page
+    const externalLink = entry.externalUrl || entry.videoUrl || entry.slidesUrl
+    const href = externalLink || `/coe-hub/${entry.slug.current}`
+    const isExternal = !!externalLink
+
     return (
-      <Link
+      <a
         key={entry._id}
-        href={`/coe-hub/${entry.slug.current}`}
+        href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
         className="bg-white border border-gray-200 rounded-xl p-4 cursor-pointer transition-all flex flex-col hover:border-amber-600 hover:shadow-[0_0_0_3px_rgba(217,119,6,0.1)] no-underline"
       >
         {/* Header */}
@@ -343,7 +373,14 @@ export default function CoeHubClient({
 
         {/* Footer */}
         <div className="flex items-center justify-between text-[11px] text-gray-400 pt-2 border-t border-gray-100">
-          <span>{formatDate(entry._createdAt)}</span>
+          <div className="flex items-center gap-2">
+            <span>{formatDate(entry._createdAt)}</span>
+            {isExternal && (
+              <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            )}
+          </div>
           <div className="flex items-center gap-2">
             {entry.customer && entry.customer !== 'N/A' && (
               <span className="text-[9px] font-medium uppercase tracking-wide px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">
@@ -357,7 +394,7 @@ export default function CoeHubClient({
             )}
           </div>
         </div>
-      </Link>
+      </a>
     )
   }
 
@@ -366,10 +403,17 @@ export default function CoeHubClient({
     const badgeColors = TYPE_BADGE_COLORS[entry.entryType] || { bg: 'bg-gray-100', text: 'text-gray-600' }
     const icon = entry.icon || TYPE_ICONS[entry.entryType] || '📄'
 
+    // Use external URL if available, otherwise fallback to internal page
+    const externalLink = entry.externalUrl || entry.videoUrl || entry.slidesUrl
+    const href = externalLink || `/coe-hub/${entry.slug.current}`
+    const isExternal = !!externalLink
+
     return (
-      <Link
+      <a
         key={entry._id}
-        href={`/coe-hub/${entry.slug.current}`}
+        href={href}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
         className="bg-white border border-gray-200 rounded-lg p-4 cursor-pointer transition-all flex items-center gap-4 hover:border-amber-600 no-underline"
       >
         <div className="w-10 h-10 rounded-lg flex items-center justify-center text-lg flex-shrink-0 bg-amber-50">
@@ -383,7 +427,12 @@ export default function CoeHubClient({
           {getTypeLabel(entry.entryType)}
         </span>
         <span className="text-[11px] text-gray-400 w-20 text-right">{formatDate(entry._createdAt)}</span>
-      </Link>
+        {isExternal && (
+          <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        )}
+      </a>
     )
   }
 
@@ -395,20 +444,20 @@ export default function CoeHubClient({
           title: 'Best Practice Library',
           description: 'Curated collection of proven strategies, process innovations, internal best practices, and meeting assets from across the organization.'
         }
-      case 'bva-tools':
-        return {
-          title: 'BVA & ROI Tools',
-          description: 'Business value assessment calculators and ROI tools to help quantify customer value and build compelling business cases.'
-        }
       case 'proof-points':
         return {
-          title: 'Proof Points',
-          description: 'Customer success metrics, benchmarks, quotes, and case studies to support your sales conversations and customer presentations.'
+          title: 'Proof Point Finder',
+          description: 'Search, filter, and copy customer stats for your decks and proposals.'
         }
       case 'dashboards':
         return {
           title: 'Performance Dashboards',
           description: 'Track key metrics and performance indicators to measure success and identify opportunities for improvement.'
+        }
+      case 'meeting-assets':
+        return {
+          title: 'Meeting Assets',
+          description: 'Customer meeting decks, BVA presentations, and pre/post-sales materials.'
         }
       default:
         return { title: '', description: '' }
@@ -541,29 +590,34 @@ export default function CoeHubClient({
           </div>
         </section>
 
-        {/* Catalog Filter Buttons */}
-        <div className="flex items-center gap-2 mb-6">
-          {[
-            { id: 'all', label: 'All', icon: '📋' },
-            { id: 'new', label: 'New', icon: '✨' },
-            { id: 'popular', label: 'Most Popular', icon: '🔥' },
-          ].map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setCatalogFilter(filter.id as 'all' | 'new' | 'popular')}
-              className={`text-sm font-medium px-4 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 ${
-                catalogFilter === filter.id
-                  ? 'bg-amber-600 border-amber-600 text-white'
-                  : 'bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
-              }`}
-            >
-              <span>{filter.icon}</span>
-              {filter.label}
-            </button>
-          ))}
-        </div>
+        {/* Proof Points Tab - Render ProofPointFinder table UI */}
+        {activeTab === 'proof-points' ? (
+          <ProofPointFinder proofPoints={newProofPoints} />
+        ) : (
+          <>
+            {/* Catalog Filter Buttons */}
+            <div className="flex items-center gap-2 mb-6">
+              {[
+                { id: 'all', label: 'All', icon: '📋' },
+                { id: 'new', label: 'New', icon: '✨' },
+                { id: 'popular', label: 'Most Popular', icon: '🔥' },
+              ].map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setCatalogFilter(filter.id as 'all' | 'new' | 'popular')}
+                  className={`text-sm font-medium px-4 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 ${
+                    catalogFilter === filter.id
+                      ? 'bg-amber-600 border-amber-600 text-white'
+                      : 'bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300'
+                  }`}
+                >
+                  <span>{filter.icon}</span>
+                  {filter.label}
+                </button>
+              ))}
+            </div>
 
-        {/* Filter Panel */}
+            {/* Filter Panel */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-6">
           {/* Type - only for Best Practice Library tab */}
           {activeTab === 'all' && (
@@ -736,12 +790,14 @@ export default function CoeHubClient({
           </div>
         )}
 
-        {filteredEntries.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-5xl mb-4">🔍</div>
-            <h3 className="text-lg font-semibold text-gray-700 mb-2">No resources found</h3>
-            <p className="text-sm text-gray-500">Try adjusting your filters or search query.</p>
-          </div>
+            {filteredEntries.length === 0 && (
+              <div className="text-center py-16">
+                <div className="text-5xl mb-4">🔍</div>
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">No resources found</h3>
+                <p className="text-sm text-gray-500">Try adjusting your filters or search query.</p>
+              </div>
+            )}
+          </>
         )}
 
         {/* Back to Home */}

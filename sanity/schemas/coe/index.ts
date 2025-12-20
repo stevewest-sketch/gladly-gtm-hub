@@ -9,3 +9,4 @@ export { default as coeAssetType } from './coeAssetType';
 export { default as coeEntry } from './coeEntry';
 export { default as coeHub } from './coeHub';
 export { default as coeEmbedding } from './coeEmbedding';
+export { default as proofPoint } from './proofPoint';

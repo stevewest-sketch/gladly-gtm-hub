@@ -25,13 +25,30 @@ interface CoeEntry {
   permission?: { name: string; color: string }
   section?: { name: string; icon: string; slug: { current: string } }
   _createdAt: string
+  // External link fields
+  externalUrl?: string
+  videoUrl?: string
+  slidesUrl?: string
   // Meeting asset specific fields
   account?: string
   meetingType?: string
   customerLogoUrl?: string
   deliveryDate?: string
   salesStage?: string
-  slidesUrl?: string
+}
+
+interface ProofPoint {
+  _id: string
+  stat: string
+  customer: string
+  isBlind: boolean
+  kpiCategory: string
+  product: string[]
+  channel: string | null
+  approved: boolean
+  sourceUrl?: string
+  context?: string
+  industry?: string
 }
 
 // Fetch all CoE sections
@@ -63,13 +80,15 @@ async function getBestPractices(): Promise<CoeEntry[]> {
       "permission": permission->{name, color},
       "section": coeSection->{name, icon, slug},
       _createdAt,
+      externalUrl,
+      videoUrl,
+      slidesUrl,
       // Meeting asset specific fields
       account,
       meetingType,
       customerLogoUrl,
       deliveryDate,
-      salesStage,
-      slidesUrl
+      salesStage
     }
   `, {}, { next: { revalidate: 60 } })
 }
@@ -88,13 +107,16 @@ async function getTools(): Promise<CoeEntry[]> {
       featured,
       "permission": permission->{name, color},
       "section": coeSection->{name, icon, slug},
-      _createdAt
+      _createdAt,
+      externalUrl,
+      videoUrl,
+      slidesUrl
     }
   `, {}, { next: { revalidate: 60 } })
 }
 
-// Fetch proof points
-async function getProofPoints(): Promise<CoeEntry[]> {
+// Fetch proof points (legacy coeEntry type)
+async function getLegacyProofPoints(): Promise<CoeEntry[]> {
   return client.fetch(`
     *[_type == "coeEntry" && entryType == "proof-point"] | order(featured desc, _createdAt desc) {
       _id,
@@ -110,6 +132,25 @@ async function getProofPoints(): Promise<CoeEntry[]> {
       "permission": permission->{name, color},
       "section": coeSection->{name, icon, slug},
       _createdAt
+    }
+  `, {}, { next: { revalidate: 60 } })
+}
+
+// Fetch new proof points (proofPoint document type)
+async function getNewProofPoints(): Promise<ProofPoint[]> {
+  return client.fetch(`
+    *[_type == "proofPoint"] | order(customer asc) {
+      _id,
+      stat,
+      customer,
+      isBlind,
+      kpiCategory,
+      product,
+      channel,
+      approved,
+      sourceUrl,
+      context,
+      industry
     }
   `, {}, { next: { revalidate: 60 } })
 }
@@ -132,7 +173,10 @@ async function getDashboards(): Promise<CoeEntry[]> {
       featured,
       "permission": permission->{name, color},
       "section": coeSection->{name, icon, slug},
-      _createdAt
+      _createdAt,
+      externalUrl,
+      videoUrl,
+      slidesUrl
     }
   `, {}, { next: { revalidate: 60 } })
 }
@@ -154,11 +198,12 @@ async function getCounts(): Promise<{
 }
 
 export default async function CoeHubPage() {
-  const [sections, bestPractices, tools, proofPoints, dashboards, counts] = await Promise.all([
+  const [sections, bestPractices, tools, legacyProofPoints, newProofPoints, dashboards, counts] = await Promise.all([
     getCoeSections(),
     getBestPractices(),
     getTools(),
-    getProofPoints(),
+    getLegacyProofPoints(),
+    getNewProofPoints(),
     getDashboards(),
     getCounts(),
   ])
@@ -168,7 +213,8 @@ export default async function CoeHubPage() {
       sections={sections}
       bestPractices={bestPractices}
       tools={tools}
-      proofPoints={proofPoints}
+      proofPoints={legacyProofPoints}
+      newProofPoints={newProofPoints}
       dashboards={dashboards}
       counts={counts}
     />

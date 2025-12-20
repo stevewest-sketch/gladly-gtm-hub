@@ -43,6 +43,7 @@ import {
   coeEntry,
   coeHub,
   coeEmbedding,
+  proofPoint,
 } from './coe'
 
 // Section types
@@ -145,4 +146,5 @@ export const schemaTypes = [
   coeEntry,
   coeHub,
   coeEmbedding,
+  proofPoint,
 ]
