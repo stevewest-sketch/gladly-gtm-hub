@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:com="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" xmlns:ahyp="http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="2277" name="Shape 2277"/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2278" name="Google Shape;2278;p218"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr>
+            <p:ph idx="12" type="sldNum"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8417612" y="4923178"/>
+            <a:ext cx="571500" cy="123000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="r">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:fld id="{00000000-1234-1234-1234-123412341234}" type="slidenum">
+              <a:rPr lang="en"/>
+              <a:t>&#8249;#&#8250;</a:t>
+            </a:fld>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2279" name="Google Shape;2279;p218"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr>
+            <p:ph idx="2" type="sldNum"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3524740" y="4923174"/>
+            <a:ext cx="1966500" cy="123000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en"/>
+              <a:t>Gladly Confidential</a:t>
+            </a:r>
+            <a:endParaRPr/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2280" name="Google Shape;2280;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457314" y="1828800"/>
+            <a:ext cx="2593200" cy="2716500"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 4327" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF">
+              <a:alpha val="2750"/>
+            </a:srgbClr>
+          </a:solidFill>
+          <a:ln cap="flat" cmpd="sng" w="19050">
+            <a:solidFill>
+              <a:srgbClr val="FFFFFF"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+            <a:round/>
+            <a:headEnd len="sm" w="sm" type="none"/>
+            <a:tailEnd len="sm" w="sm" type="none"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="44850" lIns="89750" spcFirstLastPara="1" rIns="89750" wrap="square" tIns="44850">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="000000"/>
+              </a:buClr>
+              <a:buSzPts val="1800"/>
+              <a:buFont typeface="Calibri"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:t/>
+            </a:r>
+            <a:endParaRPr b="0" i="0" sz="1800" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Calibri"/>
+              <a:ea typeface="Calibri"/>
+              <a:cs typeface="Calibri"/>
+              <a:sym typeface="Calibri"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2281" name="Google Shape;2281;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="691079" y="2027886"/>
+            <a:ext cx="2168100" cy="373800"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="009B00"/>
+              </a:buClr>
+              <a:buSzPts val="2900"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" i="0" lang="en" sz="2900" u="none" cap="none" strike="noStrike">
+                <a:solidFill>
+                  <a:srgbClr val="009B00"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>1</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2900" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2282" name="Google Shape;2282;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="691079" y="2588781"/>
+            <a:ext cx="2168100" cy="218700"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="80000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1300"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" lang="en" sz="2100">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>Foundation</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2100" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2283" name="Google Shape;2283;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="691175" y="3086725"/>
+            <a:ext cx="2359500" cy="1283100"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Integration setup</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; AI training begins</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Team onboarding</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2284" name="Google Shape;2284;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3274907" y="1828800"/>
+            <a:ext cx="2593200" cy="2716500"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 4327" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF">
+              <a:alpha val="2750"/>
+            </a:srgbClr>
+          </a:solidFill>
+          <a:ln cap="flat" cmpd="sng" w="19050">
+            <a:solidFill>
+              <a:srgbClr val="FFFFFF"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+            <a:round/>
+            <a:headEnd len="sm" w="sm" type="none"/>
+            <a:tailEnd len="sm" w="sm" type="none"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="44850" lIns="89750" spcFirstLastPara="1" rIns="89750" wrap="square" tIns="44850">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="000000"/>
+              </a:buClr>
+              <a:buSzPts val="1800"/>
+              <a:buFont typeface="Calibri"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:t/>
+            </a:r>
+            <a:endParaRPr b="0" i="0" sz="1800" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Calibri"/>
+              <a:ea typeface="Calibri"/>
+              <a:cs typeface="Calibri"/>
+              <a:sym typeface="Calibri"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2285" name="Google Shape;2285;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3508673" y="2027886"/>
+            <a:ext cx="2168100" cy="373800"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="009B00"/>
+              </a:buClr>
+              <a:buSzPts val="2900"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" i="0" lang="en" sz="2900" u="none" cap="none" strike="noStrike">
+                <a:solidFill>
+                  <a:srgbClr val="009B00"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>2</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2900" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2286" name="Google Shape;2286;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3508673" y="2588781"/>
+            <a:ext cx="2168100" cy="218700"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="80000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1300"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" lang="en" sz="2100">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>Calibration</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2100" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2287" name="Google Shape;2287;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6092501" y="1828800"/>
+            <a:ext cx="2593200" cy="2716500"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 4327" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFFFFF">
+              <a:alpha val="2750"/>
+            </a:srgbClr>
+          </a:solidFill>
+          <a:ln cap="flat" cmpd="sng" w="19050">
+            <a:solidFill>
+              <a:srgbClr val="FFFFFF"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+            <a:round/>
+            <a:headEnd len="sm" w="sm" type="none"/>
+            <a:tailEnd len="sm" w="sm" type="none"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="44850" lIns="89750" spcFirstLastPara="1" rIns="89750" wrap="square" tIns="44850">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="000000"/>
+              </a:buClr>
+              <a:buSzPts val="1800"/>
+              <a:buFont typeface="Calibri"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:t/>
+            </a:r>
+            <a:endParaRPr b="0" i="0" sz="1800" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Calibri"/>
+              <a:ea typeface="Calibri"/>
+              <a:cs typeface="Calibri"/>
+              <a:sym typeface="Calibri"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2288" name="Google Shape;2288;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6326269" y="2027886"/>
+            <a:ext cx="2168100" cy="373800"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="100000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="009B00"/>
+              </a:buClr>
+              <a:buSzPts val="2900"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" i="0" lang="en" sz="2900" u="none" cap="none" strike="noStrike">
+                <a:solidFill>
+                  <a:srgbClr val="009B00"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>3</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2900" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2289" name="Google Shape;2289;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6326269" y="2588781"/>
+            <a:ext cx="2168100" cy="218700"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="80000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1300"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr b="1" lang="en" sz="2100">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue"/>
+                <a:ea typeface="Helvetica Neue"/>
+                <a:cs typeface="Helvetica Neue"/>
+                <a:sym typeface="Helvetica Neue"/>
+              </a:rPr>
+              <a:t>Scale</a:t>
+            </a:r>
+            <a:endParaRPr i="0" sz="2100" u="none" cap="none" strike="noStrike">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue"/>
+              <a:ea typeface="Helvetica Neue"/>
+              <a:cs typeface="Helvetica Neue"/>
+              <a:sym typeface="Helvetica Neue"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2290" name="Google Shape;2290;p218"/>
+          <p:cNvSpPr txBox="1"/>
+          <p:nvPr>
+            <p:ph idx="4294967295" type="title"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="461797" y="362570"/>
+            <a:ext cx="8220300" cy="567900"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:spAutoFit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en" sz="4100">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+              </a:rPr>
+              <a:t>From kickoff to ROI in 90 days</a:t>
+            </a:r>
+            <a:endParaRPr sz="4100">
+              <a:solidFill>
+                <a:schemeClr val="lt1"/>
+              </a:solidFill>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2291" name="Google Shape;2291;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="461797" y="1295222"/>
+            <a:ext cx="951600" cy="301800"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 50000" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:schemeClr val="accent1"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="68575" lIns="68575" spcFirstLastPara="1" rIns="68575" wrap="square" tIns="68575">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en" sz="1400">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>Week 1</a:t>
+            </a:r>
+            <a:endParaRPr sz="1400">
+              <a:solidFill>
+                <a:schemeClr val="lt1"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2292" name="Google Shape;2292;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3274907" y="1295213"/>
+            <a:ext cx="951600" cy="301800"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 50000" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:schemeClr val="accent1"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="68575" lIns="68575" spcFirstLastPara="1" rIns="68575" wrap="square" tIns="68575">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en" sz="1400">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>Week </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>4</a:t>
+            </a:r>
+            <a:endParaRPr sz="1400">
+              <a:solidFill>
+                <a:schemeClr val="lt1"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2293" name="Google Shape;2293;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6088017" y="1295222"/>
+            <a:ext cx="951600" cy="301800"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst>
+              <a:gd fmla="val 50000" name="adj"/>
+            </a:avLst>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:schemeClr val="accent1"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="68575" lIns="68575" spcFirstLastPara="1" rIns="68575" wrap="square" tIns="68575">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en" sz="1400">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>Week </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:schemeClr val="lt1"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>8</a:t>
+            </a:r>
+            <a:endParaRPr sz="1400">
+              <a:solidFill>
+                <a:schemeClr val="lt1"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2294" name="Google Shape;2294;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1534818" y="1432242"/>
+            <a:ext cx="1618500" cy="27600"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:gradFill>
+            <a:gsLst>
+              <a:gs pos="0">
+                <a:schemeClr val="accent1"/>
+              </a:gs>
+              <a:gs pos="100000">
+                <a:schemeClr val="dk1"/>
+              </a:gs>
+            </a:gsLst>
+            <a:lin ang="18900044" scaled="0"/>
+          </a:gradFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="68575" lIns="68575" spcFirstLastPara="1" rIns="68575" wrap="square" tIns="68575">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:t/>
+            </a:r>
+            <a:endParaRPr sz="1100">
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2295" name="Google Shape;2295;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="4347919" y="1432242"/>
+            <a:ext cx="1618500" cy="27600"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:gradFill>
+            <a:gsLst>
+              <a:gs pos="0">
+                <a:schemeClr val="accent1"/>
+              </a:gs>
+              <a:gs pos="100000">
+                <a:schemeClr val="dk1"/>
+              </a:gs>
+            </a:gsLst>
+            <a:lin ang="18900044" scaled="0"/>
+          </a:gradFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="ctr" bIns="68575" lIns="68575" spcFirstLastPara="1" rIns="68575" wrap="square" tIns="68575">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:t/>
+            </a:r>
+            <a:endParaRPr sz="1100">
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2296" name="Google Shape;2296;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="6324621" y="3086725"/>
+            <a:ext cx="2359500" cy="1283100"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Full channel rollout</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Advanced automation</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Revenue features live</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Measurable ROI</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2297" name="Google Shape;2297;p218"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3512323" y="3086725"/>
+            <a:ext cx="2359500" cy="1283100"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr anchorCtr="0" anchor="t" bIns="0" lIns="0" spcFirstLastPara="1" rIns="0" wrap="square" tIns="0">
+            <a:noAutofit/>
+          </a:bodyPr>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; AI optimization</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Workflow refinement</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Agent feedback loops</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr indent="0" lvl="0" marL="0" marR="0" rtl="0" algn="l">
+              <a:lnSpc>
+                <a:spcPct val="150000"/>
+              </a:lnSpc>
+              <a:spcBef>
+                <a:spcPts val="0"/>
+              </a:spcBef>
+              <a:spcAft>
+                <a:spcPts val="0"/>
+              </a:spcAft>
+              <a:buClr>
+                <a:srgbClr val="FFFFFF"/>
+              </a:buClr>
+              <a:buSzPts val="1000"/>
+              <a:buFont typeface="Arial"/>
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Helvetica Neue Light"/>
+                <a:ea typeface="Helvetica Neue Light"/>
+                <a:cs typeface="Helvetica Neue Light"/>
+                <a:sym typeface="Helvetica Neue Light"/>
+              </a:rPr>
+              <a:t>&#10003; Performance tuning</a:t>
+            </a:r>
+            <a:endParaRPr>
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+              <a:latin typeface="Helvetica Neue Light"/>
+              <a:ea typeface="Helvetica Neue Light"/>
+              <a:cs typeface="Helvetica Neue Light"/>
+              <a:sym typeface="Helvetica Neue Light"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

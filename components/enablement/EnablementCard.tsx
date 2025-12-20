@@ -14,6 +14,13 @@ export default function EnablementCard({
   variant = 'standard',
   showVideo = false,
 }: EnablementCardProps) {
+  // Use sessionDate for live-replay/on-demand, otherwise fall back to publishDate
+  const isSessionFormat = entry.format === 'live-replay' || entry.format === 'on-demand'
+  const displayDate = isSessionFormat && entry.sessionDate
+    ? new Date(entry.sessionDate).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: '2-digit' })
+    : entry.publishDate
+      ? new Date(entry.publishDate).toLocaleDateString()
+      : ''
   const publishDate = entry.publishDate
     ? new Date(entry.publishDate).toLocaleDateString()
     : ''
@@ -27,17 +34,18 @@ export default function EnablementCard({
   // Get first category with color mapping
   const category = entry.enablementCategory?.[0] || ''
 
-  // Category color and icon mapping for distinctive tags
-  const categoryConfig: Record<string, { bg: string; text: string; icon: string }> = {
-    'Product': { bg: '#E0F2FE', text: '#0369A1', icon: '📦' },        // Sky blue
-    'GTM Strategy': { bg: '#DCFCE7', text: '#166534', icon: '🚀' },   // Green
-    'Internal Ops': { bg: '#F3E8FF', text: '#7C3AED', icon: '⚙️' },  // Purple
-    'Competitive': { bg: '#FFE4E6', text: '#BE123C', icon: '⚔️' },   // Rose
-    'Technical': { bg: '#E0E7FF', text: '#4338CA', icon: '🔧' },     // Indigo
-    'Partner': { bg: '#FFEDD5', text: '#C2410C', icon: '🤝' },       // Orange
-    'Value Realization': { bg: '#D1FAE5', text: '#047857', icon: '💰' }, // Emerald
+  // Category color and icon mapping for distinctive tags (using schema values)
+  const categoryConfig: Record<string, { bg: string; text: string; icon: string; label: string }> = {
+    'product': { bg: '#E0F2FE', text: '#0369A1', icon: '📦', label: 'Product' },
+    'gtm-strategy': { bg: '#DCFCE7', text: '#166534', icon: '🎯', label: 'GTM Strategy' },
+    'internal-ops': { bg: '#F3E8FF', text: '#7C3AED', icon: '⚙️', label: 'Internal Ops' },
+    'competitive': { bg: '#FFE4E6', text: '#BE123C', icon: '⚔️', label: 'Competitive' },
+    'technical': { bg: '#E0E7FF', text: '#4338CA', icon: '🔧', label: 'Technical' },
+    'partner': { bg: '#FFEDD5', text: '#C2410C', icon: '🤝', label: 'Partner' },
+    'value-realization': { bg: '#D1FAE5', text: '#047857', icon: '💰', label: 'Value Realization' },
   }
-  const categoryStyle = categoryConfig[category] || { bg: '#F3F4F6', text: '#374151', icon: '📄' }
+  const categoryStyle = categoryConfig[category] || { bg: '#F3F4F6', text: '#374151', icon: '📄', label: category }
+  const categoryLabel = categoryStyle.label || category
 
   // Format duration
   const duration = entry.duration ? `${entry.duration} minutes` : ''
@@ -56,7 +64,7 @@ export default function EnablementCard({
                   style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
                 >
                   <span className="mr-1">{categoryStyle.icon}</span>
-                  {category}
+                  {categoryLabel}
                 </div>
               )}
               {entry.featured && (
@@ -118,9 +126,21 @@ export default function EnablementCard({
             )}
           </div>
 
-          {/* Action footer */}
-          <div className="px-5 pb-5 pt-2 border-t border-[#F3F3F3] opacity-0 group-hover:opacity-100 transition-opacity">
-            <span className="text-[13px] leading-[20px] text-[#009B00] font-semibold flex items-center gap-1">
+          {/* Footer with session date (bottom left) and action link */}
+          <div className="px-5 pb-5 pt-2 border-t border-[#F3F3F3] flex items-center justify-between">
+            {/* Session date in bottom left */}
+            {isSessionFormat && displayDate && (
+              <div className="flex items-center gap-1 text-[12px] leading-[16px] font-semibold text-[#666666]">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>{displayDate}</span>
+              </div>
+            )}
+            {!isSessionFormat && <div />}
+
+            {/* Action link (right side) */}
+            <span className="text-[13px] leading-[20px] text-[#009B00] font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
               View Enablement
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -136,7 +156,7 @@ export default function EnablementCard({
   if (variant === 'compact') {
     return (
       <Link href={linkHref} className="group block h-full">
-        <div className="h-full bg-white border border-[#DFDFDF] rounded-lg p-4 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+        <div className="h-full bg-white border border-[#DFDFDF] rounded-lg p-4 hover:border-[#009B00] hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
           <div className="flex items-center gap-2 mb-2 flex-wrap">
             {category && (
               <span
@@ -144,7 +164,7 @@ export default function EnablementCard({
                 style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
               >
                 <span className="mr-1">{categoryStyle.icon}</span>
-                {category}
+                {categoryLabel}
               </span>
             )}
             {entry.featured && (
@@ -156,11 +176,24 @@ export default function EnablementCard({
           <h3 className="text-[15px] leading-[24px] font-semibold text-[#0D0D0D] mb-1 line-clamp-2 group-hover:text-[#009B00] transition-colors">
             {entry.title}
           </h3>
-          <p className="text-[12px] leading-[16px] text-[#252525] mb-2">
-            {publishDate}
-          </p>
+          <div className="flex-grow" />
+          {/* Session date in bottom left for live-replay/on-demand */}
+          {isSessionFormat && displayDate ? (
+            <div className="flex items-center gap-1 text-[11px] leading-[14px] font-semibold text-[#666666] mt-2">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>{displayDate}</span>
+            </div>
+          ) : (
+            publishDate && (
+              <p className="text-[12px] leading-[16px] text-[#252525] mb-2">
+                {publishDate}
+              </p>
+            )
+          )}
           {audiences && (
-            <span className="inline-block px-2 py-0.5 bg-[#F3F3F3] rounded text-[11px] leading-[14px] font-semibold text-[#252525]">
+            <span className="inline-block px-2 py-0.5 bg-[#F3F3F3] rounded text-[11px] leading-[14px] font-semibold text-[#252525] mt-2">
               {audiences}
             </span>
           )}
@@ -182,7 +215,7 @@ export default function EnablementCard({
                 style={{ backgroundColor: categoryStyle.bg, color: categoryStyle.text }}
               >
                 <span className="mr-1">{categoryStyle.icon}</span>
-                {category}
+                {categoryLabel}
               </div>
             )}
             {entry.featured && (
@@ -227,9 +260,21 @@ export default function EnablementCard({
           </div>
         </div>
 
-        {/* Action footer */}
-        <div className="px-5 pb-5 pt-2 border-t border-[#F3F3F3] opacity-0 group-hover:opacity-100 transition-opacity">
-          <span className="text-[13px] leading-[20px] text-[#009B00] font-semibold flex items-center gap-1">
+        {/* Footer with session date (bottom left) and action link */}
+        <div className="px-5 pb-5 pt-2 border-t border-[#F3F3F3] flex items-center justify-between">
+          {/* Session date in bottom left */}
+          {isSessionFormat && displayDate && (
+            <div className="flex items-center gap-1 text-[12px] leading-[16px] font-semibold text-[#666666]">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>{displayDate}</span>
+            </div>
+          )}
+          {!isSessionFormat && <div />}
+
+          {/* Action link (right side) */}
+          <span className="text-[13px] leading-[20px] text-[#009B00] font-semibold flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
             View Enablement
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

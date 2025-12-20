@@ -83,8 +83,16 @@
   "journeyStages": [],
   "products": [
     {
+      "name": "Gladly (fka Sidekick)",
+      "slug": "gladly"
+    },
+    {
       "name": "Sidekick",
       "slug": "sidekick"
+    },
+    {
+      "name": "Gladly Team (fka Hero)",
+      "slug": "gladly-team"
     },
     {
       "name": "Voice",
@@ -95,32 +103,20 @@
       "slug": "classic"
     },
     {
-      "name": null,
-      "slug": "sidekick-email"
+      "name": "Guides",
+      "slug": "guides"
     },
     {
-      "name": null,
-      "slug": "sidekick-sales"
+      "name": "Journeys",
+      "slug": "journeys"
     },
     {
-      "name": null,
-      "slug": "sidekick-voice"
-    },
-    {
-      "name": null,
+      "name": "App Platform",
       "slug": "app-platform"
     },
     {
-      "name": null,
-      "slug": "sidekick-standalone"
-    },
-    {
-      "name": null,
-      "slug": "customer-ai"
-    },
-    {
-      "name": null,
-      "slug": "guides-and-journeys"
+      "name": "Co-Pilot",
+      "slug": "co-pilot"
     }
   ],
   "teams": [

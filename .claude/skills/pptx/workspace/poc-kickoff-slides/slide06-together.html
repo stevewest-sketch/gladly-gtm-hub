@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.main { flex: 1; display: flex; margin: 25pt 50pt; }
+.left { width: 50%; padding-right: 25pt; }
+.right { width: 50%; display: flex; flex-direction: column; gap: 12pt; }
+.title { color: #0D0D0D; font-size: 24pt; font-weight: bold; margin: 0 0 15pt 0; }
+.intro { color: #4A4A4A; font-size: 11pt; margin: 0 0 20pt 0; line-height: 1.5; }
+.you-section { margin-top: 10pt; }
+.you-title { color: #8C69F0; font-size: 12pt; font-weight: bold; margin: 0 0 10pt 0; }
+.you-list { margin: 0; padding-left: 15pt; }
+.you-list li { color: #4A4A4A; font-size: 10pt; margin-bottom: 6pt; }
+.step-card {
+  background: #1A1A1A; border-radius: 10pt; padding: 15pt;
+  display: flex; align-items: flex-start;
+}
+.step-num {
+  background: #009B00; color: #FFFFFF; font-size: 14pt; font-weight: bold;
+  width: 28pt; height: 28pt; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; margin-right: 12pt; flex-shrink: 0;
+}
+.step-content { flex: 1; }
+.step-title { color: #FFFFFF; font-size: 12pt; font-weight: bold; margin: 0 0 4pt 0; }
+.step-desc { color: #AAAAAA; font-size: 9pt; margin: 0; line-height: 1.4; }
+.footer { display: flex; justify-content: center; margin-bottom: 20pt; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="main">
+  <div class="left">
+    <h1 class="title">What We'll Accomplish Together</h1>
+    <p class="intro">This POC is a collaborative partnership. We'll work together to validate Gladly AI against your specific use cases and success criteria.</p>
+    <div class="you-section">
+      <p class="you-title">Your Role</p>
+      <ul class="you-list">
+        <li>Identify 2-5 key questions/use cases to test</li>
+        <li>Provide access to workflows & knowledge base</li>
+        <li>Dedicate time for working sessions</li>
+        <li>Share feedback openly and often</li>
+      </ul>
+    </div>
+  </div>
+  <div class="right">
+    <div class="step-card">
+      <div class="step-num"><p style="margin:0;color:#FFFFFF;">1</p></div>
+      <div class="step-content">
+        <p class="step-title">Discovery & Setup</p>
+        <p class="step-desc">Map your top contact reasons, integrate knowledge base, configure initial Guides</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num"><p style="margin:0;color:#FFFFFF;">2</p></div>
+      <div class="step-content">
+        <p class="step-title">Testing & Iteration</p>
+        <p class="step-desc">Run test conversations, refine responses, optimize for your tone and policies</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num"><p style="margin:0;color:#FFFFFF;">3</p></div>
+      <div class="step-content">
+        <p class="step-title">Validation & Results</p>
+        <p class="step-desc">Measure against success criteria, document learnings, plan next steps</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

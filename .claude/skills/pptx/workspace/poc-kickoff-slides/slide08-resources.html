@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.title-section { margin: 20pt 50pt 15pt 50pt; }
+.title { color: #0D0D0D; font-size: 24pt; font-weight: bold; margin: 0; }
+.subtitle { color: #4A4A4A; font-size: 12pt; margin: 8pt 0 0 0; }
+.resources-grid { display: flex; flex-wrap: wrap; margin: 0 50pt; gap: 15pt; }
+.resource-card {
+  background: #F3F3F3; border-radius: 10pt; padding: 14pt;
+  width: 190pt;
+}
+.resource-icon { color: #009B00; font-size: 24pt; margin: 0 0 10pt 0; }
+.resource-title { color: #0D0D0D; font-size: 13pt; font-weight: bold; margin: 0 0 8pt 0; }
+.resource-desc { color: #4A4A4A; font-size: 9pt; margin: 0; line-height: 1.4; }
+.support-section {
+  background: #1A1A1A; border-radius: 10pt; margin: 15pt 50pt;
+  padding: 12pt 25pt; display: flex; justify-content: space-around;
+}
+.support-item { text-align: center; }
+.support-label { color: #AAAAAA; font-size: 9pt; margin: 0 0 5pt 0; }
+.support-value { color: #FFFFFF; font-size: 11pt; font-weight: bold; margin: 0; }
+.footer { display: flex; justify-content: center; margin: auto 0 15pt 0; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="title-section">
+  <h1 class="title">Resources & Support</h1>
+  <p class="subtitle">Everything you need to succeed with your POC</p>
+</div>
+<div class="resources-grid">
+  <div class="resource-card">
+    <p class="resource-title">Gladly Help Docs</p>
+    <p class="resource-desc">Comprehensive documentation and best practices for all Gladly features and configurations.</p>
+  </div>
+  <div class="resource-card">
+    <p class="resource-title">Gladly Academy</p>
+    <p class="resource-desc">Self-paced training modules covering Sidekick, Guides, Answers, and more.</p>
+  </div>
+  <div class="resource-card">
+    <p class="resource-title">Office Hours</p>
+    <p class="resource-desc">Dedicated time slots for questions, training, and hands-on guidance from our team.</p>
+  </div>
+  <div class="resource-card">
+    <p class="resource-title">Slack Channel</p>
+    <p class="resource-desc">Real-time async support and collaboration with your dedicated POC team.</p>
+  </div>
+</div>
+<div class="support-section">
+  <div class="support-item">
+    <p class="support-label">POC Team Lead</p>
+    <p class="support-value">[Your Gladly Contact]</p>
+  </div>
+  <div class="support-item">
+    <p class="support-label">Slack Channel</p>
+    <p class="support-value">#shared-[company]-gladly</p>
+  </div>
+  <div class="support-item">
+    <p class="support-label">Weekly Syncs</p>
+    <p class="support-value">[Day/Time TBD]</p>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

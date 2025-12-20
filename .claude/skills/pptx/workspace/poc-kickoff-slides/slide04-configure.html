@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.title-section { margin: 25pt 50pt 20pt 50pt; }
+.title { color: #0D0D0D; font-size: 24pt; font-weight: bold; margin: 0; }
+.subtitle { color: #4A4A4A; font-size: 12pt; margin: 8pt 0 0 0; }
+.spectrum { margin: 0 50pt; display: flex; flex-direction: column; }
+.spectrum-bar { display: flex; height: 8pt; border-radius: 4pt; overflow: hidden; margin-bottom: 8pt; }
+.bar-segment { flex: 1; }
+.bar-1 { background: #8C69F0; }
+.bar-2 { background: #A888F5; }
+.bar-3 { background: #C5B3F8; }
+.bar-4 { background: #CDEFCD; }
+.bar-5 { background: #009B00; }
+.labels { display: flex; justify-content: space-between; margin-bottom: 5pt; }
+.label-left { color: #8C69F0; font-size: 9pt; font-weight: bold; }
+.label-right { color: #009B00; font-size: 9pt; font-weight: bold; }
+.options { display: flex; justify-content: space-between; margin-top: 15pt; }
+.option { width: 115pt; text-align: center; }
+.option-title { color: #0D0D0D; font-size: 11pt; font-weight: bold; margin: 0 0 6pt 0; }
+.option-desc { color: #4A4A4A; font-size: 8pt; margin: 0; line-height: 1.4; }
+.option-best { color: #009B00; font-size: 7pt; font-style: italic; margin: 8pt 0 0 0; }
+.footer { display: flex; justify-content: center; margin: auto 0 20pt 0; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="title-section">
+  <h1 class="title">Configure Gladly Your Way</h1>
+  <p class="subtitle">From full control to fully managed - deploy at your pace</p>
+</div>
+<div class="spectrum">
+  <div class="labels">
+    <p class="label-left">Full Control</p>
+    <p class="label-right">Fully Managed</p>
+  </div>
+  <div class="spectrum-bar">
+    <div class="bar-segment bar-1"></div>
+    <div class="bar-segment bar-2"></div>
+    <div class="bar-segment bar-3"></div>
+    <div class="bar-segment bar-4"></div>
+    <div class="bar-segment bar-5"></div>
+  </div>
+  <div class="options">
+    <div class="option">
+      <p class="option-title">DIY APIs</p>
+      <p class="option-desc">Max flexibility for engineers. Own the model, prompts, and workflows.</p>
+      <p class="option-best">Best for: Strong in-house ENG/ML</p>
+    </div>
+    <div class="option">
+      <p class="option-title">Guided Build</p>
+      <p class="option-desc">Launch fast with no-code + expert help. Playbooks & templates.</p>
+      <p class="option-best">Best for: Lean teams, time-to-value</p>
+    </div>
+    <div class="option">
+      <p class="option-title">Co-Pilot Ops</p>
+      <p class="option-desc">AI + agents in the loop. Assist + automate high-volume actions.</p>
+      <p class="option-best">Best for: Complex edge cases</p>
+    </div>
+    <div class="option">
+      <p class="option-title">Automation</p>
+      <p class="option-desc">End-to-end automation for defined intents with SLAs.</p>
+      <p class="option-best">Best for: Stable policies, mid-high vol</p>
+    </div>
+    <div class="option">
+      <p class="option-title">White Glove</p>
+      <p class="option-desc">We configure, run, and optimize. Reviews & analytics included.</p>
+      <p class="option-best">Best for: Resource-constrained teams</p>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

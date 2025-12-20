@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enablement Hub - Sidebar Layout Mock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+      padding: 24px 32px 20px;
+      color: white;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header p {
+      font-size: 14px;
+      opacity: 0.9;
+      max-width: 500px;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 4px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-tab {
+      padding: 10px 18px;
+      border-radius: 8px 8px 0 0;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-tab.active {
+      background: #f8f9fa;
+      color: #1a1a1a;
+    }
+
+    .nav-tab:not(.active) {
+      background: rgba(255,255,255,0.15);
+      color: white;
+    }
+
+    .nav-tab:not(.active):hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Main Layout */
+    .main-layout {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      min-height: calc(100vh - 180px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: white;
+      border-right: 1px solid #e5e7eb;
+      padding: 20px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: calc(100vh - 180px);
+      overflow-y: auto;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .sidebar-header h3 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6b7280;
+    }
+
+    .clear-btn {
+      font-size: 12px;
+      color: #059669;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .clear-btn:hover {
+      text-decoration: underline;
+    }
+
+    .filter-section {
+      margin-bottom: 24px;
+    }
+
+    .filter-section h4 {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #374151;
+      margin-bottom: 10px;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      color: #4b5563;
+      transition: all 0.15s ease;
+    }
+
+    .filter-option:hover {
+      background: #f3f4f6;
+    }
+
+    .filter-option.active {
+      background: #ecfdf5;
+      color: #059669;
+      font-weight: 500;
+    }
+
+    .filter-option input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #059669;
+    }
+
+    .filter-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Content Area */
+    .content-area {
+      flex: 1;
+      padding: 24px 32px;
+      background: #f8f9fa;
+    }
+
+    /* Search and Controls */
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      background: white;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: #059669;
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    }
+
+    .search-box::before {
+      content: "🔍";
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      opacity: 0.5;
+    }
+
+    .quick-filters {
+      display: flex;
+      gap: 8px;
+    }
+
+    .quick-filter {
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quick-filter.active {
+      background: #059669;
+      color: white;
+      border-color: #059669;
+    }
+
+    .quick-filter:not(.active):hover {
+      border-color: #059669;
+      color: #059669;
+    }
+
+    .results-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .results-count {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .view-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .sort-select {
+      padding: 6px 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 13px;
+      background: white;
+    }
+
+    .view-toggle {
+      display: flex;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .view-btn {
+      padding: 6px 10px;
+      background: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .view-btn.active {
+      background: #1a1a1a;
+      color: white;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: #059669;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-product { background: #e0f2fe; color: #0369a1; }
+    .badge-technical { background: #e0e7ff; color: #4338ca; }
+    .badge-competitive { background: #ffe4e6; color: #be123c; }
+    .badge-gtm { background: #dcfce7; color: #166534; }
+    .badge-value { background: #fef3c7; color: #b45309; }
+
+    .card-format {
+      font-size: 11px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .card-description {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .card-products {
+      display: flex;
+      gap: 4px;
+    }
+
+    .product-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Sidebar Toggle (for demo) */
+    .sidebar-toggle {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 20px;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    /* Collapsed state demo */
+    .main-layout.collapsed .sidebar {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .main-layout.collapsed .sidebar-toggle {
+      display: block;
+    }
+
+    /* Active filters bar */
+    .active-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .active-filter-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 16px;
+      font-size: 12px;
+      color: #059669;
+      font-weight: 500;
+    }
+
+    .active-filter-tag .remove {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .active-filter-tag .remove:hover {
+      opacity: 1;
+    }
+
+    /* Note banner */
+    .mock-note {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      padding: 12px 20px;
+      font-size: 13px;
+      color: #92400e;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-note">
+    📐 <strong>MOCK:</strong> This is a layout prototype for the left sidebar approach. Click around to get a feel for the structure.
+  </div>
+
+  <header class="header">
+    <div class="header-content">
+      <h1>🎓 Enablement Hub</h1>
+      <p>Become the Gladly expert everyone turns to. Training videos, product deep-dives, and skills for every role.</p>
+
+      <nav class="nav-tabs">
+        <div class="nav-tab active">📁 All Training</div>
+        <div class="nav-tab">📦 Product</div>
+        <div class="nav-tab">💼 Sales</div>
+        <div class="nav-tab">💛 Customer Success</div>
+        <div class="nav-tab">💡 Solutions Consulting</div>
+        <div class="nav-tab">⚔️ Competitive</div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3>Filters</h3>
+        <span class="clear-btn">Clear all</span>
+      </div>
+
+      <div class="filter-section">
+        <h4>Type</h4>
+        <div class="filter-options">
+          <label class="filter-option active">
+            <input type="checkbox" checked> All
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Product
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Technical
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> GTM Strategy
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Competitive
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Partner
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Value Realization
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Product</h4>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #f59e0b;"></span>
+            Gladly (fka Sidekick)
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #3b82f6;"></span>
+            Gladly Team (fka Hero)
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #10b981;"></span>
+            Guides
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #8b5cf6;"></span>
+            Journeys
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #06b6d4;"></span>
+            App Platform
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #ec4899;"></span>
+            Copilot
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <span class="filter-dot" style="background: #6366f1;"></span>
+            Insights & Dashboards
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h4>Format</h4>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox"> Live Replay
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> On-Demand
+          </label>
+          <label class="filter-option">
+            <input type="checkbox"> Playbook
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <label class="filter-option">
+          <input type="checkbox"> Courses only
+        </label>
+      </div>
+    </aside>
+
+    <main class="content-area">
+      <div class="content-header">
+        <div class="search-box">
+          <input type="text" placeholder="Search training...">
+        </div>
+        <div class="quick-filters">
+          <div class="quick-filter active">📁 All</div>
+          <div class="quick-filter">✨ New</div>
+          <div class="quick-filter">🔥 Most Popular</div>
+        </div>
+      </div>
+
+      <!-- Show active filters when something is selected -->
+      <!--
+      <div class="active-filters">
+        <span class="active-filter-tag">Product <span class="remove">×</span></span>
+        <span class="active-filter-tag">Guides <span class="remove">×</span></span>
+      </div>
+      -->
+
+      <div class="results-info">
+        <span class="results-count">137 resources</span>
+        <div class="view-controls">
+          <select class="sort-select">
+            <option>Newest</option>
+            <option>Most Popular</option>
+            <option>A-Z</option>
+          </select>
+          <div class="view-toggle">
+            <button class="view-btn active">⊞</button>
+            <button class="view-btn">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">📦 Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Gladly Platform Overview</h3>
+          <p class="card-description">A comprehensive introduction to the Gladly platform, covering core features, architecture, and key differentiators.</p>
+          <div class="card-meta">
+            <span>Dec 15, 2024 · 45 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #f59e0b;" title="Gladly"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-competitive">⚔️ Competitive</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">Zendesk Battle Card</h3>
+          <p class="card-description">Competitive positioning, objection handling, and win strategies when competing against Zendesk.</p>
+          <div class="card-meta">
+            <span>Dec 10, 2024</span>
+            <div class="card-products"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-technical">🔧 Technical</span>
+            <span class="card-format">Live Replay</span>
+          </div>
+          <h3 class="card-title">API Integration Deep Dive</h3>
+          <p class="card-description">Technical walkthrough of Gladly's REST APIs, webhooks, and integration patterns for solutions consultants.</p>
+          <div class="card-meta">
+            <span>Dec 8, 2024 · 60 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #06b6d4;" title="App Platform"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-gtm">🎯 GTM Strategy</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Q1 2025 Product Positioning</h3>
+          <p class="card-description">Updated messaging framework and positioning for the new year, including Copilot and Journeys narratives.</p>
+          <div class="card-meta">
+            <span>Dec 5, 2024 · 30 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #ec4899;" title="Copilot"></span>
+              <span class="product-dot" style="background: #8b5cf6;" title="Journeys"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">📦 Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Guides Feature Walkthrough</h3>
+          <p class="card-description">Complete tour of the Guides product, from setup to advanced configuration and best practices.</p>
+          <div class="card-meta">
+            <span>Dec 1, 2024 · 35 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #10b981;" title="Guides"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-value">💰 Value</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">ROI Calculator Training</h3>
+          <p class="card-description">How to use the ROI calculator effectively in sales conversations and build compelling business cases.</p>
+          <div class="card-meta">
+            <span>Nov 28, 2024</span>
+            <div class="card-products"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-technical">🔧 Technical</span>
+            <span class="card-format">Live Replay</span>
+          </div>
+          <h3 class="card-title">Copilot Configuration Workshop</h3>
+          <p class="card-description">Hands-on workshop covering Copilot setup, prompt engineering, and optimization techniques.</p>
+          <div class="card-meta">
+            <span>Nov 25, 2024 · 90 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #ec4899;" title="Copilot"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-competitive">⚔️ Competitive</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">Salesforce Service Cloud Battle Card</h3>
+          <p class="card-description">Positioning against Salesforce Service Cloud, key differentiators, and common objection responses.</p>
+          <div class="card-meta">
+            <span>Nov 20, 2024</span>
+            <div class="card-products"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">📦 Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Insights & Dashboards Overview</h3>
+          <p class="card-description">Tour of reporting capabilities, dashboard customization, and analytics best practices.</p>
+          <div class="card-meta">
+            <span>Nov 15, 2024 · 40 min</span>
+            <div class="card-products">
+              <span class="product-dot" style="background: #6366f1;" title="Insights"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <button class="sidebar-toggle" onclick="document.querySelector('.main-layout').classList.toggle('collapsed')">
+    ☰ Show Filters
+  </button>
+
+  <script>
+    // Simple interactivity for the mock
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.quick-filter').forEach(filter => {
+      filter.addEventListener('click', () => {
+        document.querySelectorAll('.quick-filter').forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

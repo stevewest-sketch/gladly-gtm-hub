@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.title-section { margin: 25pt 50pt 20pt 50pt; }
+.title { color: #0D0D0D; font-size: 24pt; font-weight: bold; margin: 0; }
+.timeline { display: flex; justify-content: space-between; margin: 0 50pt; position: relative; }
+.timeline::before {
+  content: ''; position: absolute; top: 35pt; left: 60pt; right: 60pt;
+  height: 3pt; background: #CDEFCD;
+}
+.week { text-align: center; width: 180pt; position: relative; z-index: 1; }
+.week-num {
+  background: #009B00; color: #FFFFFF; font-size: 12pt; font-weight: bold;
+  width: 70pt; height: 70pt; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; margin: 0 auto 15pt auto;
+}
+.week-title { color: #0D0D0D; font-size: 13pt; font-weight: bold; margin: 0 0 8pt 0; }
+.week-tasks { margin: 0; padding-left: 20pt; text-align: left; }
+.week-tasks li { color: #4A4A4A; font-size: 9pt; margin-bottom: 5pt; }
+.cta-section {
+  background: #F3F3F3; border-radius: 10pt; margin: 25pt 50pt;
+  padding: 15pt 25pt; display: flex; justify-content: space-between; align-items: center;
+}
+.cta-text { color: #0D0D0D; font-size: 12pt; font-weight: bold; margin: 0; }
+.cta-action { color: #009B00; font-size: 11pt; margin: 0; }
+.footer { display: flex; justify-content: center; margin: auto 0 20pt 0; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="title-section">
+  <h1 class="title">Next Steps</h1>
+</div>
+<div class="timeline">
+  <div class="week">
+    <div class="week-num"><p style="margin:0;color:#FFFFFF;font-size:10pt;">Week 1</p></div>
+    <p class="week-title">Setup</p>
+    <ul class="week-tasks">
+      <li>Slack channel created</li>
+      <li>Weekly sync scheduled</li>
+      <li>Top contact reasons identified</li>
+      <li>Initial Guides configured</li>
+    </ul>
+  </div>
+  <div class="week">
+    <div class="week-num"><p style="margin:0;color:#FFFFFF;font-size:10pt;">Week 2</p></div>
+    <p class="week-title">Working Sessions</p>
+    <ul class="week-tasks">
+      <li>First working session</li>
+      <li>Test 2-5 use cases</li>
+      <li>Iterate on Guides</li>
+      <li>Tune tone & guardrails</li>
+    </ul>
+  </div>
+  <div class="week">
+    <div class="week-num"><p style="margin:0;color:#FFFFFF;font-size:10pt;">Week 3</p></div>
+    <p class="week-title">Validation</p>
+    <ul class="week-tasks">
+      <li>Measure success criteria</li>
+      <li>Document results</li>
+      <li>Plan expansion path</li>
+      <li>Next steps discussion</li>
+    </ul>
+  </div>
+</div>
+<div class="cta-section">
+  <p class="cta-text">Ready to get started?</p>
+  <p class="cta-action">Schedule your first working session within the next week</p>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

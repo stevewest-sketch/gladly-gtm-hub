@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.title-section { margin: 25pt 50pt 15pt 50pt; }
+.title { color: #0D0D0D; font-size: 24pt; font-weight: bold; margin: 0; }
+.subtitle { color: #4A4A4A; font-size: 12pt; margin: 8pt 0 0 0; }
+.criteria-grid { display: flex; flex-wrap: wrap; margin: 0 50pt; gap: 15pt; }
+.criteria-card {
+  background: #F3F3F3; border-radius: 10pt; padding: 15pt;
+  width: 145pt; border-left: 4pt solid #009B00;
+}
+.criteria-title { color: #0D0D0D; font-size: 12pt; font-weight: bold; margin: 0 0 8pt 0; }
+.criteria-items { margin: 0; padding-left: 12pt; }
+.criteria-items li { color: #4A4A4A; font-size: 9pt; margin-bottom: 5pt; line-height: 1.3; }
+.footer { display: flex; justify-content: center; margin: auto 0 20pt 0; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="title-section">
+  <h1 class="title">POC Success Criteria</h1>
+  <p class="subtitle">What we'll measure together to validate success</p>
+</div>
+<div class="criteria-grid">
+  <div class="criteria-card">
+    <p class="criteria-title">Resolution Quality</p>
+    <ul class="criteria-items">
+      <li>Resolution rate across top contact reasons</li>
+      <li>Answer accuracy & completeness</li>
+      <li>Multi-step completion rate</li>
+    </ul>
+  </div>
+  <div class="criteria-card">
+    <p class="criteria-title">Ease of Admin</p>
+    <ul class="criteria-items">
+      <li>Guide usability - easy to build & iterate</li>
+      <li>Sandbox testing experience</li>
+      <li>Transparency & debug-ability</li>
+    </ul>
+  </div>
+  <div class="criteria-card">
+    <p class="criteria-title">Tone Recognition</p>
+    <ul class="criteria-items">
+      <li>Translation quality</li>
+      <li>Guardrail adherence</li>
+      <li>Brand voice consistency</li>
+    </ul>
+  </div>
+  <div class="criteria-card">
+    <p class="criteria-title">Partnership</p>
+    <ul class="criteria-items">
+      <li>Resource availability & support</li>
+      <li>Documentation quality</li>
+      <li>Responsiveness & collaboration</li>
+    </ul>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

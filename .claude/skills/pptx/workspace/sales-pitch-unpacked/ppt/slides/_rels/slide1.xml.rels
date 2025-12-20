@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ascii"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout149.xml"/>
+  <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide" Target="../notesSlides/notesSlide1.xml"/>
+  <Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1LYscm1aGWTPuix1DEGVEZhrZ8ZJZUvP66nWiVyhBIco/edit" TargetMode="External"/>
+  <Relationship Id="rId4" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1LYscm1aGWTPuix1DEGVEZhrZ8ZJZUvP66nWiVyhBIco/edit" TargetMode="External"/>
+  <Relationship Id="rId9" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1HZeqqxuteUA1lWOn4A8gk0sLgVjp3rNX840M4RebTRI/edit" TargetMode="External"/>
+  <Relationship Id="rId5" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1bTTcdBqATjgWaIfNZo8SYrAO6wKuhY4D1tsiNrFCcGA/edit" TargetMode="External"/>
+  <Relationship Id="rId6" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1bTTcdBqATjgWaIfNZo8SYrAO6wKuhY4D1tsiNrFCcGA/edit" TargetMode="External"/>
+  <Relationship Id="rId7" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1bTTcdBqATjgWaIfNZo8SYrAO6wKuhY4D1tsiNrFCcGA/edit" TargetMode="External"/>
+  <Relationship Id="rId8" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1TzNEZDVrxebVmFrHC4Jw6xhzUCPf4de7AUQ3-BxsNcY/edit" TargetMode="External"/>
+  <Relationship Id="rId11" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1HZeqqxuteUA1lWOn4A8gk0sLgVjp3rNX840M4RebTRI/edit" TargetMode="External"/>
+  <Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1HZeqqxuteUA1lWOn4A8gk0sLgVjp3rNX840M4RebTRI/edit" TargetMode="External"/>
+  <Relationship Id="rId13" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/1EuQ-0V2VTr1ofkH1cz06jFP6LKJ2QidPTxQBMY6Kn4Y/edit" TargetMode="External"/>
+  <Relationship Id="rId12" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="https://docs.google.com/presentation/u/0/d/15ScGeoNBnZ63_RZ5eOwhDouVTCZR4l9xG1jYs8F79d0/edit" TargetMode="External"/>
+</Relationships>

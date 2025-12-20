@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header-bar { background: #009B00; height: 6pt; width: 100%; }
+.main { flex: 1; display: flex; margin: 30pt 50pt; }
+.left { width: 45%; padding-right: 30pt; display: flex; flex-direction: column; justify-content: center; }
+.right { width: 55%; display: flex; align-items: center; justify-content: center; }
+.title { color: #0D0D0D; font-size: 28pt; font-weight: bold; margin: 0 0 15pt 0; line-height: 1.3; }
+.subtitle { color: #4A4A4A; font-size: 14pt; font-weight: normal; margin: 0; line-height: 1.5; }
+.card {
+  background: #1A1A1A; border-radius: 12pt; padding: 25pt;
+  width: 280pt; height: 220pt;
+}
+.stat-row { display: flex; justify-content: space-between; margin-bottom: 20pt; }
+.stat-box { text-align: center; width: 45%; }
+.stat-number { color: #009B00; font-size: 32pt; font-weight: bold; margin: 0; }
+.stat-label { color: #FFFFFF; font-size: 10pt; margin: 5pt 0 0 0; }
+.divider { background: #333333; height: 1pt; margin: 15pt 0; }
+.bottom-stat { text-align: center; }
+.footer { display: flex; justify-content: center; margin-bottom: 20pt; }
+.confidential { color: #AAAAAA; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="header-bar"></div>
+<div class="main">
+  <div class="left">
+    <h1 class="title">The AI Opportunity<br>Is Now</h1>
+    <p class="subtitle">AI-powered customer experience isn't just about efficiency. It's about delivering exceptional service at scale while building lasting customer relationships.</p>
+  </div>
+  <div class="right">
+    <div class="card">
+      <div class="stat-row">
+        <div class="stat-box">
+          <p class="stat-number">70%</p>
+          <p class="stat-label">Resolution Coverage<br>Target</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-number">90</p>
+          <p class="stat-label">Days to<br>Proven ROI</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="bottom-stat">
+        <p class="stat-number">3x</p>
+        <p class="stat-label">Resolution Rate Increase in First 30 Days</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>

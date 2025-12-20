@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:com="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" xmlns:ahyp="http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor">
+  <p:cSld>
+    <p:bg>
+      <p:bgPr>
+        <a:solidFill>
+          <a:schemeClr val="lt1"/>
+        </a:solidFill>
+      </p:bgPr>
+    </p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="984" name="Shape 984"/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMap accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" bg1="lt1" bg2="dk2" tx1="dk1" tx2="lt2" folHlink="folHlink" hlink="hlink"/>
+  <p:sldLayoutIdLst>
+    <p:sldLayoutId id="2147483763" r:id="rId1"/>
+    <p:sldLayoutId id="2147483764" r:id="rId2"/>
+    <p:sldLayoutId id="2147483765" r:id="rId3"/>
+    <p:sldLayoutId id="2147483766" r:id="rId4"/>
+    <p:sldLayoutId id="2147483767" r:id="rId5"/>
+    <p:sldLayoutId id="2147483768" r:id="rId6"/>
+    <p:sldLayoutId id="2147483769" r:id="rId7"/>
+    <p:sldLayoutId id="2147483770" r:id="rId8"/>
+    <p:sldLayoutId id="2147483771" r:id="rId9"/>
+    <p:sldLayoutId id="2147483772" r:id="rId10"/>
+    <p:sldLayoutId id="2147483773" r:id="rId11"/>
+    <p:sldLayoutId id="2147483774" r:id="rId12"/>
+    <p:sldLayoutId id="2147483775" r:id="rId13"/>
+    <p:sldLayoutId id="2147483776" r:id="rId14"/>
+    <p:sldLayoutId id="2147483777" r:id="rId15"/>
+    <p:sldLayoutId id="2147483778" r:id="rId16"/>
+    <p:sldLayoutId id="2147483779" r:id="rId17"/>
+    <p:sldLayoutId id="2147483780" r:id="rId18"/>
+    <p:sldLayoutId id="2147483781" r:id="rId19"/>
+    <p:sldLayoutId id="2147483782" r:id="rId20"/>
+    <p:sldLayoutId id="2147483783" r:id="rId21"/>
+    <p:sldLayoutId id="2147483784" r:id="rId22"/>
+    <p:sldLayoutId id="2147483785" r:id="rId23"/>
+    <p:sldLayoutId id="2147483786" r:id="rId24"/>
+    <p:sldLayoutId id="2147483787" r:id="rId25"/>
+    <p:sldLayoutId id="2147483788" r:id="rId26"/>
+    <p:sldLayoutId id="2147483789" r:id="rId27"/>
+    <p:sldLayoutId id="2147483790" r:id="rId28"/>
+    <p:sldLayoutId id="2147483791" r:id="rId29"/>
+    <p:sldLayoutId id="2147483792" r:id="rId30"/>
+    <p:sldLayoutId id="2147483793" r:id="rId31"/>
+    <p:sldLayoutId id="2147483794" r:id="rId32"/>
+    <p:sldLayoutId id="2147483795" r:id="rId33"/>
+    <p:sldLayoutId id="2147483796" r:id="rId34"/>
+    <p:sldLayoutId id="2147483797" r:id="rId35"/>
+    <p:sldLayoutId id="2147483798" r:id="rId36"/>
+    <p:sldLayoutId id="2147483799" r:id="rId37"/>
+    <p:sldLayoutId id="2147483800" r:id="rId38"/>
+    <p:sldLayoutId id="2147483801" r:id="rId39"/>
+  </p:sldLayoutIdLst>
+  <p:transition>
+    <p:fade/>
+  </p:transition>
+  <p:hf dt="0" ftr="0" hdr="0"/>
+  <p:txStyles>
+    <p:titleStyle>
+      <a:defPPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+      </a:defPPr>
+      <a:lvl1pPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+      <a:lvl2pPr lvl="1" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl2pPr>
+      <a:lvl3pPr lvl="2" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl3pPr>
+      <a:lvl4pPr lvl="3" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl4pPr>
+      <a:lvl5pPr lvl="4" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl5pPr>
+      <a:lvl6pPr lvl="5" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl6pPr>
+      <a:lvl7pPr lvl="6" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl7pPr>
+      <a:lvl8pPr lvl="7" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl8pPr>
+      <a:lvl9pPr lvl="8" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl9pPr>
+    </p:titleStyle>
+    <p:bodyStyle>
+      <a:defPPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+      </a:defPPr>
+      <a:lvl1pPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+      <a:lvl2pPr lvl="1" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl2pPr>
+      <a:lvl3pPr lvl="2" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl3pPr>
+      <a:lvl4pPr lvl="3" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl4pPr>
+      <a:lvl5pPr lvl="4" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl5pPr>
+      <a:lvl6pPr lvl="5" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl6pPr>
+      <a:lvl7pPr lvl="6" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl7pPr>
+      <a:lvl8pPr lvl="7" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl8pPr>
+      <a:lvl9pPr lvl="8" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl9pPr>
+    </p:bodyStyle>
+    <p:otherStyle>
+      <a:defPPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+      </a:defPPr>
+      <a:lvl1pPr lvl="0" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl1pPr>
+      <a:lvl2pPr lvl="1" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl2pPr>
+      <a:lvl3pPr lvl="2" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl3pPr>
+      <a:lvl4pPr lvl="3" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl4pPr>
+      <a:lvl5pPr lvl="4" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl5pPr>
+      <a:lvl6pPr lvl="5" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl6pPr>
+      <a:lvl7pPr lvl="6" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl7pPr>
+      <a:lvl8pPr lvl="7" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl8pPr>
+      <a:lvl9pPr lvl="8" marR="0" rtl="0" algn="l">
+        <a:lnSpc>
+          <a:spcPct val="100000"/>
+        </a:lnSpc>
+        <a:spcBef>
+          <a:spcPts val="0"/>
+        </a:spcBef>
+        <a:spcAft>
+          <a:spcPts val="0"/>
+        </a:spcAft>
+        <a:buClr>
+          <a:srgbClr val="000000"/>
+        </a:buClr>
+        <a:buFont typeface="Arial"/>
+        <a:defRPr b="0" i="0" sz="1400" u="none" cap="none" strike="noStrike">
+          <a:solidFill>
+            <a:srgbClr val="000000"/>
+          </a:solidFill>
+          <a:latin typeface="Arial"/>
+          <a:ea typeface="Arial"/>
+          <a:cs typeface="Arial"/>
+          <a:sym typeface="Arial"/>
+        </a:defRPr>
+      </a:lvl9pPr>
+    </p:otherStyle>
+  </p:txStyles>
+  <p:extLst>
+    <p:ext uri="{27BBF7A9-308A-43DC-89C8-2F10F3537804}">
+      <p15:sldGuideLst>
+        <p15:guide id="1" pos="288">
+          <p15:clr>
+            <a:schemeClr val="accent6"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="2" pos="5472">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="3" orient="horz" pos="612">
+          <p15:clr>
+            <a:schemeClr val="accent6"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="4" orient="horz" pos="2952">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="5" orient="horz" pos="3091">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="6" pos="144">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="7" orient="horz" pos="144">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="8" pos="5611">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="9" pos="588">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="10" pos="1033">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="11" pos="1175">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="12" pos="1477">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="13" pos="1602">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="14" pos="1944">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="15" pos="2070">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="16" pos="2365">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="17" pos="2505">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="18" pos="2809">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="19" pos="2949">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="20" pos="3252">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="21" pos="3393">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="22" pos="3696">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="23" pos="3835">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="24" pos="4140">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="25" pos="4279">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="26" pos="4584">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="27" pos="4723">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="28" pos="5028">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="29" pos="5167">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="30" pos="738">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="31" orient="horz" pos="288">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="32" orient="horz" pos="754">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="33" orient="horz" pos="1080">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="34" orient="horz" pos="1224">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="35" orient="horz" pos="1548">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="36" orient="horz" pos="1687">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="37" orient="horz" pos="2009">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="38" orient="horz" pos="2151">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="39" orient="horz" pos="2477">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+        <p15:guide id="40" orient="horz" pos="2622">
+          <p15:clr>
+            <a:srgbClr val="FDE53C"/>
+          </p15:clr>
+        </p15:guide>
+      </p15:sldGuideLst>
+    </p:ext>
+  </p:extLst>
+</p:sldMaster>

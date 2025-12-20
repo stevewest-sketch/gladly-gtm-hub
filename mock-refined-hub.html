@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enablement Hub - Refined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Header - Similar to current */
+    .header {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      padding: 20px 32px 0;
+      color: white;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .header-logo {
+      font-size: 24px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .header p {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    /* Navigation Tabs - Cleaner */
+    .nav-tabs {
+      display: flex;
+      gap: 1px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 8px 8px 0 0;
+      overflow: hidden;
+      width: fit-content;
+    }
+
+    .nav-tab {
+      padding: 11px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.9);
+      border: none;
+    }
+
+    .nav-tab:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .nav-tab.browse-all {
+      border-radius: 0 8px 0 0;
+    }
+
+    .nav-tab.active {
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    .nav-tab:not(.active):hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 32px 48px;
+      min-height: calc(100vh - 140px);
+    }
+
+    /* Tab Panels */
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* Section Row */
+    .section-row {
+      margin-bottom: 36px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title-icon {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .section-link {
+      font-size: 12px;
+      color: #059669;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Cards Row - Horizontal scroll */
+    .cards-row {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scroll-snap-type: x mandatory;
+      margin: 0 -8px;
+      padding: 8px;
+    }
+
+    .cards-row::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    .cards-row::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .cards-row::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 3px;
+    }
+
+    .cards-row::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
+
+    /* Card */
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      flex-shrink: 0;
+      width: 300px;
+      scroll-snap-align: start;
+    }
+
+    .card:hover {
+      border-color: #10b981;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    /* Badges - Refined colors */
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-product { background: #dbeafe; color: #1e40af; }
+    .badge-technical { background: #e0e7ff; color: #3730a3; }
+    .badge-competitive { background: #fce7f3; color: #9d174d; }
+    .badge-gtm { background: #d1fae5; color: #065f46; }
+    .badge-value { background: #fef3c7; color: #92400e; }
+    .badge-partner { background: #f3e8ff; color: #6b21a8; }
+
+    .card-format {
+      font-size: 10px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .card-description {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .card-products {
+      display: flex;
+      gap: 4px;
+    }
+
+    .product-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    /* Featured Card - Elevated but not garish */
+    .featured-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .featured-card {
+      background: white;
+      border-radius: 10px;
+      padding: 22px;
+      border: 1px solid #e5e7eb;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .featured-card.accent-green::before { background: linear-gradient(90deg, #059669, #10b981); }
+    .featured-card.accent-blue::before { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+    .featured-card.accent-purple::before { background: linear-gradient(90deg, #7c3aed, #8b5cf6); }
+
+    .featured-card:hover {
+      border-color: #10b981;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .featured-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #059669;
+      margin-bottom: 10px;
+    }
+
+    .featured-card .card-title {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .featured-card .card-description {
+      -webkit-line-clamp: 3;
+      margin-bottom: 14px;
+    }
+
+    /* Curated Section */
+    .curated-section {
+      margin-bottom: 40px;
+    }
+
+    .curated-section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .curated-section-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .curated-section-count {
+      background: #f3f4f6;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    .curated-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .curated-grid .card {
+      width: auto;
+    }
+
+    /* Jump Nav */
+    .jump-nav {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .jump-nav-label {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-right: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .jump-link {
+      padding: 5px 10px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 12px;
+      color: #4b5563;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      font-weight: 500;
+    }
+
+    .jump-link:hover {
+      border-color: #10b981;
+      color: #059669;
+    }
+
+    /* Browse All Tab */
+    .browse-header {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      max-width: 420px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 13px;
+      background: white;
+      transition: all 0.15s ease;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: #9ca3af;
+    }
+
+    .type-filter {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .type-btn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+      color: #4b5563;
+    }
+
+    .type-btn.active {
+      background: #059669;
+      color: white;
+      border-color: #059669;
+    }
+
+    .type-btn:not(.active):hover {
+      border-color: #10b981;
+      color: #059669;
+    }
+
+    .browse-results {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .results-count {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .sort-select {
+      padding: 7px 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-size: 12px;
+      background: white;
+      color: #4b5563;
+    }
+
+    .browse-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .browse-grid .card {
+      width: auto;
+    }
+
+    /* Tab intro - for curated tabs */
+    .tab-intro {
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      border-left: 3px solid #10b981;
+    }
+
+    .tab-intro p {
+      font-size: 13px;
+      color: #4b5563;
+      margin: 0;
+    }
+
+    /* Note banner */
+    .mock-note {
+      background: #fef9c3;
+      border-bottom: 1px solid #fde047;
+      padding: 10px 20px;
+      font-size: 12px;
+      color: #854d0e;
+      text-align: center;
+    }
+
+    /* Subtle hint for Sanity */
+    .sanity-hint {
+      background: #f9fafb;
+      border: 1px dashed #d1d5db;
+      border-radius: 6px;
+      padding: 12px 16px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-note">
+    <strong>MOCK v3:</strong> Refined visual direction — professional, engaging, color-coded content types. Click tabs to explore.
+  </div>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="header-top">
+        <span class="header-logo">🎓</span>
+        <h1>Enablement Hub</h1>
+      </div>
+      <p>Training videos, product deep-dives, and skills for every role.</p>
+
+      <nav class="nav-tabs">
+        <div class="nav-tab active" data-tab="featured">Featured</div>
+        <div class="nav-tab" data-tab="sales">Sales</div>
+        <div class="nav-tab" data-tab="cs">Customer Success</div>
+        <div class="nav-tab" data-tab="sc">Solutions Consulting</div>
+        <div class="nav-tab" data-tab="copilot">Copilot Launch</div>
+        <div class="nav-tab browse-all" data-tab="browse">Browse All</div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- FEATURED TAB -->
+    <div class="tab-panel active" id="featured">
+
+      <!-- Featured Cards -->
+      <div class="featured-row">
+        <div class="featured-card accent-green">
+          <div class="featured-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Featured
+          </div>
+          <span class="card-badge badge-gtm">GTM Strategy</span>
+          <h3 class="card-title">Q1 2025 Kick-off: Positioning & Messaging</h3>
+          <p class="card-description">Everything you need to know for Q1 — updated competitive positioning, new product messaging, and sales plays for the quarter.</p>
+          <div class="card-meta">
+            <span>Jan 6, 2025 · 45 min</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+        </div>
+        <div class="featured-card accent-purple">
+          <div class="featured-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Featured
+          </div>
+          <span class="card-badge badge-product">Product</span>
+          <h3 class="card-title">Copilot 2.0: What's New & How to Sell It</h3>
+          <p class="card-description">Deep dive into Copilot 2.0 features, demo flows, and competitive differentiation against other AI solutions in the market.</p>
+          <div class="card-meta">
+            <span>Dec 18, 2024 · 60 min</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- New This Week -->
+      <div class="section-row">
+        <div class="section-header">
+          <h2 class="section-title">New This Week</h2>
+          <a href="#" class="section-link">View all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Journeys Configuration Workshop</h3>
+            <p class="card-description">Hands-on walkthrough of journey builder, triggers, and optimization strategies.</p>
+            <div class="card-meta">
+              <span>Dec 19, 2024 · 40 min</span>
+              <div class="card-products">
+                <span class="product-dot" style="background: #8b5cf6;" title="Journeys"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Intercom Battle Card (Updated)</h3>
+            <p class="card-description">Latest competitive intel and win strategies against Intercom's new AI features.</p>
+            <div class="card-meta">
+              <span>Dec 18, 2024</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">Live Replay</span>
+            </div>
+            <h3 class="card-title">API v3 Migration Guide</h3>
+            <p class="card-description">Technical deep-dive on migrating customers from v2 to v3 APIs.</p>
+            <div class="card-meta">
+              <span>Dec 17, 2024 · 55 min</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-value">Value</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Executive Business Review Template</h3>
+            <p class="card-description">Updated EBR deck template with new ROI metrics and case studies.</p>
+            <div class="card-meta">
+              <span>Dec 16, 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Essential Training -->
+      <div class="section-row">
+        <div class="section-header">
+          <h2 class="section-title">Essential Training</h2>
+          <a href="#" class="section-link">View all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Gladly Platform Overview</h3>
+            <p class="card-description">Comprehensive intro to Gladly — architecture, key features, and differentiators.</p>
+            <div class="card-meta">
+              <span>45 min</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Discovery Call Framework</h3>
+            <p class="card-description">The definitive guide to running effective discovery calls.</p>
+            <div class="card-meta">
+              <span>20 min read</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Competitive Landscape Overview</h3>
+            <p class="card-description">Know your competitors — positioning against Zendesk, Salesforce, Intercom & more.</p>
+            <div class="card-meta">
+              <span>35 min</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Demo Best Practices</h3>
+            <p class="card-description">How to deliver compelling, persona-driven product demonstrations.</p>
+            <div class="card-meta">
+              <span>30 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Most Popular -->
+      <div class="section-row">
+        <div class="section-header">
+          <h2 class="section-title">Most Popular</h2>
+          <a href="#" class="section-link">View all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Zendesk Battle Card</h3>
+            <p class="card-description">Win strategies, objection handling, and competitive positioning.</p>
+            <div class="card-meta">
+              <span>15 min read</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Copilot Deep Dive</h3>
+            <p class="card-description">Everything about Copilot — features, configuration, and selling points.</p>
+            <div class="card-meta">
+              <span>50 min</span>
+              <div class="card-products">
+                <span class="product-dot" style="background: #ec4899;"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-value">Value</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">ROI Calculator Guide</h3>
+            <p class="card-description">Build compelling business cases with the ROI calculator.</p>
+            <div class="card-meta">
+              <span>10 min read</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Integration Overview</h3>
+            <p class="card-description">Shopify, Salesforce, and custom integrations explained.</p>
+            <div class="card-meta">
+              <span>40 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SALES TAB -->
+    <div class="tab-panel" id="sales">
+      <div class="tab-intro">
+        <p>Curated resources for the Sales team — from onboarding to closing. Updated by Sales Enablement.</p>
+      </div>
+
+      <div class="jump-nav">
+        <span class="jump-nav-label">Jump to:</span>
+        <a href="#" class="jump-link">Getting Started</a>
+        <a href="#" class="jump-link">Discovery</a>
+        <a href="#" class="jump-link">Product Knowledge</a>
+        <a href="#" class="jump-link">Competitive</a>
+        <a href="#" class="jump-link">Closing</a>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Getting Started</h2>
+          <span class="curated-section-count">4 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Gladly Platform Overview</h3>
+            <p class="card-description">Start here — comprehensive intro to what Gladly does and why it matters.</p>
+            <div class="card-meta"><span>45 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Sales Playbook 2025</h3>
+            <p class="card-description">Your guide to the sales process, personas, and plays.</p>
+            <div class="card-meta"><span>30 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Demo Environment Setup</h3>
+            <p class="card-description">Get your demo org ready with sample data and scenarios.</p>
+            <div class="card-meta"><span>20 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Competitive Landscape</h3>
+            <p class="card-description">Know your competitors before your first call.</p>
+            <div class="card-meta"><span>35 min</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Discovery & Qualification</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Discovery Call Framework</h3>
+            <p class="card-description">Questions, structure, and techniques for effective discovery.</p>
+            <div class="card-meta"><span>20 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Qualification Criteria Deep Dive</h3>
+            <p class="card-description">MEDDIC in practice — what great looks like.</p>
+            <div class="card-meta"><span>25 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-value">Value</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Pain Point Mapping</h3>
+            <p class="card-description">Common customer pains and how to uncover them.</p>
+            <div class="card-meta"><span>15 min read</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Competitive Intel</h2>
+          <span class="curated-section-count">4 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Zendesk Battle Card</h3>
+            <p class="card-description">Win strategies and objection handling.</p>
+            <div class="card-meta"><span>15 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Salesforce Battle Card</h3>
+            <p class="card-description">Positioning against Service Cloud.</p>
+            <div class="card-meta"><span>15 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Intercom Battle Card</h3>
+            <p class="card-description">Compete against Intercom's AI push.</p>
+            <div class="card-meta"><span>15 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Freshdesk Battle Card</h3>
+            <p class="card-description">Win against the budget option.</p>
+            <div class="card-meta"><span>10 min read</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS TAB -->
+    <div class="tab-panel" id="cs">
+      <div class="tab-intro">
+        <p>Resources curated for Customer Success — onboarding, retention, expansion. Managed by the CS team.</p>
+      </div>
+
+      <div class="jump-nav">
+        <span class="jump-nav-label">Jump to:</span>
+        <a href="#" class="jump-link">Onboarding</a>
+        <a href="#" class="jump-link">Health & Retention</a>
+        <a href="#" class="jump-link">Expansion</a>
+        <a href="#" class="jump-link">Product Updates</a>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Onboarding Customers</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Customer Onboarding Guide</h3>
+            <p class="card-description">Week-by-week guide to successful customer onboarding.</p>
+            <div class="card-meta"><span>25 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Implementation Best Practices</h3>
+            <p class="card-description">Technical setup patterns for smooth go-lives.</p>
+            <div class="card-meta"><span>40 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-value">Value</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Success Metrics Framework</h3>
+            <p class="card-description">Define and track the right KPIs from day one.</p>
+            <div class="card-meta"><span>15 min read</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Health & Retention</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">Health Score Playbook</h3>
+            <p class="card-description">How to read and act on customer health signals.</p>
+            <div class="card-meta"><span>20 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-value">Value</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">EBR Template & Guide</h3>
+            <p class="card-description">Executive Business Review best practices.</p>
+            <div class="card-meta"><span>30 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Renewal Conversations</h3>
+            <p class="card-description">Navigate renewals with confidence.</p>
+            <div class="card-meta"><span>35 min</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SC TAB -->
+    <div class="tab-panel" id="sc">
+      <div class="tab-intro">
+        <p>Technical resources for Solutions Consultants — demos, integrations, architecture deep-dives.</p>
+      </div>
+
+      <div class="jump-nav">
+        <span class="jump-nav-label">Jump to:</span>
+        <a href="#" class="jump-link">Demo Mastery</a>
+        <a href="#" class="jump-link">Technical Deep Dives</a>
+        <a href="#" class="jump-link">Integrations</a>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Demo Mastery</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Demo Best Practices</h3>
+            <p class="card-description">Persona-driven demos that convert.</p>
+            <div class="card-meta"><span>30 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Demo Environment Setup</h3>
+            <p class="card-description">Configure your demo org for success.</p>
+            <div class="card-meta"><span>20 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Advanced Demo Scenarios</h3>
+            <p class="card-description">Complex use cases and how to show them.</p>
+            <div class="card-meta"><span>45 min</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Technical Deep Dives</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Platform Architecture</h3>
+            <p class="card-description">Under the hood — how Gladly works.</p>
+            <div class="card-meta"><span>50 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">Live Replay</span>
+            </div>
+            <h3 class="card-title">API Deep Dive</h3>
+            <p class="card-description">REST APIs, webhooks, authentication.</p>
+            <div class="card-meta"><span>60 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Security & Compliance</h3>
+            <p class="card-description">SOC 2, GDPR, and security architecture.</p>
+            <div class="card-meta"><span>35 min</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPILOT LAUNCH TAB -->
+    <div class="tab-panel" id="copilot">
+      <div class="tab-intro">
+        <p><strong>Copilot 2.0 Launch Kit</strong> — Everything you need to understand, demo, and sell Copilot 2.0. Last updated Dec 18, 2024.</p>
+      </div>
+
+      <div class="jump-nav">
+        <span class="jump-nav-label">Jump to:</span>
+        <a href="#" class="jump-link">Product Knowledge</a>
+        <a href="#" class="jump-link">Demo & Pitch</a>
+        <a href="#" class="jump-link">Competitive</a>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Understand the Product</h2>
+          <span class="curated-section-count">3 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Copilot 2.0 Deep Dive</h3>
+            <p class="card-description">Full feature walkthrough and architecture overview.</p>
+            <div class="card-meta"><span>60 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-product">Product</span>
+              <span class="card-format">Document</span>
+            </div>
+            <h3 class="card-title">Feature Comparison: 1.0 vs 2.0</h3>
+            <p class="card-description">What's new, what's changed, what's better.</p>
+            <div class="card-meta"><span>10 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-technical">Technical</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Copilot Configuration Workshop</h3>
+            <p class="card-description">Hands-on setup, prompts, and tuning.</p>
+            <div class="card-meta"><span>90 min</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Demo & Pitch</h2>
+          <span class="curated-section-count">2 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">On-Demand</span>
+            </div>
+            <h3 class="card-title">Copilot Demo Flow</h3>
+            <p class="card-description">Recommended demo script and talking points.</p>
+            <div class="card-meta"><span>25 min</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-gtm">GTM Strategy</span>
+              <span class="card-format">Slides</span>
+            </div>
+            <h3 class="card-title">Copilot Pitch Deck</h3>
+            <p class="card-description">Customer-facing slides for Copilot conversations.</p>
+            <div class="card-meta"><span>Slides</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curated-section">
+        <div class="curated-section-header">
+          <h2 class="curated-section-title">Compete on AI</h2>
+          <span class="curated-section-count">2 resources</span>
+        </div>
+        <div class="curated-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">AI Competitive Landscape</h3>
+            <p class="card-description">How Copilot stacks up against Zendesk AI, Intercom Fin, etc.</p>
+            <div class="card-meta"><span>20 min read</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-badge badge-competitive">Competitive</span>
+              <span class="card-format">Playbook</span>
+            </div>
+            <h3 class="card-title">AI Objection Handling</h3>
+            <p class="card-description">Common AI concerns and how to address them.</p>
+            <div class="card-meta"><span>10 min read</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BROWSE ALL TAB -->
+    <div class="tab-panel" id="browse">
+      <div class="browse-header">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Search all training...">
+        </div>
+        <div class="type-filter">
+          <button class="type-btn active">All</button>
+          <button class="type-btn">Product</button>
+          <button class="type-btn">Technical</button>
+          <button class="type-btn">GTM Strategy</button>
+          <button class="type-btn">Competitive</button>
+          <button class="type-btn">Value</button>
+        </div>
+      </div>
+
+      <div class="browse-results">
+        <span class="results-count">137 resources</span>
+        <select class="sort-select">
+          <option>Newest</option>
+          <option>Most Popular</option>
+          <option>A-Z</option>
+        </select>
+      </div>
+
+      <div class="browse-grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Gladly Platform Overview</h3>
+          <p class="card-description">Comprehensive intro to Gladly — architecture, features, differentiators.</p>
+          <div class="card-meta"><span>Dec 15, 2024 · 45 min</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-competitive">Competitive</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">Zendesk Battle Card</h3>
+          <p class="card-description">Win strategies, objection handling, competitive positioning.</p>
+          <div class="card-meta"><span>Dec 10, 2024</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-technical">Technical</span>
+            <span class="card-format">Live Replay</span>
+          </div>
+          <h3 class="card-title">API Integration Deep Dive</h3>
+          <p class="card-description">REST APIs, webhooks, and integration patterns.</p>
+          <div class="card-meta"><span>Dec 8, 2024 · 60 min</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-gtm">GTM Strategy</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Q1 2025 Product Positioning</h3>
+          <p class="card-description">Updated messaging framework and positioning.</p>
+          <div class="card-meta"><span>Dec 5, 2024 · 30 min</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Guides Feature Walkthrough</h3>
+          <p class="card-description">Complete tour of Guides — setup to advanced config.</p>
+          <div class="card-meta"><span>Dec 1, 2024 · 35 min</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-value">Value</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">ROI Calculator Training</h3>
+          <p class="card-description">Build compelling business cases with the calculator.</p>
+          <div class="card-meta"><span>Nov 28, 2024</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-technical">Technical</span>
+            <span class="card-format">Live Replay</span>
+          </div>
+          <h3 class="card-title">Copilot Configuration Workshop</h3>
+          <p class="card-description">Hands-on Copilot setup and optimization.</p>
+          <div class="card-meta"><span>Nov 25, 2024 · 90 min</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-competitive">Competitive</span>
+            <span class="card-format">Playbook</span>
+          </div>
+          <h3 class="card-title">Salesforce Battle Card</h3>
+          <p class="card-description">Positioning against Service Cloud.</p>
+          <div class="card-meta"><span>Nov 20, 2024</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-badge badge-product">Product</span>
+            <span class="card-format">On-Demand</span>
+          </div>
+          <h3 class="card-title">Insights & Dashboards Overview</h3>
+          <p class="card-description">Reporting, dashboards, and analytics.</p>
+          <div class="card-meta"><span>Nov 15, 2024 · 40 min</span></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const tabId = tab.dataset.tab;
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Type filter
+    document.querySelectorAll('.type-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

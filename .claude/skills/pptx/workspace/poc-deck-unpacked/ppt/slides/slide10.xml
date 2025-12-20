@@ -1,0 +1,2628 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:com="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" xmlns:ahyp="http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor">
+  <p:cSld>
+    <p:bg>
+      <p:bgPr>
+        <a:solidFill>
+          <a:schemeClr val="lt2"/>
+        </a:solidFill>
+      </p:bgPr>
+    </p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1937" name="Shape 1937"/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="1938" name="Google Shape;1938;p209" title="idHDfVeY1D_1760636762611.jpeg"/>
+          <p:cNvPicPr preferRelativeResize="0"/>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+          </a:blip>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8733375" y="4885061"/>
+            <a:ext cx="199225" cy="199225"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+      </p:pic>
+      <p:graphicFrame>
+        <p:nvGraphicFramePr>
+          <p:cNvPr id="1939" name="Google Shape;1939;p209"/>
+          <p:cNvGraphicFramePr/>
+          <p:nvPr/>
+        </p:nvGraphicFramePr>
+        <p:xfrm>
+          <a:off x="-513175" y="152400"/>
+          <a:ext cx="3000000" cy="3000000"/>
+        </p:xfrm>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/table">
+            <a:tbl>
+              <a:tblPr>
+                <a:noFill/>
+                <a:tableStyleId>{7C4465FC-0FDA-470A-91AF-DCA95BE9ABF5}</a:tableStyleId>
+              </a:tblPr>
+              <a:tblGrid>
+                <a:gridCol w="2277825"/>
+                <a:gridCol w="4982750"/>
+                <a:gridCol w="3250975"/>
+              </a:tblGrid>
+              <a:tr h="209550">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1500">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Success Criteria</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1500">
+                        <a:solidFill>
+                          <a:srgbClr val="FFFFFF"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F13D1F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F13D1F"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1500">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Definition and Overview of Each Criteria</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1500">
+                        <a:solidFill>
+                          <a:srgbClr val="FFFFFF"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F13D1F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F13D1F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F13D1F"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1500">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>How and What We Measure</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1500">
+                        <a:solidFill>
+                          <a:srgbClr val="FFFFFF"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F13D1F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F13D1F"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="923925">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Ease of Admin</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Guide Usability - How easy it is to build or iterate Guides</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Sandbox Experience - Ease of testing, clarity of results</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Transparency / Debug-ability - Ability to diagnose logic, gaps, failures</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # of use cases built per week</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Time to build/update</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # of tests run to live</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Ability to preview flows</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Qual score from Strava of 1-5</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # of issues identified/resolved</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="561975">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Tone Recognition</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Translation Quality - Accuracy across EN, ES, PT-BR, FR, DE</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Guardrail Quality - Does SK avoid exposing internal/Guru-only info</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- % accuracy across languages</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Strava qualitative score</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # of violations / errors (or good/bad binary qual score)</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="923925">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Resolution</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Resolution Rate - Ability to handle top contact reasons (Subs, Login, Account Access)</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Answer Quality - Correctness/completeness vs. known answers</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Multi-Step Completion - Ability to follow workflows w/out escalation</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- % resolved in test convos</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Multi-step completion %</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Accuracy score (1-5)</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # correct/# total</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- % of workflows completed end-to-end</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="561975">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Insights and Analytics</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Clarity of insights - Can Strava extract trends and failure points easily</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Knowledge Optimization - Quality of insights into KB gaps and SOP weaknesses</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Qual score from Strava of 1-5</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- # KB gaps identified</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Strava qualitative score</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="561975">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Level of Effort to Implement</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Ease of Implementation - Low lift for Strava. How much handled by Gladly vs. Strava</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Integration and Connectivity - Ease of connecting to internal systems (future-looking)</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Qual score from Strava of 1-5</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Time Strava spent getting to know the platform</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="FFFFFF"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+              <a:tr h="561975">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="ctr">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1200">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Partnership</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1200">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Vendor Support - Responsiveness, collaboration, hands-on help</a:t>
+                      </a:r>
+                      <a:endParaRPr b="1" sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr b="1" lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>Resource Availability - Feeling supported by POC team</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Qual score from Strava of 1-5</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                    <a:p>
+                      <a:pPr indent="0" lvl="0" marL="0" rtl="0" algn="l">
+                        <a:lnSpc>
+                          <a:spcPct val="115000"/>
+                        </a:lnSpc>
+                        <a:spcBef>
+                          <a:spcPts val="0"/>
+                        </a:spcBef>
+                        <a:spcAft>
+                          <a:spcPts val="0"/>
+                        </a:spcAft>
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en" sz="1100">
+                          <a:solidFill>
+                            <a:srgbClr val="434343"/>
+                          </a:solidFill>
+                          <a:latin typeface="Helvetica Neue"/>
+                          <a:ea typeface="Helvetica Neue"/>
+                          <a:cs typeface="Helvetica Neue"/>
+                          <a:sym typeface="Helvetica Neue"/>
+                        </a:rPr>
+                        <a:t>- Qual score from Strava of 1-5</a:t>
+                      </a:r>
+                      <a:endParaRPr sz="1100">
+                        <a:solidFill>
+                          <a:srgbClr val="434343"/>
+                        </a:solidFill>
+                        <a:latin typeface="Helvetica Neue"/>
+                        <a:ea typeface="Helvetica Neue"/>
+                        <a:cs typeface="Helvetica Neue"/>
+                        <a:sym typeface="Helvetica Neue"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marT="91425" marB="91425" marR="76200" marL="76200" anchor="ctr">
+                    <a:lnL cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnL>
+                    <a:lnR cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnR>
+                    <a:lnT cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="F6F8F9"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnT>
+                    <a:lnB cap="flat" cmpd="sng" w="6350">
+                      <a:solidFill>
+                        <a:srgbClr val="284E3F"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd len="sm" w="sm" type="none"/>
+                      <a:tailEnd len="sm" w="sm" type="none"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="F6F8F9"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+              </a:tr>
+            </a:tbl>
+          </a:graphicData>
+        </a:graphic>
+      </p:graphicFrame>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+  <p:transition>
+    <p:fade/>
+  </p:transition>
+</p:sld>

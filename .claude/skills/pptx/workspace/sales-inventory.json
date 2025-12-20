@@ -1,0 +1,8033 @@
+{
+  "slide-0": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.37,
+      "width": 8.99,
+      "height": 0.42,
+      "placeholder_type": "TITLE",
+      "default_font_size": 28.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.08
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-1": 3.78,
+          "shape-2": 0.24,
+          "shape-5": 0.25
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Table of contents",
+          "font_size": 28.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 0.37,
+      "width": 8.99,
+      "height": 0.42,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 3.78,
+          "shape-2": 0.24,
+          "shape-5": 0.25
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Table of contents",
+          "font_name": "Helvetica Neue",
+          "font_size": 28.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 25.2
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.08,
+      "top": 0.19,
+      "width": 5.31,
+      "height": 0.25,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        },
+        "slide": {
+          "overflow_right": 1.38
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.24,
+          "shape-1": 0.24
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Quick Links:",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.51,
+      "top": 0.83,
+      "width": 5.31,
+      "height": 0.25,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Platform Pitch Deck Retail → Click Section Titles to Navigate",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "theme_color": "DARK_1",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 6.23,
+      "top": 1.07,
+      "width": 1.43,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "PLATFORM PITCH\u000bDECK RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 6.24,
+      "top": 0.71,
+      "width": 3.07,
+      "height": 0.18,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.25,
+          "shape-1": 0.25
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "PITCH DECKS | RETAIL",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.23,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 12.92
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 7.97,
+      "top": 1.07,
+      "width": 1.43,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH\u000bDECK RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF",
+          "line_spacing": 6.34
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 6.22,
+      "top": 2.45,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "PLATFORM PITCH\u000bDECK ALL VERT",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "color": "D9D9D9",
+          "line_spacing": 6.34
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 6.24,
+      "top": 2.09,
+      "width": 3.07,
+      "height": 0.18,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "PITCH DECKS | ANY VERTICAL coming soon",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.23,
+          "bold": true,
+          "color": "F3F3F3",
+          "line_spacing": 12.92
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 7.39,
+      "top": 2.45,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "color": "D9D9D9",
+          "line_spacing": 6.34
+        },
+        {
+          "text": "DECK ALL VERT",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "color": "D9D9D9",
+          "line_spacing": 6.34
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 8.57,
+      "top": 2.44,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "VERTICAL KITS",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 6.22,
+      "top": 3.83,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "ARCHITECTURE SLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "color": "D9D9D9",
+          "line_spacing": 6.34
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 6.24,
+      "top": 3.47,
+      "width": 3.07,
+      "height": 0.18,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "SLIDE MODULES",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.23,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 12.92
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 7.39,
+      "top": 3.83,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "ROADMAP\u000bSLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 8.57,
+      "top": 3.82,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "CASE STUDY SLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF",
+          "line_spacing": 7.34
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 6.22,
+      "top": 4.45,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "IMPLEMENTATION\u000bSLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.34,
+          "bold": true,
+          "color": "F3F3F3",
+          "line_spacing": 6.34
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 7.39,
+      "top": 4.45,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "BVA SLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 8.57,
+      "top": 4.44,
+      "width": 0.97,
+      "height": 0.35,
+      "paragraphs": [
+        {
+          "text": "COMPETITORS SLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF"
+        }
+      ]
+    }
+  },
+  "slide-1": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.37,
+      "width": 8.99,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "default_font_size": 28.0,
+      "paragraphs": [
+        {
+          "text": "Suggested pitch: 8 slides"
+        }
+      ]
+    }
+  },
+  "slide-2": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.37,
+      "width": 8.99,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "default_font_size": 28.0,
+      "paragraphs": [
+        {
+          "text": "Suggested pitch: 17 slides"
+        }
+      ]
+    }
+  },
+  "slide-3": {
+    "shape-0": {
+      "left": 0.48,
+      "top": 2.07,
+      "width": 1.64,
+      "height": 0.59,
+      "paragraphs": [
+        {
+          "text": "INSERT COMPANY LOGO",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.0,
+          "bold": true
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.37,
+      "top": 2.82,
+      "width": 9.3,
+      "height": 1.73,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "AI for devotion, \u000bnot deflection"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.37,
+      "top": 4.66,
+      "width": 6.85,
+      "height": 0.59,
+      "placeholder_type": "SUBTITLE",
+      "paragraphs": [
+        {
+          "text": "Deliver operational efficiency and value",
+          "space_after": 8.0
+        }
+      ]
+    }
+  },
+  "slide-5": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Platform intro infographics",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-6": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.72,
+      "width": 3.8,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "The market \u000bforces a trade-off. \u000bWe broke It.",
+          "font_size": 31.0
+        },
+        {
+          "text": "Why choose between saving money and keeping your customers?",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 10.67,
+      "top": 2.77,
+      "width": 1.33,
+      "height": 0.51,
+      "overflow": {
+        "slide": {
+          "overflow_right": 2.0
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Bolt-on Bots",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.18,
+          "bold": true,
+          "theme_color": "ACCENT_4",
+          "line_spacing": 10.56
+        },
+        {
+          "text": "Robotic • Deflecting",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.42,
+          "italic": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.68
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 12.19,
+      "top": 3.01,
+      "width": 2.22,
+      "height": 0.28,
+      "overflow": {
+        "slide": {
+          "overflow_right": 4.41
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Speed • Retention • Loyalty",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.42,
+          "italic": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 9.61,
+      "top": 3.56,
+      "width": 0.77,
+      "height": 0.29,
+      "overflow": {
+        "slide": {
+          "overflow_right": 0.38
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Efficiency",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.42,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 10.64,
+      "top": 4.12,
+      "width": 1.4,
+      "height": 0.51,
+      "overflow": {
+        "slide": {
+          "overflow_right": 2.04
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Ticketing Platforms",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.18,
+          "bold": true,
+          "theme_color": "ACCENT_4",
+          "line_spacing": 10.56
+        },
+        {
+          "text": "Slow • Impersonal",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.42,
+          "italic": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.68
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 12.49,
+      "top": 4.13,
+      "width": 1.63,
+      "height": 0.51,
+      "overflow": {
+        "slide": {
+          "overflow_right": 4.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Support Teams",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.18,
+          "bold": true,
+          "theme_color": "ACCENT_4",
+          "line_spacing": 10.56
+        },
+        {
+          "text": "Expensive • Overstaffed",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.42,
+          "italic": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.68
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 11.33,
+      "top": 5.07,
+      "width": 1.98,
+      "height": 0.34,
+      "overflow": {
+        "slide": {
+          "overflow_right": 3.31
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Experience",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.42,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    }
+  },
+  "slide-7": {
+    "shape-0": {
+      "left": 6.8,
+      "top": 0.13,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "Customer at the center",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.78
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 0.8,
+      "width": 4.36,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Stop managing tickets. Start earning devotion.",
+          "font_size": 28.0
+        },
+        {
+          "text": "Customer experience AI \u000bdesigned to lower costs today \u000band deliver LTV always",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 5.19,
+      "top": 0.97,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "Single lifelong conversation",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 8.41,
+      "top": 0.97,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "Owned and operated by CX teams",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.78
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.19,
+      "top": 3.07,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "Continuous optimization built in",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.78
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 8.41,
+      "top": 3.07,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "10+ years retail CX",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.78
+        },
+        {
+          "text": "expertise",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.78
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.8,
+      "top": 3.87,
+      "width": 1.2,
+      "height": 1.2,
+      "paragraphs": [
+        {
+          "text": "Proven path to ROI in",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "90 days",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.78,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-8": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "WHY devotion, not deflection",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-9": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.8,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Everyone does AI now",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "What actually makes them different?",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    }
+  },
+  "slide-10": {
+    "shape-0": {
+      "left": 0.5,
+      "top": -0.18,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "The back end is commoditized",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "Same building AI blocks. Same access.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.95,
+      "top": 7.45,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 2.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "LLMs",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.6,
+      "top": 7.45,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 2.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Channels",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.24,
+      "top": 7.45,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 2.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Memory",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 6.89,
+      "top": 7.45,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 2.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Integrations",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 8.53,
+      "top": 7.45,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 2.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Knowledge",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    }
+  },
+  "slide-11": {
+    "shape-0": {
+      "left": 0.5,
+      "top": -0.18,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "The experience is where",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "you win or lose",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "The end customer experience. Your team’s experience.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        },
+        {
+          "text": "Devotion is what you should be evaluating.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.8,
+      "top": 4.1,
+      "width": 1.46,
+      "height": 0.39,
+      "paragraphs": [
+        {
+          "text": "Philosophy",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.45,
+      "top": 4.1,
+      "width": 1.46,
+      "height": 0.39,
+      "paragraphs": [
+        {
+          "text": "Architecture",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.09,
+      "top": 4.1,
+      "width": 1.46,
+      "height": 0.39,
+      "paragraphs": [
+        {
+          "text": "Expertise",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 6.74,
+      "top": 4.1,
+      "width": 1.46,
+      "height": 0.39,
+      "paragraphs": [
+        {
+          "text": "AI Optimization",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    }
+  },
+  "slide-12": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.64,
+      "width": 8.99,
+      "height": 1.15,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Efficiency is table stakes",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "Devotion is the difference",
+          "alignment": "CENTER",
+          "font_size": 41.0,
+          "theme_color": "ACCENT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 7.56,
+      "top": 2.19,
+      "width": 2.0,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "Devotion Path:\u000bCost Savings + LTV increases",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 11.5
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.53,
+      "top": 3.26,
+      "width": 0.58,
+      "height": 0.27,
+      "paragraphs": [
+        {
+          "text": "Value",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 1.61,
+      "top": 4.77,
+      "width": 0.88,
+      "height": 0.27,
+      "paragraphs": [
+        {
+          "text": "Month 3",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 4.11,
+      "top": 4.77,
+      "width": 0.88,
+      "height": 0.27,
+      "paragraphs": [
+        {
+          "text": "Month 6",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 6.61,
+      "top": 4.77,
+      "width": 0.88,
+      "height": 0.27,
+      "paragraphs": [
+        {
+          "text": "Year 1",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_2"
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 7.56,
+      "top": 4.27,
+      "width": 2.0,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "Deflection Path:\u000bCSAT drops + LTV collapses",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.0,
+          "bold": true,
+          "color": "FF6B6B",
+          "line_spacing": 11.5
+        }
+      ]
+    }
+  },
+  "slide-13": {
+    "shape-0": {
+      "left": 3.18,
+      "top": 0.39,
+      "width": 3.63,
+      "height": 1.75,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-1": 2.07,
+          "shape-2": 1.21
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "95%",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 46.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "of AI initiatives see zero ROI",
+          "alignment": "CENTER",
+          "space_before": 3.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "The GenAI Divide: State of AI in Business 2025, MIT",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 9.0,
+          "italic": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.57,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 2.07,
+          "shape-2": 0.75
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Deflection-first bots \u000bachieve short-term savings",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "at the cost of everything else.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 4.39,
+      "top": 1.3,
+      "width": 3.28,
+      "height": 0.5,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 1.21,
+          "shape-1": 0.75
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "zero ROI",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 18.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-14": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.22,
+      "width": 8.99,
+      "height": 1.77,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Gladly delivers",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.56,
+      "top": 2.26,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "EFFICIENCY ✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.56,
+      "top": 2.66,
+      "width": 1.85,
+      "height": 0.73,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "3x",
+          "font_name": "Helvetica Neue",
+          "font_size": 37.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 51.8
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 2.9,
+      "top": 2.26,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AT SCALE ✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 2.9,
+      "top": 2.66,
+      "width": 1.85,
+      "height": 0.73,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "75%",
+          "font_name": "Helvetica Neue",
+          "font_size": 37.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 51.8
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 5.24,
+      "top": 2.26,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "VALUE ✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 5.24,
+      "top": 2.66,
+      "width": 1.85,
+      "height": 0.73,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "2x",
+          "font_name": "Helvetica Neue",
+          "font_size": 37.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 51.8
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 7.62,
+      "top": 2.26,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "EXPERIENCE ✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 7.62,
+      "top": 2.66,
+      "width": 1.85,
+      "height": 0.73,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "65%",
+          "font_name": "Helvetica Neue",
+          "font_size": 37.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 51.8
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 0.56,
+      "top": 3.47,
+      "width": 1.85,
+      "height": 0.54,
+      "paragraphs": [
+        {
+          "text": "resolution rate increase in first 30 days",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.8
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 2.9,
+      "top": 3.47,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.22
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "of conversations fully resolved by AI",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.8
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.24,
+      "top": 3.47,
+      "width": 1.85,
+      "height": 0.27,
+      "paragraphs": [
+        {
+          "text": "revenue per conversation",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.8
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 7.62,
+      "top": 3.47,
+      "width": 1.85,
+      "height": 0.27,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.22
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Increase in",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.8
+        },
+        {
+          "text": "CSAT",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.8
+        }
+      ]
+    }
+  },
+  "slide-15": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "HOW Gladly delivers",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-16": {
+    "shape-0": {
+      "left": 0.44,
+      "top": 0.35,
+      "width": 8.99,
+      "height": 1.48,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Gladly works with \u000byour existing platform",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.81,
+      "top": 2.37,
+      "width": 3.89,
+      "height": 0.26,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Native Helpdesk AI",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 18.9
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.85,
+      "top": 2.82,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✕",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 1.07,
+      "top": 2.8,
+      "width": 2.66,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Generic — not built for CX outcomes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 12.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.42,
+      "top": 2.37,
+      "width": 3.89,
+      "height": 0.26,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Gladly",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 18.9
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 5.46,
+      "top": 2.82,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 5.67,
+      "top": 2.8,
+      "width": 3.02,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Purpose-built for customer devotion",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 18.2
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 0.85,
+      "top": 3.18,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✕",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 0.85,
+      "top": 3.53,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✕",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 1.07,
+      "top": 3.15,
+      "width": 1.85,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Limited industry expertise",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 12.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 1.07,
+      "top": 3.51,
+      "width": 3.69,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Deflection-focused",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 12.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.46,
+      "top": 3.18,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 5.46,
+      "top": 3.53,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 5.67,
+      "top": 3.15,
+      "width": 3.25,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Trained on 300M+ retail conversations",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 18.2
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 5.67,
+      "top": 3.51,
+      "width": 3.52,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Resolve + Assist model for true outcomes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 18.2
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 0.85,
+      "top": 3.89,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✕",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 0.85,
+      "top": 4.24,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✕",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "E85555",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 1.07,
+      "top": 3.87,
+      "width": 1.6,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Basic automation only",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 12.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-18": {
+      "left": 1.07,
+      "top": 4.22,
+      "width": 3.34,
+      "height": 0.26,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.08
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "No outcome-aligned pricing",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 12.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-19": {
+      "left": 5.46,
+      "top": 3.89,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-20": {
+      "left": 5.46,
+      "top": 4.24,
+      "width": 0.12,
+      "height": 0.19,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.75,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 13.65
+        }
+      ]
+    },
+    "shape-21": {
+      "left": 5.67,
+      "top": 3.87,
+      "width": 2.91,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Actions that complete transactions",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 18.2
+        }
+      ]
+    },
+    "shape-22": {
+      "left": 5.67,
+      "top": 4.22,
+      "width": 2.67,
+      "height": 0.19,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Pay only when we deliver value",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.0,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 18.2
+        }
+      ]
+    }
+  },
+  "slide-17": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.8,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "[COMPANY] built its brand",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "on customer devotion",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "Your AI should too",
+          "alignment": "CENTER",
+          "font_size": 41.0,
+          "theme_color": "ACCENT_1"
+        },
+        {
+          "text": "The platform you choose determines whether",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        },
+        {
+          "text": "that momentum compounds, or resets",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    }
+  },
+  "slide-18": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.32,
+      "width": 4.84,
+      "height": 1.13,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "We built around the customer",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.5,
+      "top": 2.5,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.42
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Others built around the session",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 3.3,
+      "width": 4.84,
+      "height": 1.01,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.2
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Persistent customer context powers \u000bevery response and makes \u000bvalue-weighted decisions instantly",
+          "space_after": 8.0,
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-19": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.32,
+      "width": 5.09,
+      "height": 1.13,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.69
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "The single lifelong conversation",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.5,
+      "top": 2.5,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.42
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "A system of record for all interactions",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 3.3,
+      "width": 4.74,
+      "height": 1.31,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Every email, call, and text unified in one continuous thread—neverending context, persistent continuity, zero repetition",
+          "space_after": 8.0,
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-20": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.35,
+      "width": 4.84,
+      "height": 1.13,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI owned and operated by CX",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 2.53,
+      "width": 4.84,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.42
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Intuitive control and optimization",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.5,
+      "top": 3.33,
+      "width": 4.74,
+      "height": 0.95,
+      "placeholder_type": "BODY",
+      "paragraphs": [
+        {
+          "text": "Build, update, launch, and \u000bfine-tune experiences without \u000bengineering support",
+          "space_after": 8.0,
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-21": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.5,
+      "width": 8.99,
+      "height": 0.53,
+      "placeholder_type": "TITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.06
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Why bolt-on AI breaks down",
+          "font_size": 35.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.58,
+      "top": 1.78,
+      "width": 1.49,
+      "height": 0.66,
+      "paragraphs": [
+        {
+          "text": "Bolt-on AI Architecture",
+          "space_after": 2.0,
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "color": "F87171"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 2.67,
+      "top": 1.56,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Customer",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Chat Widget",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 4.07,
+      "top": 1.56,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Ticket System",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Zendesk/SF",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.47,
+      "top": 1.56,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "AI Bot",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "color": "F87171",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Sierra/Ada",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 6.87,
+      "top": 1.56,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Bot Backend",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Non-AI logic",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 8.26,
+      "top": 1.56,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Ticket System",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Write back",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 2.67,
+      "top": 2.26,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "5+ API hops",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.0
+        },
+        {
+          "text": "Adds latency and failure points",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 6.0
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 4.35,
+      "top": 2.26,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Context lost",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Bot sees current message only",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 6.03,
+      "top": 2.26,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Async delays",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Webhooks timeout, retry fail",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 7.71,
+      "top": 2.26,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Handoff breaks",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Agent gets no history",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 0.58,
+      "top": 3.31,
+      "width": 1.71,
+      "height": 0.91,
+      "paragraphs": [
+        {
+          "text": "Gladly Standalone AI Architecture",
+          "space_after": 2.0,
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "theme_color": "ACCENT_1"
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 3.42,
+      "top": 3.44,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Customer",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Any Channel",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 4.81,
+      "top": 3.44,
+      "width": 2.25,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Gladly",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "color": "4ADE80",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Context + AI + Actions + Safeguards",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "Single unified layer",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 7.52,
+      "top": 3.44,
+      "width": 0.93,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Resolution",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        },
+        {
+          "text": "or Smart Handoff",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 7.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 7.0
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 0.58,
+      "top": 4.18,
+      "width": 1.76,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Fewer moving parts = \u000bhigher reliability + faster resolution",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.0,
+          "theme_color": "DARK_1"
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 2.67,
+      "top": 4.13,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "1 integration",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 8.0
+        },
+        {
+          "text": "Direct connection to your stack",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 6.0
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 4.35,
+      "top": 4.13,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Full history",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "245M conversations of context",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-18": {
+      "left": 6.03,
+      "top": 4.13,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Real-time",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "No webhook delays",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-19": {
+      "left": 7.71,
+      "top": 4.13,
+      "width": 1.49,
+      "height": 0.45,
+      "paragraphs": [
+        {
+          "text": "Rich handoff",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.0,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Full context to any platform",
+          "space_before": 2.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-22": {
+    "shape-0": {
+      "left": 0.44,
+      "top": 0.35,
+      "width": 8.99,
+      "height": 1.48,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Full AI capabilities\u000bplugged into your helpdesk",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.06,
+      "top": 2.29,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI Resolution",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 1.06,
+      "top": 2.6,
+      "width": 2.18,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Fully autonomous handling of common inquiries — WISMO, returns, FAQs, account updates",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 3.88,
+      "top": 2.29,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI Assist",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 3.88,
+      "top": 2.6,
+      "width": 2.37,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Context summaries, suggested responses, and next-best-action recommendations for your agents",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 6.69,
+      "top": 2.29,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI Actions",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.69,
+      "top": 2.6,
+      "width": 2.18,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Execute transactions — process returns, update orders, check loyalty status, apply discounts",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 1.06,
+      "top": 3.89,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Brand Voice",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 1.06,
+      "top": 4.21,
+      "width": 2.18,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "AI trained on your tone, policies, and communication style — sounds like you, not a bot",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 3.88,
+      "top": 3.89,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Smart Routing",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 3.88,
+      "top": 4.21,
+      "width": 2.18,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Intelligent escalation based on complexity, sentiment, and customer value",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 6.69,
+      "top": 3.89,
+      "width": 2.18,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Analytics",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.06,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.48
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 6.69,
+      "top": 4.21,
+      "width": 2.18,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Resolution rates, CSAT impact, cost savings, and continuous optimization insights",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 10.91,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.91
+        }
+      ]
+    }
+  },
+  "slide-23": {
+    "shape-0": {
+      "left": 0.44,
+      "top": 0.35,
+      "width": 8.99,
+      "height": 1.48,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Start where you are\u000bGrow when you’re ready",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.88,
+      "top": 2.6,
+      "width": 2.55,
+      "height": 0.29,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Gladly",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 1.99,
+      "top": 2.31,
+      "width": 0.36,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "TODAY",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.64,
+      "top": 2.6,
+      "width": 2.51,
+      "height": 0.29,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Gladly Team",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.74,
+      "top": 2.31,
+      "width": 0.73,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "WHEN READY",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "0A0A0A",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 1.88,
+      "top": 2.95,
+      "width": 2.55,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Add best-in-class AI to your existing ticketing system or helpdesk",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.25,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.25
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 1.88,
+      "top": 3.4,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 2.05,
+      "top": 3.4,
+      "width": 1.33,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Keep current workflows",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 4.8,
+      "top": 3.04,
+      "width": 0.41,
+      "height": 0.29,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "---›",
+          "font_name": "Helvetica Neue",
+          "font_size": 15.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "666666",
+          "line_spacing": 21.0
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 5.64,
+      "top": 2.95,
+      "width": 2.51,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Unified AI + helpdesk for maximum efficiency and customer devotion",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.25,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.25
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 5.64,
+      "top": 3.4,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.81,
+      "top": 3.4,
+      "width": 1.55,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Single lifelong conversation",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 1.88,
+      "top": 3.64,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 1.88,
+      "top": 3.88,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 2.05,
+      "top": 3.64,
+      "width": 1.23,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "No retraining required",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 2.05,
+      "top": 3.88,
+      "width": 1.01,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Fast time to value",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 5.64,
+      "top": 3.64,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 5.64,
+      "top": 3.88,
+      "width": 0.11,
+      "height": 0.17,
+      "paragraphs": [
+        {
+          "text": "✓",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-18": {
+      "left": 5.81,
+      "top": 3.64,
+      "width": 1.34,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Unified customer profile",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-19": {
+      "left": 5.81,
+      "top": 3.88,
+      "width": 1.48,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Maximum AI effectiveness",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 12.6
+        }
+      ]
+    },
+    "shape-20": {
+      "left": 0.33,
+      "top": 4.68,
+      "width": 9.35,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.29
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "No pressure. No lock-in. Just great AI that delivers results today.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 25.2
+        }
+      ]
+    }
+  },
+  "slide-24": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Expertise",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-25": {
+    "shape-0": {
+      "left": 0.0,
+      "top": 0.03,
+      "width": 10.0,
+      "height": 2.6,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-1": 0.27,
+          "shape-2": 0.27,
+          "shape-3": 0.27
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "We spent a decade learning retail",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "They’re learning everyone",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.26,
+      "top": 2.52,
+      "width": 2.46,
+      "height": 0.7,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.27
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "300M+",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 41.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 32.8
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.77,
+      "top": 2.52,
+      "width": 2.46,
+      "height": 0.7,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.27
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "11+",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 41.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 32.8
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 6.28,
+      "top": 2.52,
+      "width": 2.46,
+      "height": 0.7,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.27
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "270+",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 41.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 32.8
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 1.26,
+      "top": 3.17,
+      "width": 2.46,
+      "height": 0.53,
+      "paragraphs": [
+        {
+          "text": "Retail conversations processed",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 14.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.2
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 3.77,
+      "top": 3.17,
+      "width": 2.46,
+      "height": 0.53,
+      "paragraphs": [
+        {
+          "text": "Years focused",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 14.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.2
+        },
+        {
+          "text": "on CX in retail",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 14.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.2
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.28,
+      "top": 3.17,
+      "width": 2.46,
+      "height": 0.53,
+      "paragraphs": [
+        {
+          "text": "Retail and ecommerce customers",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.6
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 2.09,
+      "top": 4.12,
+      "width": 5.82,
+      "height": 0.64,
+      "paragraphs": [
+        {
+          "text": "Gladly is purpose-built for what you do.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 14.4
+        },
+        {
+          "text": "Expertise is baked in, not bolted on.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 14.4
+        }
+      ]
+    }
+  },
+  "slide-26": {
+    "shape-0": {
+      "left": 0.4,
+      "top": 0.83,
+      "width": 4.27,
+      "height": 0.42,
+      "paragraphs": [
+        {
+          "text": "Learning retail \u000bon your dime",
+          "font_name": "Helvetica Neue",
+          "font_size": 23.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 18.4
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 5.24,
+      "top": 0.85,
+      "width": 4.27,
+      "height": 0.42,
+      "paragraphs": [
+        {
+          "text": "Build on a proven \u000bretail partnership",
+          "font_name": "Helvetica Neue",
+          "font_size": 23.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 18.4
+        }
+      ]
+    }
+  },
+  "slide-27": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.4,
+      "width": 8.99,
+      "height": 1.5,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Our data tells us what works",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "Competitors can't replicate",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.85,
+      "top": 2.14,
+      "width": 2.21,
+      "height": 0.72,
+      "paragraphs": [
+        {
+          "text": "245M+",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 22.67,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 22.67
+        },
+        {
+          "text": "Retail conversations",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.07,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.07
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.69,
+      "top": 2.14,
+      "width": 1.7,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Intent Recognition",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.07,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.58
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.38,
+      "top": 2.14,
+      "width": 3.64,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "AI knows what customers need as they type; trained on real retail conversations",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.26,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.95
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 0.85,
+      "top": 2.99,
+      "width": 2.21,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Order inquiries and tracking",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.16,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.16
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 3.69,
+      "top": 2.88,
+      "width": 1.7,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Resolution Confidence",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.07,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.58
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 5.38,
+      "top": 2.88,
+      "width": 3.64,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "We know which questions to resolve vs. escalate—based on millions of actual outcomes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.26,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.95
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 0.85,
+      "top": 3.4,
+      "width": 2.21,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Returns & exchanges",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.16,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 0.85,
+      "top": 3.81,
+      "width": 2.21,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Product recommendations",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.16,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.16
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 3.69,
+      "top": 3.62,
+      "width": 1.7,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "CSAT Prediction",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.07,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.58
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 5.38,
+      "top": 3.62,
+      "width": 3.64,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Proactive handoff before frustration peaks. We predict dips and route accordingly",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.26,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.95
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 0.85,
+      "top": 4.22,
+      "width": 2.21,
+      "height": 0.32,
+      "paragraphs": [
+        {
+          "text": "Loyalty management",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.16,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 0.85,
+      "top": 4.63,
+      "width": 2.21,
+      "height": 0.29,
+      "paragraphs": [
+        {
+          "text": "Escalation patterns",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.16,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 3.69,
+      "top": 4.36,
+      "width": 1.7,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Continuous Learning",
+          "font_name": "Helvetica Neue",
+          "font_size": 10.07,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.58
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 5.38,
+      "top": 4.36,
+      "width": 3.64,
+      "height": 0.56,
+      "paragraphs": [
+        {
+          "text": "Every conversation makes the platform smarter. More volume=better AI=more customers",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.26,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.95
+        }
+      ]
+    }
+  },
+  "slide-28": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 0.96,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.62,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Case Studies and Proof Points",
+          "alignment": "CENTER"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 2.68,
+      "top": 3.68,
+      "width": 4.79,
+      "height": 1.27,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-3": 1.45
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Click here to access more case studies here:",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 3.78,
+      "top": 4.26,
+      "width": 2.59,
+      "height": 0.56,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 1.45
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "CASE STUDY SLIDES",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "underline": true,
+          "color": "FFFFFF",
+          "line_spacing": 13.34
+        }
+      ]
+    }
+  },
+  "slide-29": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.4,
+      "width": 8.99,
+      "height": 0.62,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.06
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Proven AI-driven outcomes",
+          "font_size": 41.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.9,
+      "top": 1.24,
+      "width": 2.85,
+      "height": 1.1,
+      "paragraphs": [
+        {
+          "text": "94%",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        },
+        {
+          "text": "resolution on replacements",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 13.13,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.82
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.5,
+      "top": 1.24,
+      "width": 2.85,
+      "height": 1.1,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 1.74
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "84%\u000bresolution on product questions \u000band recommendations",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 1.9,
+      "top": 2.62,
+      "width": 2.85,
+      "height": 0.84,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.35
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "63%\u000bresolution on discounts",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 6.5,
+      "top": 2.62,
+      "width": 2.61,
+      "height": 1.04,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 1.25
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "65%\u000bresolution on orders\u000band returns",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 1.9,
+      "top": 3.97,
+      "width": 2.85,
+      "height": 0.84,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.9
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "56%\u000bresolution on all interactions",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.5,
+      "top": 3.97,
+      "width": 2.61,
+      "height": 0.94,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.81
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "65%\u000bresolution on order tracking",
+          "font_name": "Helvetica Neue",
+          "font_size": 43.78,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 39.4
+        }
+      ]
+    }
+  },
+  "slide-30": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.4,
+      "width": 8.99,
+      "height": 0.62,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.63
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Proven AI-driven efficiency gains",
+          "font_size": 41.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.97,
+      "top": 1.24,
+      "width": 2.56,
+      "height": 1.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 1.81
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "41%\u000breduced chat and email \u000bandle times",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.5,
+      "top": 1.24,
+      "width": 2.85,
+      "height": 1.1,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 1.85
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "173%\u000bIncreased resolution rate \u000bon email in 1 week",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 1.97,
+      "top": 2.56,
+      "width": 2.98,
+      "height": 0.88,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.37
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "33%\u000breduced handle time",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 6.5,
+      "top": 2.56,
+      "width": 2.61,
+      "height": 1.04,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.78
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "34%\u000breduced handle time",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 1.97,
+      "top": 3.89,
+      "width": 2.98,
+      "height": 0.88,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.94
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "80%\u000breduced email handle time",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.5,
+      "top": 3.89,
+      "width": 2.61,
+      "height": 0.94,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.88
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "60%\u000bof customers self-serve",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.68,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 41.11
+        }
+      ]
+    }
+  },
+  "slide-31": {
+    "shape-0": {
+      "left": 1.13,
+      "top": 1.37,
+      "width": 7.74,
+      "height": 2.56,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "\"Transitioning from Sierra to Gladly allowed us to move from a custom-built, code-dependent model to a more flexible, integrated AI ecosystem. This has improved agility, consistency and customer experience across all touchpoints.\"",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 24.0,
+          "bold": false,
+          "line_spacing": 27.6
+        }
+      ]
+    }
+  },
+  "slide-32": {
+    "shape-0": {
+      "left": 4.3,
+      "top": 0.9,
+      "width": 5.19,
+      "height": 1.09,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "30-day migration drives 67% resolution",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 4.3,
+      "top": 2.17,
+      "width": 5.19,
+      "height": 2.19,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.14
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Migrated to Sidekick in under 30 days",
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "Integrated with Shopify",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "Hands-on admin and optimization",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "Weekly tuning sessions",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "Sidekick Sales activation",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "67% chat resolution within weeks",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        }
+      ]
+    }
+  },
+  "slide-33": {
+    "shape-0": {
+      "left": 4.3,
+      "top": 0.69,
+      "width": 5.19,
+      "height": 1.09,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "120% increase in revenue per call",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 4.3,
+      "top": 1.96,
+      "width": 5.19,
+      "height": 2.62,
+      "placeholder_type": "BODY",
+      "paragraphs": [
+        {
+          "text": "AI took on repetitive work",
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "Agents free to focus on revenue-driving",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "59% email resolution rate",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "27% chat resolution rate",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "50% reduction in emails to agents",
+          "space_before": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        },
+        {
+          "text": "75% CSAT for AI",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 20.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.0
+        }
+      ]
+    }
+  },
+  "slide-34": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Partnership model",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-35": {
+    "shape-0": {
+      "left": 0.5,
+      "top": -0.45,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "[COMPANY] deserves a partner built for [COMPANY]",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 3.6,
+      "top": 5.7,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 0.46
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Philosophy",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 5.24,
+      "top": 5.7,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 0.46
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Architecture",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 6.89,
+      "top": 5.7,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 0.46
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Expertise",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 8.53,
+      "top": 5.7,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 0.46
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI Optimization",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 4.42,
+      "top": 7.03,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.79
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Partnership",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.06,
+      "top": 7.03,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.79
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Agility",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 7.71,
+      "top": 7.03,
+      "width": 1.46,
+      "height": 0.39,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.79
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Cost",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "color": "FFFFFF",
+          "line_spacing": 14.0
+        }
+      ]
+    }
+  },
+  "slide-36": {
+    "shape-0": {
+      "left": 0.5,
+      "top": -0.61,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-1": 0.87,
+          "shape-2": 1.5,
+          "shape-3": 0.87,
+          "shape-4": 1.5
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "More than a product,\u000bit’s a partnership",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.8,
+      "top": 2.52,
+      "width": 3.94,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.87
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Roadmap Influence",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.75
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.8,
+      "top": 2.82,
+      "width": 3.94,
+      "height": 0.38,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 1.5
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Your feedback shapes our product direction. Strategic customers get a direct line to our product team.",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "AAAAAA",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.36,
+      "top": 2.52,
+      "width": 3.94,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 0.87
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Co-Investment",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "9B59B6",
+          "line_spacing": 15.75
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.36,
+      "top": 2.82,
+      "width": 3.94,
+      "height": 0.38,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-0": 1.5
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "We invest alongside you in custom features and integrations that drive your specific outcomes.",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "AAAAAA",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 0.8,
+      "top": 3.94,
+      "width": 3.94,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Shared Risk Model",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.75
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 0.8,
+      "top": 4.24,
+      "width": 3.94,
+      "height": 0.38,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Commercial terms tied to your success metrics. We're accountable to your results, not just delivery.",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "AAAAAA",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 5.36,
+      "top": 3.94,
+      "width": 3.94,
+      "height": 0.22,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "24/7 Support",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "9B59B6",
+          "line_spacing": 15.75
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 5.36,
+      "top": 4.24,
+      "width": 3.94,
+      "height": 0.38,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Round-the-clock incident management with dedicated escalation paths and executive sponsorship.",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "AAAAAA",
+          "line_spacing": 13.5
+        }
+      ]
+    }
+  },
+  "slide-37": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 0.7,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "We move at your speed",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "That’s what real partnership looks like",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.53,
+      "top": 5.89,
+      "width": 3.67,
+      "height": 1.64,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.9
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "95%",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 36.0
+        },
+        {
+          "text": "Implementation success\u000brate",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 5.72,
+      "top": 5.89,
+      "width": 3.67,
+      "height": 1.64,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.9
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "1 Day",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 36.0
+        },
+        {
+          "text": "Initial implementation\u000band optimization",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 9.91,
+      "top": 5.89,
+      "width": 3.67,
+      "height": 1.64,
+      "overflow": {
+        "slide": {
+          "overflow_right": 3.58,
+          "overflow_bottom": 1.9
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "30 Days",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 45.0,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 36.0
+        },
+        {
+          "text": "To best-in-class\u000bperformance",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-38": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Project scope and commercials",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-39": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.4,
+      "width": 8.99,
+      "height": 0.62,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.06
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "From kickoff to ROI in 90 days",
+          "font_size": 41.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.51,
+      "top": 1.42,
+      "width": 1.04,
+      "height": 0.33,
+      "paragraphs": [
+        {
+          "text": "Week 1",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.58,
+      "top": 1.42,
+      "width": 1.04,
+      "height": 0.33,
+      "paragraphs": [
+        {
+          "text": "Week 4",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 6.66,
+      "top": 1.42,
+      "width": 1.04,
+      "height": 0.33,
+      "paragraphs": [
+        {
+          "text": "Week 8",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 0.76,
+      "top": 2.22,
+      "width": 2.37,
+      "height": 0.41,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "1",
+          "font_name": "Helvetica Neue",
+          "font_size": 29.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "009B00",
+          "line_spacing": 29.0
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 3.84,
+      "top": 2.22,
+      "width": 2.37,
+      "height": 0.41,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "2",
+          "font_name": "Helvetica Neue",
+          "font_size": 29.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "009B00",
+          "line_spacing": 29.0
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 6.92,
+      "top": 2.22,
+      "width": 2.37,
+      "height": 0.41,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "3",
+          "font_name": "Helvetica Neue",
+          "font_size": 29.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "009B00",
+          "line_spacing": 29.0
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 0.76,
+      "top": 2.83,
+      "width": 2.37,
+      "height": 0.24,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Foundation",
+          "font_name": "Helvetica Neue",
+          "font_size": 21.0,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 3.84,
+      "top": 2.83,
+      "width": 2.37,
+      "height": 0.24,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Calibration",
+          "font_name": "Helvetica Neue",
+          "font_size": 21.0,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 6.92,
+      "top": 2.83,
+      "width": 2.37,
+      "height": 0.24,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Scale",
+          "font_name": "Helvetica Neue",
+          "font_size": 21.0,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 0.76,
+      "top": 3.38,
+      "width": 2.58,
+      "height": 1.4,
+      "paragraphs": [
+        {
+          "text": "✓ Integration setup",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ AI training begins",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Team onboarding",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 3.84,
+      "top": 3.38,
+      "width": 2.58,
+      "height": 1.4,
+      "paragraphs": [
+        {
+          "text": "✓ AI optimization",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Workflow refinement",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Agent feedback loops",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Performance tuning",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 6.92,
+      "top": 3.38,
+      "width": 2.58,
+      "height": 1.4,
+      "paragraphs": [
+        {
+          "text": "✓ Full channel rollout",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Advanced automation",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Revenue features live",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        },
+        {
+          "text": "✓ Measurable ROI",
+          "font_name": "Helvetica Neue Light",
+          "color": "FFFFFF",
+          "line_spacing": 18.0
+        }
+      ]
+    }
+  },
+  "slide-40": {
+    "shape-0": {
+      "left": 0.0,
+      "top": 0.17,
+      "width": 10.0,
+      "height": 1.84,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Live in weeks, not months",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.76,
+      "top": 2.59,
+      "width": 1.7,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "WEEK 1-2",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 11.55
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 0.76,
+      "top": 2.83,
+      "width": 1.7,
+      "height": 0.23,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Discovery & Setup",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 3.04,
+      "top": 2.59,
+      "width": 1.7,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "WEEK 3-4",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "9B59B6",
+          "line_spacing": 11.55
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 3.04,
+      "top": 2.83,
+      "width": 1.7,
+      "height": 0.23,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Testing & Training",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 5.32,
+      "top": 2.59,
+      "width": 1.7,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "WEEK 5-6",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "00D26A",
+          "line_spacing": 11.55
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 5.32,
+      "top": 2.83,
+      "width": 1.7,
+      "height": 0.23,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Launch & Optimize",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 7.6,
+      "top": 2.59,
+      "width": 1.7,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "DAY 90",
+          "font_name": "Helvetica Neue",
+          "font_size": 8.25,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "9B59B6",
+          "line_spacing": 11.55
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 7.6,
+      "top": 2.83,
+      "width": 1.7,
+      "height": 0.23,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "ROI Review",
+          "font_name": "Helvetica Neue",
+          "font_size": 12.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.8
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 0.76,
+      "top": 3.17,
+      "width": 1.7,
+      "height": 0.56,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Integration configuration, knowledge base import, brand voice training",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 9.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 3.04,
+      "top": 3.17,
+      "width": 1.7,
+      "height": 0.47,
+      "paragraphs": [
+        {
+          "text": "Conversation testing, agent training, workflow refinement",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 9.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.32,
+      "top": 3.17,
+      "width": 1.7,
+      "height": 0.56,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Go live, monitor performance, continuous optimization begins",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 9.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 7.6,
+      "top": 3.17,
+      "width": 1.7,
+      "height": 0.56,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Measure resolution rates, cost savings, CSAT impact, expansion planning",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 9.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 13.5
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 10.2,
+      "top": 3.15,
+      "width": 2.35,
+      "height": 0.77,
+      "overflow": {
+        "slide": {
+          "overflow_right": 2.55
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Deep product",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        },
+        {
+          "text": "and engineering engagement",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 13.22,
+      "top": 3.15,
+      "width": 2.35,
+      "height": 0.77,
+      "overflow": {
+        "slide": {
+          "overflow_right": 5.57
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Dedicated pod based support organization",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 16.32,
+      "top": 3.15,
+      "width": 2.35,
+      "height": 0.52,
+      "overflow": {
+        "slide": {
+          "overflow_right": 8.68
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Executive grade governance",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 19.37,
+      "top": 3.15,
+      "width": 2.35,
+      "height": 0.77,
+      "overflow": {
+        "slide": {
+          "overflow_right": 11.72
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Enterprise",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        },
+        {
+          "text": "go live assurance program",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 17.0,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 15.3
+        }
+      ]
+    }
+  },
+  "slide-41": {
+    "shape-0": {
+      "left": 0.44,
+      "top": 0.35,
+      "width": 8.99,
+      "height": 1.48,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Get started based on \u000bwhere are you today",
+          "alignment": "CENTER",
+          "font_size": 41.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.12,
+      "top": 2.33,
+      "width": 0.11,
+      "height": 0.2,
+      "paragraphs": [
+        {
+          "text": "1",
+          "alignment": "CENTER",
+          "font_size": 10.5,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 14.7
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 1.42,
+      "top": 2.23,
+      "width": 3.14,
+      "height": 0.39,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.17
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Proof of Concept\u000bBest for: Teams that need internal validation before commitment",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "FFFFFF",
+          "line_spacing": 16.2
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.4,
+      "top": 2.33,
+      "width": 0.11,
+      "height": 0.2,
+      "paragraphs": [
+        {
+          "text": "2",
+          "alignment": "CENTER",
+          "font_size": 10.5,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 14.7
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.7,
+      "top": 2.23,
+      "width": 3.14,
+      "height": 0.39,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.25
+        }
+      },
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-5": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Guided Trial\u000bBest for: Teams ready to move and measure real impact",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "color": "FFFFFF",
+          "line_spacing": 19.2
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 7.16,
+      "top": 2.27,
+      "width": 0.86,
+      "height": 0.15,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-4": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "RECOMMENDED",
+          "alignment": "CENTER",
+          "font_name": "Arial",
+          "font_size": 6.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 6.5
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 0.97,
+      "top": 2.82,
+      "width": 3.28,
+      "height": 0.68,
+      "paragraphs": [
+        {
+          "text": "30 Days",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 18.4
+        },
+        {
+          "text": "Controlled pilot environment",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.5,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.92
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 5.25,
+      "top": 2.82,
+      "width": 3.28,
+      "height": 0.68,
+      "paragraphs": [
+        {
+          "text": "6 Weeks",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 18.4
+        },
+        {
+          "text": "Full implementation path",
+          "font_name": "Helvetica Neue",
+          "font_size": 9.5,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 10.92
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 1.01,
+      "top": 3.54,
+      "width": 3.28,
+      "height": 1.22,
+      "paragraphs": [
+        {
+          "text": "→ Limited scope, defined use case",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "→ Validate AI performance",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "→ Technical integration test",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "→ See it work first",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 5.29,
+      "top": 3.54,
+      "width": 3.28,
+      "height": 1.22,
+      "paragraphs": [
+        {
+          "text": "✓ Production environment",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "✓ Full team onboarding",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "✓ Real customer conversations",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        },
+        {
+          "text": "✓ Start seeing value fast",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 16.5
+        }
+      ]
+    }
+  },
+  "slide-42": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.55,
+      "width": 8.99,
+      "height": 1.16,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Outcome-aligned pricing that scales with value delivered",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.42,
+      "top": 2.4,
+      "width": 1.7,
+      "height": 0.54,
+      "paragraphs": [
+        {
+          "text": "Resolution",
+          "font_name": "Helvetica Neue",
+          "font_size": 20.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 23.0
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.4,
+      "top": 2.38,
+      "width": 1.2,
+      "height": 0.54,
+      "paragraphs": [
+        {
+          "text": "Starting at\u000b$1.00/each",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 6.9
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.92,
+      "top": 2.4,
+      "width": 1.7,
+      "height": 0.54,
+      "paragraphs": [
+        {
+          "text": "Assist",
+          "font_name": "Helvetica Neue",
+          "font_size": 20.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 23.0
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 7.91,
+      "top": 2.38,
+      "width": 1.2,
+      "height": 0.54,
+      "paragraphs": [
+        {
+          "text": "Starting at\u000b$0.60/each",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 6.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 6.9
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 1.01,
+      "top": 3.16,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "What it means",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 1.01,
+      "top": 3.31,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI fully resolves issues without human intervention",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 1.01,
+      "top": 3.65,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "How we charge",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 5.51,
+      "top": 3.15,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "What it means",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 5.51,
+      "top": 3.31,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI fully resolves issues without human intervention",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 5.51,
+      "top": 3.65,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "How we charge",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 1.01,
+      "top": 3.81,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Per successful resolution - you pay when we deliver",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 1.01,
+      "top": 4.15,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Your benefit",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 1.01,
+      "top": 4.31,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Real cost savings tied to real outcomes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 5.51,
+      "top": 3.81,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Per successful resolution - you pay when we deliver",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 5.51,
+      "top": 4.15,
+      "width": 3.7,
+      "height": 0.15,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Your benefit",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.5,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 10.5
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 5.51,
+      "top": 4.31,
+      "width": 3.7,
+      "height": 0.17,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Real cost savings tied to real outcomes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 11.0,
+          "italic": false,
+          "underline": false,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 15.4
+        }
+      ]
+    }
+  },
+  "slide-43": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Competitive",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-44": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.03,
+      "width": 8.99,
+      "height": 2.6,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "We built around the customer",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "They built around the session",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 2.04,
+      "top": 3.62,
+      "width": 2.81,
+      "height": 1.02,
+      "paragraphs": [
+        {
+          "text": "Gladly",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 18.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 14.4
+        },
+        {
+          "text": "Persistent customer context enables continuity and value-weighted decisions",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.2
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 5.45,
+      "top": 3.62,
+      "width": 2.46,
+      "height": 1.02,
+      "paragraphs": [
+        {
+          "text": "Bolt-on AI",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 18.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 14.4
+        },
+        {
+          "text": "Isolated interactions queried at runtime, each contact treated as new",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 14.0,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 11.2
+        }
+      ]
+    }
+  },
+  "slide-45": {
+    "shape-0": {
+      "left": 0.51,
+      "top": 0.03,
+      "width": 8.99,
+      "height": 2.6,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "A single lifelong conversation",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        },
+        {
+          "text": "A system of record for every customer interaction.\u000bAll channels and history, unified.",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 18.0,
+          "bold": false
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.86,
+      "top": 2.62,
+      "width": 2.81,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.18
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Ticket-Centric AI",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.77,
+          "bold": true,
+          "color": "FA193C",
+          "line_spacing": 16.48
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 1.86,
+      "top": 2.82,
+      "width": 1.23,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "The Status Quo",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "color": "888888",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 5.67,
+      "top": 2.62,
+      "width": 2.81,
+      "height": 0.16,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.18
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Customer-Based",
+          "font_name": "Helvetica Neue",
+          "font_size": 11.77,
+          "bold": true,
+          "color": "009B00",
+          "line_spacing": 16.48
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 5.67,
+      "top": 2.82,
+      "width": 1.74,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Gladly Persistent Customer Profile",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "color": "888888",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 1.73,
+      "top": 3.19,
+      "width": 0.25,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "Email",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "666666",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 1.73,
+      "top": 3.48,
+      "width": 0.23,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "Chat",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "666666",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 2.03,
+      "top": 3.48,
+      "width": 0.28,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "#4847",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "italic": false,
+          "underline": false,
+          "color": "999999",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 2.06,
+      "top": 3.19,
+      "width": 0.29,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "#4521",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "italic": false,
+          "underline": false,
+          "color": "999999",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 2.34,
+      "top": 3.48,
+      "width": 2.33,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Where's my order?",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "italic": false,
+          "underline": false,
+          "color": "1A1A1A",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 2.37,
+      "top": 3.18,
+      "width": 2.3,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Return request",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "italic": false,
+          "underline": false,
+          "color": "1A1A1A",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.55,
+      "top": 3.44,
+      "width": 0.72,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "Called Yesterday",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 6.64,
+      "top": 3.14,
+      "width": 0.64,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "LTV: $2,847",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 7.54,
+      "top": 3.44,
+      "width": 0.72,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "12 Orders",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 1.55,
+      "top": 4.04,
+      "width": 3.08,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "No unified view — each ticket isolated",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "italic": true,
+          "underline": false,
+          "color": "999999",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 1.73,
+      "top": 3.78,
+      "width": 0.29,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "Voice",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "666666",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 2.08,
+      "top": 3.78,
+      "width": 0.35,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "#5102",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "italic": false,
+          "underline": false,
+          "color": "999999",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 2.39,
+      "top": 3.78,
+      "width": 2.27,
+      "height": 0.12,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.13
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Shipping delay",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.07,
+          "italic": false,
+          "underline": false,
+          "color": "1A1A1A",
+          "line_spacing": 9.9
+        }
+      ]
+    },
+    "shape-18": {
+      "left": 5.55,
+      "top": 3.78,
+      "width": 0.72,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "Loyal Customer",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-19": {
+      "left": 6.6,
+      "top": 4.03,
+      "width": 0.72,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "SMS + Voice",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-20": {
+      "left": 7.54,
+      "top": 3.78,
+      "width": 0.72,
+      "height": 0.1,
+      "paragraphs": [
+        {
+          "text": "VIP Member",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 6.28,
+          "bold": true,
+          "color": "0D0D0D",
+          "line_spacing": 8.79
+        }
+      ]
+    },
+    "shape-21": {
+      "left": 1.54,
+      "top": 4.48,
+      "width": 3.11,
+      "height": 0.13,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI resolves the ticket without context",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.27,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": "333333",
+          "line_spacing": 10.18
+        }
+      ]
+    },
+    "shape-22": {
+      "left": 5.35,
+      "top": 4.48,
+      "width": 3.11,
+      "height": 0.13,
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.12
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI understands this customer and makes judgment calls",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 7.27,
+          "bold": true,
+          "color": "333333",
+          "line_spacing": 10.18
+        }
+      ]
+    }
+  },
+  "slide-46": {
+    "shape-0": {
+      "left": 0.47,
+      "top": 0.72,
+      "width": 8.99,
+      "height": 4.02,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Owned and operated by\u000bCX teams",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.11,
+      "top": 6.03,
+      "width": 2.81,
+      "height": 0.99,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.39
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Create and author",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.8
+        },
+        {
+          "text": "Build, update, and launch \u000bnew experiences without engineering support",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.6
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 4.36,
+      "top": 6.03,
+      "width": 2.46,
+      "height": 0.99,
+      "overflow": {
+        "slide": {
+          "overflow_bottom": 1.39
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Unified reporting",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.8
+        },
+        {
+          "text": "AI and human performance in one view. No data reconciliation required.",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.6
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 7.26,
+      "top": 6.03,
+      "width": 2.85,
+      "height": 0.99,
+      "overflow": {
+        "slide": {
+          "overflow_right": 0.11,
+          "overflow_bottom": 1.39
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Continuous Optimization",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 16.0,
+          "bold": true,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 12.8
+        },
+        {
+          "text": "Self-improving feedback \u000bloops. Tune and optimize\u000bin real-time.",
+          "alignment": "CENTER",
+          "space_before": 4.0,
+          "font_name": "Helvetica Neue Light",
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.6
+        }
+      ]
+    }
+  },
+  "slide-47": {
+    "shape-0": {
+      "left": 1.54,
+      "top": 1.21,
+      "width": 6.91,
+      "height": 0.51,
+      "paragraphs": [
+        {
+          "text": "STANDALONE PITCH RETAIL",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 24.0,
+          "bold": true,
+          "color": "674EA7"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 1.57,
+      "top": 1.87,
+      "width": 6.85,
+      "height": 1.89,
+      "placeholder_type": "TITLE",
+      "default_font_size": 60.0,
+      "paragraphs": [
+        {
+          "text": "Capabilities",
+          "alignment": "CENTER"
+        },
+        {
+          "text": "and gifs",
+          "alignment": "CENTER"
+        }
+      ]
+    }
+  },
+  "slide-48": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Resolve",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Automate without compromise",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 5.32,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.4
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Handles conversations end-to-end",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Understands intent and context",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Adapts responses",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Controlled by brand voice and policies",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-49": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Sell",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Recommend and convert",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 4.69,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.71
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Upsell and cross-sell",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Recommend products contextually",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Confirm size, stock, and specs",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Convert without ever feeling pushy",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-50": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Assist",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.42
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Empower meaningful engagement",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 4.69,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 1.74
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Shares full history for seamless transitions",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Empathy cues flag sentiment and urgency",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Customer never has to repeat themselves",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Efficiency gains from upfront context",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Faster resolutions and higher CSAT",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-51": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Guide",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.42
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "No-code configuration and control",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 4.69,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 2.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Outline processes and logic in plain text",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Connect to existing answers and app data",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Define guardrails and when to escalate",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Test, refine, and improve over time",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Full CX team control",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Launch fast and stay flexible",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-52": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Optimize",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Smarter AI with every outcome",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 4.69,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 2.46
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Find breakdowns in real conversations",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Surfaces friction and blind spots",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Get AI-suggested answers to fill knowledge gaps",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Optimize based on real-world outcomes",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Connects feedback loops into model improvement",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Track impact of changes on resolution rates",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-53": {
+    "shape-0": {
+      "left": 0.5,
+      "top": 1.13,
+      "width": 5.32,
+      "height": 0.55,
+      "placeholder_type": "TITLE",
+      "paragraphs": [
+        {
+          "text": "Gladly Team",
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.5,
+      "top": 1.72,
+      "width": 5.32,
+      "height": 0.46,
+      "placeholder_type": "SUBTITLE",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "AI meets agent productivity",
+          "space_after": 8.0,
+          "font_size": 24.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 6.36,
+      "top": 1.93,
+      "width": 3.14,
+      "height": 1.41,
+      "paragraphs": [
+        {
+          "text": "NEED ANIMATED IMAGERY",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "bold": true
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 0.5,
+      "top": 2.52,
+      "width": 4.69,
+      "height": 1.98,
+      "placeholder_type": "BODY",
+      "overflow": {
+        "frame": {
+          "overflow_bottom": 2.76
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Full customer history always at your fingertips",
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Unified conversation timeline",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Smart content suggestions to boost productivity",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "AI summarizes conversations for faster resolution",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Context-rich handoffs from Sidekick",
+          "space_before": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        },
+        {
+          "text": "Real-time translations for global support",
+          "space_before": 8.0,
+          "space_after": 8.0,
+          "font_size": 22.0,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  },
+  "slide-54": {
+    "shape-0": {
+      "left": 0.0,
+      "top": 0.36,
+      "width": 10.0,
+      "height": 0.77,
+      "placeholder_type": "TITLE",
+      "default_font_size": 45.0,
+      "paragraphs": [
+        {
+          "text": "Enterprise grade AI at scale",
+          "alignment": "CENTER",
+          "font_size": 41.0
+        }
+      ]
+    },
+    "shape-1": {
+      "left": 0.57,
+      "top": 1.43,
+      "width": 2.78,
+      "height": 1.59,
+      "paragraphs": [
+        {
+          "text": "Multi-model, multi-provider",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 15.34
+        },
+        {
+          "text": "Applies the right model for the task, balancing quality, latency, and cost.",
+          "alignment": "CENTER",
+          "space_before": 3.31,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.44,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.71
+        }
+      ]
+    },
+    "shape-2": {
+      "left": 3.61,
+      "top": 1.43,
+      "width": 2.78,
+      "height": 1.59,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-4": 0.04,
+          "shape-5": 0.05,
+          "shape-6": 0.03,
+          "shape-7": 0.03,
+          "shape-8": 0.04,
+          "shape-9": 0.04,
+          "shape-10": 0.03,
+          "shape-11": 0.03
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Context-aware",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.34
+        },
+        {
+          "text": "Grounds responses in guest history, verified knowledge bases, and APIs.",
+          "alignment": "CENTER",
+          "space_before": 3.31,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.44,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.71
+        }
+      ]
+    },
+    "shape-3": {
+      "left": 6.65,
+      "top": 1.43,
+      "width": 2.78,
+      "height": 1.59,
+      "paragraphs": [
+        {
+          "text": "Secure integrations",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "theme_color": "ACCENT_5",
+          "line_spacing": 15.34
+        },
+        {
+          "text": "50+ out-of-the-box integrations connect securely to CRMs and commerce systems.",
+          "alignment": "CENTER",
+          "space_before": 3.31,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.44,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.71
+        }
+      ]
+    },
+    "shape-4": {
+      "left": 3.91,
+      "top": 2.42,
+      "width": 0.38,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.04
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Customer Profile",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-5": {
+      "left": 3.91,
+      "top": 2.71,
+      "width": 0.47,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.05
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Conversation History",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 3.55,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-6": {
+      "left": 4.6,
+      "top": 2.71,
+      "width": 0.35,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.03
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Knowledge Documents",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-7": {
+      "left": 4.61,
+      "top": 2.42,
+      "width": 0.28,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.03
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Website Content",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-8": {
+      "left": 5.19,
+      "top": 2.42,
+      "width": 0.38,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.04
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Agent Expertise",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-9": {
+      "left": 5.19,
+      "top": 2.71,
+      "width": 0.38,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.04
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Brand Guidelines",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-10": {
+      "left": 5.9,
+      "top": 2.42,
+      "width": 0.32,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.03
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Answer Content",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-11": {
+      "left": 5.9,
+      "top": 2.71,
+      "width": 0.33,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-2": 0.03
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Support Processes",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 4.0,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-12": {
+      "left": 0.57,
+      "top": 3.28,
+      "width": 4.3,
+      "height": 1.59,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-14": 0.1,
+          "shape-15": 0.1,
+          "shape-16": 0.1,
+          "shape-17": 0.1,
+          "shape-18": 0.11,
+          "shape-19": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Safeguards",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.34
+        },
+        {
+          "text": "Tone, brand, and compliance checks on every response.\u000bHallucination detection built-in.",
+          "alignment": "CENTER",
+          "space_before": 3.31,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.44,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.71
+        }
+      ]
+    },
+    "shape-13": {
+      "left": 5.13,
+      "top": 3.28,
+      "width": 4.36,
+      "height": 1.59,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-20": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Human-in-the-loop",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 13.34,
+          "bold": true,
+          "theme_color": "ACCENT_1",
+          "line_spacing": 15.34
+        },
+        {
+          "text": "AI augments live agents. Low confidence conversations \u000bescalate to humans.",
+          "alignment": "CENTER",
+          "space_before": 3.31,
+          "font_name": "Helvetica Neue Light",
+          "font_size": 8.44,
+          "theme_color": "LIGHT_1",
+          "line_spacing": 9.71
+        }
+      ]
+    },
+    "shape-14": {
+      "left": 1.16,
+      "top": 4.23,
+      "width": 0.82,
+      "height": 0.12,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Tone &  Voice",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-15": {
+      "left": 1.16,
+      "top": 4.52,
+      "width": 0.86,
+      "height": 0.12,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Promise Detection",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-16": {
+      "left": 2.29,
+      "top": 4.23,
+      "width": 0.81,
+      "height": 0.12,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Clarity & Quality",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-17": {
+      "left": 2.29,
+      "top": 4.52,
+      "width": 0.86,
+      "height": 0.12,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.1
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Channel Awareness",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-18": {
+      "left": 3.48,
+      "top": 4.23,
+      "width": 0.94,
+      "height": 0.12,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.11
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Hallucination Protection",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-19": {
+      "left": 3.48,
+      "top": 4.53,
+      "width": 0.91,
+      "height": 0.1,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-12": 0.09
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Confidence Threshold",
+          "font_name": "Helvetica Neue Light",
+          "font_size": 5.71,
+          "color": "FFFFFF"
+        }
+      ]
+    },
+    "shape-20": {
+      "left": 5.71,
+      "top": 4.13,
+      "width": 0.59,
+      "height": 0.26,
+      "overlap": {
+        "overlapping_shapes": {
+          "shape-13": 0.15
+        }
+      },
+      "paragraphs": [
+        {
+          "text": "Team",
+          "alignment": "CENTER",
+          "font_name": "Helvetica Neue",
+          "font_size": 3.71,
+          "bold": true,
+          "theme_color": "LIGHT_1"
+        }
+      ]
+    }
+  }
+}

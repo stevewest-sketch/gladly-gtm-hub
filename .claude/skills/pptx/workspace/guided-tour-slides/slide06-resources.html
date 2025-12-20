@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #8C69F0; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.content {
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  margin: 0 60pt;
+}
+.title { color: #FFFFFF; font-size: 28pt; font-weight: bold; margin: 0 0 25pt 0; }
+.resources { display: flex; gap: 20pt; }
+.resource {
+  background: #FFFFFF; border-radius: 10pt; padding: 20pt;
+  width: 180pt; text-align: center;
+}
+.resource-title { color: #0D0D0D; font-size: 13pt; font-weight: bold; margin: 0 0 8pt 0; }
+.resource-desc { color: #4A4A4A; font-size: 10pt; margin: 0; line-height: 1.4; }
+.cta-section { margin-top: 30pt; }
+.cta-text { color: #C5B3F8; font-size: 12pt; margin: 0 0 8pt 0; }
+.cta-action { color: #FFFFFF; font-size: 14pt; font-weight: bold; margin: 0; }
+.footer { display: flex; justify-content: center; margin-bottom: 20pt; }
+.confidential { color: #C5B3F8; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="content">
+  <h1 class="title">Resources & Next Steps</h1>
+  <div class="resources">
+    <div class="resource">
+      <p class="resource-title">Gladly Help Docs</p>
+      <p class="resource-desc">Complete documentation for all features and configurations</p>
+    </div>
+    <div class="resource">
+      <p class="resource-title">Gladly Academy</p>
+      <p class="resource-desc">Self-paced training modules and certifications</p>
+    </div>
+    <div class="resource">
+      <p class="resource-title">Office Hours</p>
+      <p class="resource-desc">Live Q&A with Gladly experts during your POC</p>
+    </div>
+  </div>
+  <div class="cta-section">
+    <p class="cta-text">Questions or need help?</p>
+    <p class="cta-action">Reach out in your dedicated Slack channel: #shared-[company]-gladly</p>
+  </div>
+</div>
+<div class="footer">
+  <p class="confidential">Gladly Confidential</p>
+</div>
+</body>
+</html>
