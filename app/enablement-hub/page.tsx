@@ -1,7 +1,7 @@
 import { client } from '@/lib/sanity';
-import EnablementHub from './EnablementHub';
+import { EnablementHubV2 } from './EnablementHubV2';
 
-// GROQ query to fetch catalog entries published to Enablement Hub
+// GROQ query to fetch catalog entries and collections for Enablement Hub
 const query = `{
   "entries": *[
     _type == "catalogEntry" &&
@@ -43,6 +43,7 @@ const query = `{
     },
     enablementCategory,
     publishDate,
+    sessionDate,
     duration,
     difficulty,
     presenter,
@@ -53,9 +54,46 @@ const query = `{
       }
     },
     externalUrl,
+    videoUrl,
+    slidesUrl,
     featured,
     priority,
-    showInUpcoming
+    showInUpcoming,
+    displayPriority,
+    teams,
+    enablementHubCollections[]{
+      collection->{
+        _id,
+        name,
+        slug,
+        icon,
+        color
+      },
+      subsections
+    }
+  },
+  "collections": *[
+    _type == "collection" &&
+    hub == "enablement" &&
+    isEnabled == true
+  ] | order(order asc) {
+    _id,
+    name,
+    slug,
+    hub,
+    description,
+    icon,
+    color,
+    order,
+    showInNavigation,
+    isEnabled,
+    subsections[]{
+      name,
+      icon,
+      filterLogic,
+      maxItems,
+      order
+    }
   },
   "audiences": *[_type == "audience"] | order(order asc, name asc) [0...50] {
     _id,
@@ -113,13 +151,11 @@ export default async function EnablementPage() {
     );
   }
 
-  // Pass Sanity data to client component
+  // Pass Sanity data to client component (matching HTML mock design)
   return (
-    <EnablementHub
+    <EnablementHubV2
       entries={data.entries}
-      audiences={data.audiences || []}
-      learningPaths={data.learningPaths || []}
-      products={data.products || []}
+      collections={data.collections || []}
     />
   );
 }

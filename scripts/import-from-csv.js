@@ -88,12 +88,13 @@ function mapHub(hub) {
   const hubLower = hub.toLowerCase();
   if (hubLower === 'enablement') return ['enablement'];
   if (hubLower === 'content') return ['content'];
+  if (hubLower === 'coe') return ['coe'];
   if (hubLower === 'both') return ['content', 'enablement'];
   return ['content'];
 }
 
 async function importFromCSV() {
-  const csvPath = process.argv[2] || '/Users/steve.westgladly.com/Downloads/Audit steve - Sheet1 (5).csv';
+  const csvPath = process.argv[2] || path.join(__dirname, 'audit-data.csv');
 
   if (!fs.existsSync(csvPath)) {
     console.error('CSV file not found:', csvPath);
@@ -113,6 +114,7 @@ async function importFromCSV() {
     title: header.indexOf('title'),
     description: header.indexOf('description'),
     hub: header.indexOf('hub'),
+    coeType: header.indexOf('coeType'),
     enablementCategory: header.indexOf('enablementCategory'),
     contentType: header.indexOf('contentType'),
     teams: header.indexOf('teams'),
@@ -143,7 +145,23 @@ async function importFromCSV() {
     existingByTitle[key] = e;
   });
 
+  // Fetch all collections for auto-assignment
+  const collections = await client.fetch(`*[_type == "collection"]{
+    _id,
+    name,
+    slug,
+    hub
+  }`);
+
+  // Create lookup maps for collections by hub and slug
+  const collectionsByHubAndSlug = {};
+  collections.forEach(c => {
+    const key = `${c.hub}:${c.slug.current}`;
+    collectionsByHubAndSlug[key] = c._id;
+  });
+
   console.log(`Found ${existingEntries.length} existing entries in Sanity`);
+  console.log(`Found ${collections.length} collections for auto-assignment`);
   console.log(`Processing ${lines.length - 1} CSV rows...\n`);
 
   const toCreate = [];
@@ -157,7 +175,10 @@ async function importFromCSV() {
     let title = row[cols.title];
     const description = row[cols.description] || '';
     const hub = row[cols.hub] || '';
+    const coeType = row[cols.coeType] || '';
     const enablementCategory = row[cols.enablementCategory] || '';
+    const teamsRaw = row[cols.teams] || '';
+    const teams = teamsRaw ? teamsRaw.split('|').map(t => t.trim()).filter(Boolean) : [];
     const format = mapFormat(row[cols.format]);
     const externalUrl = row[cols.externalUrl] || '';
     const videoUrl = row[cols.videoUrl] || '';
@@ -177,12 +198,22 @@ async function importFromCSV() {
     }
 
     // Build entry object
+    let publishedTo = mapHub(hub);
+
+    // AUTO-ADD BOTH HUBS: If it's video/on-demand content in enablement, also add to content hub
+    // This allows videos to appear in both Content Hub collections AND Enablement Hub collections
+    if (publishedTo.includes('enablement') && (format === 'video' || format === 'on-demand' || format === 'live-replay')) {
+      if (!publishedTo.includes('content')) {
+        publishedTo.push('content');
+      }
+    }
+
     const entry = {
       _type: 'catalogEntry',
       title,
       description: description.substring(0, 500), // Limit description length
       slug: { _type: 'slug', current: generateSlug(title) },
-      publishedTo: mapHub(hub),
+      publishedTo,
       format,
       status: 'published',
       featured,
@@ -197,10 +228,158 @@ async function importFromCSV() {
     if (keyAssetUrl) entry.keyAssetUrl = keyAssetUrl;
     if (keyAssetLabel) entry.keyAssetLabel = keyAssetLabel;
     if (presenter) entry.presenter = presenter;
+    if (teams.length > 0) entry.teams = teams;
 
-    // Add enablement category as array
+    // Add categories as arrays
     if (enablementCategory) {
       entry.enablementCategory = [enablementCategory];
+    }
+    if (coeType) {
+      entry.coeType = [coeType];
+    }
+
+    // ========================================
+    // AUTO-ASSIGN COLLECTIONS
+    // ========================================
+
+    const assignedCollections = {
+      enablement: [],
+      coe: [],
+      content: [],
+    };
+
+    // For Enablement Hub: Assign based on teams
+    if (entry.publishedTo.includes('enablement')) {
+      teams.forEach(team => {
+        const teamSlugMap = {
+          'sales': 'sales',
+          'customer-success': 'cs',
+          'solutions-consultant': 'sc',
+          'implementation': 'sc', // Map implementation to SC
+          'ps': 'sc', // Map PS to SC
+        };
+        const slug = teamSlugMap[team];
+        if (slug) {
+          const collectionId = collectionsByHubAndSlug[`enablement:${slug}`];
+          if (collectionId && !assignedCollections.enablement.includes(collectionId)) {
+            assignedCollections.enablement.push(collectionId);
+          }
+        }
+      });
+
+      // Also check for New Hire content (if it has certain keywords or is onboarding)
+      if (title.toLowerCase().includes('new hire') ||
+          title.toLowerCase().includes('onboarding') ||
+          enablementCategory === 'onboarding') {
+        const newHireId = collectionsByHubAndSlug['enablement:new-hire'];
+        if (newHireId && !assignedCollections.enablement.includes(newHireId)) {
+          assignedCollections.enablement.push(newHireId);
+        }
+      }
+
+      // If no teams assigned, default to Uncategorized
+      if (assignedCollections.enablement.length === 0) {
+        const uncategorizedId = collectionsByHubAndSlug['enablement:enablement-uncategorized'];
+        if (uncategorizedId) {
+          assignedCollections.enablement.push(uncategorizedId);
+        }
+      }
+    }
+
+    // For CoE Hub: Assign based on coeType
+    if (entry.publishedTo.includes('coe')) {
+      if (coeType) {
+        const coeTypeSlugMap = {
+          'meeting-asset': 'meeting-examples',
+          'proof-point': 'proof-points',
+          'internal-best-practice': 'best-practices',
+          'process-innovation': 'best-practices',
+          'tool': 'best-practices', // Tools can go to best practices
+        };
+        const slug = coeTypeSlugMap[coeType];
+        if (slug) {
+          const collectionId = collectionsByHubAndSlug[`coe:${slug}`];
+          if (collectionId) {
+            assignedCollections.coe.push(collectionId);
+          }
+        }
+      }
+
+      // Check for playbooks and dashboards in title/format
+      if (format === 'playbook' || title.toLowerCase().includes('playbook')) {
+        const playbookId = collectionsByHubAndSlug['coe:playbooks'];
+        if (playbookId && !assignedCollections.coe.includes(playbookId)) {
+          assignedCollections.coe.push(playbookId);
+        }
+      }
+
+      if (title.toLowerCase().includes('dashboard')) {
+        const dashboardId = collectionsByHubAndSlug['coe:dashboards'];
+        if (dashboardId && !assignedCollections.coe.includes(dashboardId)) {
+          assignedCollections.coe.push(dashboardId);
+        }
+      }
+
+      // Default to Uncategorized if no collection assigned
+      if (assignedCollections.coe.length === 0) {
+        const uncategorizedId = collectionsByHubAndSlug['coe:coe-uncategorized'];
+        if (uncategorizedId) {
+          assignedCollections.coe.push(uncategorizedId);
+        }
+      }
+    }
+
+    // For Content Hub: Assign based on format
+    if (entry.publishedTo.includes('content')) {
+      const formatSlugMap = {
+        'slides': 'meeting-decks',
+        'deck': 'meeting-decks',
+        'one-pager': 'one-pagers',
+        'battlecard': 'competitive',
+        'competitive': 'competitive',
+        'template': 'templates',
+        'tool': 'value-tools',
+        'calculator': 'value-tools',
+      };
+
+      const slug = formatSlugMap[format];
+      if (slug) {
+        const collectionId = collectionsByHubAndSlug[`content:${slug}`];
+        if (collectionId) {
+          assignedCollections.content.push(collectionId);
+        }
+      }
+
+      // Default to Uncategorized if no format match
+      if (assignedCollections.content.length === 0) {
+        const uncategorizedId = collectionsByHubAndSlug['content:uncategorized'];
+        if (uncategorizedId) {
+          assignedCollections.content.push(uncategorizedId);
+        }
+      }
+    }
+
+    // Add collection references to entry with proper _key values
+    if (assignedCollections.enablement.length > 0) {
+      entry.enablementHubCollections = assignedCollections.enablement.map(id => ({
+        _type: 'reference',
+        _ref: id,
+        _key: id, // Use collection ID as key for uniqueness
+      }));
+    }
+    if (assignedCollections.coe.length > 0) {
+      entry.coeHubCollections = assignedCollections.coe.map(id => ({
+        _type: 'reference',
+        _ref: id,
+        _key: id, // Use collection ID as key for uniqueness
+      }));
+    }
+    if (assignedCollections.content.length > 0) {
+      entry.contentHubCollections = assignedCollections.content.map(id => ({
+        _type: 'reference',
+        _ref: id,
+        _key: id, // Use collection ID as key for uniqueness
+      }));
     }
 
     // Check if exists
@@ -224,7 +403,12 @@ async function importFromCSV() {
   if (toCreate.length > 0) {
     console.log('=== NEW ENTRIES (first 5) ===');
     toCreate.slice(0, 5).forEach(e => {
-      console.log(`  "${e.title}" (${e.format || 'no format'}) -> ${e.publishedTo?.join(', ')}`);
+      const collectionCounts = [];
+      if (e.enablementHubCollections) collectionCounts.push(`Enablement: ${e.enablementHubCollections.length}`);
+      if (e.coeHubCollections) collectionCounts.push(`CoE: ${e.coeHubCollections.length}`);
+      if (e.contentHubCollections) collectionCounts.push(`Content: ${e.contentHubCollections.length}`);
+      const collectionInfo = collectionCounts.length > 0 ? ` [${collectionCounts.join(', ')}]` : '';
+      console.log(`  "${e.title}" (${e.format || 'no format'}) -> ${e.publishedTo?.join(', ')}${collectionInfo}`);
     });
     console.log('');
   }
@@ -232,7 +416,12 @@ async function importFromCSV() {
   if (toUpdate.length > 0) {
     console.log('=== UPDATES (first 5) ===');
     toUpdate.slice(0, 5).forEach(e => {
-      console.log(`  "${e.title}" (${e.format || 'no format'})`);
+      const collectionCounts = [];
+      if (e.enablementHubCollections) collectionCounts.push(`Enablement: ${e.enablementHubCollections.length}`);
+      if (e.coeHubCollections) collectionCounts.push(`CoE: ${e.coeHubCollections.length}`);
+      if (e.contentHubCollections) collectionCounts.push(`Content: ${e.contentHubCollections.length}`);
+      const collectionInfo = collectionCounts.length > 0 ? ` [${collectionCounts.join(', ')}]` : '';
+      console.log(`  "${e.title}" (${e.format || 'no format'}) -> ${e.publishedTo?.join(', ')}${collectionInfo}`);
       if (e.sessionDate) console.log(`    sessionDate: ${e.sessionDate}`);
     });
     console.log('');

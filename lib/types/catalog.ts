@@ -279,9 +279,43 @@ export interface RelatedContent {
   cardType?: string
 }
 
+export interface CollectionSubsection {
+  name: string
+  icon?: string
+  filterLogic: 'all' | 'featured' | 'recent' | 'priority'
+  maxItems?: number
+  order: number
+}
+
+export interface Collection {
+  _id: string
+  _type: 'collection'
+  name: string
+  slug: { current: string }
+  hub: 'content' | 'enablement' | 'coe' | 'curated' | 'sales' | 'training' | 'partner'
+  description?: string
+  icon?: string
+  color?: string
+  order: number
+  showInNavigation: boolean
+  isEnabled: boolean
+  subsections?: CollectionSubsection[]
+}
+
+export interface CollectionAssignment {
+  collection: {
+    _id: string
+    name: string
+    slug: { current: string }
+    icon?: string
+  }
+  subsections?: string[] // Names of subsections, e.g., ["First Meeting", "Discovery & Demo"]
+}
+
 export interface CatalogEntry {
   _id: string
   _type: 'catalogEntry'
+  _updatedAt?: string
   title: string
   description?: string
   slug: { current: string }
@@ -375,6 +409,31 @@ export interface CatalogEntry {
   showInUpcoming?: boolean
   publishedTo?: string[]
   status: 'draft' | 'submitted' | 'in-review' | 'approved' | 'published' | 'archived'
+
+  // Collection Assignments (NEW)
+  enablementHubCollections?: CollectionAssignment[]
+  coeHubCollections?: CollectionAssignment[]
+  contentHubCollections?: CollectionAssignment[]
+  curatedHubCollections?: CollectionAssignment[]
+  salesHubCollections?: Collection[]
+  trainingHubCollections?: Collection[]
+  partnerHubCollections?: Collection[]
+
+  // Display Priority (NEW)
+  displayPriority?: 'hero' | 'featured' | 'normal'
+
+  // Hub-Specific Fields (NEW)
+  // CoE-specific
+  coeType?: string[]
+  meetingType?: 'bva' | 'ebr' | 'qbr' | 'rfx' | 'strategy-session'
+
+  // Enablement-specific
+  enablementCategory?: string[]
+
+  // Other hub categories
+  salesCategory?: string[]
+  trainingCategory?: string[]
+  partnerCategory?: string[]
 }
 
 // Filter configuration types

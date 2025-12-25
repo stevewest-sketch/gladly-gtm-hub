@@ -1,3 +1,5 @@
+import CollectionSubsectionInput from '../components/CollectionSubsectionInput'
+
 export default {
   name: 'catalogEntry',
   title: 'Catalog Entries',
@@ -23,6 +25,8 @@ export default {
         list: [
           { title: '📚 Content Hub', value: 'content' },
           { title: '🎓 Enablement Hub', value: 'enablement' },
+          { title: '🏆 CoE Hub', value: 'coe' },
+          { title: '✨ Curated Hub', value: 'curated' },
         ],
         layout: 'grid',
       },
@@ -345,6 +349,25 @@ export default {
     },
 
     {
+      name: 'teams',
+      title: 'Teams',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: '💼 Sales', value: 'sales' },
+          { title: '🤝 Customer Success', value: 'customer-success' },
+          { title: '🚀 Implementation', value: 'implementation' },
+          { title: '🎯 Solutions Consultant', value: 'solutions-consultant' },
+          { title: '🛠️ Professional Services', value: 'ps' },
+        ],
+        layout: 'grid',
+      },
+      description: 'Which team(s) is this content for?',
+      group: 'publish',
+    },
+
+    {
       name: 'enablementCategory',
       title: 'Enablement Category',
       type: 'array',
@@ -361,6 +384,299 @@ export default {
         ],
       },
       hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      group: 'publish',
+    },
+
+    {
+      name: 'coeType',
+      title: 'CoE Type',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: '⭐ Internal Best Practice', value: 'internal-best-practice' },
+          { title: '🔄 Process Innovation', value: 'process-innovation' },
+          { title: '📊 Proof Point', value: 'proof-point' },
+          { title: '🛠️ Tool', value: 'tool' },
+          { title: '🤝 Meeting Asset', value: 'meeting-asset' },
+        ],
+        layout: 'grid',
+      },
+      description: 'Type of CoE content',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('coe'),
+      group: 'publish',
+    },
+
+    // ========================================
+    // COLLECTION ASSIGNMENTS
+    // ========================================
+
+    {
+      name: 'enablementHubCollections',
+      title: 'Enablement Hub Collections & Subsections',
+      type: 'array',
+      of: [{
+        type: 'object',
+        name: 'collectionAssignment',
+        components: {
+          input: CollectionSubsectionInput,
+        },
+        fields: [
+          {
+            name: 'collection',
+            title: 'Collection',
+            type: 'reference',
+            to: [{ type: 'collection' }],
+            options: {
+              filter: 'hub == "enablement" && isEnabled == true',
+            },
+            validation: (Rule: any) => Rule.required(),
+          },
+          {
+            name: 'subsections',
+            title: 'Subsections',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Which subsections within this collection? Leave empty to show in all subsections.',
+          },
+        ],
+        preview: {
+          select: {
+            collectionName: 'collection.name',
+            collectionIcon: 'collection.icon',
+            subsections: 'subsections',
+          },
+          prepare({ collectionName, collectionIcon, subsections }: any) {
+            const subsectionText = subsections && subsections.length > 0
+              ? ` → ${subsections.join(', ')}`
+              : ' (all subsections)';
+            return {
+              title: `${collectionIcon || '📁'} ${collectionName || 'Untitled'}`,
+              subtitle: subsectionText,
+            };
+          },
+        },
+      }],
+      description: 'Assign to specific collections and optionally to specific subsections',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('enablement'),
+      validation: (Rule: any) => Rule.custom((collections: any, context: any) => {
+        const parent = (context as any).parent;
+        if (parent?.publishedTo?.includes('enablement') && (!collections || collections.length === 0)) {
+          return 'Please assign to at least one Enablement Hub collection';
+        }
+        return true;
+      }),
+      group: 'publish',
+    },
+
+    {
+      name: 'coeHubCollections',
+      title: 'CoE Hub Collections & Subsections',
+      type: 'array',
+      of: [{
+        type: 'object',
+        name: 'collectionAssignment',
+        components: {
+          input: CollectionSubsectionInput,
+        },
+        fields: [
+          {
+            name: 'collection',
+            title: 'Collection',
+            type: 'reference',
+            to: [{ type: 'collection' }],
+            options: {
+              filter: 'hub == "coe" && isEnabled == true',
+            },
+            validation: (Rule: any) => Rule.required(),
+          },
+          {
+            name: 'subsections',
+            title: 'Subsections',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Which subsections within this collection? Leave empty to show in all subsections.',
+          },
+        ],
+        preview: {
+          select: {
+            collectionName: 'collection.name',
+            collectionIcon: 'collection.icon',
+            subsections: 'subsections',
+          },
+          prepare({ collectionName, collectionIcon, subsections }: any) {
+            const subsectionText = subsections && subsections.length > 0
+              ? ` → ${subsections.join(', ')}`
+              : ' (all subsections)';
+            return {
+              title: `${collectionIcon || '📁'} ${collectionName || 'Untitled'}`,
+              subtitle: subsectionText,
+            };
+          },
+        },
+      }],
+      description: 'Assign to specific collections and optionally to specific subsections',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('coe'),
+      validation: (Rule: any) => Rule.custom((collections: any, context: any) => {
+        const parent = (context as any).parent;
+        if (parent?.publishedTo?.includes('coe') && (!collections || collections.length === 0)) {
+          return 'Please assign to at least one CoE Hub collection';
+        }
+        return true;
+      }),
+      group: 'publish',
+    },
+
+    {
+      name: 'contentHubCollections',
+      title: 'Content Hub Collections & Subsections',
+      type: 'array',
+      of: [{
+        type: 'object',
+        name: 'collectionAssignment',
+        components: {
+          input: CollectionSubsectionInput,
+        },
+        fields: [
+          {
+            name: 'collection',
+            title: 'Collection',
+            type: 'reference',
+            to: [{ type: 'collection' }],
+            options: {
+              filter: 'hub == "content" && isEnabled == true',
+            },
+            validation: (Rule: any) => Rule.required(),
+          },
+          {
+            name: 'subsections',
+            title: 'Subsections',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Which subsections within this collection? Leave empty to show in all subsections.',
+          },
+        ],
+        preview: {
+          select: {
+            collectionName: 'collection.name',
+            collectionIcon: 'collection.icon',
+            subsections: 'subsections',
+          },
+          prepare({ collectionName, collectionIcon, subsections }: any) {
+            const subsectionText = subsections && subsections.length > 0
+              ? ` → ${subsections.join(', ')}`
+              : ' (all subsections)';
+            return {
+              title: `${collectionIcon || '📁'} ${collectionName || 'Untitled'}`,
+              subtitle: subsectionText,
+            };
+          },
+        },
+      }],
+      description: 'Assign to specific collections and optionally to specific subsections',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('content'),
+      validation: (Rule: any) => Rule.custom((collections: any, context: any) => {
+        const parent = (context as any).parent;
+        if (parent?.publishedTo?.includes('content') && (!collections || collections.length === 0)) {
+          return 'Please assign to at least one Content Hub collection';
+        }
+        return true;
+      }),
+      group: 'publish',
+    },
+
+    {
+      name: 'curatedHubCollections',
+      title: 'Curated Hub Collections & Subsections',
+      type: 'array',
+      of: [{
+        type: 'object',
+        name: 'collectionAssignment',
+        components: {
+          input: CollectionSubsectionInput,
+        },
+        fields: [
+          {
+            name: 'collection',
+            title: 'Collection',
+            type: 'reference',
+            to: [{ type: 'collection' }],
+            options: {
+              filter: 'hub == "curated" && isEnabled == true',
+            },
+            validation: (Rule: any) => Rule.required(),
+          },
+          {
+            name: 'subsections',
+            title: 'Subsections',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Which subsections within this collection? Leave empty to show in all subsections.',
+          },
+        ],
+        preview: {
+          select: {
+            collectionName: 'collection.name',
+            collectionIcon: 'collection.icon',
+            subsections: 'subsections',
+          },
+          prepare({ collectionName, collectionIcon, subsections }: any) {
+            const subsectionText = subsections && subsections.length > 0
+              ? ` → ${subsections.join(', ')}`
+              : ' (all subsections)';
+            return {
+              title: `${collectionIcon || '📁'} ${collectionName || 'Untitled'}`,
+              subtitle: subsectionText,
+            };
+          },
+        },
+      }],
+      description: 'Assign to curated collections (can include entries from any hub)',
+      hidden: ({ parent }: any) => !parent?.publishedTo?.includes('curated'),
+      validation: (Rule: any) => Rule.custom((collections: any, context: any) => {
+        const parent = (context as any).parent;
+        if (parent?.publishedTo?.includes('curated') && (!collections || collections.length === 0)) {
+          return 'Please assign to at least one Curated Hub collection';
+        }
+        return true;
+      }),
+      group: 'publish',
+    },
+
+    // Display priority for featured content
+    {
+      name: 'displayPriority',
+      title: 'Display Priority',
+      type: 'string',
+      options: {
+        list: [
+          { title: '⭐ Hero Callout', value: 'hero' },
+          { title: '✨ Featured', value: 'featured' },
+          { title: '📌 Normal', value: 'normal' },
+        ],
+        layout: 'radio',
+      },
+      description: 'Hero callouts appear in large cards at top of Featured tab',
+      initialValue: 'normal',
+      group: 'publish',
+    },
+
+    // Meeting type for CoE meeting assets
+    {
+      name: 'meetingType',
+      title: 'Meeting Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: '🔍 Business Value Assessment (BVA)', value: 'bva' },
+          { title: '📊 Executive Business Review (EBR)', value: 'ebr' },
+          { title: '📈 Quarterly Business Review (QBR)', value: 'qbr' },
+          { title: '📝 RFX Response', value: 'rfx' },
+          { title: '🎯 Strategy Session', value: 'strategy-session' },
+        ],
+      },
+      description: 'Type of meeting this asset supports',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('meeting-asset'),
       group: 'publish',
     },
 

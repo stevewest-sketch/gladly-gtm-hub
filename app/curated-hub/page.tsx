@@ -1,21 +1,30 @@
 import { client } from '@/lib/sanity';
-import { CoEHub } from './CoEHub';
+import { CuratedHub } from './CuratedHub';
 
-// GROQ query to fetch catalog entries and collections for CoE Hub
+// GROQ query to fetch catalog entries and collections for Curated Hub
 const query = `{
   "entries": *[
     _type == "catalogEntry" &&
     status == "published" &&
-    "coe" in publishedTo
+    "curated" in publishedTo
   ] | order(publishDate desc) {
     _id,
     title,
     slug,
     description,
-    coeType,
+    contentType->{
+      _id,
+      name,
+      slug,
+      icon,
+      color
+    },
+    format,
     teams,
     displayPriority,
     featured,
+    publishDate,
+    _updatedAt,
     thumbnailImage{
       asset->{
         _id,
@@ -25,7 +34,7 @@ const query = `{
     externalUrl,
     videoUrl,
     slidesUrl,
-    coeHubCollections[]{
+    curatedHubCollections[]{
       collection->{
         _id,
         name,
@@ -38,7 +47,7 @@ const query = `{
   },
   "collections": *[
     _type == "collection" &&
-    hub == "coe" &&
+    hub == "curated" &&
     isEnabled == true
   ] | order(order asc) {
     _id,
@@ -61,7 +70,7 @@ const query = `{
   }
 }`;
 
-export default async function CoeHubPage() {
+export default async function CuratedHubPage() {
   // Fetch all catalog entries and collections from Sanity
   const data = await client.fetch(
     query,
@@ -76,17 +85,17 @@ export default async function CoeHubPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-8">
         <div className="text-center max-w-md">
-          <div className="text-6xl mb-4">🏆</div>
+          <div className="text-6xl mb-4">✨</div>
           <h1 className="text-2xl font-bold text-gray-700 mb-3">
-            Center of Excellence
+            Curated Hub
           </h1>
           <p className="text-gray-600 mb-6">
-            No CoE content found. Create your first catalog entry in
-            Sanity Studio and publish it to the CoE Hub.
+            No curated content found. Create your first catalog entry in
+            Sanity Studio and publish it to the Curated Hub.
           </p>
           <a
             href="/studio"
-            className="inline-block bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-all"
+            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all"
           >
             Go to Sanity Studio
           </a>
@@ -95,9 +104,9 @@ export default async function CoeHubPage() {
     );
   }
 
-  // Pass Sanity data to client component (matching HTML mock design)
+  // Pass Sanity data to client component
   return (
-    <CoEHub
+    <CuratedHub
       entries={data.entries}
       collections={data.collections || []}
     />
@@ -107,8 +116,8 @@ export default async function CoeHubPage() {
 // Generate metadata for SEO
 export async function generateMetadata() {
   return {
-    title: 'Center of Excellence | Gladly Revenue Enablement',
+    title: 'Curated Hub | Gladly Revenue Enablement',
     description:
-      'Customer success stories, best practices, and proven strategies from the field.',
+      'Hand-picked content from across all hubs. The best resources curated for your success.',
   };
 }

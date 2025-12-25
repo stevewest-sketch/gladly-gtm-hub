@@ -471,6 +471,53 @@ export const structure = (S: StructureBuilder) =>
       S.divider(),
 
       // ========================================
+      // COLLECTIONS (Hub Organization)
+      // ========================================
+      S.listItem()
+        .title('📁 Collections')
+        .child(
+          S.list()
+            .title('Collections')
+            .items([
+              S.listItem()
+                .title('📚 All Collections')
+                .child(
+                  S.documentList()
+                    .title('All Collections')
+                    .filter('_type == "collection"')
+                    .defaultOrdering([{ field: 'hub', direction: 'asc' }, { field: 'order', direction: 'asc' }])
+                ),
+              S.divider(),
+              S.listItem()
+                .title('🎓 Enablement Hub Collections')
+                .child(
+                  S.documentList()
+                    .title('Enablement Hub Collections')
+                    .filter('_type == "collection" && hub == "enablement"')
+                    .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                ),
+              S.listItem()
+                .title('🏆 CoE Hub Collections')
+                .child(
+                  S.documentList()
+                    .title('CoE Hub Collections')
+                    .filter('_type == "collection" && hub == "coe"')
+                    .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                ),
+              S.listItem()
+                .title('📚 Content Hub Collections')
+                .child(
+                  S.documentList()
+                    .title('Content Hub Collections')
+                    .filter('_type == "collection" && hub == "content"')
+                    .defaultOrdering([{ field: 'order', direction: 'asc' }])
+                ),
+            ])
+        ),
+
+      S.divider(),
+
+      // ========================================
       // TAXONOMIES
       // ========================================
       S.listItem()
