@@ -9,73 +9,119 @@ interface CoECardV2Props {
   variant?: 'hero' | 'standard';
 }
 
-// Badge color mapping for CoE types
-const BADGE_COLORS: Record<string, { bg: string; text: string }> = {
-  'proof-point': { bg: '#dbeafe', text: '#1e40af' },
-  'best-practice': { bg: '#d1fae5', text: '#065f46' },
-  'meeting-asset': { bg: '#f3e8ff', text: '#7c3aed' },
-  'tool': { bg: '#fef3c7', text: '#b45309' },
-  'playbook': { bg: '#ffe4e6', text: '#be123c' },
+// Icons for different CoE types (matching design system v2.0)
+const COE_ICONS: Record<string, string> = {
+  'meeting-asset': '🎯',
+  'best-practice': '⭐',
+  'internal-best-practice': '⭐',
+  'tool': '🛠️',
+  'dashboard': '📊',
+  'process-innovation': '💡',
+  'proof-point': '📈',
+  'playbook': '📚',
 };
 
-// Icons for different CoE types
-const COE_ICONS: Record<string, string> = {
-  'proof-point': '📊',
-  'best-practice': '⭐',
-  'meeting-asset': '🤝',
-  'tool': '🧮',
-  'playbook': '📖',
-  'dashboard': '📈',
+// Type display labels
+const TYPE_LABELS: Record<string, string> = {
+  'meeting-asset': 'Meeting Asset',
+  'best-practice': 'Best Practice',
+  'internal-best-practice': 'Best Practice',
+  'tool': 'Tool',
+  'dashboard': 'Dashboard',
+  'process-innovation': 'Process Innovation',
+  'proof-point': 'Proof Point',
+  'playbook': 'Playbook',
 };
+
+// Access level mapping
+type AccessLevel = 'public' | 'internal' | 'confidential';
 
 export function CoECardV2({ entry, variant = 'standard' }: CoECardV2Props) {
   const coeType = entry.coeType?.[0] || 'best-practice';
-  const badgeColors = BADGE_COLORS[coeType] || { bg: '#f3f4f6', text: '#374151' };
   const icon = COE_ICONS[coeType] || '📄';
-  const linkHref = entry.slug?.current ? `/coe-hub/${entry.slug.current}` : '#';
+  const typeLabel = TYPE_LABELS[coeType] || coeType.replace(/-/g, ' ');
+
+  // Determine access level (default to internal for CoE)
+  const accessLevel: AccessLevel = (entry as any).access || 'internal';
+
+  // Prefer externalUrl if available, otherwise use slug
+  const linkHref = entry.externalUrl ||
+    (entry.slug?.current ? `/coe-hub/${entry.slug.current}` : '#');
+  const isExternal = !!entry.externalUrl;
+
+  // Get CTA text based on CoE type
+  const getCtaText = () => {
+    switch (coeType) {
+      case 'meeting-asset':
+        return 'View Example →';
+      case 'dashboard':
+        return 'Open Dashboard →';
+      case 'proof-point':
+        return 'View Metrics →';
+      case 'process-innovation':
+        return 'View Process →';
+      default:
+        return 'View Example →';
+    }
+  };
 
   // Hero variant - large featured card with gradient background
   if (variant === 'hero') {
     return (
-      <Link href={linkHref} className={styles.heroCard}>
-        <div className={styles.heroBadge}>{coeType.replace('-', ' ')}</div>
+      <Link
+        href={linkHref}
+        className={styles.heroCard}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+      >
+        <div className={styles.heroBadge}>{typeLabel}</div>
         <h3 className={styles.heroTitle}>{entry.title}</h3>
         <p className={styles.heroDescription}>{entry.description}</p>
         <div className={styles.heroMeta}>
-          {entry.teams && entry.teams.length > 0 && `${entry.teams.join(', ')}`}
+          {entry.teams && entry.teams.length > 0 && entry.teams.join(', ')}
         </div>
       </Link>
     );
   }
 
-  // Standard variant - clean card with large icon (Zendesk Play style)
+  // Standard variant - card with orange accent bar
   return (
-    <Link href={linkHref} className={styles.coeCard}>
-      <div className={styles.cardHeader}>
-        <div className={styles.cardIcon}>{icon}</div>
-        <span
-          className={styles.cardBadge}
-          style={{ backgroundColor: badgeColors.bg, color: badgeColors.text }}
-        >
-          {coeType.replace('-', ' ')}
-        </span>
-      </div>
+    <Link
+      href={linkHref}
+      className={styles.coeCard}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+    >
+      {/* Orange accent bar */}
+      <div className={styles.cardAccent} />
 
-      <h3 className={styles.cardTitle}>{entry.title}</h3>
+      <div className={styles.cardBody}>
+        <div className={styles.cardHeader}>
+          <span className={styles.cardIcon}>{icon}</span>
+          <span className={styles.cardBadge}>{typeLabel}</span>
+        </div>
 
-      {entry.description && (
-        <p className={styles.cardDescription}>{entry.description}</p>
-      )}
+        <h4 className={styles.cardTitle}>{entry.title}</h4>
 
-      <div className={styles.cardFooter}>
+        {entry.description && (
+          <p className={styles.cardDescription}>{entry.description}</p>
+        )}
+
         {entry.teams && entry.teams.length > 0 && (
-          <div className={styles.cardTeams}>
-            {entry.teams.slice(0, 2).map(team => (
-              <span key={team} className={styles.teamTag}>{team}</span>
+          <div className={styles.cardTags}>
+            {entry.teams.slice(0, 3).map(team => (
+              <span key={team} className={styles.cardTag}>{team}</span>
             ))}
           </div>
         )}
-        <span className={styles.cardCta}>View →</span>
+
+        <div className={styles.cardFooter}>
+          <span className={styles.cardMeta}>
+            <span className={`${styles.accessDot} ${styles[accessLevel]}`} />
+            {accessLevel.charAt(0).toUpperCase() + accessLevel.slice(1)}
+          </span>
+          <span className={styles.cardCta}>{getCtaText()}</span>
+        </div>
       </div>
     </Link>
   );

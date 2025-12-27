@@ -23,6 +23,63 @@
   --bubble-agent: #D5F2E8;
 
   /* ===========================================
+     CATALOG CARD DESIGN SYSTEM v2.0
+     Unified Design Tokens
+     =========================================== */
+
+  /* Hub Colors - Content (Purple) */
+  --content-primary: #8C69F0;
+  --content-primary-light: #E8E0F8;
+  --content-hover-bg: #E8E0F8;
+  --content-border-hover: #8C69F0;
+
+  /* Hub Colors - CoE (Orange) */
+  --coe-primary: #F59E0B;
+  --coe-primary-light: #FEF3C7;
+  --coe-hover-bg: #FEF3C7;
+  --coe-border-hover: #F59E0B;
+  --coe-text-dark: #B45309;
+
+  /* Hub Colors - Enablement (Green) */
+  --enablement-primary: #009B00;
+  --enablement-primary-light: #DCFCE7;
+  --enablement-hover-bg: #DCFCE7;
+  --enablement-border-hover: #009B00;
+
+  /* Neutral Colors */
+  --card-bg: #FFFFFF;
+  --card-border: #E8EBF2;
+  --text-primary: #1A1D26;
+  --text-secondary: #5C6578;
+  --text-muted: #8B93A7;
+  --tag-bg: #f3f4f6;
+
+  /* Card Dimensions */
+  --card-padding: 24px;
+  --card-radius: 10px;
+  --card-border-width: 2px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+
+  /* Access Level Colors */
+  --access-public: #10B981;
+  --access-internal: #F59E0B;
+  --access-confidential: #EF4444;
+
+  /* Enablement Category Colors */
+  --category-product: #009B00;
+  --category-technical: #8B5CF6;
+  --category-competitive: #EF4444;
+  --category-gtm-strategy: #3B82F6;
+  --category-value-realization: #F59E0B;
+  --category-playbook: #EC4899;
+  --category-certification: #6366F1;
+  --category-partner: #10B981;
+
+  /* ===========================================
      V2 Design System - Hub Theme Variables
      Default: Content Hub (Purple)
      =========================================== */

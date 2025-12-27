@@ -9,31 +9,10 @@ interface ContentCardV2Props {
   variant?: 'hero' | 'standard';
 }
 
-// Badge color mapping for content types (matching HTML mock)
-const BADGE_COLORS: Record<string, { bg: string; text: string }> = {
-  // From mock
-  'deck': { bg: '#dbeafe', text: '#1e40af' },
-  'onepager': { bg: '#d1fae5', text: '#065f46' },
-  'one-pager': { bg: '#d1fae5', text: '#065f46' },
-  'battlecard': { bg: '#ffe4e6', text: '#be123c' },
-  'template': { bg: '#fef3c7', text: '#b45309' },
-  'tool': { bg: '#e0e7ff', text: '#4338ca' },
-  'calculator': { bg: '#e0e7ff', text: '#4338ca' },
-  'messaging': { bg: '#fce7f3', text: '#9d174d' },
-  'script': { bg: '#fce7f3', text: '#9d174d' },
-  // Additional types
-  'case-study': { bg: '#dbeafe', text: '#1e40af' },
-  'video': { bg: '#f3e8ff', text: '#7c3aed' },
-  'guide': { bg: '#d1fae5', text: '#065f46' },
-  'article': { bg: '#ffe4e6', text: '#be123c' },
-  'webinar': { bg: '#e0e7ff', text: '#4338ca' },
-  'slides': { bg: '#dbeafe', text: '#1e40af' },
-  'document': { bg: '#f3f4f6', text: '#374151' },
-};
-
-// Icons for different content types (matching HTML mock)
+// Icons for different content types (matching design system v2.0)
 const CONTENT_ICONS: Record<string, string> = {
   'deck': '📊',
+  'slides': '📊',
   'onepager': '📄',
   'one-pager': '📄',
   'battlecard': '⚔️',
@@ -42,32 +21,76 @@ const CONTENT_ICONS: Record<string, string> = {
   'calculator': '🧮',
   'messaging': '💬',
   'script': '📝',
+  'sequence': '📧',
   'case-study': '📊',
   'video': '🎥',
   'guide': '📖',
-  'article': '📄',
+  'article': '📰',
+  'press': '📰',
   'webinar': '🎓',
   'presentation': '📊',
-  'slides': '📊',
   'document': '📄',
+  'report': '📊',
+  'demo': '🎬',
+  'checklist': '✅',
+};
+
+// Format display names
+const FORMAT_LABELS: Record<string, string> = {
+  'deck': 'Deck',
+  'slides': 'Slides',
+  'one-pager': 'One-Pager',
+  'battlecard': 'Battlecard',
+  'template': 'Template',
+  'calculator': 'Calculator',
+  'tool': 'Tool',
+  'guide': 'Guide',
+  'document': 'Document',
+  'video': 'Video',
+  'article': 'Article',
+  'press': 'Press',
+  'sequence': 'Sequence',
+  'report': 'Report',
+  'demo': 'Demo',
 };
 
 export function ContentCardV2({ entry, variant = 'standard' }: ContentCardV2Props) {
-  const contentType = entry.contentType?.name || entry.format || 'article';
-  const badgeColors = BADGE_COLORS[contentType] || { bg: '#f3f4f6', text: '#374151' };
+  const contentType = entry.contentType?.name?.toLowerCase() || entry.format || 'document';
   const icon = CONTENT_ICONS[contentType] || '📄';
+  const formatLabel = FORMAT_LABELS[contentType] || contentType.replace('-', ' ');
 
   // Prefer externalUrl if available, otherwise use slug
   const linkHref = entry.externalUrl ||
     (entry.slug?.current ? `/content-hub/${entry.slug.current}` : '#');
   const isExternal = !!entry.externalUrl;
 
+  // Get CTA text based on content type
+  const getCtaText = () => {
+    switch (contentType) {
+      case 'deck':
+      case 'slides':
+        return 'View Deck →';
+      case 'video':
+        return 'Watch Video →';
+      case 'calculator':
+      case 'tool':
+        return 'Open Tool →';
+      case 'article':
+      case 'press':
+        return 'Read Article →';
+      case 'template':
+      case 'sequence':
+        return 'View Template →';
+      default:
+        return 'View Doc →';
+    }
+  };
+
   // Hero variant - large featured card with gradient background
   if (variant === 'hero') {
-    // Determine badge text based on display priority or content type
     const heroBadge = entry.displayPriority === 'hero'
       ? (entry.featured ? '✨ What\'s New' : '📊 Essential')
-      : contentType.toUpperCase();
+      : formatLabel.toUpperCase();
 
     return (
       <Link
@@ -80,13 +103,13 @@ export function ContentCardV2({ entry, variant = 'standard' }: ContentCardV2Prop
         <h3 className={styles.heroTitle}>{entry.title}</h3>
         <p className={styles.heroDescription}>{entry.description}</p>
         <div className={styles.heroMeta}>
-          {entry.teams && entry.teams.length > 0 && `${entry.teams.join(', ')}`}
+          {entry.teams && entry.teams.length > 0 && entry.teams.join(', ')}
         </div>
       </Link>
     );
   }
 
-  // Standard variant - clean card with large icon
+  // Standard variant - clean card matching design system v2.0
   return (
     <Link
       href={linkHref}
@@ -95,30 +118,29 @@ export function ContentCardV2({ entry, variant = 'standard' }: ContentCardV2Prop
       rel={isExternal ? 'noopener noreferrer' : undefined}
     >
       <div className={styles.cardHeader}>
-        <div className={styles.cardIcon}>{icon}</div>
-        <span
-          className={styles.cardBadge}
-          style={{ backgroundColor: badgeColors.bg, color: badgeColors.text }}
-        >
-          {contentType}
-        </span>
+        <span className={styles.cardIcon}>{icon}</span>
+        <span className={styles.cardBadge}>{formatLabel}</span>
       </div>
 
-      <h3 className={styles.cardTitle}>{entry.title}</h3>
+      <h4 className={styles.cardTitle}>{entry.title}</h4>
 
       {entry.description && (
         <p className={styles.cardDescription}>{entry.description}</p>
       )}
 
+      {entry.teams && entry.teams.length > 0 && (
+        <div className={styles.cardTags}>
+          {entry.teams.slice(0, 3).map(team => (
+            <span key={team} className={styles.cardTag}>{team}</span>
+          ))}
+        </div>
+      )}
+
       <div className={styles.cardFooter}>
-        {entry.teams && entry.teams.length > 0 && (
-          <div className={styles.cardMeta}>
-            {entry.teams.slice(0, 2).map(team => (
-              <span key={team} className={styles.metaTag}>{team}</span>
-            ))}
-          </div>
-        )}
-        <span className={styles.cardCta}>View →</span>
+        <span className={styles.metaTag}>
+          {entry.products?.[0]?.name || 'Gladly'}
+        </span>
+        <span className={styles.cardCta}>{getCtaText()}</span>
       </div>
     </Link>
   );

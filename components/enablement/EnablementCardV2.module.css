@@ -1,42 +1,100 @@
-/* Training Card Styles */
+/* ========================================
+   ENABLEMENT CARD (Green Theme) v2.0
+   With Dark Header
+   ======================================== */
+
+/* Standard Card (Training Card) Styles */
 .trainingCard {
-  background: white;
-  border-radius: 16px;
+  background: var(--card-bg, #FFFFFF);
+  border: 2px solid var(--card-border, #E8EBF2);
+  border-radius: var(--card-radius, 10px);
   overflow: hidden;
-  border: 2px solid #e5e7eb;
-  transition: all 0.2s ease;
+  transition: var(--transition-fast, all 0.2s ease);
   cursor: pointer;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
+  height: 100%;
 }
 
 .trainingCard:hover {
-  border-color: #10b981;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
-  transform: translateY(-2px);
+  border-color: var(--enablement-primary, #009B00);
+  box-shadow: var(--card-shadow-hover, 0 8px 24px rgba(0, 0, 0, 0.12));
+  transform: translateY(-3px);
 }
 
+/* Dark Header */
 .trainingHeader {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  padding: 20px 24px;
+  background: #0D0D0D;
   color: white;
-  min-height: 120px;
+  padding: 20px var(--card-padding, 24px);
 }
 
 .trainingHeaderTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .trainingDate {
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  font-weight: 500;
+  font-size: 12px;
+  color: #AAAAAA;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+.trainingFormat {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.trainingTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Category tags in header */
+.trainingTags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trainingTag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--enablement-primary, #009B00);
+  color: white;
+}
+
+/* Tag color variants */
+.tagProduct { background: var(--category-product, #009B00); }
+.tagTechnical { background: var(--category-technical, #8B5CF6); }
+.tagCompetitive { background: var(--category-competitive, #EF4444); }
+.tagGtmStrategy { background: var(--category-gtm-strategy, #3B82F6); }
+.tagValueRealization { background: var(--category-value-realization, #F59E0B); }
+.tagPlaybook { background: var(--category-playbook, #EC4899); }
+.tagCertification { background: var(--category-certification, #6366F1); }
+.tagPartner { background: var(--category-partner, #10B981); }
+
+/* Legacy badge classes for backward compatibility */
 .trainingBadge {
   display: inline-flex;
   padding: 5px 12px;
@@ -47,57 +105,65 @@
   letter-spacing: 0.5px;
 }
 
-.badgeGtm { background: #f3e8ff; color: #7c3aed; }
-.badgeProduct { background: #dbeafe; color: #1e40af; }
-.badgeCompetitive { background: #ffe4e6; color: #be123c; }
-.badgeTechnical { background: #e0e7ff; color: #4338ca; }
-.badgeValue { background: #fef3c7; color: #b45309; }
-.badgePartner { background: #d1fae5; color: #065f46; }
+.badgeGtm { background: #3B82F6; color: white; }
+.badgeProduct { background: #009B00; color: white; }
+.badgeCompetitive { background: #EF4444; color: white; }
+.badgeTechnical { background: #8B5CF6; color: white; }
+.badgeValue { background: #F59E0B; color: white; }
+.badgePartner { background: #10B981; color: white; }
 
-.trainingTitle {
-  font-size: 20px;
-  font-weight: 700;
-  color: white;
-  line-height: 1.3;
-  margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 52px;
+/* White Body */
+.trainingBody {
+  padding: 20px var(--card-padding, 24px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainingCard:hover .trainingBody {
+  background: var(--enablement-hover-bg, #DCFCE7);
+}
+
+/* Product badge in body - gray */
+.trainingProduct {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--tag-bg, #f3f4f6);
+  color: var(--text-secondary, #5C6578);
+  margin-bottom: 12px;
+  align-self: flex-start;
 }
 
 .trainingTeam {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 500;
 }
 
-.trainingBody {
-  padding: 20px 24px;
-}
-
 .trainingDescription {
-  font-size: 14px;
-  color: #6b7280;
-  line-height: 1.6;
+  font-size: 13px;
+  color: var(--text-secondary, #5C6578);
+  line-height: 1.5;
   margin-bottom: 16px;
+  flex-grow: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 45px;
 }
 
 .trainingFormats {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .formatTag {
@@ -105,17 +171,30 @@
   align-items: center;
   gap: 5px;
   padding: 6px 12px;
-  background: #f3f4f6;
+  background: var(--tag-bg, #f3f4f6);
   border-radius: 6px;
   font-size: 13px;
   color: #374151;
   font-weight: 500;
 }
 
+.trainingFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--card-border, #E8EBF2);
+}
+
+.trainingDuration {
+  font-size: 11px;
+  color: var(--text-muted, #8B93A7);
+}
+
 .trainingCta {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  color: #059669;
+  color: var(--enablement-primary, #009B00);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -127,12 +206,12 @@
 
 /* Hero Card Styles */
 .heroCard {
-  background: linear-gradient(135deg, #065f46 0%, #059669 100%);
-  border-radius: 16px;
+  background: linear-gradient(135deg, #065f46 0%, #009B00 50%, #34d399 100%);
+  border-radius: var(--card-radius, 10px);
   padding: 28px;
   color: white;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition-fast, all 0.2s ease);
   position: relative;
   overflow: hidden;
   display: block;
@@ -146,17 +225,17 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
 }
 
 .heroCard:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: var(--card-shadow-hover, 0 8px 24px rgba(0, 0, 0, 0.15));
 }
 
 .heroBadge {
   display: inline-block;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 4px 10px;
   border-radius: 12px;
@@ -184,7 +263,7 @@
 
 .heroDescription {
   font-size: 14px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
   margin-bottom: 20px;
   position: relative;
@@ -198,7 +277,19 @@
 
 .heroMeta {
   font-size: 12px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   position: relative;
   z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .trainingHeader,
+  .trainingBody {
+    padding: 16px 20px;
+  }
+
+  .trainingTitle {
+    font-size: 15px;
+  }
 }
