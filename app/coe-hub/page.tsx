@@ -1,5 +1,5 @@
 import { client } from '@/lib/sanity';
-import { CoEHub } from './CoEHub';
+import { CoEHubV2 } from './CoEHubV2';
 
 // GROQ query to fetch catalog entries and collections for CoE Hub
 const query = `{
@@ -9,6 +9,7 @@ const query = `{
     "coe" in publishedTo
   ] | order(publishDate desc) {
     _id,
+    _updatedAt,
     title,
     slug,
     description,
@@ -16,6 +17,7 @@ const query = `{
     teams,
     displayPriority,
     featured,
+    publishDate,
     thumbnailImage{
       asset->{
         _id,
@@ -25,6 +27,17 @@ const query = `{
     externalUrl,
     videoUrl,
     slidesUrl,
+    // Proof point specific fields
+    customer,
+    isBlindCustomer,
+    kpiCategory,
+    productTags,
+    channelTag,
+    approvedForExternal,
+    externalLinks[]{
+      title,
+      url
+    },
     coeHubCollections[]{
       collection->{
         _id,
@@ -97,7 +110,7 @@ export default async function CoeHubPage() {
 
   // Pass Sanity data to client component (matching HTML mock design)
   return (
-    <CoEHub
+    <CoEHubV2
       entries={data.entries}
       collections={data.collections || []}
     />

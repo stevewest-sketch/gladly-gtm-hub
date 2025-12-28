@@ -13,6 +13,9 @@ interface EnablementHubV2Props {
 export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) {
   const [activeTab, setActiveTab] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('newest');
+  const [categoryFilter, setCategoryFilter] = useState<string>('all');
 
   // Enable smooth scrolling on mount
   useEffect(() => {
@@ -21,6 +24,14 @@ export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) 
       document.documentElement.style.scrollBehavior = '';
     };
   }, []);
+
+  // Reset filters when switching tabs
+  useEffect(() => {
+    if (activeTab !== 'browse-all') {
+      setCategoryFilter('all');
+      setSearchQuery('');
+    }
+  }, [activeTab]);
 
   // Generate tabs from CMS collections
   const tabs = useMemo(() => {
@@ -102,6 +113,17 @@ export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) 
       : filtered;
   };
 
+  // Get unique enablement categories for filter buttons
+  const enablementCategories = useMemo(() => {
+    const categories = new Set<string>();
+    entries.forEach(entry => {
+      if (entry.enablementCategory && entry.enablementCategory.length > 0) {
+        entry.enablementCategory.forEach(cat => categories.add(cat));
+      }
+    });
+    return Array.from(categories).sort();
+  }, [entries]);
+
   // Filter entries by active tab
   const filteredEntries = useMemo(() => {
     if (activeTab === 'featured') {
@@ -116,7 +138,25 @@ export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) 
     }
 
     if (activeTab === 'browse-all') {
-      return entries;
+      let filtered = entries;
+
+      // Apply search filter
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        filtered = filtered.filter(e =>
+          e.title?.toLowerCase().includes(query) ||
+          e.description?.toLowerCase().includes(query)
+        );
+      }
+
+      // Apply category filter
+      if (categoryFilter !== 'all') {
+        filtered = filtered.filter(e =>
+          e.enablementCategory?.includes(categoryFilter)
+        );
+      }
+
+      return filtered;
     }
 
     const activeCollection = collections.find(c => c.slug.current === activeTab);
@@ -127,7 +167,7 @@ export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) 
         assignment?.collection?._id === activeCollection._id
       )
     );
-  }, [activeTab, entries, collections]);
+  }, [activeTab, entries, collections, searchQuery, categoryFilter]);
 
   // Get current tab
   const currentTab = tabs.find(t => t.id === activeTab);
@@ -285,13 +325,46 @@ export function EnablementHubV2({ entries, collections }: EnablementHubV2Props) 
         {/* Browse All Tab */}
         {activeTab === 'browse-all' && (
           <div className={`${styles.tabPanel} ${styles.active}`}>
+            {/* Search Bar */}
+            <div className={styles.searchBox}>
+              <input
+                type="text"
+                placeholder="Search all enablement content..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+
+            {/* Category Filter Buttons */}
+            <div className={styles.categoryFilters}>
+              <button
+                className={`${styles.categoryFilterBtn} ${categoryFilter === 'all' ? styles.active : ''}`}
+                onClick={() => setCategoryFilter('all')}
+              >
+                All
+              </button>
+              {enablementCategories.map(category => (
+                <button
+                  key={category}
+                  className={`${styles.categoryFilterBtn} ${categoryFilter === category ? styles.active : ''}`}
+                  onClick={() => setCategoryFilter(category)}
+                >
+                  {category.replace(/-/g, ' ')}
+                </button>
+              ))}
+            </div>
+
             <div className={styles.browseHeader}>
               <div className={styles.browseLeft}>
                 <span className={styles.resultsCount}>{filteredEntries.length} resources</span>
-                <select className={styles.sortSelect}>
-                  <option>Sort by: Newest First</option>
-                  <option>Sort by: Title (A-Z)</option>
-                  <option>Sort by: Most Popular</option>
+                <select
+                  className={styles.sortSelect}
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                >
+                  <option value="newest">Newest</option>
+                  <option value="title">A-Z</option>
+                  <option value="popular">Most Popular</option>
                 </select>
               </div>
               <div className={styles.viewToggle}>

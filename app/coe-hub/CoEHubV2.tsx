@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { CatalogEntry, Collection, CollectionSubsection } from '@/lib/types/catalog';
 import { CoECardV2 } from '@/components/coe/CoECardV2';
+import ProofPointsTable from '@/components/coe/ProofPointsTable';
 import styles from './CoEHubV2.module.css';
 
 interface CoEHubV2Props {
@@ -13,6 +14,9 @@ interface CoEHubV2Props {
 export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
   const [activeTab, setActiveTab] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('newest');
+  const [typeFilter, setTypeFilter] = useState<string>('all');
 
   // Enable smooth scrolling on mount
   useEffect(() => {
@@ -21,6 +25,14 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
       document.documentElement.style.scrollBehavior = '';
     };
   }, []);
+
+  // Reset filters when switching tabs
+  useEffect(() => {
+    if (activeTab !== 'browse-all') {
+      setTypeFilter('all');
+      setSearchQuery('');
+    }
+  }, [activeTab]);
 
   const tabs = useMemo(() => {
     const featuredTab = { id: 'featured', label: 'Featured', icon: '⭐', subsections: [] as CollectionSubsection[] };
@@ -101,6 +113,17 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
       : filtered;
   };
 
+  // Get unique CoE types for filter buttons
+  const coeTypes = useMemo(() => {
+    const types = new Set<string>();
+    entries.forEach(entry => {
+      if (entry.coeType && entry.coeType.length > 0) {
+        entry.coeType.forEach(type => types.add(type));
+      }
+    });
+    return Array.from(types).sort();
+  }, [entries]);
+
   const filteredEntries = useMemo(() => {
     if (activeTab === 'featured') {
       return entries
@@ -114,7 +137,26 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
     }
 
     if (activeTab === 'browse-all') {
-      return entries;
+      let filtered = entries;
+
+      // Apply search filter
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        filtered = filtered.filter(e =>
+          e.title?.toLowerCase().includes(query) ||
+          e.description?.toLowerCase().includes(query) ||
+          e.customer?.toLowerCase().includes(query)
+        );
+      }
+
+      // Apply type filter
+      if (typeFilter !== 'all') {
+        filtered = filtered.filter(e =>
+          e.coeType?.includes(typeFilter)
+        );
+      }
+
+      return filtered;
     }
 
     const activeCollection = collections.find(c => c.slug.current === activeTab);
@@ -125,10 +167,29 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
         assignment?.collection?._id === activeCollection._id
       )
     );
-  }, [activeTab, entries, collections]);
+  }, [activeTab, entries, collections, searchQuery, typeFilter]);
 
   // Get current tab
   const currentTab = tabs.find(t => t.id === activeTab);
+
+  // Check if current tab is proof-points
+  const isProofPointsTab = activeTab === 'proof-points';
+
+  // Transform entries to proof points format for the table
+  const proofPoints = useMemo(() => {
+    if (!isProofPointsTab) return [];
+    return filteredEntries.map(entry => ({
+      stat: entry.title,
+      customer: entry.customer || 'Unknown',
+      isBlind: entry.isBlindCustomer || false,
+      kpiCategory: entry.kpiCategory || 'Other',
+      product: entry.productTags || [],
+      channel: entry.channelTag || null,
+      approved: entry.approvedForExternal || false,
+      context: entry.description || '',
+      sourceUrl: entry.externalLinks?.[0]?.url || undefined,
+    }));
+  }, [isProofPointsTab, filteredEntries]);
 
   const heroEntries = useMemo(() => {
     if (activeTab !== 'featured') return [];
@@ -144,11 +205,16 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
     <div className="min-h-screen bg-gray-50">
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <div>
-            <h1>
-              <span>🏆</span> Center of Excellence
-            </h1>
-            <p>Customer success stories, best practices, and proven strategies from the field</p>
+          <div className={styles.headerTop}>
+            <div>
+              <h1>
+                <span>🏆</span> Center of Excellence
+              </h1>
+              <p>Customer success stories, best practices, and proven strategies from the field</p>
+            </div>
+            <button className={styles.submitBtn}>
+              <span>➕</span> Submit a Win
+            </button>
           </div>
 
           <div className={styles.navTabs}>
@@ -195,8 +261,18 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
           </div>
         )}
 
-        {/* Collection Tabs (with subsections) */}
-        {activeTab !== 'featured' && activeTab !== 'browse-all' && currentTab && (
+        {/* Proof Points Tab - Special table view */}
+        {isProofPointsTab && (
+          <div className={`${styles.tabPanel} ${styles.active}`}>
+            <ProofPointsTable
+              proofPoints={proofPoints}
+              title={`Proof Points (${proofPoints.length})`}
+            />
+          </div>
+        )}
+
+        {/* Collection Tabs (with subsections) - excluding proof-points */}
+        {activeTab !== 'featured' && activeTab !== 'browse-all' && !isProofPointsTab && currentTab && (
           <div className={`${styles.tabPanel} ${styles.active}`}>
             {/* Jump Navigation for Subsections */}
             {currentTab.subsections && currentTab.subsections.length > 1 && (
@@ -278,13 +354,46 @@ export function CoEHubV2({ entries, collections }: CoEHubV2Props) {
 
         {activeTab === 'browse-all' && (
           <div className={`${styles.tabPanel} ${styles.active}`}>
+            {/* Search Bar */}
+            <div className={styles.searchBox}>
+              <input
+                type="text"
+                placeholder="Search all CoE content..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+
+            {/* Type Filter Buttons */}
+            <div className={styles.typeFilters}>
+              <button
+                className={`${styles.typeFilterBtn} ${typeFilter === 'all' ? styles.active : ''}`}
+                onClick={() => setTypeFilter('all')}
+              >
+                All
+              </button>
+              {coeTypes.map(type => (
+                <button
+                  key={type}
+                  className={`${styles.typeFilterBtn} ${typeFilter === type ? styles.active : ''}`}
+                  onClick={() => setTypeFilter(type)}
+                >
+                  {type.replace(/-/g, ' ')}
+                </button>
+              ))}
+            </div>
+
             <div className={styles.browseHeader}>
               <div className={styles.browseLeft}>
                 <span className={styles.resultsCount}>{filteredEntries.length} resources</span>
-                <select className={styles.sortSelect}>
-                  <option>Sort by: Newest First</option>
-                  <option>Sort by: Title (A-Z)</option>
-                  <option>Sort by: Most Popular</option>
+                <select
+                  className={styles.sortSelect}
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                >
+                  <option value="newest">Newest</option>
+                  <option value="title">A-Z</option>
+                  <option value="popular">Most Popular</option>
                 </select>
               </div>
               <div className={styles.viewToggle}>

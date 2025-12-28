@@ -680,6 +680,127 @@ export default {
       group: 'publish',
     },
 
+    // ========================================
+    // PROOF POINT SPECIFIC FIELDS (CoE Hub)
+    // ========================================
+
+    {
+      name: 'customer',
+      title: 'Customer Name',
+      type: 'string',
+      description: 'Customer name (e.g., "Crate & Barrel", "Allbirds")',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'content',
+    },
+
+    {
+      name: 'isBlindCustomer',
+      title: 'Blind Customer?',
+      type: 'boolean',
+      description: 'Check if customer name should be anonymized (e.g., "Major Retailer")',
+      initialValue: false,
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'content',
+    },
+
+    {
+      name: 'kpiCategory',
+      title: 'KPI Category',
+      type: 'string',
+      options: {
+        list: [
+          { title: '📈 Resolution Rate', value: 'Resolution Rate' },
+          { title: '⏱️ Handle Time', value: 'Handle Time' },
+          { title: '😊 CSAT', value: 'CSAT' },
+          { title: '✅ FCR', value: 'FCR' },
+          { title: '💰 Cost Savings', value: 'Cost Savings' },
+          { title: '📊 ROI', value: 'ROI' },
+          { title: '📦 Volume', value: 'Volume' },
+          { title: '🤖 Self-Service', value: 'Self-Service' },
+          { title: '💵 Revenue', value: 'Revenue' },
+          { title: '📋 Other', value: 'Other' },
+        ],
+        layout: 'dropdown',
+      },
+      description: 'Primary KPI this proof point demonstrates',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'content',
+    },
+
+    {
+      name: 'productTags',
+      title: 'Product Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Hero', value: 'Hero' },
+          { title: 'Sidekick', value: 'Sidekick' },
+          { title: 'People Match', value: 'People Match' },
+          { title: 'Insights', value: 'Insights' },
+          { title: 'Payments', value: 'Payments' },
+          { title: 'Platform', value: 'Platform' },
+        ],
+        layout: 'grid',
+      },
+      description: 'Which Gladly products are involved',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'content',
+    },
+
+    {
+      name: 'channelTag',
+      title: 'Channel',
+      type: 'string',
+      options: {
+        list: [
+          { title: '💬 Chat', value: 'Chat' },
+          { title: '📧 Email', value: 'Email' },
+          { title: '📱 SMS', value: 'SMS' },
+          { title: '📞 Voice', value: 'Voice' },
+          { title: '📲 Social', value: 'Social' },
+          { title: '🔄 Omnichannel', value: 'Omnichannel' },
+        ],
+        layout: 'dropdown',
+      },
+      description: 'Primary channel for this proof point',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'content',
+    },
+
+    {
+      name: 'approvedForExternal',
+      title: 'Approved for External Use?',
+      type: 'boolean',
+      description: 'Can this proof point be used in external presentations/marketing?',
+      initialValue: false,
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'publish',
+    },
+
+    {
+      name: 'externalLinks',
+      title: 'External Links',
+      type: 'array',
+      of: [{
+        type: 'object',
+        name: 'externalLink',
+        fields: [
+          { name: 'title', title: 'Link Title', type: 'string' },
+          { name: 'url', title: 'URL', type: 'url' },
+        ],
+        preview: {
+          select: { title: 'title', url: 'url' },
+          prepare({ title, url }: any) {
+            return { title: title || 'Untitled Link', subtitle: url };
+          },
+        },
+      }],
+      description: 'Links to source materials, case studies, etc.',
+      hidden: ({ parent }: any) => !parent?.coeType?.includes('proof-point'),
+      group: 'links',
+    },
+
     // Battle Card specific
     {
       name: 'competitor',

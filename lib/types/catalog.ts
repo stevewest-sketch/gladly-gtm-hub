@@ -427,6 +427,15 @@ export interface CatalogEntry {
   coeType?: string[]
   meetingType?: 'bva' | 'ebr' | 'qbr' | 'rfx' | 'strategy-session'
 
+  // Proof point specific fields (CoE Hub)
+  customer?: string
+  isBlindCustomer?: boolean
+  kpiCategory?: string
+  productTags?: string[]
+  channelTag?: string
+  approvedForExternal?: boolean
+  externalLinks?: Array<{ title: string; url: string }>
+
   // Enablement-specific
   enablementCategory?: string[]
 
